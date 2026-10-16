@@ -1,0 +1,109 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "QA Report",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "project_id",
+    "run_id",
+    "checks",
+    "summary_status"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "project_id": {
+      "type": "string"
+    },
+    "run_id": {
+      "type": "string"
+    },
+    "created_at": {
+      "type": "string"
+    },
+    "checks": {
+      "type": "array",
+      "items": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "title": "Check",
+        "type": "object",
+        "required": [
+          "id",
+          "kind",
+          "status",
+          "summary"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "kind": {
+            "enum": [
+              "unit",
+              "integration",
+              "engine",
+              "visual",
+              "performance",
+              "accessibility",
+              "license",
+              "package",
+              "human"
+            ]
+          },
+          "status": {
+            "enum": [
+              "passed",
+              "failed",
+              "blocked",
+              "not_run",
+              "review_required"
+            ]
+          },
+          "summary": {
+            "type": "string"
+          },
+          "command": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "duration_seconds": {
+            "type": "number",
+            "minimum": 0
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "summary_status": {
+      "enum": [
+        "passed",
+        "failed",
+        "blocked",
+        "review_required",
+        "partial"
+      ]
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "human_gates": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": true
+}

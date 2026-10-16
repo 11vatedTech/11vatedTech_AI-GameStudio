@@ -1,0 +1,117 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Animation Manifest",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "animation_id",
+    "fps",
+    "frame_count",
+    "frame_size",
+    "anchor",
+    "frames",
+    "status"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "animation_id": {
+      "type": "string"
+    },
+    "fps": {
+      "type": "number",
+      "minimum": 1,
+      "maximum": 120
+    },
+    "loop": {
+      "type": "boolean"
+    },
+    "frame_count": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "frame_size": {
+      "type": "array",
+      "prefixItems": [
+        {
+          "type": "integer",
+          "minimum": 1
+        },
+        {
+          "type": "integer",
+          "minimum": 1
+        }
+      ],
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "anchor": {
+      "type": "string"
+    },
+    "frames": {
+      "type": "array",
+      "items": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "title": "Frame",
+        "type": "object",
+        "required": [
+          "index",
+          "path",
+          "sha256"
+        ],
+        "properties": {
+          "index": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "path": {
+            "type": "string"
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "source_type": {
+            "enum": [
+              "generated-keyframe",
+              "authored-keyframe",
+              "inbetween",
+              "interpolated",
+              "corrected"
+            ]
+          },
+          "anchor_position": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "spritesheet": {
+      "type": "string"
+    },
+    "preview": {
+      "type": "string"
+    },
+    "diagnostics": {
+      "type": "object"
+    },
+    "status": {
+      "enum": [
+        "assembled",
+        "requires_visual_review",
+        "approved",
+        "rejected",
+        "blocked"
+      ]
+    },
+    "human_review_id": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

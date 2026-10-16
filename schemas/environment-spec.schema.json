@@ -1,0 +1,110 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Environment Specification",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "environment_id",
+    "purpose",
+    "camera",
+    "composition",
+    "walkable_surface_contract",
+    "palette",
+    "layers"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "environment_id": {
+      "type": "string"
+    },
+    "purpose": {
+      "type": "string"
+    },
+    "camera": {
+      "type": "string"
+    },
+    "composition": {
+      "type": "string"
+    },
+    "focal_point": {
+      "type": "string"
+    },
+    "depth_layers": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "foreground",
+          "midground",
+          "background",
+          "parallax",
+          "overlay"
+        ]
+      }
+    },
+    "layers": {
+      "type": "array",
+      "items": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "title": "Layer",
+        "type": "object",
+        "required": [
+          "name",
+          "purpose"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "purpose": {
+            "type": "string"
+          },
+          "asset": {
+            "type": "string"
+          },
+          "parallax_factor": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 2
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "walkable_surface_contract": {
+      "type": "string"
+    },
+    "collision_alignment": {
+      "type": "string"
+    },
+    "palette": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "lighting": {
+      "type": "string"
+    },
+    "atmosphere": {
+      "type": "string"
+    },
+    "repeatability_constraints": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "provenance_requirements": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,952 @@
+{
+  "schema_version": "1.0",
+  "skill_count": 79,
+  "skills": [
+    {
+      "id": "project-discovery",
+      "title": "Project Discovery and Constraints",
+      "summary": "Turn an ambiguous idea into explicit requirements, constraints and a testable brief.",
+      "tags": [
+        "discovery",
+        "brief",
+        "requirements",
+        "scope"
+      ],
+      "path": "skills/project-discovery/SKILL.md"
+    },
+    {
+      "id": "creative-thesis",
+      "title": "Creative Thesis and Game Pillars",
+      "summary": "Create a distinctive player fantasy and a decision filter for coherent game design.",
+      "tags": [
+        "creative-direction",
+        "game-design",
+        "pillars",
+        "identity"
+      ],
+      "path": "skills/creative-thesis/SKILL.md"
+    },
+    {
+      "id": "core-loop-design",
+      "title": "Core Loop and Player Verbs",
+      "summary": "Design the repeatable actions, decisions, feedback, and rewards that create play.",
+      "tags": [
+        "game-design",
+        "core-loop",
+        "mechanics",
+        "feedback"
+      ],
+      "path": "skills/core-loop-design/SKILL.md"
+    },
+    {
+      "id": "systemic-design",
+      "title": "Systemic Game Design",
+      "summary": "Design interacting rules with explicit state, invariants, and emergent consequences.",
+      "tags": [
+        "game-design",
+        "systems",
+        "simulation",
+        "emergence"
+      ],
+      "path": "skills/systemic-design/SKILL.md"
+    },
+    {
+      "id": "genre-action",
+      "title": "Action and Combat Games",
+      "summary": "Build responsive action games with readable threats and synchronized feedback.",
+      "tags": [
+        "genre",
+        "action",
+        "combat",
+        "arena"
+      ],
+      "path": "skills/genre-action/SKILL.md"
+    },
+    {
+      "id": "genre-platformer",
+      "title": "Platformer and Precision Movement",
+      "summary": "Design platforming around geometry, stable movement, and fair challenge.",
+      "tags": [
+        "genre",
+        "platformer",
+        "physics",
+        "level-design"
+      ],
+      "path": "skills/genre-platformer/SKILL.md"
+    },
+    {
+      "id": "genre-roguelite",
+      "title": "Roguelike and Roguelite Structure",
+      "summary": "Create meaningful run decisions, build diversity and pacing.",
+      "tags": [
+        "genre",
+        "roguelite",
+        "progression",
+        "replayability"
+      ],
+      "path": "skills/genre-roguelite/SKILL.md"
+    },
+    {
+      "id": "genre-rpg",
+      "title": "RPG and Character Progression",
+      "summary": "Connect character identity, decisions, progression and content.",
+      "tags": [
+        "genre",
+        "rpg",
+        "progression",
+        "quests"
+      ],
+      "path": "skills/genre-rpg/SKILL.md"
+    },
+    {
+      "id": "genre-tactics",
+      "title": "Turn-Based Tactics and Strategy",
+      "summary": "Create legible tactical choices and verifiable turn resolution.",
+      "tags": [
+        "genre",
+        "tactics",
+        "strategy",
+        "turn-based"
+      ],
+      "path": "skills/genre-tactics/SKILL.md"
+    },
+    {
+      "id": "genre-deckbuilder",
+      "title": "Deckbuilders and Card Battlers",
+      "summary": "Design card systems with understandable effects and healthy pacing.",
+      "tags": [
+        "genre",
+        "deckbuilder",
+        "cards",
+        "systems"
+      ],
+      "path": "skills/genre-deckbuilder/SKILL.md"
+    },
+    {
+      "id": "genre-survival",
+      "title": "Survival and Crafting Loops",
+      "summary": "Create resource pressure and crafting that support exploration.",
+      "tags": [
+        "genre",
+        "survival",
+        "crafting",
+        "economy"
+      ],
+      "path": "skills/genre-survival/SKILL.md"
+    },
+    {
+      "id": "genre-puzzle",
+      "title": "Puzzle and Environmental Interaction",
+      "summary": "Design puzzles around inferable rules and robust transitions.",
+      "tags": [
+        "genre",
+        "puzzle",
+        "interaction",
+        "level-design"
+      ],
+      "path": "skills/genre-puzzle/SKILL.md"
+    },
+    {
+      "id": "genre-horror",
+      "title": "Horror and Atmospheric Exploration",
+      "summary": "Use anticipation, information control and sound to shape tension.",
+      "tags": [
+        "genre",
+        "horror",
+        "atmosphere",
+        "audio"
+      ],
+      "path": "skills/genre-horror/SKILL.md"
+    },
+    {
+      "id": "genre-narrative",
+      "title": "Narrative and Dialogue Games",
+      "summary": "Integrate story choices with state, pacing and player agency.",
+      "tags": [
+        "genre",
+        "narrative",
+        "dialogue",
+        "quests"
+      ],
+      "path": "skills/genre-narrative/SKILL.md"
+    },
+    {
+      "id": "genre-racing",
+      "title": "Racing and Movement-Driven Games",
+      "summary": "Tune control feel, track readability and camera around speed.",
+      "tags": [
+        "genre",
+        "racing",
+        "vehicle",
+        "physics"
+      ],
+      "path": "skills/genre-racing/SKILL.md"
+    },
+    {
+      "id": "genre-simulation",
+      "title": "Simulation and Management Games",
+      "summary": "Make state, economies and schedules observably causal.",
+      "tags": [
+        "genre",
+        "simulation",
+        "economy",
+        "management"
+      ],
+      "path": "skills/genre-simulation/SKILL.md"
+    },
+    {
+      "id": "genre-metroidvania",
+      "title": "Metroidvania and Ability-Gated Exploration",
+      "summary": "Design interconnected spaces and meaningful ability-gated routes.",
+      "tags": [
+        "genre",
+        "metroidvania",
+        "exploration",
+        "progression"
+      ],
+      "path": "skills/genre-metroidvania/SKILL.md"
+    },
+    {
+      "id": "genre-shooter",
+      "title": "Shooter and Projectile Systems",
+      "summary": "Align projectile visuals, collision, travel and encounter pressure.",
+      "tags": [
+        "genre",
+        "shooter",
+        "projectiles",
+        "combat"
+      ],
+      "path": "skills/genre-shooter/SKILL.md"
+    },
+    {
+      "id": "genre-multiplayer",
+      "title": "Multiplayer Feasibility and Network Design",
+      "summary": "Assess state ownership and network failure before committing to multiplayer.",
+      "tags": [
+        "genre",
+        "multiplayer",
+        "networking",
+        "architecture"
+      ],
+      "path": "skills/genre-multiplayer/SKILL.md"
+    },
+    {
+      "id": "genre-procedural",
+      "title": "Procedural Content with Authored Constraints",
+      "summary": "Generate variation while preserving playable design constraints.",
+      "tags": [
+        "procedural",
+        "levels",
+        "content",
+        "algorithms"
+      ],
+      "path": "skills/genre-procedural/SKILL.md"
+    },
+    {
+      "id": "art-direction",
+      "title": "Visual Art Direction and Style Bible",
+      "summary": "Translate aesthetic intent into repeatable visual rules.",
+      "tags": [
+        "art-direction",
+        "style",
+        "visual-development",
+        "art-bible"
+      ],
+      "path": "skills/art-direction/SKILL.md"
+    },
+    {
+      "id": "style-pixel",
+      "title": "Pixel-Art Production",
+      "summary": "Create pixel art with deliberate grid, palette, clusters and animation.",
+      "tags": [
+        "art-style",
+        "pixel-art",
+        "sprites",
+        "animation"
+      ],
+      "path": "skills/style-pixel/SKILL.md"
+    },
+    {
+      "id": "style-painterly",
+      "title": "Painterly 2D Art Production",
+      "summary": "Build consistent hand-painted surfaces, lighting and depth.",
+      "tags": [
+        "art-style",
+        "painterly",
+        "2d",
+        "environment"
+      ],
+      "path": "skills/style-painterly/SKILL.md"
+    },
+    {
+      "id": "style-anime-cel",
+      "title": "Anime and Cel-Shaded Art",
+      "summary": "Control line work, proportions and shadow shapes across assets.",
+      "tags": [
+        "art-style",
+        "anime",
+        "cel-shading",
+        "characters"
+      ],
+      "path": "skills/style-anime-cel/SKILL.md"
+    },
+    {
+      "id": "style-isometric",
+      "title": "Isometric and 2.5D Art",
+      "summary": "Maintain projection, scale, occlusion and collision clarity.",
+      "tags": [
+        "art-style",
+        "isometric",
+        "2.5d",
+        "camera"
+      ],
+      "path": "skills/style-isometric/SKILL.md"
+    },
+    {
+      "id": "style-lowpoly",
+      "title": "Stylized Low-Poly 3D",
+      "summary": "Create deliberate forms, readable silhouettes and coherent lighting.",
+      "tags": [
+        "art-style",
+        "3d",
+        "low-poly",
+        "blender"
+      ],
+      "path": "skills/style-lowpoly/SKILL.md"
+    },
+    {
+      "id": "style-realistic-3d",
+      "title": "Realistic and Semi-Realistic 3D",
+      "summary": "Coordinate materials, lighting, detail, animation and performance.",
+      "tags": [
+        "art-style",
+        "3d",
+        "realism",
+        "pbr"
+      ],
+      "path": "skills/style-realistic-3d/SKILL.md"
+    },
+    {
+      "id": "style-voxel",
+      "title": "Voxel and Block-Based Art",
+      "summary": "Maintain block scale and visual grammar across content.",
+      "tags": [
+        "art-style",
+        "voxel",
+        "blocks",
+        "3d"
+      ],
+      "path": "skills/style-voxel/SKILL.md"
+    },
+    {
+      "id": "style-graphic",
+      "title": "Vector, Flat, and Graphic Art",
+      "summary": "Use shape, type, palette and negative space for crisp graphic games.",
+      "tags": [
+        "art-style",
+        "vector",
+        "flat",
+        "graphic"
+      ],
+      "path": "skills/style-graphic/SKILL.md"
+    },
+    {
+      "id": "character-design",
+      "title": "Character and Creature Design",
+      "summary": "Design memorable characters with explicit identity anchors.",
+      "tags": [
+        "character-design",
+        "creature",
+        "concept-art",
+        "identity"
+      ],
+      "path": "skills/character-design/SKILL.md"
+    },
+    {
+      "id": "environment-design",
+      "title": "Environment and World Art",
+      "summary": "Turn concept art into layered, navigable, gameplay-compatible scenes.",
+      "tags": [
+        "environment",
+        "world-art",
+        "level-art",
+        "composition"
+      ],
+      "path": "skills/environment-design/SKILL.md"
+    },
+    {
+      "id": "prop-design",
+      "title": "Props, Weapons and Interactables",
+      "summary": "Create consistent props with clear role, scale, pivot and affordance.",
+      "tags": [
+        "props",
+        "weapons",
+        "interaction",
+        "asset-pipeline"
+      ],
+      "path": "skills/prop-design/SKILL.md"
+    },
+    {
+      "id": "image-generation-direction",
+      "title": "Prompt and Image-Generation Direction",
+      "summary": "Convert asset specifications into model-appropriate generation requests.",
+      "tags": [
+        "image-generation",
+        "prompting",
+        "models",
+        "art-direction"
+      ],
+      "path": "skills/image-generation-direction/SKILL.md"
+    },
+    {
+      "id": "comfyui-workflows",
+      "title": "ComfyUI Workflow Engineering",
+      "summary": "Build versioned API workflows and bounded local generation jobs.",
+      "tags": [
+        "comfyui",
+        "workflow",
+        "api",
+        "generation"
+      ],
+      "path": "skills/comfyui-workflows/SKILL.md"
+    },
+    {
+      "id": "model-selection",
+      "title": "Model Selection and Resource Benchmarking",
+      "summary": "Choose models by measured usable output, license, memory and time.",
+      "tags": [
+        "models",
+        "benchmark",
+        "vram",
+        "licensing"
+      ],
+      "path": "skills/model-selection/SKILL.md"
+    },
+    {
+      "id": "image-refinement",
+      "title": "Image Refinement and Inpainting",
+      "summary": "Repair targeted defects without degrading approved identity or composition.",
+      "tags": [
+        "inpainting",
+        "img2img",
+        "refinement",
+        "reference"
+      ],
+      "path": "skills/image-refinement/SKILL.md"
+    },
+    {
+      "id": "background-extraction",
+      "title": "Background Extraction and Alpha Cleanup",
+      "summary": "Create transparent sprites without damaging fine edges and interior details.",
+      "tags": [
+        "alpha",
+        "segmentation",
+        "background-removal",
+        "matting"
+      ],
+      "path": "skills/background-extraction/SKILL.md"
+    },
+    {
+      "id": "upscaling",
+      "title": "Upscaling and Texture Preparation",
+      "summary": "Increase usable detail without false detail or style loss.",
+      "tags": [
+        "upscaling",
+        "textures",
+        "super-resolution",
+        "technical-art"
+      ],
+      "path": "skills/upscaling/SKILL.md"
+    },
+    {
+      "id": "atlases",
+      "title": "Sprite Atlases and Packing",
+      "summary": "Pack sprites deterministically with correct frame metadata and sampling behavior.",
+      "tags": [
+        "atlases",
+        "spritesheets",
+        "packing",
+        "technical-art"
+      ],
+      "path": "skills/atlases/SKILL.md"
+    },
+    {
+      "id": "animation-principles",
+      "title": "Animation Principles for Game Feedback",
+      "summary": "Apply timing, spacing, anticipation, follow-through, staging and silhouette.",
+      "tags": [
+        "animation",
+        "principles",
+        "timing",
+        "pose"
+      ],
+      "path": "skills/animation-principles/SKILL.md"
+    },
+    {
+      "id": "animation-keyframes",
+      "title": "Keyframe-to-Animation Production",
+      "summary": "Turn action design into coherent inspectable animation sequences.",
+      "tags": [
+        "animation",
+        "keyframes",
+        "sprites",
+        "walk-cycle"
+      ],
+      "path": "skills/animation-keyframes/SKILL.md"
+    },
+    {
+      "id": "animation-cutout",
+      "title": "Cutout and 2D Rigged Animation",
+      "summary": "Create reusable motion from segmented artwork where deformation stays convincing.",
+      "tags": [
+        "animation",
+        "cutout",
+        "rigging",
+        "2d"
+      ],
+      "path": "skills/animation-cutout/SKILL.md"
+    },
+    {
+      "id": "animation-rife",
+      "title": "Frame Interpolation and RIFE Evaluation",
+      "summary": "Use interpolation only when it improves motion without damaging assets.",
+      "tags": [
+        "animation",
+        "rife",
+        "interpolation",
+        "alpha"
+      ],
+      "path": "skills/animation-rife/SKILL.md"
+    },
+    {
+      "id": "godot-animation",
+      "title": "Godot Animation Integration",
+      "summary": "Integrate SpriteFrames, AnimationPlayer, and AnimationTree appropriately.",
+      "tags": [
+        "godot",
+        "animation",
+        "engine-integration"
+      ],
+      "path": "skills/godot-animation/SKILL.md"
+    },
+    {
+      "id": "blender-production",
+      "title": "Blender Asset and Animation Production",
+      "summary": "Use Blender for 3D models, rigging, motion, renders and sprite output where useful.",
+      "tags": [
+        "blender",
+        "3d",
+        "rigging",
+        "rendering"
+      ],
+      "path": "skills/blender-production/SKILL.md"
+    },
+    {
+      "id": "vfx-design",
+      "title": "Visual Effects and Combat Readability",
+      "summary": "Design effects that communicate state and force without obscuring play.",
+      "tags": [
+        "vfx",
+        "particles",
+        "combat",
+        "shaders"
+      ],
+      "path": "skills/vfx-design/SKILL.md"
+    },
+    {
+      "id": "lighting-color",
+      "title": "Lighting, Color Scripts and Value Design",
+      "summary": "Use light and value to direct focus and control mood.",
+      "tags": [
+        "lighting",
+        "color",
+        "composition",
+        "materials"
+      ],
+      "path": "skills/lighting-color/SKILL.md"
+    },
+    {
+      "id": "material-design",
+      "title": "Materials and Surface Language",
+      "summary": "Keep material response consistent and communicate form.",
+      "tags": [
+        "materials",
+        "shaders",
+        "technical-art",
+        "pbr"
+      ],
+      "path": "skills/material-design/SKILL.md"
+    },
+    {
+      "id": "ui-ux",
+      "title": "Game UI/UX and Information Architecture",
+      "summary": "Design interfaces around player tasks, hierarchy, feedback and accessibility.",
+      "tags": [
+        "ui",
+        "ux",
+        "accessibility",
+        "menus"
+      ],
+      "path": "skills/ui-ux/SKILL.md"
+    },
+    {
+      "id": "audio-direction",
+      "title": "Audio Direction and Soundscape",
+      "summary": "Create coherent sound identity and connect audio to game events.",
+      "tags": [
+        "audio",
+        "music",
+        "sound-design",
+        "mixing"
+      ],
+      "path": "skills/audio-direction/SKILL.md"
+    },
+    {
+      "id": "accessibility",
+      "title": "Accessibility and Inclusive Game UX",
+      "summary": "Identify barriers early and make practical accommodations.",
+      "tags": [
+        "accessibility",
+        "ui",
+        "input",
+        "usability"
+      ],
+      "path": "skills/accessibility/SKILL.md"
+    },
+    {
+      "id": "level-design",
+      "title": "Level Layout, Flow and Encounter Design",
+      "summary": "Construct spaces that teach, challenge, pace and reinforce mechanics.",
+      "tags": [
+        "level-design",
+        "layout",
+        "pacing",
+        "encounters"
+      ],
+      "path": "skills/level-design/SKILL.md"
+    },
+    {
+      "id": "game-ai",
+      "title": "Game AI and Enemy Behavior",
+      "summary": "Build readable, testable NPC behavior.",
+      "tags": [
+        "game-ai",
+        "enemy-ai",
+        "state-machines",
+        "behavior"
+      ],
+      "path": "skills/game-ai/SKILL.md"
+    },
+    {
+      "id": "physics-collision",
+      "title": "Physics, Collision and Interaction Contracts",
+      "summary": "Align physics rules, visual geometry and interaction.",
+      "tags": [
+        "physics",
+        "collision",
+        "interaction",
+        "engine"
+      ],
+      "path": "skills/physics-collision/SKILL.md"
+    },
+    {
+      "id": "architecture-modular",
+      "title": "Modular Game Architecture",
+      "summary": "Set clear ownership boundaries and data contracts.",
+      "tags": [
+        "architecture",
+        "modularity",
+        "data-driven",
+        "engineering"
+      ],
+      "path": "skills/architecture-modular/SKILL.md"
+    },
+    {
+      "id": "python-engineering",
+      "title": "Python Production Tooling",
+      "summary": "Build reliable local tools with explicit errors and safe paths.",
+      "tags": [
+        "python",
+        "testing",
+        "engineering",
+        "cli"
+      ],
+      "path": "skills/python-engineering/SKILL.md"
+    },
+    {
+      "id": "godot-project",
+      "title": "Godot Project Structure and Lifecycle",
+      "summary": "Structure scenes and runtime lifecycle with clear ownership.",
+      "tags": [
+        "godot",
+        "engine",
+        "scenes",
+        "lifecycle"
+      ],
+      "path": "skills/godot-project/SKILL.md"
+    },
+    {
+      "id": "performance-profiling",
+      "title": "Performance and Memory Profiling",
+      "summary": "Meet explicit hardware budgets with measured optimization.",
+      "tags": [
+        "performance",
+        "profiling",
+        "vram",
+        "optimization"
+      ],
+      "path": "skills/performance-profiling/SKILL.md"
+    },
+    {
+      "id": "qa-risk-based",
+      "title": "Risk-Based QA and Regression Architecture",
+      "summary": "Test the likely high-impact failures and make defects reproducible.",
+      "tags": [
+        "qa",
+        "testing",
+        "risk",
+        "regression"
+      ],
+      "path": "skills/qa-risk-based/SKILL.md"
+    },
+    {
+      "id": "playtesting",
+      "title": "Blind Playtesting and Usability",
+      "summary": "Discover whether real players understand and enjoy the intended experience.",
+      "tags": [
+        "playtesting",
+        "usability",
+        "feedback",
+        "release"
+      ],
+      "path": "skills/playtesting/SKILL.md"
+    },
+    {
+      "id": "visual-qa",
+      "title": "Visual Asset and In-Engine QA",
+      "summary": "Review visual candidates in isolation and final rendering context.",
+      "tags": [
+        "visual-qa",
+        "review",
+        "contact-sheet",
+        "art-direction"
+      ],
+      "path": "skills/visual-qa/SKILL.md"
+    },
+    {
+      "id": "model-licensing",
+      "title": "Model and Asset Licensing Due Diligence",
+      "summary": "Track rights for weights, code, LoRAs, fonts, sounds and third-party assets.",
+      "tags": [
+        "licensing",
+        "provenance",
+        "commercial",
+        "model-weights"
+      ],
+      "path": "skills/model-licensing/SKILL.md"
+    },
+    {
+      "id": "security-local-services",
+      "title": "Security for Local Agent Services",
+      "summary": "Use least privilege and safe boundaries for local APIs/files.",
+      "tags": [
+        "security",
+        "api",
+        "local-first",
+        "paths"
+      ],
+      "path": "skills/security-local-services/SKILL.md"
+    },
+    {
+      "id": "mcp-agent-tools",
+      "title": "MCP and Agent Tool Design",
+      "summary": "Expose discoverable bounded tools compatible with coding agents.",
+      "tags": [
+        "mcp",
+        "agents",
+        "tooling",
+        "schemas"
+      ],
+      "path": "skills/mcp-agent-tools/SKILL.md"
+    },
+    {
+      "id": "release-engineering",
+      "title": "Release Packaging and Reproducibility",
+      "summary": "Build traceable releases that cannot silently drift from source.",
+      "tags": [
+        "release",
+        "packaging",
+        "sha256",
+        "builds"
+      ],
+      "path": "skills/release-engineering/SKILL.md"
+    },
+    {
+      "id": "production-management",
+      "title": "Production Planning and Dependencies",
+      "summary": "Coordinate work and deadlines without sacrificing core loop or release.",
+      "tags": [
+        "production",
+        "planning",
+        "dependencies",
+        "jam"
+      ],
+      "path": "skills/production-management/SKILL.md"
+    },
+    {
+      "id": "postmortem-learning",
+      "title": "Evidence-Based Postmortem",
+      "summary": "Capture reusable lessons without overgeneralizing from one experiment.",
+      "tags": [
+        "postmortem",
+        "learning",
+        "metrics",
+        "knowledge-loop"
+      ],
+      "path": "skills/postmortem-learning/SKILL.md"
+    },
+    {
+      "id": "source-control-hygiene",
+      "title": "Source Control and Public Repository Hygiene",
+      "summary": "Keep work recoverable, reviewable and safe to publish.",
+      "tags": [
+        "git",
+        "workspace",
+        "repo-hygiene",
+        "versioning"
+      ],
+      "path": "skills/source-control-hygiene/SKILL.md"
+    },
+    {
+      "id": "save-load",
+      "title": "Save/Load and Persistent Data",
+      "summary": "Persist game state safely across versions.",
+      "tags": [
+        "save-load",
+        "persistence",
+        "serialization"
+      ],
+      "path": "skills/save-load/SKILL.md"
+    },
+    {
+      "id": "localization",
+      "title": "Localization and Text Expansion",
+      "summary": "Prevent translated text from breaking layout and logic.",
+      "tags": [
+        "localization",
+        "text",
+        "ui",
+        "accessibility"
+      ],
+      "path": "skills/localization/SKILL.md"
+    },
+    {
+      "id": "shader-effects",
+      "title": "Shader and Rendering Effects",
+      "summary": "Implement shaders with defined visual and performance contracts.",
+      "tags": [
+        "shader",
+        "vfx",
+        "rendering",
+        "performance"
+      ],
+      "path": "skills/shader-effects/SKILL.md"
+    },
+    {
+      "id": "camera-staging",
+      "title": "Camera and Staging",
+      "summary": "Frame play for information, emotion, and navigation.",
+      "tags": [
+        "camera",
+        "staging",
+        "composition",
+        "cinematics"
+      ],
+      "path": "skills/camera-staging/SKILL.md"
+    },
+    {
+      "id": "visual-storytelling",
+      "title": "Visual Storytelling and Environmental Narrative",
+      "summary": "Embed world information into space, materials and composition.",
+      "tags": [
+        "visual-storytelling",
+        "environment",
+        "narrative",
+        "art-direction"
+      ],
+      "path": "skills/visual-storytelling/SKILL.md"
+    },
+    {
+      "id": "content-pipeline",
+      "title": "Data-Driven Content Pipeline",
+      "summary": "Keep large content sets validated and editable.",
+      "tags": [
+        "content",
+        "pipeline",
+        "data-validation",
+        "tools"
+      ],
+      "path": "skills/content-pipeline/SKILL.md"
+    },
+    {
+      "id": "agent-delegation",
+      "title": "Agent Task Decomposition and Handoffs",
+      "summary": "Delegate bounded tasks without losing shared state or quality.",
+      "tags": [
+        "agents",
+        "orchestration",
+        "handoffs",
+        "planning"
+      ],
+      "path": "skills/agent-delegation/SKILL.md"
+    },
+    {
+      "id": "jam-finalization",
+      "title": "Jam Freeze and Finalization",
+      "summary": "Ship the actual build under deadline.",
+      "tags": [
+        "game-jam",
+        "release",
+        "polish",
+        "scope"
+      ],
+      "path": "skills/jam-finalization/SKILL.md"
+    },
+    {
+      "id": "cross-platform-release",
+      "title": "Cross-Platform Export Qualification",
+      "summary": "Verify each platform as a separate artifact and runtime requirement.",
+      "tags": [
+        "cross-platform",
+        "export",
+        "release",
+        "platforms"
+      ],
+      "path": "skills/cross-platform-release/SKILL.md"
+    },
+    {
+      "id": "character-animation-identity",
+      "title": "Character Identity Through Animation",
+      "summary": "Prevent identity drift across poses and make motion recognizable.",
+      "tags": [
+        "character",
+        "animation",
+        "identity",
+        "reference"
+      ],
+      "path": "skills/character-animation-identity/SKILL.md"
+    },
+    {
+      "id": "evidence-claims",
+      "title": "Evidence Levels and Capability Claims",
+      "summary": "Distinguish documented, implemented, tested, demonstrated and human-approved.",
+      "tags": [
+        "evidence",
+        "claims",
+        "capabilities",
+        "qa"
+      ],
+      "path": "skills/evidence-claims/SKILL.md"
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Asset Manifest",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "project_id",
+    "assets"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "project_id": {
+      "type": "string"
+    },
+    "assets": {
+      "type": "array",
+      "items": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "title": "Asset Record",
+        "type": "object",
+        "required": [
+          "asset_id",
+          "kind",
+          "relative_path",
+          "sha256",
+          "status"
+        ],
+        "properties": {
+          "asset_id": {
+            "type": "string"
+          },
+          "kind": {
+            "type": "string"
+          },
+          "relative_path": {
+            "type": "string"
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "status": {
+            "enum": [
+              "candidate",
+              "generated",
+              "refined",
+              "technically_validated",
+              "integrated",
+              "approved",
+              "rejected",
+              "blocked"
+            ]
+          },
+          "source_prompt": {
+            "type": "string"
+          },
+          "seed": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "model_id": {
+            "type": "string"
+          },
+          "workflow_id": {
+            "type": "string"
+          },
+          "source_assets": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "processing_steps": {
+            "type": "array",
+            "items": {}
+          },
+          "license_record_id": {
+            "type": "string"
+          },
+          "review_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "technical_checks": {
+            "type": "object"
+          },
+          "notes": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "updated_at": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

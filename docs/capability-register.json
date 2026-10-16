@@ -1,0 +1,294 @@
+{
+  "schema_version": "1.0",
+  "capabilities": [
+    {
+      "id": "animation-assembly",
+      "label": "Animation frame audit and assembly",
+      "status": "implemented+tested",
+      "interface": "ags animation audit/build",
+      "purpose": "Normalize frame canvas/anchors and create preview GIF, spritesheet, manifest, and measurable diagnostic signals.",
+      "dependencies": [
+        "Pillow and NumPy optional vision extras"
+      ],
+      "verification": [
+        "tests/test_asset_pipeline.py"
+      ],
+      "limitations": [
+        "Diagnostics cannot judge semantic motion, weight, timing, or expressive readability; playback inspection is required."
+      ],
+      "evidence_level": "tested"
+    },
+    {
+      "id": "atlas-packing",
+      "label": "Deterministic sprite atlas packing",
+      "status": "implemented+tested",
+      "interface": "asset.atlas; pack_atlas",
+      "purpose": "Pack images into an atlas with metadata and padding suitable for downstream engine integration.",
+      "dependencies": [
+        "Pillow optional vision extra"
+      ],
+      "verification": [
+        "tests/test_asset_pipeline.py"
+      ],
+      "limitations": [
+        "Target-engine import and edge-bleed checks remain project-specific."
+      ],
+      "evidence_level": "tested"
+    },
+    {
+      "id": "blender-probe",
+      "label": "Blender availability probe",
+      "status": "implemented",
+      "interface": "ags doctor; vated_studio.adapters.blender.BlenderAdapter",
+      "purpose": "Discover a local Blender executable and read its version without forcing a Blender install.",
+      "dependencies": [
+        "Optional local Blender executable"
+      ],
+      "verification": [],
+      "limitations": [
+        "No Blender animation/render was executed in this clean-room validation."
+      ],
+      "evidence_level": "implemented"
+    },
+    {
+      "id": "comfyui-api",
+      "label": "ComfyUI API workflow execution",
+      "status": "implemented+tested",
+      "interface": "vated_studio.adapters.comfyui.ComfyUIClient; image.generate.comfy",
+      "purpose": "Validate API-format workflows, submit jobs, poll history, download outputs, and record output hashes.",
+      "dependencies": [
+        "Compatible local ComfyUI service, nodes and models"
+      ],
+      "verification": [
+        "tests/test_adapters.py"
+      ],
+      "limitations": [
+        "Automated tests use a local protocol fixture. They do not prove a particular real checkpoint/node graph runs on the target GPU."
+      ],
+      "evidence_level": "tested-with-mocks"
+    },
+    {
+      "id": "godot-integration",
+      "label": "Godot project validation and guarded export",
+      "status": "implemented+tested",
+      "interface": "ags godot doctor/validate/export",
+      "purpose": "Check project structure, invoke selected Godot validation/export commands with timeouts, and inspect output existence.",
+      "dependencies": [
+        "Godot 4 executable; export templates and named preset for export"
+      ],
+      "verification": [
+        "tests/test_store_service.py"
+      ],
+      "limitations": [
+        "A command exit code or nonempty export does not prove the game plays correctly. External engine execution was not run in this container."
+      ],
+      "evidence_level": "tested-with-mocks"
+    },
+    {
+      "id": "image-generation-recipes",
+      "label": "Model-specific Klein and Z-Image workflow builders",
+      "status": "implemented+tested",
+      "interface": "image.generate.klein; image.generate.zimage",
+      "purpose": "Build explicit API-format workflow graphs for supported model variants and generation settings.",
+      "dependencies": [
+        "Compatible workflow nodes and exact model assets in local ComfyUI"
+      ],
+      "verification": [
+        "tests/test_adapters.py"
+      ],
+      "limitations": [
+        "Builder validity is not live-generation proof. Model files, node versions, VRAM, licensing and output quality must be checked on the target machine."
+      ],
+      "evidence_level": "tested-with-mocks"
+    },
+    {
+      "id": "image-processing",
+      "label": "Image inspection and deterministic refinement",
+      "status": "implemented+tested",
+      "interface": "ags asset inspect/process/contact-sheet",
+      "purpose": "Inspect dimensions, alpha, occupancy and hashes; trim, resize, conservative edge-background removal, and create contact sheets.",
+      "dependencies": [
+        "Pillow and NumPy optional vision extras"
+      ],
+      "verification": [
+        "tests/test_asset_pipeline.py"
+      ],
+      "limitations": [
+        "Edge-color removal is not semantic matting. Numeric signals are not aesthetic-quality scores."
+      ],
+      "evidence_level": "tested"
+    },
+    {
+      "id": "jam-planner",
+      "label": "Time-boxed production planner",
+      "status": "implemented+tested",
+      "interface": "ags jam profiles; ags jam plan",
+      "purpose": "Plan 24-hour, 72-hour, and 14-day work within a release reserve while respecting dependencies and reporting cuts.",
+      "dependencies": [],
+      "verification": [
+        "tests/test_planner_workflow.py"
+      ],
+      "limitations": [
+        "A deterministic greedy planner is not a full critical-path or resource-constrained scheduler; estimates require calibration."
+      ],
+      "evidence_level": "tested"
+    },
+    {
+      "id": "local-http",
+      "label": "Authenticated local HTTP API",
+      "status": "implemented+tested",
+      "interface": "ags serve; /health; /v1/status; /v1/command",
+      "purpose": "Expose a bearer-authenticated command surface with request-size bounds, structured errors and loopback-first config.",
+      "dependencies": [
+        "Python standard library"
+      ],
+      "verification": [
+        "tests/test_config_paths.py",
+        "tests/test_mcp_http.py"
+      ],
+      "limitations": [
+        "Designed for a local trusted workflow, not an internet-facing multi-user service."
+      ],
+      "evidence_level": "tested"
+    },
+    {
+      "id": "mcp-stdio",
+      "label": "MCP JSON-RPC stdio server",
+      "status": "implemented+tested",
+      "interface": "ags-mcp; MCP ags_status/ags_doctor/ags_capabilities/ags_skill_search/ags_command",
+      "purpose": "Expose discoverable local studio tools over protocol-clean stdio.",
+      "dependencies": [
+        "Python standard library",
+        "Compatible MCP host"
+      ],
+      "verification": [
+        "tests/test_mcp_http.py"
+      ],
+      "limitations": [
+        "Protocol tests and local smoke tests do not verify every external coding agent's configuration."
+      ],
+      "evidence_level": "tested"
+    },
+    {
+      "id": "project-factory",
+      "label": "Godot 2D project factory",
+      "status": "implemented+tested",
+      "interface": "ags project create; project.create",
+      "purpose": "Create a clearly labeled Godot 4 starter fixture with safe slugging and scoped output paths.",
+      "dependencies": [
+        "Bundled Godot starter template"
+      ],
+      "verification": [
+        "tests/test_store_service.py"
+      ],
+      "limitations": [
+        "Starter fixture is not a finished game and still requires actual design, content, and engine validation."
+      ],
+      "evidence_level": "tested"
+    },
+    {
+      "id": "release-packager",
+      "label": "Public-release audit and source packaging",
+      "status": "implemented+tested",
+      "interface": "ags release audit/package",
+      "purpose": "Inventory and hash release files; exclude secrets, local state, caches and common model-weight formats; refuse unsafe symlinks and accidental overwrite.",
+      "dependencies": [
+        "Python standard library"
+      ],
+      "verification": [
+        "tests/test_release_security.py"
+      ],
+      "limitations": [
+        "The tool does not certify copyright, commercial model rights, game quality, or human approval."
+      ],
+      "evidence_level": "tested"
+    },
+    {
+      "id": "rife-runner",
+      "label": "Optional RIFE interpolation wrapper",
+      "status": "implemented",
+      "interface": "ags doctor; vated_studio.adapters.rife.RIFEAdapter",
+      "purpose": "Run a configured RIFE ncnn-vulkan interpolation process and inspect basic output/alpha signals.",
+      "dependencies": [
+        "Optional RIFE binary and compatible model"
+      ],
+      "verification": [],
+      "limitations": [
+        "Interpolation does not invent semantic motion; output alpha/silhouette and playback must be reviewed. No RIFE invocation occurred in this container."
+      ],
+      "evidence_level": "implemented"
+    },
+    {
+      "id": "schema-contracts",
+      "label": "JSON Schema contract library",
+      "status": "implemented+tested",
+      "interface": "ags schema list/validate",
+      "purpose": "Provide machine-readable project, art, asset, animation, task, license, review, QA, and release contracts.",
+      "dependencies": [
+        "jsonschema optional extra for full validation"
+      ],
+      "verification": [
+        "tests/test_repository_contracts.py",
+        "tests/test_store_service.py"
+      ],
+      "limitations": [
+        "Schema syntax validation does not prove a project's creative or gameplay quality."
+      ],
+      "evidence_level": "tested"
+    },
+    {
+      "id": "sd-webui-api",
+      "label": "Stable Diffusion WebUI API",
+      "status": "implemented+tested",
+      "interface": "vated_studio.adapters.sd_webui.SDWebUIClient; image.generate.sd_webui",
+      "purpose": "Call a compatible local WebUI API and save returned image outputs.",
+      "dependencies": [
+        "Compatible local WebUI with API enabled and a loaded model"
+      ],
+      "verification": [
+        "tests/test_adapters.py"
+      ],
+      "limitations": [
+        "Endpoint behavior and supported fields vary by WebUI distribution/version; local model quality is not inferred."
+      ],
+      "evidence_level": "tested-with-mocks"
+    },
+    {
+      "id": "skill-library",
+      "label": "Searchable specialist skill library",
+      "status": "implemented+tested",
+      "interface": "ags skills list/search/read; MCP ags_skill_search",
+      "purpose": "Load 79 production skills covering design, genres, art styles, assets, animation, engineering, QA, and release.",
+      "dependencies": [
+        "Bundled SKILL.md package data"
+      ],
+      "verification": [
+        "tests/test_repository_contracts.py",
+        "tests/test_store_service.py"
+      ],
+      "limitations": [
+        "A skill is guidance, not proof that the described tool or outcome has been tested."
+      ],
+      "evidence_level": "tested"
+    },
+    {
+      "id": "workspace-state",
+      "label": "Workspace, configuration and evidence store",
+      "status": "implemented+tested",
+      "interface": "ags init/status/doctor; SQLite run/event/asset/feedback store",
+      "purpose": "Initialize a workspace, inspect local prerequisites, and persist command outcomes and feedback.",
+      "dependencies": [
+        "Python >=3.11",
+        "SQLite in Python standard library"
+      ],
+      "verification": [
+        "tests/test_config_paths.py",
+        "tests/test_store_service.py"
+      ],
+      "limitations": [
+        "Doctor readiness does not mean optional image models or game engines are installed."
+      ],
+      "evidence_level": "tested"
+    }
+  ]
+}

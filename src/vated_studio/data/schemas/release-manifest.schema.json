@@ -1,0 +1,133 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Release Manifest",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "release_id",
+    "project_id",
+    "version",
+    "created_at",
+    "files",
+    "audit_status"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "release_id": {
+      "type": "string"
+    },
+    "project_id": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string"
+    },
+    "created_at": {
+      "type": "string"
+    },
+    "commit": {
+      "type": "string"
+    },
+    "files": {
+      "type": "array",
+      "items": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "title": "Release File",
+        "type": "object",
+        "required": [
+          "path",
+          "bytes",
+          "sha256"
+        ],
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "bytes": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "license_record_id": {
+            "type": "string"
+          },
+          "role": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "source_archive": {
+      "type": "string"
+    },
+    "playable_builds": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "test_evidence": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "audit_status": {
+      "enum": [
+        "passed",
+        "blocked",
+        "review_required",
+        "not_run"
+      ]
+    },
+    "human_gates": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "title": "Human Gates",
+      "type": "object",
+      "required": [],
+      "properties": {
+        "commercial_rights": {
+          "enum": [
+            "open",
+            "passed",
+            "failed",
+            "not_applicable"
+          ]
+        },
+        "art_direction": {
+          "enum": [
+            "open",
+            "passed",
+            "failed",
+            "not_applicable"
+          ]
+        },
+        "cold_playtest": {
+          "enum": [
+            "open",
+            "passed",
+            "failed",
+            "not_applicable"
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  },
+  "additionalProperties": true
+}

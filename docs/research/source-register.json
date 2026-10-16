@@ -1,0 +1,159 @@
+{
+  "schema_version": "1.0",
+  "reviewed_on": "2026-10-16",
+  "policy": "Primary public sources are starting points. Verify exact tool version, model file, terms, and behavior when adopting. Historical source-archive findings are not test results for this clean-room rebuild.",
+  "sources": [
+    {
+      "id": "flux2",
+      "title": "Black Forest Labs FLUX.2 official repository/model matrix",
+      "url": "https://github.com/black-forest-labs/flux2",
+      "type": "official model repository",
+      "use": "Model capabilities and variant-specific licensing",
+      "notes": "Current repository table lists Klein 4B and 4B Base as Apache-2.0; 9B variants and FLUX.2 dev use the FLUX Non-Commercial License. Re-check exact weight file and terms."
+    },
+    {
+      "id": "comfyui-docs",
+      "title": "ComfyUI official documentation",
+      "url": "https://docs.comfy.org/",
+      "type": "official documentation",
+      "use": "Workflow construction and node compatibility",
+      "notes": "Workflow shapes and node inputs are version-sensitive."
+    },
+    {
+      "id": "comfyui-openapi",
+      "title": "ComfyUI OpenAPI specification",
+      "url": "https://github.com/Comfy-Org/ComfyUI/blob/master/openapi.yaml",
+      "type": "official API specification",
+      "use": "API adapter contracts",
+      "notes": "Check against installed service version."
+    },
+    {
+      "id": "comfyui-examples",
+      "title": "ComfyUI examples",
+      "url": "https://github.com/comfyanonymous/ComfyUI_examples",
+      "type": "official example repository",
+      "use": "Workflow construction and image conditioning concepts",
+      "notes": "Examples must be converted/tested for installed nodes and API format."
+    },
+    {
+      "id": "godot-sprite-animation",
+      "title": "Godot 2D sprite animation",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/2d/2d_sprite_animation.html",
+      "type": "official engine docs",
+      "use": "AnimatedSprite2D, SpriteFrames and AnimationPlayer",
+      "notes": "Use docs matching installed engine."
+    },
+    {
+      "id": "godot-animation-tree",
+      "title": "Godot AnimationTree",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/animation/animation_tree.html",
+      "type": "official engine docs",
+      "use": "Advanced animation transitions/blending",
+      "notes": "AnimationTree consumes AnimationPlayer animations."
+    },
+    {
+      "id": "godot-cli",
+      "title": "Godot command line tutorial",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/editor/command_line_tutorial.html",
+      "type": "official engine docs",
+      "use": "Headless checks and export",
+      "notes": "A successful file write is not proof of gameplay; presets/templates are required."
+    },
+    {
+      "id": "blender-animation",
+      "title": "Blender animation and rigging",
+      "url": "https://www.blender.org/features/animation/",
+      "type": "official tool documentation",
+      "use": "Keyframing, IK/FK, NLA, rigging and animation",
+      "notes": "Benchmark against task-specific alternative workflows."
+    },
+    {
+      "id": "rife",
+      "title": "RIFE ncnn-vulkan",
+      "url": "https://github.com/nihui/rife-ncnn-vulkan",
+      "type": "official implementation repo",
+      "use": "Frame interpolation",
+      "notes": "Interpolation does not semantically author an action; sprite alpha and silhouette must be checked."
+    },
+    {
+      "id": "pixar-box",
+      "title": "Pixar in a Box",
+      "url": "https://www.khanacademy.org/computing/pixar",
+      "type": "public educational material",
+      "use": "Storytelling, animation, color, lighting, rigging, effects and environments",
+      "notes": "Public curriculum, not disclosure of confidential studio pipelines."
+    },
+    {
+      "id": "mcp-tools",
+      "title": "Model Context Protocol tools",
+      "url": "https://modelcontextprotocol.io/docs/concepts/tools",
+      "type": "official protocol documentation",
+      "use": "Agent tool discovery and invocation",
+      "notes": "Protocol tests do not verify every host configuration."
+    },
+    {
+      "id": "json-schema",
+      "title": "JSON Schema Draft 2020-12",
+      "url": "https://json-schema.org/draft/2020-12",
+      "type": "official specification",
+      "use": "Structured production contracts",
+      "notes": "Full schema validation requires the optional jsonschema dependency."
+    },
+    {
+      "id": "github-security",
+      "title": "GitHub Actions secure use",
+      "url": "https://docs.github.com/en/actions/reference/security/secure-use",
+      "type": "official security docs",
+      "use": "Workflow supply-chain and permission hygiene",
+      "notes": "Pin third-party Actions to full commit SHAs and minimize permissions."
+    },
+    {
+      "id": "python",
+      "title": "Python documentation",
+      "url": "https://docs.python.org/3/",
+      "type": "official language docs",
+      "use": "Runtime and packaging contracts",
+      "notes": "Test the declared supported Python versions."
+    },
+    {
+      "id": "wcag",
+      "title": "WCAG 2.2 Quick Reference",
+      "url": "https://www.w3.org/WAI/WCAG22/quickref/",
+      "type": "W3C standard guidance",
+      "use": "Accessible interface checks",
+      "notes": "Do not claim full game or site conformance without a relevant audit."
+    },
+    {
+      "id": "z-image-turbo-model-card",
+      "title": "Tongyi-MAI Z-Image-Turbo official model card",
+      "url": "https://huggingface.co/Tongyi-MAI/Z-Image-Turbo/tree/main",
+      "type": "official model card",
+      "use": "Model overview and license identification",
+      "notes": "The current model card lists Apache-2.0. Verify the exact model files and license at adoption; license metadata alone is not an output-rights guarantee, and this model's VRAM profile may not fit the target GPU without a compatible quantized workflow."
+    },
+    {
+      "id": "comfyui-z-image-template",
+      "title": "Comfy-Org official Z-Image Turbo workflow template",
+      "url": "https://github.com/Comfy-Org/workflow_templates/blob/main/templates/image_z_image_turbo.json",
+      "type": "official workflow template",
+      "use": "Node graph and model-file compatibility reference for Z-Image Turbo",
+      "notes": "Template contains model links and expected node structure; adapt to the installed ComfyUI version and validate the API-format graph before execution."
+    },
+    {
+      "id": "godot-animation-tree-stable",
+      "title": "Godot AnimationTree official documentation",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/animation/animation_tree.html",
+      "type": "official engine documentation",
+      "use": "Animation blending and state transitions",
+      "notes": "AnimationTree operates on AnimationPlayer data; use only when blending/state transitions justify the added complexity."
+    },
+    {
+      "id": "blender-animation-rigging",
+      "title": "Blender animation and rigging official feature documentation",
+      "url": "https://www.blender.org/features/animation/",
+      "type": "official tool documentation",
+      "use": "Rigging, keyframes, IK/FK, NLA, sound synchronization",
+      "notes": "General feature overview; a specific production workflow must still be tested against the target assets and hardware."
+    }
+  ]
+}

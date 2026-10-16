@@ -1,0 +1,135 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Character Specification",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "character_id",
+    "role",
+    "silhouette",
+    "identity_anchors",
+    "palette",
+    "materials",
+    "camera",
+    "scale_contract"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "character_id": {
+      "type": "string"
+    },
+    "role": {
+      "type": "string"
+    },
+    "design_summary": {
+      "type": "string"
+    },
+    "silhouette": {
+      "type": "string"
+    },
+    "identity_anchors": {
+      "type": "array",
+      "minItems": 3,
+      "items": {
+        "type": "string"
+      }
+    },
+    "palette": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "materials": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "title": "Materials",
+      "type": "object",
+      "required": [],
+      "properties": {
+        "primary": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "secondary": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "surface_notes": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": true
+    },
+    "camera": {
+      "type": "string"
+    },
+    "scale_contract": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "title": "Scale Contract",
+      "type": "object",
+      "required": [],
+      "properties": {
+        "target_height_px": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "ground_anchor": {
+          "enum": [
+            "bottom-center",
+            "center",
+            "custom"
+          ]
+        },
+        "pivot": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": true
+    },
+    "pose_requirements": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "animation_states": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "reference_assets": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "drift_risks": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "provenance_requirements": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  },
+  "additionalProperties": true
+}

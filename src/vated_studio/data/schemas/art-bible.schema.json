@@ -1,0 +1,149 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Art Bible",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "project_id",
+    "style_name",
+    "camera",
+    "palette",
+    "identity_invariants",
+    "asset_rules",
+    "review_criteria"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "project_id": {
+      "type": "string"
+    },
+    "style_name": {
+      "type": "string"
+    },
+    "style_description": {
+      "type": "string"
+    },
+    "reference_board": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "camera": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "title": "Camera",
+      "type": "object",
+      "required": [
+        "projection",
+        "view",
+        "framing"
+      ],
+      "properties": {
+        "projection": {
+          "enum": [
+            "2d",
+            "2.5d",
+            "3d"
+          ]
+        },
+        "view": {
+          "type": "string"
+        },
+        "framing": {
+          "type": "string"
+        },
+        "perspective": {
+          "type": "string"
+        },
+        "target_resolution": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 8192
+          }
+        }
+      },
+      "additionalProperties": true
+    },
+    "palette": {
+      "type": "array",
+      "minItems": 3,
+      "items": {
+        "type": "string",
+        "pattern": "^#[0-9A-Fa-f]{6}$"
+      }
+    },
+    "value_hierarchy": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "shape_language": {
+      "type": "string"
+    },
+    "lighting_language": {
+      "type": "string"
+    },
+    "material_language": {
+      "type": "string"
+    },
+    "identity_invariants": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "forbidden_traits": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "asset_rules": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "title": "Asset Rules",
+      "type": "object",
+      "required": [],
+      "properties": {
+        "transparent_sprites": {
+          "type": "string"
+        },
+        "environment": {
+          "type": "string"
+        },
+        "ui": {
+          "type": "string"
+        },
+        "vfx": {
+          "type": "string"
+        },
+        "animation": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": true
+    },
+    "review_criteria": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "style_mix_policy": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

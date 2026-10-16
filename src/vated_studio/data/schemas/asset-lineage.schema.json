@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Asset Lineage Record",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "asset_id",
+    "source_hashes",
+    "operations",
+    "output_hash",
+    "review_status"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "asset_id": {
+      "type": "string"
+    },
+    "source_hashes": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-f0-9]{64}$"
+      }
+    },
+    "operations": {
+      "type": "array",
+      "items": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "title": "Operation",
+        "type": "object",
+        "required": [
+          "name",
+          "parameters",
+          "tool_version"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "parameters": {
+            "type": "object"
+          },
+          "tool_version": {
+            "type": "string"
+          },
+          "started_at": {
+            "type": "string"
+          },
+          "duration_ms": {
+            "type": "number",
+            "minimum": 0
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "output_hash": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "model_record_id": {
+      "type": "string"
+    },
+    "workflow_hash": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "review_status": {
+      "enum": [
+        "candidate",
+        "technical_pass",
+        "agent_recommended",
+        "human_approved",
+        "rejected",
+        "blocked"
+      ]
+    },
+    "review_record_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  },
+  "additionalProperties": true
+}

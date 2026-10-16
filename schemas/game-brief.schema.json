@@ -1,0 +1,170 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Game Brief",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "project_id",
+    "title",
+    "genre",
+    "platforms",
+    "jam_profile",
+    "creative_thesis",
+    "core_loop",
+    "success_criteria",
+    "non_goals"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "project_id": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "genre": {
+      "type": "string"
+    },
+    "subgenres": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "platforms": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "enum": [
+          "web",
+          "windows",
+          "linux",
+          "macos",
+          "android",
+          "ios",
+          "console",
+          "other"
+        ]
+      }
+    },
+    "jam_profile": {
+      "enum": [
+        "24h",
+        "72h",
+        "14d",
+        "custom"
+      ]
+    },
+    "jam_rules": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "title": "Jam Rules",
+      "type": "object",
+      "required": [],
+      "properties": {
+        "theme": {
+          "type": "string"
+        },
+        "must_use_ai": {
+          "type": "boolean"
+        },
+        "prohibited_tools": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "submission_deadline": {
+          "type": "string"
+        },
+        "constraints": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "additionalProperties": true
+    },
+    "audience": {
+      "type": "string"
+    },
+    "player_fantasy": {
+      "type": "string"
+    },
+    "creative_thesis": {
+      "type": "string"
+    },
+    "design_pillars": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "core_loop": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "string"
+      }
+    },
+    "core_verbs": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "controls": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "success_criteria": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "non_goals": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "references": {
+      "type": "array",
+      "items": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "title": "Reference",
+        "type": "object",
+        "required": [],
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "why": {
+            "type": "string"
+          },
+          "license_notes": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": true
+}

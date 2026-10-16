@@ -1,0 +1,102 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Task Graph",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "project_id",
+    "tasks"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "project_id": {
+      "type": "string"
+    },
+    "tasks": {
+      "type": "array",
+      "items": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "title": "Task",
+        "type": "object",
+        "required": [
+          "id",
+          "title",
+          "estimate_minutes",
+          "priority",
+          "depends_on",
+          "status"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "estimate_minutes": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "measured_minutes": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "minimum": 1
+          },
+          "priority": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "depends_on": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "status": {
+            "enum": [
+              "backlog",
+              "ready",
+              "in_progress",
+              "blocked",
+              "done",
+              "deferred",
+              "cut"
+            ]
+          },
+          "mandatory": {
+            "type": "boolean"
+          },
+          "owner_role": {
+            "type": "string"
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "blocker": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "time_budget_minutes": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "reserve_minutes": {
+      "type": "integer",
+      "minimum": 0
+    }
+  },
+  "additionalProperties": true
+}

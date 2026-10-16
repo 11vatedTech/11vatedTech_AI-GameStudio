@@ -1,0 +1,129 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Asset Specification",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "asset_id",
+    "kind",
+    "intended_use",
+    "style_profile",
+    "target_dimensions",
+    "acceptance_criteria"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "asset_id": {
+      "type": "string"
+    },
+    "kind": {
+      "enum": [
+        "character",
+        "creature",
+        "prop",
+        "weapon",
+        "environment",
+        "background",
+        "tile",
+        "vfx",
+        "ui",
+        "texture",
+        "marketing",
+        "audio",
+        "other"
+      ]
+    },
+    "intended_use": {
+      "type": "string"
+    },
+    "style_profile": {
+      "type": "string"
+    },
+    "creative_brief": {
+      "type": "string"
+    },
+    "target_dimensions": {
+      "type": "array",
+      "prefixItems": [
+        {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 8192
+        },
+        {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 8192
+        }
+      ],
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "transparency": {
+      "enum": [
+        "required",
+        "optional",
+        "not_applicable"
+      ]
+    },
+    "framing": {
+      "type": "string"
+    },
+    "palette": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "identity_references": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "camera_constraints": {
+      "type": "string"
+    },
+    "model_workflow_preferences": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "negative_constraints": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "acceptance_criteria": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "license_constraints": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "budget_minutes": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "provenance_required": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "additionalProperties": true
+}

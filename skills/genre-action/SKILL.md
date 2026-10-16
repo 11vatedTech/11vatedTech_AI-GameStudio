@@ -1,0 +1,42 @@
+---
+name: genre-action
+description: Build responsive action games with readable threats and synchronized feedback.
+---
+# Action and Combat Games
+
+Summary: Build responsive action games with readable threats and synchronized feedback.
+Tags: genre,action,combat,arena
+
+## Mission
+Build responsive action games with readable threats and synchronized feedback. This is an operational production procedure, not a claim that a tool is installed or the task has already passed. Apply it at the depth appropriate to the project’s jam profile.
+
+## Required inputs
+- Project brief, target genre/style/platform, time budget, and explicit acceptance criteria.
+- Relevant approved project contracts and the current repository/source state.
+- Actual tool/model availability, constraints, and previous evidence.
+
+## Procedure
+1. Specify startup/active/recovery, input buffers, hit pause, invulnerability, damage, and recovery.
+2. Build one player action and one enemy pattern before expanding.
+3. Sync actual damage events with animation/VFX/audio; test simultaneous kills and state changes.
+
+## Acceptance criteria
+- Inputs have predictable consequences; attacks are readable; damage applies once; win/loss/restart works.
+
+## Failure modes and cautions
+- Cosmetic hit flashes without valid damage; unreadable overlap; untelegraphed unavoidable attacks.
+- Distinguish a successful command from a valid artifact, an integrated asset, an in-engine verified result, and a human-approved release.
+
+## Required evidence
+- Source inputs/references and configuration needed to understand the result.
+- Changed paths, exact commands, exit codes, logs and artifact hashes where relevant.
+- QA findings, rejected alternatives, unresolved defects and checks not run.
+
+## Handoff contract
+Return the changed files and exact output paths; include test/runtime status and a truthful limitations statement. Preserve the original inputs and frozen releases. Ask for human review only when the decision is subjective, legal, rights-related, or otherwise outside automation.
+
+## Reference starting points
+- https://docs.godotengine.org/en/stable/
+
+## Studio operating rule
+Use repeatable processes, project-scoped context, explicit configuration and evidence. Never claim artistic quality, legal clearance or human playtesting from a technical exit code.

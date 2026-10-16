@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Visual or Human Review Record",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "review_id",
+    "review_type",
+    "reviewer_type",
+    "subject_id",
+    "decision",
+    "notes",
+    "created_at"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "review_id": {
+      "type": "string"
+    },
+    "review_type": {
+      "enum": [
+        "art_direction",
+        "asset_candidate",
+        "animation",
+        "gameplay",
+        "accessibility",
+        "commercial_rights",
+        "cold_playtest",
+        "release"
+      ]
+    },
+    "reviewer_type": {
+      "enum": [
+        "human",
+        "agent",
+        "automated"
+      ]
+    },
+    "subject_id": {
+      "type": "string"
+    },
+    "decision": {
+      "enum": [
+        "approved",
+        "approved_with_notes",
+        "revise",
+        "rejected",
+        "blocked",
+        "not_reviewed"
+      ]
+    },
+    "rating": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 1,
+      "maximum": 5
+    },
+    "criteria_results": {
+      "type": "object"
+    },
+    "notes": {
+      "type": "string"
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "reviewer": {
+      "type": "string"
+    },
+    "created_at": {
+      "type": "string"
+    },
+    "human_gate": {
+      "type": "boolean"
+    }
+  },
+  "additionalProperties": true
+}

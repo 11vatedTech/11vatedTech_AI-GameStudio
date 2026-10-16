@@ -1,0 +1,105 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Production Project",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "project_id",
+    "title",
+    "engine",
+    "jam_profile",
+    "brief_path",
+    "art_bible_path",
+    "task_graph_path",
+    "current_stage",
+    "risk_register"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "project_id": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "engine": {
+      "type": "string"
+    },
+    "jam_profile": {
+      "enum": [
+        "24h",
+        "72h",
+        "14d",
+        "custom"
+      ]
+    },
+    "brief_path": {
+      "type": "string"
+    },
+    "art_bible_path": {
+      "type": "string"
+    },
+    "task_graph_path": {
+      "type": "string"
+    },
+    "current_stage": {
+      "type": "string"
+    },
+    "risk_register": {
+      "type": "array",
+      "items": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "title": "Risk",
+        "type": "object",
+        "required": [
+          "id",
+          "description",
+          "impact",
+          "mitigation",
+          "status"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "impact": {
+            "enum": [
+              "low",
+              "medium",
+              "high",
+              "critical"
+            ]
+          },
+          "mitigation": {
+            "type": "string"
+          },
+          "status": {
+            "enum": [
+              "open",
+              "mitigated",
+              "accepted",
+              "closed"
+            ]
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "non_goals": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "release_target": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

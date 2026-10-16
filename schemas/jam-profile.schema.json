@@ -1,0 +1,93 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Game Jam Profile",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "profile_id",
+    "hours",
+    "reserve_fraction",
+    "phases",
+    "minimum_release_gates",
+    "scope_cut_rules"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "profile_id": {
+      "enum": [
+        "24h",
+        "72h",
+        "14d",
+        "custom"
+      ]
+    },
+    "hours": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "reserve_fraction": {
+      "type": "number",
+      "minimum": 0.1,
+      "maximum": 0.4
+    },
+    "phases": {
+      "type": "array",
+      "items": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "title": "Phase",
+        "type": "object",
+        "required": [
+          "id",
+          "fraction",
+          "exit_condition"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "fraction": {
+            "type": "number",
+            "exclusiveMinimum": 0,
+            "maximum": 1
+          },
+          "exit_condition": {
+            "type": "string"
+          },
+          "deliverables": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "minimum_release_gates": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "scope_cut_rules": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "max_parallel_generations": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 8
+    },
+    "profile_notes": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

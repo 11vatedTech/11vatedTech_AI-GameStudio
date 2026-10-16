@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "11vatedtech-ai-game-studio"
+version = "0.4.0"
+description = "Local-first, agent-operated game-production operating system for AI-assisted game development."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "11vatedTech" }]
+keywords = ["game-development", "agentic-workflows", "godot", "comfyui", "game-jams", "technical-art"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Topic :: Games/Entertainment",
+]
+dependencies = []
+
+[project.optional-dependencies]
+vision = ["Pillow>=10.4,<13", "numpy>=1.26,<3"]
+validation = ["jsonschema>=4.22,<5"]
+server = []
+dev = ["pytest>=8.0,<10", "Pillow>=10.4,<13", "numpy>=1.26,<3", "jsonschema>=4.22,<5"]
+all = ["Pillow>=10.4,<13", "numpy>=1.26,<3", "jsonschema>=4.22,<5", "pytest>=8.0,<10"]
+
+[project.scripts]
+ags = "vated_studio.cli:main"
+ags-mcp = "vated_studio.mcp_server:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["vated_studio*"]
+
+[tool.setuptools.package-data]
+vated_studio = ["templates/**/*", "data/*.json", "data/schemas/*.schema.json", "data/skills/*/SKILL.md"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-ra"

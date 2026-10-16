@@ -1,0 +1,114 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Model and Tool License Record",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "record_id",
+    "name",
+    "upstream_url",
+    "code_license_status",
+    "weights_license_status",
+    "commercial_use",
+    "redistribution",
+    "review_status",
+    "verified_at"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "record_id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string"
+    },
+    "upstream_url": {
+      "type": "string",
+      "format": "uri"
+    },
+    "code_license_status": {
+      "enum": [
+        "verified",
+        "conditional",
+        "unclear",
+        "not_applicable",
+        "prohibited"
+      ]
+    },
+    "weights_license_status": {
+      "enum": [
+        "verified",
+        "conditional",
+        "unclear",
+        "not_applicable",
+        "prohibited"
+      ]
+    },
+    "commercial_use": {
+      "enum": [
+        "allowed_with_conditions",
+        "noncommercial_only",
+        "prohibited",
+        "unclear",
+        "not_applicable"
+      ]
+    },
+    "redistribution": {
+      "enum": [
+        "allowed_with_conditions",
+        "prohibited",
+        "unclear",
+        "not_applicable"
+      ]
+    },
+    "attribution_requirements": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "source_provenance": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "review_status": {
+      "enum": [
+        "verified",
+        "conditional",
+        "unclear",
+        "human_review_required",
+        "prohibited"
+      ]
+    },
+    "verified_at": {
+      "type": "string"
+    },
+    "reviewer": {
+      "type": "string"
+    },
+    "checksum": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{64}$"
+    },
+    "files": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}
