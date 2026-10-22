@@ -4,7 +4,7 @@
       "frame_count": 4,
       "frames": [
         {
-          "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\anim\\tempest-wyrm\\f0.png",
+          "path": "assets/anim/tempest-wyrm/f0.png",
           "size": [
             512,
             512
@@ -20,7 +20,7 @@
           "sha256": "7e8f0fe70f608f969bac993fee855665143bac6e478ae934758986b7038e419d"
         },
         {
-          "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\anim\\tempest-wyrm\\f1.png",
+          "path": "assets/anim/tempest-wyrm/f1.png",
           "size": [
             512,
             512
@@ -36,7 +36,7 @@
           "sha256": "b6fc00e52519de8b85d6828e7117779841e2af000b20b22a4fb0af1ca1f6f2dd"
         },
         {
-          "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\anim\\tempest-wyrm\\f2.png",
+          "path": "assets/anim/tempest-wyrm/f2.png",
           "size": [
             512,
             512
@@ -52,7 +52,7 @@
           "sha256": "e3a95e9043af3b35055760d865610613ae6914d098359131e7774119f24858e7"
         },
         {
-          "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\anim\\tempest-wyrm\\f3.png",
+          "path": "assets/anim/tempest-wyrm/f3.png",
           "size": [
             512,
             512
@@ -128,9 +128,9 @@
       "interpretation": "This report detects technical signals, not semantic identity or artistic motion quality. Inspect the animation at target playback speed and in-engine scale."
     },
     "build": {
-      "gif": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\builds\\anim\\tempest-wyrm_idle.gif",
-      "spritesheet": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\builds\\anim\\tempest-wyrm_idle_spritesheet.png",
-      "manifest": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\builds\\anim\\tempest-wyrm_idle_animation.json",
+      "gif": "builds/anim/tempest-wyrm_idle.gif",
+      "spritesheet": "builds/anim/tempest-wyrm_idle_spritesheet.png",
+      "manifest": "builds/anim/tempest-wyrm_idle_animation.json",
       "frame_count": 4,
       "frame_size": [
         516,
@@ -140,7 +140,7 @@
         "frame_count": 4,
         "frames": [
           {
-            "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\anim\\tempest-wyrm\\f0.png",
+            "path": "assets/anim/tempest-wyrm/f0.png",
             "size": [
               512,
               512
@@ -156,7 +156,7 @@
             "sha256": "7e8f0fe70f608f969bac993fee855665143bac6e478ae934758986b7038e419d"
           },
           {
-            "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\anim\\tempest-wyrm\\f1.png",
+            "path": "assets/anim/tempest-wyrm/f1.png",
             "size": [
               512,
               512
@@ -172,7 +172,7 @@
             "sha256": "b6fc00e52519de8b85d6828e7117779841e2af000b20b22a4fb0af1ca1f6f2dd"
           },
           {
-            "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\anim\\tempest-wyrm\\f2.png",
+            "path": "assets/anim/tempest-wyrm/f2.png",
             "size": [
               512,
               512
@@ -188,7 +188,7 @@
             "sha256": "e3a95e9043af3b35055760d865610613ae6914d098359131e7774119f24858e7"
           },
           {
-            "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\anim\\tempest-wyrm\\f3.png",
+            "path": "assets/anim/tempest-wyrm/f3.png",
             "size": [
               512,
               512
@@ -270,7 +270,7 @@
       "frame_count": 4,
       "frames": [
         {
-          "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\anim\\prismhart\\f0.png",
+          "path": "assets/anim/prismhart/f0.png",
           "size": [
             512,
             512
@@ -286,7 +286,7 @@
           "sha256": "fc6efbd2b272d6ac8ec7ac445ae13c3dbff6f0e32c4a68633c5d90bed35f730d"
         },
         {
-          "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\anim\\prismhart\\f1.png",
+          "path": "assets/anim/prismhart/f1.png",
           "size": [
             512,
             512
@@ -302,7 +302,7 @@
           "sha256": "2998c065509132a5a9980027fe2e6d0ceace637ae401216b3268806c8f41bb89"
         },
         {
-          "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\anim\\prismhart\\f2.png",
+          "path": "assets/anim/prismhart/f2.png",
           "size": [
             512,
             512
@@ -318,7 +318,7 @@
           "sha256": "993a1ad6c67cb4026617a15540c1ba3f8e4bcf20b0c254ead6fdbc210ab9e489"
         },
         {
-          "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\anim\\prismhart\\f3.png",
+          "path": "assets/anim/prismhart/f3.png",
           "size": [
             512,
             512
@@ -394,9 +394,9 @@
       "interpretation": "This report detects technical signals, not semantic identity or artistic motion quality. Inspect the animation at target playback speed and in-engine scale."
     },
     "build": {
-      "gif": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\builds\\anim\\prismhart_idle.gif",
-      "spritesheet": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\builds\\anim\\prismhart_idle_spritesheet.png",
-      "manifest": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\builds\\anim\\prismhart_idle_animation.json",
+      "gif": "builds/anim/prismhart_idle.gif",
+      "spritesheet": "builds/anim/prismhart_idle_spritesheet.png",
+      "manifest": "builds/anim/prismhart_idle_animation.json",
       "frame_count": 4,
       "frame_size": [
         509,
@@ -406,7 +406,7 @@
         "frame_count": 4,
         "frames": [
           {
-            "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\anim\\prismhart\\f0.png",
+            "path": "assets/anim/prismhart/f0.png",
             "size": [
               512,
               512
@@ -422,7 +422,7 @@
             "sha256": "fc6efbd2b272d6ac8ec7ac445ae13c3dbff6f0e32c4a68633c5d90bed35f730d"
           },
           {
-            "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\anim\\prismhart\\f1.png",
+            "path": "assets/anim/prismhart/f1.png",
             "size": [
               512,
               512
@@ -438,7 +438,7 @@
             "sha256": "2998c065509132a5a9980027fe2e6d0ceace637ae401216b3268806c8f41bb89"
           },
           {
-            "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\anim\\prismhart\\f2.png",
+            "path": "assets/anim/prismhart/f2.png",
             "size": [
               512,
               512
@@ -454,7 +454,7 @@
             "sha256": "993a1ad6c67cb4026617a15540c1ba3f8e4bcf20b0c254ead6fdbc210ab9e489"
           },
           {
-            "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\anim\\prismhart\\f3.png",
+            "path": "assets/anim/prismhart/f3.png",
             "size": [
               512,
               512
@@ -536,7 +536,7 @@
       "frame_count": 4,
       "frames": [
         {
-          "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\anim\\riftstalker\\f0.png",
+          "path": "assets/anim/riftstalker/f0.png",
           "size": [
             512,
             512
@@ -552,7 +552,7 @@
           "sha256": "5348ffcbd35f28a4323b43752476269a26d6467e0d179b3fd2dbd920fc493ee7"
         },
         {
-          "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\anim\\riftstalker\\f1.png",
+          "path": "assets/anim/riftstalker/f1.png",
           "size": [
             512,
             512
@@ -568,7 +568,7 @@
           "sha256": "94f30c7519090e2f75648e7e6f7d7fdf71ab415b63db5f4fcfe82995bd8720a7"
         },
         {
-          "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\anim\\riftstalker\\f2.png",
+          "path": "assets/anim/riftstalker/f2.png",
           "size": [
             512,
             512
@@ -584,7 +584,7 @@
           "sha256": "7e1dae15742535438e38c5c8a903f55b753ccf2c75067acb0966ac2d1afb844f"
         },
         {
-          "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\anim\\riftstalker\\f3.png",
+          "path": "assets/anim/riftstalker/f3.png",
           "size": [
             512,
             512
@@ -660,9 +660,9 @@
       "interpretation": "This report detects technical signals, not semantic identity or artistic motion quality. Inspect the animation at target playback speed and in-engine scale."
     },
     "build": {
-      "gif": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\builds\\anim\\riftstalker_idle.gif",
-      "spritesheet": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\builds\\anim\\riftstalker_idle_spritesheet.png",
-      "manifest": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\builds\\anim\\riftstalker_idle_animation.json",
+      "gif": "builds/anim/riftstalker_idle.gif",
+      "spritesheet": "builds/anim/riftstalker_idle_spritesheet.png",
+      "manifest": "builds/anim/riftstalker_idle_animation.json",
       "frame_count": 4,
       "frame_size": [
         515,
@@ -672,7 +672,7 @@
         "frame_count": 4,
         "frames": [
           {
-            "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\anim\\riftstalker\\f0.png",
+            "path": "assets/anim/riftstalker/f0.png",
             "size": [
               512,
               512
@@ -688,7 +688,7 @@
             "sha256": "5348ffcbd35f28a4323b43752476269a26d6467e0d179b3fd2dbd920fc493ee7"
           },
           {
-            "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\anim\\riftstalker\\f1.png",
+            "path": "assets/anim/riftstalker/f1.png",
             "size": [
               512,
               512
@@ -704,7 +704,7 @@
             "sha256": "94f30c7519090e2f75648e7e6f7d7fdf71ab415b63db5f4fcfe82995bd8720a7"
           },
           {
-            "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\anim\\riftstalker\\f2.png",
+            "path": "assets/anim/riftstalker/f2.png",
             "size": [
               512,
               512
@@ -720,7 +720,7 @@
             "sha256": "7e1dae15742535438e38c5c8a903f55b753ccf2c75067acb0966ac2d1afb844f"
           },
           {
-            "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\anim\\riftstalker\\f3.png",
+            "path": "assets/anim/riftstalker/f3.png",
             "size": [
               512,
               512
@@ -802,7 +802,7 @@
       "frame_count": 4,
       "frames": [
         {
-          "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\anim\\solarius\\f0.png",
+          "path": "assets/anim/solarius/f0.png",
           "size": [
             512,
             512
@@ -818,7 +818,7 @@
           "sha256": "e55199584c71724ab48027463e3bc8efdc077f575839f569d5b6c016339a21f6"
         },
         {
-          "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\anim\\solarius\\f1.png",
+          "path": "assets/anim/solarius/f1.png",
           "size": [
             512,
             512
@@ -834,7 +834,7 @@
           "sha256": "6e2815eac86ac1e3c534dfa861097d479c8af5a22d98f3e874574cf2e5cfa0f0"
         },
         {
-          "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\anim\\solarius\\f2.png",
+          "path": "assets/anim/solarius/f2.png",
           "size": [
             512,
             512
@@ -850,7 +850,7 @@
           "sha256": "0d3d5617283eba742739b06ef8062709fb99998239a277f092f6d640900b4697"
         },
         {
-          "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\anim\\solarius\\f3.png",
+          "path": "assets/anim/solarius/f3.png",
           "size": [
             512,
             512
@@ -926,9 +926,9 @@
       "interpretation": "This report detects technical signals, not semantic identity or artistic motion quality. Inspect the animation at target playback speed and in-engine scale."
     },
     "build": {
-      "gif": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\builds\\anim\\solarius_idle.gif",
-      "spritesheet": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\builds\\anim\\solarius_idle_spritesheet.png",
-      "manifest": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\builds\\anim\\solarius_idle_animation.json",
+      "gif": "builds/anim/solarius_idle.gif",
+      "spritesheet": "builds/anim/solarius_idle_spritesheet.png",
+      "manifest": "builds/anim/solarius_idle_animation.json",
       "frame_count": 4,
       "frame_size": [
         516,
@@ -938,7 +938,7 @@
         "frame_count": 4,
         "frames": [
           {
-            "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\anim\\solarius\\f0.png",
+            "path": "assets/anim/solarius/f0.png",
             "size": [
               512,
               512
@@ -954,7 +954,7 @@
             "sha256": "e55199584c71724ab48027463e3bc8efdc077f575839f569d5b6c016339a21f6"
           },
           {
-            "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\anim\\solarius\\f1.png",
+            "path": "assets/anim/solarius/f1.png",
             "size": [
               512,
               512
@@ -970,7 +970,7 @@
             "sha256": "6e2815eac86ac1e3c534dfa861097d479c8af5a22d98f3e874574cf2e5cfa0f0"
           },
           {
-            "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\anim\\solarius\\f2.png",
+            "path": "assets/anim/solarius/f2.png",
             "size": [
               512,
               512
@@ -986,7 +986,7 @@
             "sha256": "0d3d5617283eba742739b06ef8062709fb99998239a277f092f6d640900b4697"
           },
           {
-            "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\anim\\solarius\\f3.png",
+            "path": "assets/anim/solarius/f3.png",
             "size": [
               512,
               512

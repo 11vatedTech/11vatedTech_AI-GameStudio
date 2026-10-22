@@ -4,7 +4,7 @@ OpenGL API 3.3.0 NVIDIA 610.78 - Compatibility - Using Device: NVIDIA - NVIDIA G
 Movie Maker mode enabled, recording movie in 1024Ã—1024 @ 30 FPS...
 TORCH_VISUAL_PROOF_REVISION_LOADED path=res://comfyui-output/revision-02/01_candidate_00001_.png size=(1024, 1024)
 --------------------------------------------------------------------------------
-Done recording movie at path: C:/Users/11vat/OneDrive/Desktop/AI-GameStudio_by_11vatedTech/11vatedtech-ai-game-studio-v0.4.0/projects/Torch_Dominions-Game-jam-5/visual-proof/godot-runtime-revision-02.png
+Done recording movie at path: projects/Torch_Dominions-Game-jam-5/visual-proof/godot-runtime-revision-02.png
 2 frames at 30 FPS (movie length: 00:00:00:02), recorded in 00:00:04 (25% of real-time speed).
 CPU render time: 0.00 seconds (average: 1.25 ms/frame)
 GPU render time: 0.00 seconds (average: 0.00 ms/frame)
