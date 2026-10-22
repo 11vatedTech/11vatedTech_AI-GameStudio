@@ -13,3 +13,9 @@
 - **Licensing:** registers are evidence tools, not legal advice; check exact weights/assets/fonts/data and redistribution rights.
 - **Public distribution:** model weights, local state, `.env`, virtual environments and repetitive game exports are excluded by default.
 - **Historical evidence:** archive results are not test results for this clean-room package. Current evidence is documented separately.
+- **Job queue scope:** `vated_studio.jobs` is a library. The CLI, HTTP API, MCP tools and ComfyUI generation still execute synchronously through `StudioService`; they are not yet enqueued.
+- **Synchronous run recovery:** a synchronous command that crashes mid-execution stays in status `running`. Only queue-managed jobs are reconciled.
+- **Lease timing:** a worker that stalls longer than its lease without heartbeating can have its job reclaimed while it is still running. Heartbeat well inside `lease_seconds`.
+- **Cancellation is cooperative:** the queue does not interrupt an in-flight ComfyUI prompt. A job that completes after a cancel request is recorded as succeeded.
+- **Connection handling:** `StudioStore` schema initialization uses `with connect()` without closing the connection, which emits `ResourceWarning` under `-W error`. Pre-existing; not changed in this pass.
+

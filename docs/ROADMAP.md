@@ -11,7 +11,7 @@
 - Structured JSON Schema contracts, 87 specialist skills, agent-first production contract, animation execution runbook, research register and known-limitations guide.
 
 ## Highest-value next steps based on evidence
-1. Improve generation queue job persistence, cancellation, retry and resume.
+1. Generation queue — **partially implemented** (`vated_studio.jobs`): durable queued/running/succeeded/failed/cancelled state in SQLite, lease-based crash recovery with fencing tokens, bounded retry with backoff, cooperative cancellation, idempotency keys, one-at-a-time `gpu` resource, and progress records. Still open: route `ags` CLI, HTTP and ComfyUI generation through the queue; resume of an in-flight ComfyUI prompt; measured GPU occupancy.
 2. Add a reference-identity review system with accepted/rejected candidate decisions and explicit human ratings.
 3. Prototype Blender-to-sprite production against reference-guided frame workflows on a common workload.
 4. Keep host-level Freebuff/Claude/MCP integration coverage current as connector versions change.
