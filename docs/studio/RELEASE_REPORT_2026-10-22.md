@@ -37,6 +37,8 @@ Corrections made during consolidation (cause first, then the change):
 | Capability register could not describe the new tools. | Four capabilities added in `capabilities.py` and the snapshot regenerated; `docs/capability-register.json` again equals the runtime registry and validates against its schema. |
 | Generated exports, duplicate ComfyUI output and runtime copies were untracked but publishable. | `.gitignore` now excludes `builds/`, `**/.state-*/`, `*.zip`, skill-index backups and the byte-identical ComfyUI `generation-output/` mirror. |
 | A local absolute host path appeared in a published verification doc. | Replaced with `%USERPROFILE%/.agents/mcp.json`; `.state/` evidence links are now described as local-only instead of dead links. |
+| Seven animation-sequence tests read a manifest from `builds/anim/`, which is Git-ignored generated output. The local suite passed only because those exports still existed on this machine; CI failed with `FileNotFoundError`. | The manifest is now a tracked fixture (`tests/fixtures/anim/tempest-wyrm_idle_animation.json`) pointing at published assets, and the absolute-path case creates its own temporary outputs. A clean `git archive` export now runs the whole suite. |
+| Three Godot tests patched `os.name` to `"nt"`, which makes `pathlib` instantiate `WindowsPath` on POSIX. On the Linux 3.11 job this raised `NotImplementedError` inside `locate()`, and pytest could not format the failure (`INTERNALERROR: cannot instantiate 'WindowsPath'`). | Binary discovery asks a module-level `_is_windows()` seam that tests patch instead; `os.name` is never mutated. Windows behaviour is unchanged. |
 
 ## 4. Validation results
 
@@ -91,7 +93,23 @@ Interpretation, stated plainly: this proves the Blender integration runs, preser
 
 ## 8. Publication
 
-Strategy: publish from a release branch and merge with a non-destructive merge commit; never force-push. Exact SHAs, branch, remote verification and CI outcome are recorded in the final section below once the push and CI have actually completed.
+Strategy: publish from a release branch and merge with a non-destructive merge commit; never force-push.
+
+| Item | Value |
+| --- | --- |
+| Previous `main` | `0da7804` |
+| Release branch | `release/v0.5.0-creative-upgrade` |
+| Implementation commit | `ea58b48` — consolidate agent-first creative production upgrade for v0.5.0 |
+| Follow-up commit | `d0e9f12` — fix test fixtures so the suite runs from a clean checkout |
+| Follow-up commit | `14296d0` — stop tests from mutating `os.name` to fake Windows |
+| Pull request | [#1](https://github.com/11vatedTech/11vatedTech_AI-GameStudio/pull/1), merged |
+| Merge commit / new `main` | `048ca95` |
+| Remote verification | `git ls-remote --heads origin` reports `main` at `048ca95`; the GitHub contents API returns `tools/creative_mcp_server.py` and this report on the merged tree |
+| CI | `Studio Core CI` green on Python 3.11, 3.12 and 3.13 for both the push and pull-request runs: **118 passed, 1 skipped** per version, plus the creative-MCP stdio smoke test and wheel package-data check |
+
+First CI attempt failed for the fixture and `os.name` reasons recorded in section 3; the local Windows suite had not exposed either because the ignored exports existed locally and because the symlink tests that CI can run are skipped on this machine. Both causes were fixed, not skipped, and the second attempt is the one that passed.
+
+The local branch `work/unwriters-almanac` was set to track `origin/release/v0.5.0-creative-upgrade` when it was first pushed with `-u`; treat `origin/main` as the release of record.
 
 ## 9. Reproduction from a clean checkout
 
