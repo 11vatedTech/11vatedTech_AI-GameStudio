@@ -102,8 +102,9 @@ Strategy: publish from a release branch and merge with a non-destructive merge c
 | Implementation commit | `ea58b48` — consolidate agent-first creative production upgrade for v0.5.0 |
 | Follow-up commit | `d0e9f12` — fix test fixtures so the suite runs from a clean checkout |
 | Follow-up commit | `14296d0` — stop tests from mutating `os.name` to fake Windows |
-| Pull request | [#1](https://github.com/11vatedTech/11vatedTech_AI-GameStudio/pull/1), merged |
-| Merge commit / new `main` | `048ca95` |
+| Pull requests | [#1](https://github.com/11vatedTech/11vatedTech_AI-GameStudio/pull/1) and [#2](https://github.com/11vatedTech/11vatedTech_AI-GameStudio/pull/2), both merged |
+| Release merge commit | `048ca95` (PR #1) |
+| Documentation merge | `10991b4` (PR #2), then `main` head for this report |
 | Remote verification | `git ls-remote --heads origin` reports `main` at `048ca95`; the GitHub contents API returns `tools/creative_mcp_server.py` and this report on the merged tree |
 | CI | `Studio Core CI` green on Python 3.11, 3.12 and 3.13 for both the push and pull-request runs: **118 passed, 1 skipped** per version, plus the creative-MCP stdio smoke test and wheel package-data check |
 
