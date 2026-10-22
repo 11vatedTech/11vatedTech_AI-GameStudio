@@ -12,6 +12,15 @@ from ..errors import StudioError
 from ..paths import ensure_inside
 
 
+def _is_windows() -> bool:
+    """Platform seam so tests never mutate the global os.name.
+
+    Monkeypatching os.name makes pathlib instantiate WindowsPath on POSIX,
+    which raises NotImplementedError and hides the real assertion.
+    """
+    return os.name == "nt"
+
+
 class GodotAdapter:
     def __init__(self, executable: str = "godot", timeout: float = 180):
         self.executable = executable
@@ -34,7 +43,7 @@ class GodotAdapter:
                 return resolved
         # The Studio's Windows developer layout bundles Godot outside PATH.
         # Keep this fallback deterministic; explicit config and PATH take priority.
-        if os.name == "nt":
+        if _is_windows():
             bundled = Path.home() / "tools" / "ai-game-studio" / "godot" / "godot_console.exe"
             if bundled.is_file():
                 return str(bundled.resolve())
