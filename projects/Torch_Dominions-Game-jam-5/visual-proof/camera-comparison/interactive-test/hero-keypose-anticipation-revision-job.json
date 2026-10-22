@@ -1,0 +1,194 @@
+{
+  "prompt_id": "4f63b2aa-83e9-42cd-8698-20be40f757c5",
+  "workflow": {
+    "1": {
+      "class_type": "UNETLoader",
+      "inputs": {
+        "unet_name": "flux-2-klein-4b-fp8.safetensors",
+        "weight_dtype": "fp8_e4m3fn"
+      }
+    },
+    "2": {
+      "class_type": "CLIPLoader",
+      "inputs": {
+        "clip_name": "qwen_3_4b.safetensors",
+        "type": "flux2"
+      }
+    },
+    "3": {
+      "class_type": "VAELoader",
+      "inputs": {
+        "vae_name": "flux2-vae.safetensors"
+      }
+    },
+    "4": {
+      "class_type": "CLIPTextEncode",
+      "inputs": {
+        "clip": [
+          "2",
+          0
+        ],
+        "text": "Same exact female Torch Dominions wayfarer, exact same face, auburn ponytail, torn asymmetric teal mantle, charcoal armor, bronze fasteners, crossed leather belts and one violet glass lantern staff in the RIGHT hand, from the attached reference. ONE FULL-BODY HERO IN A BACK-THREE-QUARTER VIEW, facing and looking LEFT toward the viewer's left. Strong distinct sweeping TORCH ATTACK ANTICIPATION: compress torso forward and low, both knees deeply bent, hips loaded far back, shoulder winding toward RIGHT and RIGHT elbow pulled behind her waist. Her right fist holds the staff midway along haft, with the lantern cage clearly connected only to one staff end. Staff lies close along her right side, oriented vertically or diagonally upward behind the shoulder, not across the chest, not over head, no cross-shaped prop. Left arm extends forward for balance. Rear boot planted, lead boot braced, cape trails to right. Preserve head and boots entirely inside frame, neutral cool-gray backdrop, established painterly anime game-art style, dramatic readable silhouette. Exactly one person and one continuous single-ended lantern staff; no spear, no second weapon, no duplicate lantern, no floating/detached pieces, no collage, no text."
+      }
+    },
+    "5": {
+      "class_type": "CLIPTextEncode",
+      "inputs": {
+        "clip": [
+          "2",
+          0
+        ],
+        "text": ""
+      }
+    },
+    "6": {
+      "class_type": "ConditioningZeroOut",
+      "inputs": {
+        "conditioning": [
+          "5",
+          0
+        ]
+      }
+    },
+    "7": {
+      "class_type": "CFGGuider",
+      "inputs": {
+        "model": [
+          "1",
+          0
+        ],
+        "positive": [
+          "17",
+          0
+        ],
+        "negative": [
+          "18",
+          0
+        ],
+        "cfg": 1.0
+      }
+    },
+    "8": {
+      "class_type": "KSamplerSelect",
+      "inputs": {
+        "sampler_name": "euler"
+      }
+    },
+    "9": {
+      "class_type": "Flux2Scheduler",
+      "inputs": {
+        "steps": 4,
+        "width": 1024,
+        "height": 1024
+      }
+    },
+    "10": {
+      "class_type": "RandomNoise",
+      "inputs": {
+        "noise_seed": 7183432
+      }
+    },
+    "11": {
+      "class_type": "EmptyFlux2LatentImage",
+      "inputs": {
+        "width": 1024,
+        "height": 1024,
+        "batch_size": 1
+      }
+    },
+    "12": {
+      "class_type": "SamplerCustomAdvanced",
+      "inputs": {
+        "noise": [
+          "10",
+          0
+        ],
+        "guider": [
+          "7",
+          0
+        ],
+        "sampler": [
+          "8",
+          0
+        ],
+        "sigmas": [
+          "9",
+          0
+        ],
+        "latent_image": [
+          "11",
+          0
+        ]
+      }
+    },
+    "13": {
+      "class_type": "VAEDecode",
+      "inputs": {
+        "samples": [
+          "12",
+          0
+        ],
+        "vae": [
+          "3",
+          0
+        ]
+      }
+    },
+    "14": {
+      "class_type": "SaveImage",
+      "inputs": {
+        "filename_prefix": "torch-dominions/hero-anticipation-key-revision",
+        "images": [
+          "13",
+          0
+        ]
+      }
+    },
+    "15": {
+      "class_type": "LoadImage",
+      "inputs": {
+        "image": "torch-hero-identity-reference.png"
+      }
+    },
+    "16": {
+      "class_type": "VAEEncode",
+      "inputs": {
+        "pixels": [
+          "15",
+          0
+        ],
+        "vae": [
+          "3",
+          0
+        ]
+      }
+    },
+    "17": {
+      "class_type": "ReferenceLatent",
+      "inputs": {
+        "conditioning": [
+          "4",
+          0
+        ],
+        "latent": [
+          "16",
+          0
+        ]
+      }
+    },
+    "18": {
+      "class_type": "ReferenceLatent",
+      "inputs": {
+        "conditioning": [
+          "6",
+          0
+        ],
+        "latent": [
+          "16",
+          0
+        ]
+      }
+    }
+  },
+  "seed": 7183432
+}

@@ -1,0 +1,51 @@
+ERROR: Failed to open log file for writing: projects/Torch_Dominions-Game-jam-5/visual-proof/camera-comparison/interactive-test/animation-final-side.log
+   at: rotate_file (core/io/logger.cpp:169)
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 610.78 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 5070 Ti Laptop GPU
+
+SCRIPT ERROR: Parse Error: Function "_draw_actor_labels()" not found in base self.
+   at: GDScript::reload (res://benchmark_world.gd:70)
+   GDScript backtrace (most recent call first):
+       [0] _build_panels (res://benchmark.gd:94)
+       [1] _ready (res://benchmark.gd:62)
+SCRIPT ERROR: Parse Error: Identifier "dodge_timer" not declared in the current scope.
+   at: GDScript::reload (res://benchmark_world.gd:188)
+   GDScript backtrace (most recent call first):
+       [0] _build_panels (res://benchmark.gd:94)
+       [1] _ready (res://benchmark.gd:62)
+SCRIPT ERROR: Parse Error: Identifier "sweep_origin" not declared in the current scope.
+   at: GDScript::reload (res://benchmark_world.gd:274)
+   GDScript backtrace (most recent call first):
+       [0] _build_panels (res://benchmark.gd:94)
+       [1] _ready (res://benchmark.gd:62)
+SCRIPT ERROR: Parse Error: Identifier "sweep_origin" not declared in the current scope.
+   at: GDScript::reload (res://benchmark_world.gd:274)
+   GDScript backtrace (most recent call first):
+       [0] _build_panels (res://benchmark.gd:94)
+       [1] _ready (res://benchmark.gd:62)
+SCRIPT ERROR: Parse Error: Identifier "attack_hit_feedback" not declared in the current scope.
+   at: GDScript::reload (res://benchmark_world.gd:281)
+   GDScript backtrace (most recent call first):
+       [0] _build_panels (res://benchmark.gd:94)
+       [1] _ready (res://benchmark.gd:62)
+SCRIPT ERROR: Parse Error: Identifier "attack_hit_feedback" not declared in the current scope.
+   at: GDScript::reload (res://benchmark_world.gd:283)
+   GDScript backtrace (most recent call first):
+       [0] _build_panels (res://benchmark.gd:94)
+       [1] _ready (res://benchmark.gd:62)
+SCRIPT ERROR: Parse Error: Identifier "dodge_timer" not declared in the current scope.
+   at: GDScript::reload (res://benchmark_world.gd:293)
+   GDScript backtrace (most recent call first):
+       [0] _build_panels (res://benchmark.gd:94)
+       [1] _ready (res://benchmark.gd:62)
+ERROR: Failed to load script "res://benchmark_world.gd" with error "Parse error".
+   at: load (modules/gdscript/gdscript_resource_format.cpp:46)
+   GDScript backtrace (most recent call first):
+       [0] _build_panels (res://benchmark.gd:94)
+       [1] _ready (res://benchmark.gd:62)
+BENCHMARK_TEST_START mode=side
+BENCHMARK_READY hero=res://hero-cutout-candidate.png sha256=32644a536e278461ad4dc13ec7e2a7cdd49d3389708671a13128e76fc8a344e5 paired_views=true
+BENCHMARK_CAPTURE path=res://captures/side-initial.png
+BENCHMARK_CAPTURE path=res://captures/side-haze-active.png
+BENCHMARK_TEST_RESULT {"attack_hits":1,"dodges":1,"enemy_health":1,"enemy_hits_received":0,"enemy_strikes":2,"haze_casts":1,"haze_zone_ticks":1,"hero_health":3,"mode":"side","panel_size":"(684.0, 395.0)","passed":true,"scenario_events":["torch_attack_started","torch_attack_hit_enemy","haze_cast_ground_zone_started","dodge_started_invulnerable","haze_zone_enemy_damage_tick","hero_invulnerable_during_strike"],"shared_state":true,"source_hero_sha256":"32644a536e278461ad4dc13ec7e2a7cdd49d3389708671a13128e76fc8a344e5","world_rect":"[P: (0.0, 0.0), S: (900.0, 520.0)]"}
+BENCHMARK_CAPTURE path=res://captures/side-final.png

@@ -1,0 +1,42 @@
+{
+  "product_intent": "Build the playable vertical slice of The Prismatic Creature Battler: a living holographic creature card collection and 6v6 Refractive Resonance auto-battler.",
+  "audience": "Tactical auto-battler and collectible card players who want deep synergy engineering and museum-grade living foil cards without pay-to-win distortion.",
+  "emotional_objective": "Wonder when tilting a living prismatic card in the exhibition, intellectual mastery when wiring a 3-step Refractive Resonance chain, and kinetic awe when cards materialize onto the dimensional sanctuary arena and unleash a Prism Gauge Convergence.",
+  "creative_thesis": "Every creature is a living collectible with multi-layer parallax and masked diffraction foil; every team is a causal Refractive Resonance circuit where marks, wards, and phase strikes chain across units; and every battle materializes cards onto a dimensional 3D-perspective sanctuary where player-engineered synergies ignite the Prism Gauge.",
+  "anti_generic_risk": [
+    "Avoid washing an unmasked rainbow gradient over the whole card and calling it holographic.",
+    "Avoid disconnected unit abilities that fire independently without cross-creature causal chains.",
+    "Avoid flat 2D dashboard grids during battle; cards must materialize onto a dimensional sanctuary floor with clear frontline/backline depth."
+  ],
+  "style_world_dna": {
+    "world": "The Prismatic Sanctuary — an obsidian and celestial-gold reliquary where elemental and astral creatures are preserved inside refractive crystal matrices.",
+    "palette": ["#090B14", "#121829", "#38E5FF", "#9D5CFF", "#F5C451", "#FF4D6D", "#2CEAA3", "#F2F6FF"],
+    "foil_materials": [
+      "Prismatic Spectrum (iridescent micro-hex rainbow diffraction on scales and crystal wings)",
+      "Phantom Foil (near-black obsidian chrome with oil-slick violet/cyan highlights for void and eclipse creatures)",
+      "Relic Foil (embossed antique gold/platinum filigree with illuminated runes for ancient guardians)"
+    ],
+    "camera": "Interactive 3D-tilt card inspection in Collection/Prep; 32-degree angled dimensional tabletop sanctuary in Battle."
+  },
+  "reference_principles": [
+    "From Founder Reference 1-3 (Crystal Dragon, Hex Diffraction Scales, Ryu Jade Spirit): Creature artwork is the centerpiece; foil diffraction is masked to scales, wings, and frame borders while keeping typography plates crisp and dark.",
+    "From Founder Reference 4-5 & 8 (Prismatic Spectrum, Phantom Foil, Relic Foil): Three distinct material shaders rather than a single generic rainbow overlay.",
+    "From Founder Reference 6 (Tempest Wyrm, Prismhart, Riftstalker): Causal 3-unit Refractive Resonance chain (Voltbrand -> Refractive Ward -> Phase Rend)."
+  ],
+  "signature_moments": [
+    "Tilting a creature card in the Collection Studio and watching the micro-hex Prismatic Spectrum, dark Phantom Chrome, or embossed Relic Gold shift across its wings and border while veins and eyes pulse.",
+    "Watching Tempest Wyrm apply Voltbrand to an enemy frontline, immediately triggering adjacent Prismhart's Refractive Ward shield and opening a Void Rift for Riftstalker to Phase Rend the marked target.",
+    "Filling the shared Prism Gauge to 100% through Resonance reactions and unleashing an archetype-specific Convergence wave across the dimensional arena."
+  ],
+  "medium_candidates": [
+    "ComfyUI FLUX.2 Klein 4B Distilled FP8 for original 1024x1024 painterly creature portraits and sanctuary environment art",
+    "Deterministic Studio Vision Pipeline for background extraction, trimming, contact sheets, sprite atlases, and breathing/combat animation sequences",
+    "Godot 4.7.2 + HTML5 Canvas2D/WebGL shader-driven runtime for real-time masked foil diffraction, 3D card tilt parallax, and 6v6 dimensional arena combat"
+  ],
+  "resource_strategy": "All 8 Founder-supplied images are cataloged as REFERENCE_ONLY_NOT_SHIPPED. All shipped creature portraits, spritesheets, atlases, and arena backgrounds are generated locally via FLUX.2 Klein 4B (Apache-2.0) and procedurally/shader-rendered.",
+  "evidence_plan": [
+    "Schema validation for game-brief, art-bible, task-graph, production-project, asset-manifest, model-license, qa-report, review-record, and release-manifest",
+    "Contact sheets and animation audits for all 8 generated creatures",
+    "Godot 4.7.2 headless validation and Web export + live Chromium browser preview, interactive playtest verification, and captured screenshots"
+  ]
+}

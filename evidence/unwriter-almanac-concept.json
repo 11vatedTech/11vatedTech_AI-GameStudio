@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "product_intent": "A browser-playable illustrated puzzle adventure where the player edits the ink rules of a living book page.",
+  "audience": "Players who enjoy compact, readable environmental puzzles and visually authored worlds.",
+  "emotional_objective": "Make each solution feel like a small act of authorship: the world bends because the player understood its drawing.",
+  "creative_thesis": "A mischievous ink creature traverses a living book by drawing one continuous line; every stroke becomes a physical law that redirects gravity, scenery, and the character's path.",
+  "anti_generic_risk": "A generic faux-antique storybook or black-and-white doodle aesthetic would make the mechanic feel like a tutorial sketch. The page itself must be an active material system, and the ink-creature's expressive motion must carry the world’s personality.",
+  "style_world_dna": {
+    "working_title": "The Unwriter's Almanac",
+    "medium": "Browser-first 2D canvas game; authored, layered vector/paint-like page illustrations with a small reviewed local-generated concept-art proof set if feasible.",
+    "page": "Cool ivory rag paper with deckled geometry, sparse registration marks, page seams and selective washes; avoid sepia parchment clichés.",
+    "structural_ink": "Blue-black carved contours, broken hatching, deliberate broad-to-hairline stroke hierarchy; the player-authored stroke alone carries a restrained vermilion accent before settling into the page ink.",
+    "living_ink": "A single compact, original ink-being with an asymmetric droplet silhouette, two bright negative-space eyes, a capillary tail, and a small vermilion seed. It deforms through authored anticipation, stretch, squash, adhesion, recoil and settle poses; no model-generated sprite sheet is presumed coherent.",
+    "world_logic": "Solid surfaces correspond to drawn ridges and closed linework. A single continuous player stroke snaps to the page-safe region, then becomes a gravity rail: its tangent redirects local ink/light carriers and forms walkable or looped traversal. Stroke edits replace or erase it and visibly redraw the page.",
+    "composition": "One theatrical page at a time, broad outer margins, foreground paper fibers, middle-plane puzzle geometry, distant pale wash. Gameplay silhouettes and stroke endpoints stay unobstructed.",
+    "signature_moment": "The player bends one vermilion stroke into a loop; a tiny airborne pigment bead follows the new curve, the ink-being clings to its underside, then flips through the loop as the page hatches itself into a new horizon.",
+    "palette": ["#F1E7CF", "#182A35", "#688A87", "#D96C4D", "#E7B957", "#FAF6E9"],
+    "type_and_ui": "Quiet editorial page folios and short marginalia in a locally available system serif/mono pair; labels appear on paper tabs, not floating game HUD cards.",
+    "forbidden": ["generic coffee-stained parchment", "copied manuscript borders or named-artist mark-making", "neon cyberpunk glow", "procedural doodles used in place of authored silhouettes", "unreadable decorative handwriting", "AI-generated frames treated as animation without playback review"]
+  },
+  "reference_principles": [
+    {
+      "source": "https://www.vam.ac.uk/articles/what-is-print",
+      "principle": "Relief printing makes positive and negative shapes legible through the raised ink-bearing ridge; translate this into solid stroke/platform readability.",
+      "adaptation_boundary": "Use the general mechanics of carved contrast, not any specific print composition or maker's style."
+    },
+    {
+      "source": "https://www.getty.edu/art/exhibitions/bestiary/inner.html",
+      "principle": "Illustrated manuscript figures use iconic silhouettes and staged color rather than strict naturalism; use silhouette-first creature identity.",
+      "adaptation_boundary": "Invent the creature anatomy, page composition, and symbols; do not reuse historical imagery or borders."
+    },
+    {
+      "source": "https://harvardartmuseums.org/article/it-s-a-wash",
+      "principle": "Ink and paper respond differently to moisture and treatment; use distinct crisp structural marks versus diffuse fragile washes as material cues.",
+      "adaptation_boundary": "Translate the broad material insight into original gameplay feedback without imitating any artwork."
+    }
+  ],
+  "signature_moments": [
+    "The ink-being arrives as a blot with a single curious eye, unfolds a capillary tail to inspect a dangling pigment bead, then springs toward it.",
+    "A player stroke catches a falling bead and changes its direction; the being latches to the stroke and traverses it as newly drawn terrain.",
+    "Solving the page causes a vermilion line to drain into the folio gutter while the formerly impossible scene settles into a quiet print."
+  ],
+  "medium_candidates": [
+    "Authored Canvas/vector rendering for stable small-size shape control, deterministic animation, and first-party browser delivery.",
+    "One sequential local ComfyUI/Klein image generation for mood/concept exploration only, pending exact model-license verification, actual output inspection, and spare VRAM check.",
+    "Authored pose-based animation as the initial identity-safe path; consider frame assembly only for independently reviewed, semantically consistent frames."
+  ],
+  "resource_strategy": {
+    "runtime_assets": "Generate the first slice’s environmental geometry and character poses in code or hand-authored vectors; do not ship unreviewed model images.",
+    "concept_assets": "Optionally render at most three small 512-square concept boards sequentially, only if GPU headroom supports them; preserve raw candidates and prompts.",
+    "model_rights": "Candidate model files in local ComfyUI are identified but their exact license files and source checksums still need verification. No generated output is approved for shipping or commercial use yet.",
+    "references": "Use public museum pages as principle research only; no source images included as runtime assets.",
+    "license_and_provenance": "Track provider workflow, checkpoint/encoder/VAE identity and hashes if available, prompt, seed, settings, raw/output hashes, review decision, processing steps, and runtime-versus-reference-only state."
+  },
+  "evidence_plan": {
+    "first_visible_artifact": "A browser moodboard comparing three original art grammars for the same character-and-puzzle moment; inspection at desktop and narrow viewport.",
+    "implementation_gate": "No broad implementation until the Founder reviews the written design spec. If approved, build start/play/solve/fail/restart in one short authored page.",
+    "animation": "Inspect actual running idle, draw anticipation/contact/recoil, cling-traverse, fall/land, turn, and solve pose motion at playback speed and gameplay scale; separate agent inspection from human approval.",
+    "runtime": "Real local browser interaction, keyboard/pointer operation, reset/recovery, visible completion, console/network inspection, and a seeded simulation path.",
+    "rights": "Open gate until the exact models and any optional generated concepts have reviewed terms and shipping status."
+  }
+}

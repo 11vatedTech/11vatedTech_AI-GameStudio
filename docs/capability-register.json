@@ -2,6 +2,26 @@
   "schema_version": "1.0",
   "capabilities": [
     {
+      "id": "animation-action-contracts",
+      "label": "Semantic animation action and pose-spec contracts",
+      "status": "implemented+tested",
+      "interface": "schemas/animation-sequence-v2.schema.json; schemas/blender-pose-spec-v1.schema.json; tools/animation/validate_sequence.py; tools/blender/validate_pose_spec.py",
+      "purpose": "Validate action phases, identity invariants, root/prop continuity, gameplay event markers and review state before any engine integration, and reject static-image pulse/transform gimmicks as character animation.",
+      "dependencies": [
+        "Python standard library",
+        "jsonschema optional extra for full schema validation"
+      ],
+      "verification": [
+        "tests/test_animation_sequence.py",
+        "tests/test_blender_pose_spec.py",
+        "tests/test_overlay_contracts.py"
+      ],
+      "limitations": [
+        "Structural validation cannot judge silhouette, weight, arcs, contact or readability; playback and in-engine review remain required."
+      ],
+      "evidence_level": "tested"
+    },
+    {
       "id": "animation-assembly",
       "label": "Animation frame audit and assembly",
       "status": "implemented+tested",
@@ -36,6 +56,23 @@
       "evidence_level": "tested"
     },
     {
+      "id": "blender-action-authoring",
+      "label": "Blender Action authoring and review renders",
+      "status": "implemented",
+      "interface": "tools/blender/author_action_from_pose_spec.py; tools/blender/inspect_animation_scene.py; tools/blender/render_action_review.py",
+      "purpose": "Create or inspect transform-keyed Blender Actions from a validated pose spec, render review frames and verify the source .blend stays unchanged.",
+      "dependencies": [
+        "Blender 4.x/5.x executable; disposable source project"
+      ],
+      "verification": [
+        "tests/test_blender_pose_spec.py"
+      ],
+      "limitations": [
+        "Executed on one Windows machine with Blender 5.2 as recorded in docs/studio/LOCAL_CREATIVE_UPGRADE_VERIFICATION_2026-10-20.md; not executed in CI, and rendered frames are review candidates rather than approved animation."
+      ],
+      "evidence_level": "demonstrated"
+    },
+    {
       "id": "blender-probe",
       "label": "Blender availability probe",
       "status": "implemented",
@@ -66,6 +103,42 @@
         "Automated tests use a local protocol fixture. They do not prove a particular real checkpoint/node graph runs on the target GPU."
       ],
       "evidence_level": "tested-with-mocks"
+    },
+    {
+      "id": "creative-mcp-server",
+      "label": "Bounded creative-tool MCP server",
+      "status": "implemented+tested",
+      "interface": "python tools/creative_mcp_server.py; MCP ags_creative_preflight/ags_validate_animation_sequence/ags_validate_blender_pose_spec/ags_blender_scene_inventory/ags_blender_render_action_review/ags_blender_author_action",
+      "purpose": "Expose preflight, animation contract validation and Blender authoring/render tools over stdio with workspace-contained paths, argument bounds and fixed bundled scripts.",
+      "dependencies": [
+        "Python standard library",
+        "Local Blender executable for Blender-backed tools"
+      ],
+      "verification": [
+        "tests/test_creative_mcp_server.py"
+      ],
+      "limitations": [
+        "Automated tests cover path containment, protocol negotiation and process bounding; Blender-backed tools require a local Blender installation and were exercised on one machine, not in CI."
+      ],
+      "evidence_level": "tested-with-mocks"
+    },
+    {
+      "id": "creative-preflight",
+      "label": "Read-only creative resource preflight",
+      "status": "implemented+tested",
+      "interface": "ags readiness; tools/preflight/creative_preflight.py; MCP ags_creative_preflight",
+      "purpose": "Discover local creative executables and loopback services, measure RAM/GPU/disk headroom, and emit a conservative generation policy without guessing unknown values.",
+      "dependencies": [
+        "Python standard library"
+      ],
+      "verification": [
+        "tests/test_creative_preflight.py",
+        "tests/test_readiness.py"
+      ],
+      "limitations": [
+        "Advisory only: a passing preflight does not approve a specific model/workflow or guarantee a generation will fit."
+      ],
+      "evidence_level": "tested"
     },
     {
       "id": "godot-integration",
@@ -258,7 +331,7 @@
       "label": "Searchable specialist skill library",
       "status": "implemented+tested",
       "interface": "ags skills list/search/read; MCP ags_skill_search",
-      "purpose": "Load 79 production skills covering design, genres, art styles, assets, animation, engineering, QA, and release.",
+      "purpose": "Load 87 production skills covering design, genres, art styles, assets, animation, rigging, engineering, QA, and release.",
       "dependencies": [
         "Bundled SKILL.md package data"
       ],

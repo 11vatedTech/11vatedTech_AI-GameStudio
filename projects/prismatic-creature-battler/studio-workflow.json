@@ -1,0 +1,76 @@
+{
+  "current_stage": "benched",
+  "history": [
+    {
+      "evidence": [
+        "docs/research/source-register.json",
+        "evidence/founder-reference-board.png"
+      ],
+      "note": "Completed reference and model/licensing research",
+      "occurred_at": "2026-10-16T19:13:25.338035+00:00",
+      "stage": "discover"
+    },
+    {
+      "evidence": [
+        "projects/prismatic-creature-battler/docs/game-brief.json"
+      ],
+      "note": "Defined Creative Thesis and Refractive Resonance pillars",
+      "occurred_at": "2026-10-16T19:13:25.433121+00:00",
+      "stage": "research"
+    },
+    {
+      "evidence": [
+        "projects/prismatic-creature-battler/docs/game-brief.json",
+        "projects/prismatic-creature-battler/docs/art-bible.json"
+      ],
+      "note": "Designed 8-creature roster, 3 archetypes, and hybrid card-to-arena presentation",
+      "occurred_at": "2026-10-16T19:13:25.528686+00:00",
+      "stage": "define"
+    },
+    {
+      "evidence": [
+        "projects/prismatic-creature-battler/docs/task-graph.json"
+      ],
+      "note": "Scoped 24h jam plan with 25% release reserve",
+      "occurred_at": "2026-10-16T19:13:25.630253+00:00",
+      "stage": "design"
+    },
+    {
+      "evidence": [
+        "projects/prismatic-creature-battler/project.godot"
+      ],
+      "note": "Created Godot 4 + Web hybrid vertical slice scaffold",
+      "occurred_at": "2026-10-16T19:13:25.726450+00:00",
+      "stage": "scope"
+    },
+    {
+      "evidence": [
+        "projects/prismatic-creature-battler/docs/art-bible.json",
+        "evidence/ascension/concept-gate-result.json"
+      ],
+      "note": "Locked Prismatic Sanctuary Art Bible and 3-tier masked foil shaders",
+      "occurred_at": "2026-10-16T19:13:25.821923+00:00",
+      "stage": "prototype"
+    },
+    {
+      "evidence": [
+        "evidence/ascension/craft-gate-result.json"
+      ],
+      "note": "Entered vertical slice asset & combat manufacturing",
+      "occurred_at": "2026-10-16T19:13:25.912478+00:00",
+      "stage": "visual_identity"
+    },
+    {
+      "evidence": [
+        "projects/prismatic-creature-battler/docs/production-project.json"
+      ],
+      "note": "Starting sequential FLUX.2 Klein 4B fp8 asset generation",
+      "occurred_at": "2026-10-16T19:13:26.003056+00:00",
+      "stage": "vertical_slice"
+    }
+  ],
+  "project_id": "prismatic-creature-battler",
+  "title": "The Prismatic Creature Battler",
+  "status": "benched_pending_future_resumption",
+  "parked_note": "Benched by Founder on 2026-10-16 to explore a different game idea. Existing source, assets, tests, release package, and QA evidence are intentionally preserved unchanged."
+}

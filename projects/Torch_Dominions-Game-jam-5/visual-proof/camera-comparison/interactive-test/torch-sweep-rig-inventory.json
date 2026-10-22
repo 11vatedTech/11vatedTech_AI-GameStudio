@@ -1,0 +1,491 @@
+{
+  "status": "read-only-inventory",
+  "blender_version": "5.2.0 LTS",
+  "blend_file": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\.state\\creative-mcp-smoke\\vertical-slice\\torch_sweep_candidate.blend",
+  "render_engine": "BLENDER_EEVEE",
+  "fps": 24,
+  "frame_range": [
+    1,
+    24
+  ],
+  "active_camera": "ReviewCamera",
+  "cameras": [
+    {
+      "name": "ReviewCamera",
+      "type": "PERSP",
+      "lens": 52.0
+    }
+  ],
+  "object_count": 24,
+  "objects": [
+    {
+      "name": "TorchSweepRig",
+      "type": "ARMATURE",
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dimensions": [
+        1.6799999475479126,
+        0.30000001192092896,
+        2.8400001525878906
+      ],
+      "visible": true
+    },
+    {
+      "name": "UpperArm_L",
+      "type": "MESH",
+      "location": [
+        0.4699999988079071,
+        0.0,
+        2.0199999809265137
+      ],
+      "dimensions": [
+        0.3885541558265686,
+        0.25999999046325684,
+        0.405082106590271
+      ],
+      "visible": true
+    },
+    {
+      "name": "Forearm_L",
+      "type": "MESH",
+      "location": [
+        0.7200000286102295,
+        -0.007499999832361937,
+        1.6949999332427979
+      ],
+      "dimensions": [
+        0.2865745425224304,
+        0.2078215777873993,
+        0.38918471336364746
+      ],
+      "visible": true
+    },
+    {
+      "name": "Hand_L",
+      "type": "MESH",
+      "location": [
+        0.8299999833106995,
+        -0.03749999776482582,
+        1.4549999237060547
+      ],
+      "dimensions": [
+        0.19319075345993042,
+        0.19350740313529968,
+        0.1817241907119751
+      ],
+      "visible": true
+    },
+    {
+      "name": "Thigh_L",
+      "type": "MESH",
+      "location": [
+        0.1599999964237213,
+        0.0,
+        0.7699999809265137
+      ],
+      "dimensions": [
+        0.3185585141181946,
+        0.3199999928474426,
+        0.4787999391555786
+      ],
+      "visible": true
+    },
+    {
+      "name": "Shin_L",
+      "type": "MESH",
+      "location": [
+        0.17500001192092896,
+        0.0,
+        0.36000001430511475
+      ],
+      "dimensions": [
+        0.20993441343307495,
+        0.20999999344348907,
+        0.45600005984306335
+      ],
+      "visible": true
+    },
+    {
+      "name": "Foot_L",
+      "type": "MESH",
+      "location": [
+        0.17000000178813934,
+        -0.15000000596046448,
+        0.11999999731779099
+      ],
+      "dimensions": [
+        0.19999998807907104,
+        0.3420000374317169,
+        0.2134377360343933
+      ],
+      "visible": true
+    },
+    {
+      "name": "UpperArm_R",
+      "type": "MESH",
+      "location": [
+        -0.4699999988079071,
+        0.0,
+        2.0199999809265137
+      ],
+      "dimensions": [
+        0.3885541558265686,
+        0.25999999046325684,
+        0.405082106590271
+      ],
+      "visible": true
+    },
+    {
+      "name": "Forearm_R",
+      "type": "MESH",
+      "location": [
+        -0.7200000286102295,
+        -0.007499999832361937,
+        1.6949999332427979
+      ],
+      "dimensions": [
+        0.2865745425224304,
+        0.2078215777873993,
+        0.38918471336364746
+      ],
+      "visible": true
+    },
+    {
+      "name": "Hand_R",
+      "type": "MESH",
+      "location": [
+        -0.8299999833106995,
+        -0.03749999776482582,
+        1.4549999237060547
+      ],
+      "dimensions": [
+        0.19319075345993042,
+        0.19350740313529968,
+        0.1817241907119751
+      ],
+      "visible": true
+    },
+    {
+      "name": "Thigh_R",
+      "type": "MESH",
+      "location": [
+        -0.1599999964237213,
+        0.0,
+        0.7699999809265137
+      ],
+      "dimensions": [
+        0.3185585141181946,
+        0.3199999928474426,
+        0.4787999391555786
+      ],
+      "visible": true
+    },
+    {
+      "name": "Shin_R",
+      "type": "MESH",
+      "location": [
+        -0.17500001192092896,
+        0.0,
+        0.36000001430511475
+      ],
+      "dimensions": [
+        0.20993441343307495,
+        0.20999999344348907,
+        0.45600005984306335
+      ],
+      "visible": true
+    },
+    {
+      "name": "Foot_R",
+      "type": "MESH",
+      "location": [
+        -0.17000000178813934,
+        -0.15000000596046448,
+        0.11999999731779099
+      ],
+      "dimensions": [
+        0.19999997317790985,
+        0.3420000672340393,
+        0.2134377360343933
+      ],
+      "visible": true
+    },
+    {
+      "name": "PelvisMesh",
+      "type": "MESH",
+      "location": [
+        0.0,
+        0.0,
+        1.1299999952316284
+      ],
+      "dimensions": [
+        0.47999998927116394,
+        0.47999998927116394,
+        0.34200000762939453
+      ],
+      "visible": true
+    },
+    {
+      "name": "TorsoMesh",
+      "type": "MESH",
+      "location": [
+        0.0,
+        0.0,
+        1.6150000095367432
+      ],
+      "dimensions": [
+        0.5,
+        0.5,
+        0.7638001441955566
+      ],
+      "visible": true
+    },
+    {
+      "name": "ChestMesh",
+      "type": "MESH",
+      "location": [
+        0.0,
+        0.0,
+        2.115000009536743
+      ],
+      "dimensions": [
+        0.6200000047683716,
+        0.6200000047683716,
+        0.3761998414993286
+      ],
+      "visible": true
+    },
+    {
+      "name": "NeckMesh",
+      "type": "MESH",
+      "location": [
+        0.0,
+        0.0,
+        2.4000000953674316
+      ],
+      "dimensions": [
+        0.20000000298023224,
+        0.20000000298023224,
+        0.27360010147094727
+      ],
+      "visible": true
+    },
+    {
+      "name": "HeadMesh",
+      "type": "MESH",
+      "location": [
+        0.0,
+        0.0,
+        2.7200000286102295
+      ],
+      "dimensions": [
+        0.3799999952316284,
+        0.3799999952316284,
+        0.45599985122680664
+      ],
+      "visible": true
+    },
+    {
+      "name": "TorchProp",
+      "type": "MESH",
+      "location": [
+        0.8399999737739563,
+        -0.09000000357627869,
+        1.4800000190734863
+      ],
+      "dimensions": [
+        0.09000003337860107,
+        0.09000000357627869,
+        0.5200001001358032
+      ],
+      "visible": true
+    },
+    {
+      "name": "TorchFlame",
+      "type": "MESH",
+      "location": [
+        0.8399999737739563,
+        -0.09000000357627869,
+        1.909999966621399
+      ],
+      "dimensions": [
+        0.2800000309944153,
+        0.2800000011920929,
+        0.36000001430511475
+      ],
+      "visible": true
+    },
+    {
+      "name": "ReviewFloor",
+      "type": "MESH",
+      "location": [
+        0.0,
+        0.0,
+        0.019999999552965164
+      ],
+      "dimensions": [
+        200.0,
+        200.0,
+        0.0
+      ],
+      "visible": true
+    },
+    {
+      "name": "ReviewCamera",
+      "type": "CAMERA",
+      "location": [
+        3.799999952316284,
+        -7.699999809265137,
+        3.049999952316284
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "visible": true
+    },
+    {
+      "name": "Area",
+      "type": "LIGHT",
+      "location": [
+        -3.0,
+        -4.0,
+        6.0
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "visible": true
+    },
+    {
+      "name": "Area.001",
+      "type": "LIGHT",
+      "location": [
+        3.0,
+        2.0,
+        4.0
+      ],
+      "dimensions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "visible": true
+    }
+  ],
+  "armatures": [
+    {
+      "name": "TorchSweepRig",
+      "bones": [
+        {
+          "name": "root",
+          "parent": null,
+          "use_deform": true
+        },
+        {
+          "name": "pelvis",
+          "parent": "root",
+          "use_deform": true
+        },
+        {
+          "name": "spine",
+          "parent": "pelvis",
+          "use_deform": true
+        },
+        {
+          "name": "chest",
+          "parent": "spine",
+          "use_deform": true
+        },
+        {
+          "name": "neck",
+          "parent": "chest",
+          "use_deform": true
+        },
+        {
+          "name": "head",
+          "parent": "neck",
+          "use_deform": true
+        },
+        {
+          "name": "upper_arm.L",
+          "parent": "chest",
+          "use_deform": true
+        },
+        {
+          "name": "forearm.L",
+          "parent": "upper_arm.L",
+          "use_deform": true
+        },
+        {
+          "name": "hand.L",
+          "parent": "forearm.L",
+          "use_deform": true
+        },
+        {
+          "name": "upper_arm.R",
+          "parent": "chest",
+          "use_deform": true
+        },
+        {
+          "name": "forearm.R",
+          "parent": "upper_arm.R",
+          "use_deform": true
+        },
+        {
+          "name": "hand.R",
+          "parent": "forearm.R",
+          "use_deform": true
+        },
+        {
+          "name": "thigh.L",
+          "parent": "pelvis",
+          "use_deform": true
+        },
+        {
+          "name": "shin.L",
+          "parent": "thigh.L",
+          "use_deform": true
+        },
+        {
+          "name": "foot.L",
+          "parent": "shin.L",
+          "use_deform": true
+        },
+        {
+          "name": "thigh.R",
+          "parent": "pelvis",
+          "use_deform": true
+        },
+        {
+          "name": "shin.R",
+          "parent": "thigh.R",
+          "use_deform": true
+        },
+        {
+          "name": "foot.R",
+          "parent": "shin.R",
+          "use_deform": true
+        }
+      ],
+      "active_action": "Torch_Sweep_Runtime_Proof"
+    }
+  ],
+  "actions": [
+    {
+      "name": "Torch_Sweep_Runtime_Proof",
+      "frame_range": [
+        1.0,
+        24.0
+      ],
+      "fcurve_count": 60
+    }
+  ],
+  "note": "This report inventories scene data; it does not certify rig quality or animation quality."
+}

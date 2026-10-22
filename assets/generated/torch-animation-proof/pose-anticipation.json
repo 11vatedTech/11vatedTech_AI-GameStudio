@@ -1,0 +1,11 @@
+{
+  "prompt": "Original Torch: Dominions player character, full-body female traveling torchbearer, same original identity across the planned attack key poses: short dark auburn hair with one side tucked behind ear, distinctive weathered teal asymmetrical mantle over charcoal leather tunic, bronze fasteners, dark fitted trousers and knee-high boots, compact violet-glass and dark ceramic perforated lantern torch in her right hand. Premium painterly fantasy 2D action-adventure character art, slightly side-on three-quarter camera, clean readable silhouette, feet fully visible, isolated on a flat neutral muted slate-grey background for animation extraction, consistent body proportions and costume. KEY POSE: attack anticipation, knees bent and feet planted, torso twisted back, left arm balancing, torch arm drawn behind the body ready to sweep horizontally, mantle and hair trail opposite the windup, determined focused expression. One character only, one torch only, no motion blur, no extra limbs, no cropped feet or torch, no text, no watermark, no panels, no logos.",
+  "width": 1024,
+  "height": 1024,
+  "seed": 7183601,
+  "steps": 4,
+  "cfg": 1.0,
+  "distilled": true,
+  "weight_dtype": "fp8_e4m3fn",
+  "output_dir": "assets/generated/torch-animation-proof"
+}

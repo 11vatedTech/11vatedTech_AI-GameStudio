@@ -1,0 +1,52 @@
+{
+  "proof_id": "torch-dominions-camera-comparison-01",
+  "status": "godot_runtime_verified_concept_comparison_not_a_controlled_camera_test",
+  "created_at": "2026-10-20",
+  "purpose": "Display the existing side-on and elevated Purple Haze studies side by side at equal rendered dimensions, within a separate Godot 4.7.2 Compatibility project, as a quick visual comparison before a proper matched-content gameplay prototype.",
+  "scope": "One static 1360x800 comparison board containing two original 1024x1024 source concepts scaled independently to 640x640. This is not a playable benchmark, an apples-to-apples camera experiment, a camera decision, final art, or human review.",
+  "criteria": {
+    "image_a": {"label":"Side-on cinematic","path":"assets/generated/torch-haze-proof/01_klein-bench_00041_.png","seed":7183401,"sha256":"7d633800cc10e7ee326c364231cb50ff8473a2f83afc2a309f10926ec449cc80","request":"assets/generated/torch-haze-proof/request.json","display_origin":[24,92],"display_size":[640,640]},
+    "image_b": {"label":"Elevated three-quarter","path":"assets/generated/torch-haze-proof/01_klein-bench_00042_.png","seed":7183402,"sha256":"60d8ffd5193eb99dd485a7d05fd4a434b74b421818d445b8133dc2215645b91f","request":"assets/generated/torch-haze-proof/elevated-request.json","display_origin":[696,92],"display_size":[640,640]},
+    "visual_source_boundary":"These source concepts were made from distinct camera-specific prompts and different seeds. They do not use an identical scene/character identity or identical action pose. Scale and panel rendering are matched; content confounds remain significant."
+  },
+  "godot": {
+    "version":"4.7.2.stable.official.ed1daf0bf",
+    "renderer":"GL Compatibility / OpenGL 3.3 NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+    "isolated_project":"projects/Torch_Dominions-Game-jam-5/visual-proof/camera-comparison/project.godot",
+    "scene":"projects/Torch_Dominions-Game-jam-5/visual-proof/camera-comparison/comparison.tscn",
+    "script":"projects/Torch_Dominions-Game-jam-5/visual-proof/camera-comparison/comparison.gd",
+    "editor_validation_log":"projects/Torch_Dominions-Game-jam-5/visual-proof/camera-comparison/godot-editor-validation.log",
+    "runtime_log":"projects/Torch_Dominions-Game-jam-5/visual-proof/camera-comparison/camera-comparison-run.log",
+    "runtime_command":"godot_console.exe --path <camera-comparison> --scene res://comparison.tscn --audio-driver Dummy --rendering-method gl_compatibility --resolution 1360x800 --fixed-fps 30 --write-movie <absolute camera-comparison-proof.png> --quit-after 1 --log-file <absolute camera-comparison-run.log>",
+    "runtime_exit_code":0,
+    "render_capture":"projects/Torch_Dominions-Game-jam-5/visual-proof/camera-comparison/camera-comparison-proof00000000.png",
+    "capture_dimensions":[1360,800],
+    "capture_sha256":"faac596fd2e04d01614e12e38f0f4a9cb2dddd15323d0cf1de26987bcd0bf61d",
+    "preview":"projects/Torch_Dominions-Game-jam-5/visual-proof/camera-comparison/camera-comparison-proof-small.jpg",
+    "runtime_stdout_markers":[
+      "TORCH_CAMERA_PANEL_LOADED path=res://side-on.png native_size=(1024, 1024) position=(24.0, 92.0) displayed_size=(640.0, 640.0)",
+      "TORCH_CAMERA_PANEL_LOADED path=res://elevated.png native_size=(1024, 1024) position=(696.0, 92.0) displayed_size=(640.0, 640.0)",
+      "TORCH_CAMERA_COMPARISON_LOADED side_on=res://side-on.png elevated=res://elevated.png viewport=(1360.0, 800.0)"
+    ],
+    "engine_or_script_errors_in_reviewed_logs":0
+  },
+  "agent_visual_read": {
+    "side_on_strengths":["Larger, near-camera figures and direct face-to-face staging emphasize character acting, torch silhouette, and cinematic encounter tension.","The violet flame ribbon has a strong large silhouette in open vertical space."],
+    "side_on_tradeoffs":["The illustration provides little explicit tactical ground-plane/coverage information for the Haze footprint.","It is a single cinematic painting rather than a parallax/route implementation."],
+    "elevated_strengths":["Ground plane, route, rogue position and smoke-zone occupancy are immediately visible; this supports reasoning about area-control and dodge space.","The frame communicates depth and terrain layout."],
+    "elevated_tradeoffs":["Hero and rogue are smaller in the 640-square comparable panels; tiny-scale acting/weapon and wind-up are less prominent.","The scene shifts to a different character/pose/landmark arrangement from the side-on source, so this is not an isolated camera variable."],
+    "current_read":"The authored studies illustrate the intended tradeoff: side-on foregrounds silhouette/action presentation; elevated foregrounds tactical space and route/Haze placement. No winner selected."
+  },
+  "known_limitations":[
+    "Different prompts, seeds, character renderings, action/pose, and environment layout confound the camera comparison.",
+    "No playable movement, combat, dodge, enemy tell, dynamic effect, animation, collision, camera tracking, or viewport scaling behavior is exercised.",
+    "One static generated background image is displayed in each panel; this provides no evidence about browser performance or how a real level would achieve parallax and traversable geometry.",
+    "Camera gate remains open pending matched-content playable in-engine tests using the same hero/torch/rogue, attack tell, interaction, Haze zone, route and target viewport."
+  ],
+  "preservation": {
+    "original_side_on_study_hash_verified":"7d633800cc10e7ee326c364231cb50ff8473a2f83afc2a309f10926ec449cc80",
+    "original_elevated_study_hash_verified":"60d8ffd5193eb99dd485a7d05fd4a434b74b421818d445b8133dc2215645b91f",
+    "original_protagonist_identity_reference_hash":"9c20150532fb09a45d0bebf1acf450853277c503802461e70b4c489e763ffd15"
+  },
+  "review_states": {"technical_project_validation":"passed", "godot_runtime":"passed", "agent_visual_assessment":"recorded", "controlled_comparison":"not_performed", "gameplay":"not_implemented", "camera_decision":"open", "human_art_approval":"pending", "rights_review":"pending"}
+}

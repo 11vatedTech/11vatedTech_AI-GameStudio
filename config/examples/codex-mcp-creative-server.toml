@@ -1,0 +1,6 @@
+# Codex CLI example only. Replace both absolute paths with the actual local repo and Blender executable.
+# Do not overwrite your existing config; merge after backing it up. This is not a Freebuff config.
+[mcp_servers.ags_creative]
+command = "python"
+args = ["C:\\ABSOLUTE\\PATH\\TO\\11vatedTech_AI-GameStudio\\tools\\creative_mcp_server.py"]
+env = { AGS_WORKSPACE = "C:\\ABSOLUTE\\PATH\\TO\\11vatedTech_AI-GameStudio", BLENDER_BIN = "C:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe" }

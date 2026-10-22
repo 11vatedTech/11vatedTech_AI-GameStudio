@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0",
+  "project_id": "neon-blasters",
+  "title": "Neon Blasters",
+  "genre": "Arcade survival shooter",
+  "subgenres": ["aim shooter", "score attack", "survival"],
+  "platforms": ["web", "windows", "linux", "macos"],
+  "jam_profile": "72h",
+  "jam_rules": {
+    "theme": "Precision aim becomes physical neon destruction.",
+    "must_use_ai": false,
+    "prohibited_tools": ["paid APIs", "online-only dependencies", "unlicensed external assets"],
+    "constraints": ["desktop browser first", "local-first", "retain release reserve", "no deployment"]
+  },
+  "audience": "Players who enjoy immediate arcade input, high-energy feedback and short score-chasing runs.",
+  "player_fantasy": "My hand is the weapon: every movement aims, every press fires now, and a precise shot can turn a crystal into a chain of neon fireworks.",
+  "creative_thesis": "A cursor-aimed instant laser makes aiming itself the instrument: exact contact produces directional, source-colored fractures, while deliberate spectrum matching chains crystal destruction into readable fireworks.",
+  "design_pillars": [
+    "First-shot immediacy: pointer press hits in the same input frame and beam ends at the real target surface.",
+    "Physical neon disintegration: impact, fracture, varied directional pixel debris, afterglow and reward remain causally legible.",
+    "Precision over spam: three beam spectra reward matching crystal cores without making mismatches unusable.",
+    "Spectacle under control: authored escalation, readable overload warning, strict caps, reduced-flash options and reliable restart."
+  ],
+  "core_loop": [
+    "Acquire drifting targets and read their silhouette, health, spectrum and volatile warning.",
+    "Aim with the reticle and hold the primary fire input for immediate, cadence-limited laser hits.",
+    "Switch spectrum to match crystalline targets; chain kills, split beams and volatile bursts for score and Overdrive.",
+    "Collect temporary power cores, select run-only upgrades between escalation beats and manage arena overload.",
+    "Survive until overload, inspect run results and restart with a clean run state."
+  ],
+  "core_verbs": ["aim", "fire", "switch-spectrum", "detonate-overdrive", "pause", "choose-upgrade", "survive", "restart"],
+  "controls": {
+    "mouse_move": "Aim at normalized logical playfield coordinates.",
+    "left_mouse_hold": "Fire immediately on press, then at configured repeat cadence; release stops at once.",
+    "q_or_right_click": "Cycle cyan, magenta and amber beam spectra.",
+    "space": "Activate Overdrive when charged.",
+    "escape_or_p": "Pause or resume; simulation and effect clocks freeze together.",
+    "enter": "Start or restart from title/results.",
+    "settings": "Toggle reduced flash, reduced effects, high contrast and mute."
+  },
+  "success_criteria": [
+    "Real-browser title, active run, pause, overload, results and restart are usable without console errors.",
+    "Pointer coordinates remain correct through CSS scaling and high-DPI backing stores; held-fire clears on release, blur, visibility loss and pointer loss.",
+    "Simulation is fixed-step, capped and deterministic for a seed and ordered inputs; rendering and sound cannot mutate outcomes.",
+    "Four target families, three spectra, splitter, bounded volatile chain, Chainlight, Overdrive, five power-ups and seeded run upgrades have observable behavior and tests.",
+    "Particles/effects and target count are bounded; stress measurements record environment and p50/p95 frame time without unsupported performance claims.",
+    "A tested local browser build and source archive include manifests, hashes, rights status and open human review gates."
+  ],
+  "non_goals": ["mobile delivery", "online services", "accounts", "multiplayer", "campaign", "permanent progression", "ads", "paid APIs", "deployment"],
+  "references": [
+    {"title": "Founder-supplied Neon Blasters target-family and disintegration references", "url": "https://www.w3.org/WAI/WCAG22/quickref/", "why": "Target silhouettes, target roles and staged physical destruction guide the game's original form language; the supplied reference images themselves are not runtime assets.", "license_notes": "Use for internal visual principles only; keep supplied reference images out of the shipping package. The linked WCAG resource informs accessibility, not visual asset rights."}
+  ]
+}

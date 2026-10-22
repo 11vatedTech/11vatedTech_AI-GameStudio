@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="PackedScene" path="res://artifacts/torch_sweep_candidate.glb" id="1"]
+
+[ext_resource type="Script" path="res://scripts/torch_sweep_review.gd" id="2"]
+
+[node name="TorchSweepReview" type="Node3D"]
+script = ExtResource("2")
+
+[node name="ImportedAction" parent="." instance=ExtResource("1")]

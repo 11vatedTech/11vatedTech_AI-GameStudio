@@ -1,0 +1,44 @@
+{
+  "schema_version": "2.0",
+  "sequence_id": "EXAMPLE_REPLACE_WITH_UNIQUE_SEQUENCE_ID",
+  "action_kind": "attack",
+  "method": "blender-rigged-action",
+  "frame_rate": 24,
+  "frame_count": 24,
+  "source_reference_ids": ["REPLACE_WITH_REFERENCE_ASSET_ID"],
+  "phases": [
+    {"name": "anticipation", "start_frame": 0, "end_frame": 4, "purpose": "Load weight and make intent readable."},
+    {"name": "contact", "start_frame": 7, "end_frame": 10, "purpose": "Torch crosses the attack plane; sync hit event."},
+    {"name": "follow_through", "start_frame": 11, "end_frame": 16, "purpose": "Carry momentum through body and prop."},
+    {"name": "recovery", "start_frame": 17, "end_frame": 23, "purpose": "Recover balance and define combo/cancel state."}
+  ],
+  "identity_invariants": ["hair", "outfit", "weapon", "grip", "camera", "proportions", "material_palette"],
+  "events": [
+    {"name": "torch_hitbox_on", "frame": 7, "kind": "hitbox_on"},
+    {"name": "torch_contact", "frame": 9, "kind": "impact"},
+    {"name": "impact_audio", "frame": 9, "kind": "sound"},
+    {"name": "signature_flame_vfx", "frame": 9, "kind": "vfx"},
+    {"name": "torch_hitbox_off", "frame": 11, "kind": "hitbox_off"},
+    {"name": "combo_branch_open", "frame": 18, "kind": "combo_open"}
+  ],
+  "artifacts": {
+    "source": "REPLACE_WITH_SOURCE_BLEND_OR_FRAME_SEQUENCE",
+    "keyframe_paths": [],
+    "frame_paths": [],
+    "review_frame_strip": "REPLACE_WITH_FRAME_STRIP_IMAGE",
+    "playback_video": null,
+    "engine_capture": null,
+    "engine_log": null
+  },
+  "review": {
+    "status": "candidate",
+    "intended_speed_reviewed": false,
+    "slow_reviewed": false,
+    "identity_checked": false,
+    "prop_contact_checked": false,
+    "integrated": false,
+    "runtime_observed": false,
+    "operator_approval_reference": null,
+    "notes": "Template only. Replace IDs and paths, render and review motion, then record actual evidence; do not mark valid based on schema shape alone."
+  }
+}

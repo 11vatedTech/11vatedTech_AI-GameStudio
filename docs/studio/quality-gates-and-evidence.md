@@ -10,13 +10,13 @@
 **Pass when:** real input changes game state; a player can perform the central mechanic and reach a designed outcome; state is not mocked; a test/harness and a person can reproduce it.
 
 ## Gate 3 — Creative and content integration
-**Pass when:** critical assets/audio/UI are approved or explicitly tracked as provisional; asset provenance and licensing records exist; engine references resolve; assets are inspected at gameplay scale; animation is inspected as motion.
+**Pass when:** the agent has produced and integrated the critical assets/audio/UI (or explicitly tracks candidate status); asset provenance and licensing records exist; engine references resolve; assets are inspected at gameplay scale; animation is inspected as authored movement. Agent production and iteration are the default; human creative approval is a separate gate only when the project explicitly requires it.
 
 ## Gate 4 — Release candidate
 **Pass when:** relevant unit/integration/engine tests pass; target build launches; core play paths were played; performance is measured against target constraints; accessibility/usability checks completed; high-severity defects resolved or explicitly accepted.
 
 ## Gate 5 — Release
-**Pass when:** source and binaries are versioned; release archive opens; hashes match; manifests, setup, dependencies and known limitations are included; model/assets rights have been reviewed; human art direction and cold playtest gates are truly recorded.
+**Pass when:** source and binaries are versioned; release archive opens; hashes match; manifests, setup, dependencies and known limitations are included; model/assets rights have been reviewed; any explicitly required human art-direction sign-off and target-audience cold playtest are truly recorded. These are review gates, not a transfer of routine asset creation or testing work to the operator; agents should prepare candidate work, evidence, and automated playtest evidence themselves.
 
 ## Evidence types
 

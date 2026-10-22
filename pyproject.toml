@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "11vatedtech-ai-game-studio"
-version = "0.4.0"
+version = "0.5.0"
 description = "Local-first, agent-operated game-production operating system for AI-assisted game development."
 readme = "README.md"
 requires-python = ">=3.11"

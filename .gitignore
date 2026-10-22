@@ -1,4 +1,5 @@
 # Credentials and machine-specific configuration
+.agents/mcp.json
 .env
 .env.*
 !.env.example
@@ -22,6 +23,8 @@ venv/
 # Local state and generated project output
 .studio-state/
 .state/
+.state-*/
+**/.state-*/
 .cache/
 .cache-ags/
 workspace/assets/
@@ -30,9 +33,22 @@ workspace/evidence/
 workspace/projects/
 workspace/.state/
 
+# Engine/web exports are regenerated from the project sources they belong to.
+# Publishing them duplicates art assets and ships tens of MB of WebAssembly.
+builds/
+
+# Local pre-change copies; source of truth is the tracked file plus Git history.
+skills/index.json.*.backup
+
+# ComfyUI output directory of the Torch camera benchmark: byte-identical copies
+# of interactive-test/generated-candidates/, which is the published source.
+projects/Torch_Dominions-Game-jam-5/visual-proof/camera-comparison/interactive-test/generation-output/
+
 # Engines and generated assets
 .godot/
 .blender/
+*.zip
+
 *.blend1
 *.tmp
 *.part

@@ -1,0 +1,7 @@
+{
+  "schema_version": "1.0",
+  "project_id": "the-unwriters-almanac",
+  "assets": [],
+  "updated_at": "2026-10-17T07:08:19.857299+00:00",
+  "notes": "All runtime visuals are original Canvas2D code authored in src/renderer.js. No external image files or model-generated outputs are included. See evidence/verification.json for source hashes and runtime verification."
+}

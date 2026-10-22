@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.0",
+  "project_id": "neon-blasters",
+  "style_name": "Neon Disintegration Arcade Instrument",
+  "style_description": "An original luminous arcade playfield: almost-black negative space, restrained scientific linework, emissive targets with crisp material silhouettes, white-hot contact points and directional source-colored fragments. Not a generic cyberpunk city and not a uniform glow wash.",
+  "reference_board": ["Founder-provided target and disintegration screenshots; internal principles only; not included in runtime or package."],
+  "camera": {
+    "projection": "2d",
+    "view": "Fixed frontal playfield with lower-center weapon emitter; reticle follows logical pointer coordinates.",
+    "framing": "16:9 desktop logical canvas; retain safe margins and center playfield for aspect-ratio adaptation.",
+    "perspective": "Subtle target faceting and floor convergence provide 2.5D depth without harming beam collision clarity.",
+    "target_resolution": [1280, 720]
+  },
+  "palette": ["#070A12", "#10182A", "#31D8FF", "#F34FEA", "#FFB547", "#F5F8FF", "#58F0B1", "#FF536C"],
+  "value_hierarchy": [
+    "White-hot beam contact and active hit response are brief, highest-luminance cues.",
+    "Target silhouettes, health cracks, volatile fuse and cursor reticle remain crisp and readable.",
+    "Spectrum-coded cyan, magenta and amber beams carry distinct glyph and geometry cues.",
+    "Background linework and sparse parallax stay low-contrast and below 12% luminance."
+  ],
+  "shape_language": "Neon Blocks: orthogonal beveled cubes with pixel-grid fracture. Prismatic Crystals: asymmetric faceted shards with a visible core and radial crack seams. Power-Up Cores: smooth vertical capsules containing one high-contrast ability glyph. Volatile Cores: compact jagged forms with a broken circular fuse ring. Weapon: anchored lower-center emitter and a diamond reticle.",
+  "lighting_language": "Dark field, restrained local additive glows, small white contact accents, controlled persistence and no full-screen bloom. Contact flashes are brief, avoid rapid repeated screen-wide flashes, and have reduced-flash alternatives.",
+  "material_language": "Blocks are luminous translucent glass over a dark interior; crystals use layered refractive facets; power cores are polished enamel with a clear symbol; volatile cores show hot internal seams and fuse pulse. Fragments inherit source material color plus impact-direction energy, with varied size, speed, spin and lifetime.",
+  "identity_invariants": [
+    "Every target family reads from silhouette before hue: cube, faceted crystal, capsule, and jagged fuse core.",
+    "Spectrum matching uses both color and a displayed icon/pattern; color alone never communicates a required action.",
+    "Laser is a thin colored outer stroke with a short white core and a visible endpoint at the target surface.",
+    "Impact is staged as contact spark, directional fracture, varied ejection, differentiated afterglow and score/reward.",
+    "Overload boundary and warning text remain visible during dense effect events."
+  ],
+  "forbidden_traits": [
+    "Generic cyberpunk skyline, random ornament, or dashboard clutter",
+    "Uniform glow haze or bloom that erases silhouette and contact point",
+    "Flat colored rectangles standing in for all target families",
+    "Identical particles with uniform sizes, velocities and lifetimes",
+    "Sustained strobe or a required color distinction without shape/icon backup",
+    "Reference screenshots, source image fragments or untracked third-party media shipped in the game"
+  ],
+  "asset_rules": {
+    "transparent_sprites": "Initial prototype uses original vector geometry drawn in source code; future sprites require an asset specification, candidate retention, processing lineage, SHA-256 and review status.",
+    "environment": "Procedural dark instrument field with low-contrast grid, sparse crosshair linework and no skyline.",
+    "ui": "DOM text and compact instrument labels remain crisp and outside glow passes; score and overload state have persistent text and shape cues.",
+    "vfx": "Effect curves are event-driven, staged, source-colored and bounded; reduced-effects mode lowers counts and shake while preserving hit state.",
+    "animation": "Target hover/drift, volatile fuse, contact pulse, fracture and particle ejection use deterministic gameplay timing or independent cosmetic randomness; assess at real playback speed."
+  },
+  "review_criteria": [
+    "At 1280x720 and narrow viewport, target silhouette and health/fracture state remain readable.",
+    "Impact direction follows the beam contact normal and fragments vary materially without masking warnings or reticle.",
+    "The reference's block/crystal/capsule/volatile roles are transformed into an original cohesive system, not copied artwork.",
+    "Reduced-flash/effects and high-contrast settings preserve game information and input feedback."
+  ],
+  "style_mix_policy": "Prototype geometry and procedural effects are authored in local code with no generated or external runtime asset dependency. Any later art model choice must be checked for exact checkpoint/weight license, local VRAM/runtime feasibility and measured integrated result before use.",
+  "version": "1.0"
+}

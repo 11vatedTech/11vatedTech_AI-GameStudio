@@ -1,0 +1,15 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 610.78 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 5070 Ti Laptop GPU
+
+Movie Maker mode enabled, recording movie in 1360Ã—800 @ 30 FPS...
+TORCH_CAMERA_PANEL_LOADED path=res://side-on.png native_size=(1024, 1024) position=(24.0, 92.0) displayed_size=(640.0, 640.0)
+TORCH_CAMERA_PANEL_LOADED path=res://elevated.png native_size=(1024, 1024) position=(696.0, 92.0) displayed_size=(640.0, 640.0)
+TORCH_CAMERA_COMPARISON_LOADED side_on=res://side-on.png elevated=res://elevated.png viewport=(1360.0, 800.0)
+--------------------------------------------------------------------------------
+Done recording movie at path: C:\Users\11vat\OneDrive\Desktop\AI-GameStudio_by_11vatedTech\11vatedtech-ai-game-studio-v0.4.0\projects\Torch_Dominions-Game-jam-5\visual-proof\camera-comparison\camera-comparison-proof.png
+1 frames at 30 FPS (movie length: 00:00:00:01), recorded in 00:00:02 (50% of real-time speed).
+CPU render time: 0.00 seconds (average: 0.41 ms/frame)
+GPU render time: 0.00 seconds (average: 0.00 ms/frame)
+Encoding time: 0.68 seconds (average: 683.03 ms/frame)
+--------------------------------------------------------------------------------
+

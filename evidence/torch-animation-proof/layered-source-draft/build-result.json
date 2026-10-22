@@ -1,0 +1,18 @@
+{
+  "source_sha256": "d9406f063e68b7dd3caf4451f7b0b7ae66a95f1dac429ac642e1ebb150a5a833",
+  "whole_mask_sha256": "8fb38dd3c5ad17ca167d12934dd3b3264ecedc4bdc7cff903f1210c929826091",
+  "arm_layer_sha256": "c5b9dda8be12e88d8bf72c167c77a4b0952a9501a201dc0ff35e6d3887eefc19",
+  "ora_sha256": "4af41c41219e340e4530385a3a40fc553aece220271bcbd5b6ba1fff58598e73",
+  "arm_layer_size": [
+    1024,
+    1024
+  ],
+  "alpha_bbox": [
+    111,
+    96,
+    432,
+    366
+  ],
+  "alpha_coverage_fraction": 0.011215,
+  "output_dir": "evidence/torch-animation-proof/layered-source-draft"
+}

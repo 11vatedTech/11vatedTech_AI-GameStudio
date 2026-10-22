@@ -5,11 +5,16 @@ import logging
 import sys
 from typing import Any
 
+from . import __version__
 from .config import StudioConfig
 from .errors import StudioError
 from .service import StudioService
 
-_PROTOCOL_VERSION = "2025-11-25"
+# Protocol revisions this server implements, newest first. The installed Freebuff
+# host rejects 2025-11-25, so it is deliberately absent; negotiate with the
+# client and only add a revision after a real connector test passes.
+SUPPORTED_PROTOCOL_VERSIONS = ("2025-06-18", "2025-03-26", "2024-11-05")
+_COMPATIBILITY_PROTOCOL_VERSION = SUPPORTED_PROTOCOL_VERSIONS[0]
 
 
 def _tool_definitions(service: StudioService) -> list[dict[str, Any]]:
@@ -35,9 +40,10 @@ class MCPServer:
         if method == "notifications/initialized" or method.startswith("notifications/") or method == "$/cancelRequest":
             return None
         if method == "initialize":
-            requested = params.get("protocolVersion", _PROTOCOL_VERSION) if isinstance(params, dict) else _PROTOCOL_VERSION
-            return {"jsonrpc": "2.0", "id": request_id, "result": {"protocolVersion": requested if isinstance(requested, str) else _PROTOCOL_VERSION,
-                    "capabilities": {"tools": {"listChanged": False}}, "serverInfo": {"name": "11vatedtech-ai-game-studio", "version": "0.4.0"},
+            requested = params.get("protocolVersion") if isinstance(params, dict) else None
+            negotiated = requested if requested in SUPPORTED_PROTOCOL_VERSIONS else _COMPATIBILITY_PROTOCOL_VERSION
+            return {"jsonrpc": "2.0", "id": request_id, "result": {"protocolVersion": negotiated,
+                    "capabilities": {"tools": {"listChanged": False}}, "serverInfo": {"name": "11vatedtech-ai-game-studio", "version": __version__},
                     "instructions": "Read AGENTS.md first. Use ags_skill_search and ags_capabilities before choosing a workflow. A returned command result is not proof of art quality, commercial rights, or human playtest approval."}}
         if method == "ping":
             return {"jsonrpc": "2.0", "id": request_id, "result": {}}

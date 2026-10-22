@@ -1,0 +1,21 @@
+[
+  {"id":"UA-001","title":"Create isolated runnable local project shell","estimate_minutes":35,"priority":5,"depends_on":[],"mandatory":true},
+  {"id":"UA-002","title":"Create brief, art bible, task and provenance contracts","estimate_minutes":40,"priority":5,"depends_on":["UA-001"],"mandatory":true},
+  {"id":"UA-003","title":"Create responsive authored watercolor page visual proof","estimate_minutes":50,"priority":5,"depends_on":["UA-001","UA-002"],"mandatory":true},
+  {"id":"UA-004","title":"Define deterministic puzzle simulation and fixed-step state","estimate_minutes":55,"priority":5,"depends_on":["UA-001","UA-002"],"mandatory":true},
+  {"id":"UA-005","title":"Normalize and preview pointer plus keyboard stroke editing","estimate_minutes":65,"priority":5,"depends_on":["UA-004"],"mandatory":true},
+  {"id":"UA-006","title":"Implement rail traversal, collision and pigment guidance","estimate_minutes":100,"priority":5,"depends_on":["UA-005"],"mandatory":true},
+  {"id":"UA-007","title":"Implement solved, pause, erase and restart states","estimate_minutes":40,"priority":5,"depends_on":["UA-006"],"mandatory":true},
+  {"id":"UA-008","title":"Playtest and tune first browser loop","estimate_minutes":40,"priority":5,"depends_on":["UA-003","UA-007"],"mandatory":true},
+  {"id":"UA-009","title":"Author identity-stable character animation states","estimate_minutes":85,"priority":4,"depends_on":["UA-008"],"mandatory":true},
+  {"id":"UA-010","title":"Add bounded watercolor wash and page detail","estimate_minutes":55,"priority":3,"depends_on":["UA-008"],"mandatory":true},
+  {"id":"UA-011","title":"Add instruction, keyboard accessibility and feedback","estimate_minutes":55,"priority":5,"depends_on":["UA-008"],"mandatory":true},
+  {"id":"UA-012","title":"Integrate solve and recovery choreography","estimate_minutes":35,"priority":4,"depends_on":["UA-009","UA-010","UA-011"],"mandatory":true},
+  {"id":"UA-013","title":"Test geometry, state, determinism and input failure paths","estimate_minutes":35,"priority":5,"depends_on":["UA-004","UA-005","UA-006","UA-007","UA-012"],"mandatory":true},
+  {"id":"UA-014","title":"Integrate app, renderer and animation with bounded timing","estimate_minutes":45,"priority":5,"depends_on":["UA-013"],"mandatory":true},
+  {"id":"UA-015","title":"Adversarial browser traversal and recovery testing","estimate_minutes":80,"priority":5,"depends_on":["UA-014"],"mandatory":true},
+  {"id":"UA-016","title":"Review visual and accessible states at two viewports","estimate_minutes":55,"priority":5,"depends_on":["UA-015"],"mandatory":true},
+  {"id":"UA-017","title":"Measure representative timings and resource bounds","estimate_minutes":35,"priority":4,"depends_on":["UA-014","UA-015"],"mandatory":true},
+  {"id":"UA-018","title":"Audit provenance, rights state and local build evidence","estimate_minutes":35,"priority":5,"depends_on":["UA-016","UA-017"],"mandatory":true},
+  {"id":"UA-019","title":"Run final regression checks and record handoff","estimate_minutes":30,"priority":5,"depends_on":["UA-018"],"mandatory":true}
+]

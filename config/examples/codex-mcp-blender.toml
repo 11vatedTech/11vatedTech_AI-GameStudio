@@ -1,0 +1,7 @@
+# Example for Codex CLI only. This is NOT a Freebuff config.
+# Confirm `uvx` is installed and Blender MCP has been reviewed before enabling.
+# In Blender, start the MCP add-on socket on 127.0.0.1:9876 only.
+[mcp_servers.blender]
+command = "uvx"
+args = ["mcp-for-blender", "--host", "localhost", "--port", "9876"]
+env = { BLENDER_HOST = "localhost", BLENDER_PORT = "9876", BLENDER_MCP_SAFE_MODE = "1", DISABLE_TELEMETRY = "true" }

@@ -1,0 +1,22 @@
+{
+  "source": "assets/generated/torch-animation-proof/01_klein-bench_00043_.png",
+  "source_sha256": "d9406f063e68b7dd3caf4451f7b0b7ae66a95f1dac429ac642e1ebb150a5a833",
+  "source_use": "immutable identity and costume reference; original asset remains unchanged",
+  "upload": {
+    "name": "torch-hero-identity-reference.png",
+    "subfolder": "",
+    "type": "input"
+  },
+  "workflow": "projects/Torch_Dominions-Game-jam-5/visual-proof/camera-comparison/interactive-test/hero-sweep-anticipation-workflow.json",
+  "workflow_sha256": "12cf1df4b91506a54078ff47fd83ff0c08d51001be5bfa9c4030080697cad71f",
+  "prompt": "Draw the same original Torch: Dominions female wayfarer as the supplied identity reference. Preserve her exact young face, long dark auburn ponytail, teal torn-edge asymmetrical mantle, charcoal leather armor, brown crossed belts and copper fasteners, trousers and brown high boots. Preserve the exact single violet-glass perforated lantern staff in her right hand and do not add, replace, duplicate or lose it. Use the same painterly anime game-art rendering, materials, palette and proportions. Full body, head and both boots entirely in frame, neutral flat cool-gray backdrop. Create one distinct torch-sweep ANTICIPATION action key pose: a low coiled stance with both knees visibly bent, torso and shoulders twisted away from intended swing, hips loaded over a deeply bent rear leg, forward boot planted, rear boot grounded, staff drawn close and diagonally behind the shoulder ready to reverse into the forward sweep, cape trailing opposite the loaded torso. Show a clearly different limb/torso/staff silhouette from the upright reference pose; this is not a finished strike or idle pose. One body, one pose, no collage, no motion blur. Avoid straight standing legs, upright centered stance, straight torso, or unchanged staff resting in the forward diagonal reference position. No text, logos, watermark, extra limbs, characters, props or weapons.",
+  "provider": "local ComfyUI 0.40.0 on 127.0.0.1; ComfyUI model and nodes are local",
+  "model": "FLUX.2 Klein 4B distilled FP8; qwen_3_4b; flux2-vae",
+  "seed": 7183418,
+  "steps": 4,
+  "cfg": 1.0,
+  "conditioning": "VAEEncode the uploaded immutable hero image, then attach that same reference latent to positive and negative conditioning with ReferenceLatent",
+  "output_folder": "generated-candidates",
+  "review_status": "not_generated",
+  "rights_review": "pending"
+}

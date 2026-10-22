@@ -1,0 +1,39 @@
+{
+  "run_id": "f5c604da1a3f4249b453b72afd86e968",
+  "command": "jam.plan",
+  "duration_ms": 0.0,
+  "status": "succeeded",
+  "result": {
+    "profile": "24h",
+    "time_budget_minutes": 1440,
+    "elapsed_minutes": 0,
+    "remaining_minutes": 1440,
+    "release_reserve_minutes": 360,
+    "planned_work_capacity_minutes": 1080,
+    "mandatory_estimate_minutes": 710,
+    "total_estimate_minutes": 710,
+    "within_mandatory_budget": true,
+    "overrun_risk": false,
+    "planned_tasks": [
+      {"id":"IC-001","title":"Record approved scope and baseline existing game tests","estimate_minutes":15,"priority":5,"mandatory":true,"depends_on":[]},
+      {"id":"IC-003","title":"Verify local model identity provenance rights and VRAM","estimate_minutes":35,"priority":5,"mandatory":true,"depends_on":["IC-001"]},
+      {"id":"IC-002","title":"Prove wide and narrow route geometry feasibility before implementation","estimate_minutes":60,"priority":5,"mandatory":true,"depends_on":["IC-001"]},
+      {"id":"IC-004","title":"Generate bounded local ink-comic scene and character proof set","estimate_minutes":90,"priority":4,"mandatory":true,"depends_on":["IC-002","IC-003"]},
+      {"id":"IC-005","title":"Review image proofs at game scale and obtain Founder selection","estimate_minutes":30,"priority":5,"mandatory":true,"depends_on":["IC-004"]},
+      {"id":"IC-006","title":"Update art bible asset manifest and provenance","estimate_minutes":35,"priority":5,"mandatory":true,"depends_on":["IC-005"]},
+      {"id":"IC-007","title":"Integrate selected local comic art behind crisp gameplay overlays","estimate_minutes":65,"priority":5,"mandatory":true,"depends_on":["IC-006"]},
+      {"id":"IC-008","title":"Implement responsive route HUD and accessible drawing feedback","estimate_minutes":40,"priority":5,"mandatory":true,"depends_on":["IC-007"]},
+      {"id":"IC-009","title":"Implement deterministic hazard budget and anchor validation","estimate_minutes":60,"priority":5,"mandatory":true,"depends_on":["IC-002","IC-008"]},
+      {"id":"IC-010","title":"Add validated wide and narrow route examples and keyboard presets","estimate_minutes":35,"priority":5,"mandatory":true,"depends_on":["IC-009"]},
+      {"id":"IC-011","title":"Add useful invalid-route recovery and ink-budget presentation","estimate_minutes":35,"priority":5,"mandatory":true,"depends_on":["IC-009","IC-010"]},
+      {"id":"IC-012","title":"Test route tradeoffs hazard rejection budget and retry deterministically","estimate_minutes":45,"priority":5,"mandatory":true,"depends_on":["IC-009","IC-010","IC-011"]},
+      {"id":"IC-013","title":"Verify both routes interactions and recovery in actual browser","estimate_minutes":60,"priority":5,"mandatory":true,"depends_on":["IC-007","IC-008","IC-012"]},
+      {"id":"IC-014","title":"Critique desktop narrow visual accessibility and performance evidence","estimate_minutes":50,"priority":5,"mandatory":true,"depends_on":["IC-013"]},
+      {"id":"IC-015","title":"Run final regression update hashes and handoff records","estimate_minutes":55,"priority":5,"mandatory":true,"depends_on":["IC-014"]}
+    ],
+    "deferred_tasks": [],
+    "remaining_planned_capacity_minutes": 370,
+    "scope_rules": ["One core loop","One primary environment","A small approved asset set","A complete start-to-restart path","No optional feature after content freeze"],
+    "warning": "Task durations are estimates, not guarantees. This deterministic greedy planner respects task dependencies but is not a full critical-path or resource-constrained scheduler."
+  }
+}

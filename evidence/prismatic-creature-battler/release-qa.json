@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.0",
+  "project_id": "prismatic-creature-battler",
+  "status": "vertical_slice_verified_with_scope_limits",
+  "validated_at": "2026-10-16",
+  "targets": {
+    "browser": "Custom Canvas2D + WebGL shader app, served locally at http://127.0.0.1:8791/",
+    "engine_project": "Godot 4.7.2 GL Compatibility smoke scene",
+    "export": "Godot Web preset under builds/prismatic-creature-battler/web (separate Godot smoke export; the playable slice is the custom HTML runtime)"
+  },
+  "checks": [
+    {
+      "name": "Godot availability",
+      "command": ".venv/Scripts/ags.exe godot doctor",
+      "result": "passed",
+      "evidence": "Godot 4.7.2.stable.official.ed1daf0bf found"
+    },
+    {
+      "name": "Godot project validation",
+      "command": ".venv/Scripts/ags.exe godot validate projects/prismatic-creature-battler",
+      "result": "passed",
+      "evidence": "static_valid=true; errors=[]; runtime_validation=passed; Godot editor process returned 0"
+    },
+    {
+      "name": "Godot Web smoke export",
+      "command": ".venv/Scripts/ags.exe godot export projects/prismatic-creature-battler --preset 'Web' --output builds/prismatic-creature-battler/web/index.html",
+      "result": "passed",
+      "evidence": "Export command returned 0; index.html 5461 bytes; JS 279815 bytes; PCK 9086472 bytes; WASM 39514754 bytes"
+    },
+    {
+      "name": "Custom runtime JavaScript syntax",
+      "command": "node --check projects/prismatic-creature-battler/web/app.js && node --check projects/prismatic-creature-battler/web/engine.js",
+      "result": "passed"
+    },
+    {
+      "name": "Combat-engine contract suites",
+      "command": "node projects/prismatic-creature-battler/web/test_engine.cjs",
+      "result": "passed",
+      "evidence": "4 suites passed: Roster, Resonance Trio, Counterplay Adaptation, Cosmetic Fairness"
+    },
+    {
+      "name": "Studio JSON schemas parse",
+      "result": "passed",
+      "evidence": "game-brief.json, art-bible.json, production-project.json, task-graph.json parse as JSON"
+    },
+    {
+      "name": "Actual browser playtest",
+      "result": "passed",
+      "evidence": "Local server returned HTTP 200 and text/html; browser displayed the game; launched Battle reached FINISHED (PLAYER), 65% Prism Gauge, 4 Convergences, 8 Resonance Chains, 6 surviving allies; Run Proof reported foil vs standard had identical 23 ticks, 9 chains, and unit HP; reset and Round 3 selection returned to PREPARE and displayed the Apex round. No browser console or network errors were observed."
+    },
+    {
+      "name": "Roster and package acceptance audit",
+      "result": "passed",
+      "evidence": "All 8 roster source and web sprites exist; package contains index.html, app.js, engine.js, and local assets."
+    },
+    {
+      "name": "Visual screenshot artifact integrity",
+      "result": "passed",
+      "evidence": "PNG extracted from browser recording; 663302 bytes; SHA-256 2a55f680843bc8e558290cbf0fdbfa2ec8fa5df0145d621ee6ac979d53b3bacf"
+    }
+  ],
+  "playtest_capture": "evidence/prismatic-creature-battler/browser-playtest.webm",
+  "package": "builds/prismatic-creature-battler/prismatic-creature-battler-web.zip",
+  "package_manifest": "evidence/prismatic-creature-battler/package-manifest.json",
+  "known_limitations": [
+    "The complete custom battle interface was tested in the browser, but Godot is presently an engine smoke fixture rather than the implementation host for that UI.",
+    "The separate Godot Web export is an approximately 49 MB engine/runtime build and does not contain the custom HTML battler UI; use the custom-runtime web ZIP for the playable slice.",
+    "Playtest observation and browser UI interaction are agent-run, not human playtest or human art approval.",
+    "The atlas inspection in the browser exhibited black/transparent-looking regions on the Tempest Wyrm artwork; individual creature sprite assets are used for the playable arena. Human visual/art review remains open."
+  ],
+  "human_gates": [
+    "Review image generation provenance and license register before any public/commercial distribution.",
+    "Play the packaged ZIP from a clean local copy and review appearance at target browser/device sizes.",
+    "Review balance/fairness beyond the deterministic foil-vs-standard automated proof."
+  ],
+  "visual_capture": {
+    "path": "evidence/prismatic-creature-battler/playtest-frame.png",
+    "bytes": 663302,
+    "sha256": "2a55f680843bc8e558290cbf0fdbfa2ec8fa5df0145d621ee6ac979d53b3bacf",
+    "source": "first frame extracted from agent-run browser playtest recording"
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "format": "torch-character-study-package/1",
+  "status": "candidate_review_required",
+  "identity_reference": {
+    "path": "assets/reference/torch/torch-protagonist-identity-reference.png",
+    "sha256": "9c20150532fb09a45d0bebf1acf450853277c503802461e70b4c489e763ffd15",
+    "exact_upload_preserved": true
+  },
+  "canonical_source": {
+    "path": "assets/generated/torch-animation-proof/01_klein-bench_00043_.png",
+    "sha256": "d9406f063e68b7dd3caf4451f7b0b7ae66a95f1dac429ac642e1ebb150a5a833",
+    "status": "existing-generated-hero-candidate; no local new diffusion edit was executed"
+  },
+  "outputs": {
+    "hero_presentation_candidate": {
+      "path": "evidence/torch-character-art/torch-hero-presentation-candidate.png",
+      "sha256": "0de2261cb60de5018375c60c0500617bcbb1013e1d8a5b3c5c4282cb4cebf7bb",
+      "canvas_size": [
+        1280,
+        1600
+      ],
+      "method": "Editorial artboard; embeds the existing 1024x1024 candidate at native scale, uncropped and unretouched, over the sampled neutral background with typographic framing. This is presentation polish, not a new diffusion generation or painted enhancement."
+    },
+    "pose_study": {
+      "path": "evidence/torch-character-art/torch-character-pose-study.png",
+      "sha256": "1c8688d5a034acd62a41c36fed2274b2b61d85c75f181f1c48fc1558b7c077ae",
+      "method": "Editorial contact sheet of three existing user-provided pose studies with per-pose identity and continuity review."
+    }
+  },
+  "pose_source_files": [
+    {
+      "path": "evidence/torch-animation-proof/pose-01.jpg",
+      "sha256": "21f312e64d7a6050345406ddebe3ab5bf035d84beca7737ce9162fcb23f5b2f1"
+    },
+    {
+      "path": "evidence/torch-animation-proof/pose-02.jpg",
+      "sha256": "88ced2f3c1fda722d53627c755e5a84f43592ad873d6cf1997e2b64115289bbe"
+    },
+    {
+      "path": "evidence/torch-animation-proof/pose-03.jpg",
+      "sha256": "831de43f102df8bdf2aff8ff34120fe8c2709d97dfd38124910c707015a3a327"
+    }
+  ],
+  "review": {
+    "animation_status": "rejected_as_animation_candidate",
+    "reason": "Existing report identifies hair/costume drift and a second torch in recovery; the board labels these as studies, not frames."
+  },
+  "generation_attempt": {
+    "model": "FLUX.2 Klein 4B Distilled FP8",
+    "status": "not_run_resource_gate",
+    "reason": "Before any generation, RTX 5070 Ti reports 8641 MiB used of 12227 MiB total and Windows reports under 1 GiB free RAM. Avoid competing with active GPU processes. The available source presentation is explicitly not called new generated art."
+  },
+  "human_gates": [
+    "Approve or revise the hero candidate.",
+    "Redesign the pose studies from the locked reference to remove hair, mantle, prop-count and hand-ownership drift.",
+    "Artist-authored shoulder and occluded body pixels are still required for a production cutout rig.",
+    "Review exact model/component terms and outputs before distribution."
+  ],
+  "presentation_background_rgb": [
+    135,
+    139,
+    144
+  ]
+}

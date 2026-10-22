@@ -1,0 +1,58 @@
+[https://itch.io/jam/ai-jam-5](https://itch.io/jam/ai-jam-5)
+
+It is time for the Game Jam, this is what we have been preparing for with this git repo&#x20;
+
+[https://github.com/11vatedTech/11vatedTech_AI-GameStudio](https://github.com/11vatedTech/11vatedTech_AI-GameStudio)
+
+it is time for us to start planning games for the Jam
+
+so. torches is the them. so im thinking fire. but im thinking fires of different colors, so different torches. im thinking instead of just different color fires, those different fires has different abilities. like blue=jet fire, orange=regular fire, red=Blazing fire, clear= ice fire, black= a naruto reference to the amateratsu, white= spirit fire(a cleansing fire, good for healing and extinguishing the black fire, typically wouldnt use in most use cases, can neutralize fights if players spirit is higher than opponents/npcs.) , purple= Purple Haze fire(ability is like using burning purple smoke clouds)
+Pink= cupid Fire that burn its infatuated enemies, Green=Emerald Fire( casting scalding emeralds at opponents, emeralds like a reference to sonic the hedgehog , Yellow= Electric fire
+
+I want this to be an open world game where players weapons are torches that they collect, while choosing one out of three when creating there character and starting the game. to make it more interesting, i want there 3 choices to derive from how they answer three question after creating there character, i want their choices to derive from how the player views themself. like the harry potter sorting hat. which means that players end up having different choices for them in the beginning and which fire they can use to start the game. 
+
+i want these fires to cast there abilities in interesting unusual fire type of ways, providing the player with devastating combos with their torches. I want it to feel like both fighting regularly with the torches and a way to cast special spells the torches provide in their dominions
+
+I want it to be like an open world exploration with creatures and enemy rogues, and a rogue group like the akatuski from naruto, who figured out a way to eat their flames and turn into some kind of flame monster depending on the flames they've eaten, nobody else in the game knows this forbidden technique
+
+# The master plan: an original, AI-produced fantasy action RPG
+
+We're going to approach this as an 11vatedTech game production—not a quick prototype dressed up with effects. The goal is a visually coherent, combat-rich, explorable vertical slice that proves the larger open-world RPG is worth building.
+
+I've checked the current [AI Browser Game Jam 5 rules](https://itch.io/jam/ai-jam-5?utm_source=chatgpt.com) and your [11vatedTech AI Game Studio repository](https://github.com/11vatedTech/11vatedTech_AI-GameStudio?utm_source=chatgpt.com). The jam requires a free game that runs in the browser, substantial AI-assisted creation, and a majority of the submission's content to be new if continuing an existing project. Its categories include graphics, audio, fun, theme, overall, and AI usage. The published deadline is October 31 at 03:00 UTC, equivalent to October 30 at 11:00 p.m. Eastern Daylight Time. We'll plan to finish earlier, not gamble on the final hour.&#x20;
+
+[image](https://www.google.com/s2/favicons?domain=https://itch.io\&sz=32)
+
+itch.io
+
+
+
+Your studio already provides a relevant foundation: local image-generation adapters, asset processing, animation diagnostics, provenance tracking, Godot support, and release checks. Its own documentation also acknowledges the critical distinction we need to respect: generating an image, producing a valid asset file, integrating an asset into the game, and verifying that it looks good in actual gameplay are four different milestones.
+
+That distinction will define our entire production process.
+
+The visual-quality rule: we will not use geometric primitives as substitutes for characters, environments, props, creatures, or effects that ought to be authored visual assets. We will generate, select, refine, animate, integrate, and inspect those assets. Code will still handle gameplay, collision, lighting logic, shaders, and responsive effects where appropriate; those systems will support the artwork rather than serve as a replacement for it.
+
+## The GDD is ready for our first review
+
+Download the Torch RPG GDD — v0.1 (Markdown)
+
+The document is approximately 7,600 words and establishes our initial production baseline. It includes:
+
+- The complete creative vision, design pillars, and distinction between the full open-world game and the jam vertical slice.
+- All ten flame dominions, including their combat identities, exploration roles, and design requirements.
+- The three-question identity ritual and the proposed affinity system for starting torches.
+- Physical torch combat, signature abilities, combos, enemy behaviors, and the flame-eater faction.
+- The opening region, story progression, encounter sequence, and climactic transformation.
+- The visual art bible and a detailed AI-generated asset, character-consistency, animation, VFX, UI, and audio workflow.
+- Technical architecture, accessibility, risk management, production milestones, acceptance gates, and evidence requirements.
+
+### The most important production decision
+
+We are not going to mass-generate assets and hope they look good together.
+
+First, we will establish the art direction and produce a small, representative proof set: the protagonist, a torch, an enemy, an environment, the signature flames, and a meaningful animation. We'll examine them together, in the intended camera and at actual gameplay scale. If the workflow cannot maintain visual identity and animation quality, we fix the workflow before generating the rest of the game.
+
+The GDD deliberately keeps the camera choice open until that test. My recommended starting direction is painterly mythic dark fantasy with anime-scale combat spectacle, but the actual game needs to prove that its characters, world, animation, and effects look coherent together.
+
+Our next milestone is the visual and animation proof—not another round of abstract planning. Once that passes, the GDD can be refined into an implementation-ready production contract for the 11vatedTech AI Game Studio, with every essential asset accounted for and every major feature tied to an acceptance test.

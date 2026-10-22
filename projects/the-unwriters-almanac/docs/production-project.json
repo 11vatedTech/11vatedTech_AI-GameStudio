@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0",
+  "project_id": "the-unwriters-almanac",
+  "title": "The Unwriter’s Almanac",
+  "engine": "Browser Canvas2D and semantic DOM (ES modules; no runtime dependencies)",
+  "jam_profile": "24h",
+  "brief_path": "docs/game-brief.json",
+  "art_bible_path": "docs/art-bible.json",
+  "task_graph_path": "docs/task-graph.json",
+  "asset_manifest_path": "docs/asset-manifest.json",
+  "current_stage": "Prototype / deterministic playable page",
+  "release_target": "Local browser vertical slice; no publication or distribution approval",
+  "non_goals": ["Campaign", "Generated runtime imagery", "Deployment", "Commercial release"],
+  "risk_register": [
+    {"id":"R-01","description":"The stroke may feel like generic drawing rather than editing the page’s physical law.","impact":"high","mitigation":"Have the same committed rail visibly guide the bead and carry the character; validate the causal route in browser.","status":"open"},
+    {"id":"R-02","description":"Watercolor atmosphere may obscure gameplay geometry.","impact":"medium","mitigation":"Keep rail, bead, creature, and seal above low-contrast washes; inspect two viewport widths.","status":"open"},
+    {"id":"R-03","description":"The game brief describes human playtesting criteria but no playtester is available in this session.","impact":"medium","mitigation":"Record actual browser interactions and retain player comprehension as an unapproved human gate.","status":"open"},
+    {"id":"R-04","description":"System fonts differ across platforms.","impact":"low","mitigation":"Use local system serif/monospace fallbacks; no remote font loading.","status":"accepted"}
+  ]
+}

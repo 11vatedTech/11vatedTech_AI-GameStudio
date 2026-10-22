@@ -1,0 +1,93 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MCP tool registry",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "tools"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "last_reviewed": {
+      "type": "string"
+    },
+    "policy": {
+      "type": "string"
+    },
+    "tools": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "repository",
+          "role",
+          "priority",
+          "status",
+          "free_local_path",
+          "security",
+          "smoke_test",
+          "source"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9-]+$"
+          },
+          "name": {
+            "type": "string"
+          },
+          "repository": {
+            "type": "string",
+            "format": "uri"
+          },
+          "role": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string"
+            }
+          },
+          "license_snapshot": {
+            "type": "string"
+          },
+          "priority": {
+            "enum": [
+              "P0",
+              "P1",
+              "P2",
+              "P3"
+            ]
+          },
+          "status": {
+            "type": "string"
+          },
+          "free_local_path": {
+            "type": "boolean"
+          },
+          "health_check": {
+            "type": "string"
+          },
+          "security": {
+            "type": "object"
+          },
+          "smoke_test": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "source": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": true
+}

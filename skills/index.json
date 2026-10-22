@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "skill_count": 79,
+  "skill_count": 87,
   "skills": [
     {
       "id": "project-discovery",
@@ -947,6 +947,110 @@
         "qa"
       ],
       "path": "skills/evidence-claims/SKILL.md"
+    },
+    {
+      "id": "agent-capability-discovery",
+      "title": "Agent Capability Discovery and Tool Selection",
+      "summary": "Discover what the current host can really run and select the strongest safe workflow before producing content.",
+      "tags": [
+        "mcp",
+        "capabilities",
+        "environment",
+        "discovery",
+        "orchestration"
+      ],
+      "path": "skills/agent-capability-discovery/SKILL.md"
+    },
+    {
+      "id": "ai-asset-pipeline",
+      "title": "AI Asset Pipeline: From Concept to Engine-Ready Content",
+      "summary": "Orchestrate generation, reference consistency, reconstruction, processing, selection, integration and provenance for complete art sets.",
+      "tags": [
+        "ai-assets",
+        "generation",
+        "comfyui",
+        "consistency",
+        "provenance"
+      ],
+      "path": "skills/ai-asset-pipeline/SKILL.md"
+    },
+    {
+      "id": "animation-action-design",
+      "title": "Action Design: Attacks, Dodges, Combos and Spellcasting",
+      "summary": "Design attack animation as readable, timed gameplay with a real body action and synchronized contact events.",
+      "tags": [
+        "combat",
+        "animation",
+        "attacks",
+        "combos",
+        "game-feel"
+      ],
+      "path": "skills/animation-action-design/SKILL.md"
+    },
+    {
+      "id": "animation-full-stack",
+      "title": "Full-Stack Character Animation Production",
+      "summary": "Produce meaningful character motion from action intent through rigging, animation, playback review and game-engine integration.",
+      "tags": [
+        "animation",
+        "rigging",
+        "2d",
+        "3d",
+        "retargeting",
+        "engine"
+      ],
+      "path": "skills/animation-full-stack/SKILL.md"
+    },
+    {
+      "id": "character-rigging-retargeting",
+      "title": "Character Rigging, Weighting and Motion Retargeting",
+      "summary": "Build a usable rig and transfer movement without losing proportions, contacts or torch ownership.",
+      "tags": [
+        "rigging",
+        "skinning",
+        "retargeting",
+        "blender",
+        "character"
+      ],
+      "path": "skills/character-rigging-retargeting/SKILL.md"
+    },
+    {
+      "id": "combat-vfx-audio",
+      "title": "Combat VFX and Audio Production",
+      "summary": "Create signature effects and sound that communicate hit, force, flame behavior and tactical state.",
+      "tags": [
+        "vfx",
+        "audio",
+        "combat",
+        "shaders",
+        "particles"
+      ],
+      "path": "skills/combat-vfx-audio/SKILL.md"
+    },
+    {
+      "id": "production-director",
+      "title": "Agent Production Director",
+      "summary": "Own the full creative production task from project truth through playable, visually coherent delivery.",
+      "tags": [
+        "production",
+        "creative-direction",
+        "execution",
+        "agent-autonomy"
+      ],
+      "path": "skills/production-director/SKILL.md"
+    },
+    {
+      "id": "visual-gameplay-validation",
+      "title": "Visual and Gameplay Validation in the Real Target Runtime",
+      "summary": "Verify that art, movement, VFX, UI and gameplay work together in the actual running game.",
+      "tags": [
+        "visual-qa",
+        "engine",
+        "playwright",
+        "godot",
+        "animation"
+      ],
+      "path": "skills/visual-gameplay-validation/SKILL.md"
     }
   ]
 }

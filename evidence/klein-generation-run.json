@@ -1,0 +1,452 @@
+[
+  {
+    "slug": "tempest-wyrm",
+    "seed": 2101,
+    "prompt": "Centered full-body game creature portrait of Tempest Wyrm, colossal storm dragon with jagged midnight-sapphire scales, glowing cyan lightning veins, spread wing membranes crackling with electrical arcs, fierce electric blue eyes, isolated on a clean solid dark obsidian background #090B14, high-contrast painterly fantasy collectible card art, crisp silhouette, no text, no border, no watermark",
+    "duration_seconds": 55.92,
+    "raw_path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\generated\\tempest-wyrm\\01_klein-bench_00032_.png",
+    "sha256": "f2b1f53dc9918159eceb881307bd82e778294f31cc40725701e23ddfb1d556bd",
+    "inspection": {
+      "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\generated\\tempest-wyrm\\01_klein-bench_00032_.png",
+      "sha256": "f2b1f53dc9918159eceb881307bd82e778294f31cc40725701e23ddfb1d556bd",
+      "format": "PNG",
+      "mode": "RGB",
+      "width": 1024,
+      "height": 1024,
+      "has_alpha": false,
+      "alpha_unique_values": 1,
+      "visible_bbox": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "visible_occupancy": 1.0,
+      "nonempty": true,
+      "rgb_coarse_entropy_bits": 2.2317,
+      "interpretation": "Technical diagnostics only. These signals do not establish visual quality or art-direction approval."
+    },
+    "refined_path": "assets/refined/tempest-wyrm.png",
+    "refined_sha256": "e50722847cf8c2fc6dc18dcb880ff973d6e25ce9c50292cfd598ec512eb08c1d",
+    "refined_inspection": {
+      "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\refined\\tempest-wyrm.png",
+      "sha256": "e50722847cf8c2fc6dc18dcb880ff973d6e25ce9c50292cfd598ec512eb08c1d",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 512,
+      "height": 512,
+      "has_alpha": true,
+      "alpha_unique_values": 256,
+      "visible_bbox": [
+        4,
+        4,
+        508,
+        508
+      ],
+      "visible_occupancy": 0.345497,
+      "nonempty": true,
+      "rgb_coarse_entropy_bits": 2.4134,
+      "interpretation": "Technical diagnostics only. These signals do not establish visual quality or art-direction approval."
+    }
+  },
+  {
+    "slug": "prismhart",
+    "seed": 2102,
+    "prompt": "Centered full-body game creature portrait of Prismhart, majestic bioluminescent crystal automaton stag with towering faceted diamond antlers refracting rainbow cyan and violet light, translucent quartz chest core, isolated on a clean solid dark obsidian background #090B14, high-contrast painterly fantasy collectible card art, crisp silhouette, no text, no border, no watermark",
+    "duration_seconds": 12.83,
+    "raw_path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\generated\\prismhart\\01_klein-bench_00033_.png",
+    "sha256": "f988ce35bcf44fb2b0218712760affa288930350a814c214373c5bc65231c78d",
+    "inspection": {
+      "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\generated\\prismhart\\01_klein-bench_00033_.png",
+      "sha256": "f988ce35bcf44fb2b0218712760affa288930350a814c214373c5bc65231c78d",
+      "format": "PNG",
+      "mode": "RGB",
+      "width": 1024,
+      "height": 1024,
+      "has_alpha": false,
+      "alpha_unique_values": 1,
+      "visible_bbox": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "visible_occupancy": 1.0,
+      "nonempty": true,
+      "rgb_coarse_entropy_bits": 1.8801,
+      "interpretation": "Technical diagnostics only. These signals do not establish visual quality or art-direction approval."
+    },
+    "refined_path": "assets/refined/prismhart.png",
+    "refined_sha256": "a1051e303f82ad9d0a38166a780e9f0bdfdfbac58bfc88c419344a967e3a7a3e",
+    "refined_inspection": {
+      "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\refined\\prismhart.png",
+      "sha256": "a1051e303f82ad9d0a38166a780e9f0bdfdfbac58bfc88c419344a967e3a7a3e",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 512,
+      "height": 512,
+      "has_alpha": true,
+      "alpha_unique_values": 256,
+      "visible_bbox": [
+        11,
+        4,
+        501,
+        508
+      ],
+      "visible_occupancy": 0.449444,
+      "nonempty": true,
+      "rgb_coarse_entropy_bits": 3.5002,
+      "interpretation": "Technical diagnostics only. These signals do not establish visual quality or art-direction approval."
+    }
+  },
+  {
+    "slug": "riftstalker",
+    "seed": 2103,
+    "prompt": "Centered full-body game creature portrait of Riftstalker, sleek void mantis assassin beast with dark obsidian chitin armor, glowing violet and cyan phase-blades, predatory crouching stance, dimensional rift wisps, isolated on a clean solid dark obsidian background #090B14, high-contrast painterly fantasy collectible card art, crisp silhouette, no text, no border, no watermark",
+    "duration_seconds": 12.36,
+    "raw_path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\generated\\riftstalker\\01_klein-bench_00034_.png",
+    "sha256": "eb3106b06a423fcd572d54090d0298da0276e9724565a85d2d223c57a89a3c0c",
+    "inspection": {
+      "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\generated\\riftstalker\\01_klein-bench_00034_.png",
+      "sha256": "eb3106b06a423fcd572d54090d0298da0276e9724565a85d2d223c57a89a3c0c",
+      "format": "PNG",
+      "mode": "RGB",
+      "width": 1024,
+      "height": 1024,
+      "has_alpha": false,
+      "alpha_unique_values": 1,
+      "visible_bbox": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "visible_occupancy": 1.0,
+      "nonempty": true,
+      "rgb_coarse_entropy_bits": 1.948,
+      "interpretation": "Technical diagnostics only. These signals do not establish visual quality or art-direction approval."
+    },
+    "refined_path": "assets/refined/riftstalker.png",
+    "refined_sha256": "f932c265702fe4f6ec269fc135b3b960c749d80733beb862661ed50cb261c80f",
+    "refined_inspection": {
+      "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\refined\\riftstalker.png",
+      "sha256": "f932c265702fe4f6ec269fc135b3b960c749d80733beb862661ed50cb261c80f",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 512,
+      "height": 512,
+      "has_alpha": true,
+      "alpha_unique_values": 256,
+      "visible_bbox": [
+        5,
+        6,
+        507,
+        506
+      ],
+      "visible_occupancy": 0.342129,
+      "nonempty": true,
+      "rgb_coarse_entropy_bits": 2.5276,
+      "interpretation": "Technical diagnostics only. These signals do not establish visual quality or art-direction approval."
+    }
+  },
+  {
+    "slug": "pyrewarden",
+    "seed": 2104,
+    "prompt": "Centered full-body game creature portrait of Pyrewarden, towering flame colossus lion-drake in ancient volcanic basalt armor with glowing gold and crimson magma fissures, blazing solar mane, isolated on a clean solid dark obsidian background #090B14, high-contrast painterly fantasy collectible card art, crisp silhouette, no text, no border, no watermark",
+    "duration_seconds": 12.03,
+    "raw_path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\generated\\pyrewarden\\01_klein-bench_00035_.png",
+    "sha256": "1e8db0076fd475b4666450b4ed47eccd28db955f458450e5a6af862f42ce7bb7",
+    "inspection": {
+      "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\generated\\pyrewarden\\01_klein-bench_00035_.png",
+      "sha256": "1e8db0076fd475b4666450b4ed47eccd28db955f458450e5a6af862f42ce7bb7",
+      "format": "PNG",
+      "mode": "RGB",
+      "width": 1024,
+      "height": 1024,
+      "has_alpha": false,
+      "alpha_unique_values": 1,
+      "visible_bbox": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "visible_occupancy": 1.0,
+      "nonempty": true,
+      "rgb_coarse_entropy_bits": 2.2353,
+      "interpretation": "Technical diagnostics only. These signals do not establish visual quality or art-direction approval."
+    },
+    "refined_path": "assets/refined/pyrewarden.png",
+    "refined_sha256": "cf8cb06f7272f72e2e1ef4a624397441f8f8c1a30976b7c50a471c86ca2613c3",
+    "refined_inspection": {
+      "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\refined\\pyrewarden.png",
+      "sha256": "cf8cb06f7272f72e2e1ef4a624397441f8f8c1a30976b7c50a471c86ca2613c3",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 512,
+      "height": 512,
+      "has_alpha": true,
+      "alpha_unique_values": 256,
+      "visible_bbox": [
+        9,
+        4,
+        503,
+        508
+      ],
+      "visible_occupancy": 0.545406,
+      "nonempty": true,
+      "rgb_coarse_entropy_bits": 3.8094,
+      "interpretation": "Technical diagnostics only. These signals do not establish visual quality or art-direction approval."
+    }
+  },
+  {
+    "slug": "sylvan-aegis",
+    "seed": 2105,
+    "prompt": "Centered full-body game creature portrait of Sylvan Aegis, ancient verdant spirit treant-serpent with luminous emerald amber heartwood, golden rune bark and glowing jade leaves, isolated on a clean solid dark obsidian background #090B14, high-contrast painterly fantasy collectible card art, crisp silhouette, no text, no border, no watermark",
+    "duration_seconds": 11.78,
+    "raw_path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\generated\\sylvan-aegis\\01_klein-bench_00036_.png",
+    "sha256": "c7af2d9bd1f5d42f154d7e158b4897de3a25837b1e437e4fd9133cbb52882cf3",
+    "inspection": {
+      "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\generated\\sylvan-aegis\\01_klein-bench_00036_.png",
+      "sha256": "c7af2d9bd1f5d42f154d7e158b4897de3a25837b1e437e4fd9133cbb52882cf3",
+      "format": "PNG",
+      "mode": "RGB",
+      "width": 1024,
+      "height": 1024,
+      "has_alpha": false,
+      "alpha_unique_values": 1,
+      "visible_bbox": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "visible_occupancy": 1.0,
+      "nonempty": true,
+      "rgb_coarse_entropy_bits": 1.9696,
+      "interpretation": "Technical diagnostics only. These signals do not establish visual quality or art-direction approval."
+    },
+    "refined_path": "assets/refined/sylvan-aegis.png",
+    "refined_sha256": "81dabb471cc5e699559eb27cce09e5afb96122a24e779c2c23c57d107f46d489",
+    "refined_inspection": {
+      "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\refined\\sylvan-aegis.png",
+      "sha256": "81dabb471cc5e699559eb27cce09e5afb96122a24e779c2c23c57d107f46d489",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 512,
+      "height": 512,
+      "has_alpha": true,
+      "alpha_unique_values": 256,
+      "visible_bbox": [
+        9,
+        4,
+        503,
+        508
+      ],
+      "visible_occupancy": 0.53167,
+      "nonempty": true,
+      "rgb_coarse_entropy_bits": 3.6238,
+      "interpretation": "Technical diagnostics only. These signals do not establish visual quality or art-direction approval."
+    }
+  },
+  {
+    "slug": "abyssal-ryu",
+    "seed": 2106,
+    "prompt": "Centered full-body game creature portrait of Abyssal Ryu, sinuous jade and deep-sea bioluminescent leviathan dragon coiling with glowing aquamarine currents and pearl horns, isolated on a clean solid dark obsidian background #090B14, high-contrast painterly fantasy collectible card art, crisp silhouette, no text, no border, no watermark",
+    "duration_seconds": 11.98,
+    "raw_path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\generated\\abyssal-ryu\\01_klein-bench_00037_.png",
+    "sha256": "6b3f5648962de52f4000c37065dcb8e45c6a6a9c8fc5bc4f36178c3b4151fe40",
+    "inspection": {
+      "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\generated\\abyssal-ryu\\01_klein-bench_00037_.png",
+      "sha256": "6b3f5648962de52f4000c37065dcb8e45c6a6a9c8fc5bc4f36178c3b4151fe40",
+      "format": "PNG",
+      "mode": "RGB",
+      "width": 1024,
+      "height": 1024,
+      "has_alpha": false,
+      "alpha_unique_values": 1,
+      "visible_bbox": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "visible_occupancy": 1.0,
+      "nonempty": true,
+      "rgb_coarse_entropy_bits": 2.3975,
+      "interpretation": "Technical diagnostics only. These signals do not establish visual quality or art-direction approval."
+    },
+    "refined_path": "assets/refined/abyssal-ryu.png",
+    "refined_sha256": "d6c06a4b71b96b54afb589d510ea7ff6ed01d74d5f8a0af57a13e20015cf21fd",
+    "refined_inspection": {
+      "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\refined\\abyssal-ryu.png",
+      "sha256": "d6c06a4b71b96b54afb589d510ea7ff6ed01d74d5f8a0af57a13e20015cf21fd",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 512,
+      "height": 512,
+      "has_alpha": true,
+      "alpha_unique_values": 256,
+      "visible_bbox": [
+        7,
+        4,
+        505,
+        508
+      ],
+      "visible_occupancy": 0.552872,
+      "nonempty": true,
+      "rgb_coarse_entropy_bits": 3.8561,
+      "interpretation": "Technical diagnostics only. These signals do not establish visual quality or art-direction approval."
+    }
+  },
+  {
+    "slug": "solarius",
+    "seed": 2107,
+    "prompt": "Centered full-body game creature portrait of Solarius, celestial astral phoenix-griffin with translucent starfield wings, floating golden astrolabe halo rings and radiant white-gold feathers, isolated on a clean solid dark obsidian background #090B14, high-contrast painterly fantasy collectible card art, crisp silhouette, no text, no border, no watermark",
+    "duration_seconds": 12.5,
+    "raw_path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\generated\\solarius\\01_klein-bench_00038_.png",
+    "sha256": "22d6e306721721a0c52f8c7240f084ae07e9a589b5a75fe7134fa0bc3fc22dcb",
+    "inspection": {
+      "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\generated\\solarius\\01_klein-bench_00038_.png",
+      "sha256": "22d6e306721721a0c52f8c7240f084ae07e9a589b5a75fe7134fa0bc3fc22dcb",
+      "format": "PNG",
+      "mode": "RGB",
+      "width": 1024,
+      "height": 1024,
+      "has_alpha": false,
+      "alpha_unique_values": 1,
+      "visible_bbox": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "visible_occupancy": 1.0,
+      "nonempty": true,
+      "rgb_coarse_entropy_bits": 2.7662,
+      "interpretation": "Technical diagnostics only. These signals do not establish visual quality or art-direction approval."
+    },
+    "refined_path": "assets/refined/solarius.png",
+    "refined_sha256": "3b37145b0eef881355d6a892f908e6223c1b042a4fe238a2d2aeca82de2e35ef",
+    "refined_inspection": {
+      "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\refined\\solarius.png",
+      "sha256": "3b37145b0eef881355d6a892f908e6223c1b042a4fe238a2d2aeca82de2e35ef",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 512,
+      "height": 512,
+      "has_alpha": true,
+      "alpha_unique_values": 256,
+      "visible_bbox": [
+        4,
+        4,
+        508,
+        508
+      ],
+      "visible_occupancy": 0.370117,
+      "nonempty": true,
+      "rgb_coarse_entropy_bits": 2.9904,
+      "interpretation": "Technical diagnostics only. These signals do not establish visual quality or art-direction approval."
+    }
+  },
+  {
+    "slug": "umbral-weaver",
+    "seed": 2108,
+    "prompt": "Centered full-body game creature portrait of Umbral Weaver, enigmatic eclipse moth-chimera with obsidian-chrome wings, glowing violet crescent moon eyes and silver gravity threads, isolated on a clean solid dark obsidian background #090B14, high-contrast painterly fantasy collectible card art, crisp silhouette, no text, no border, no watermark",
+    "duration_seconds": 12.36,
+    "raw_path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\generated\\umbral-weaver\\01_klein-bench_00039_.png",
+    "sha256": "1e1f4b139bc99e8c9571f4c68260f68cf51db6357b2b4e8c3c5ab96fe224797f",
+    "inspection": {
+      "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\generated\\umbral-weaver\\01_klein-bench_00039_.png",
+      "sha256": "1e1f4b139bc99e8c9571f4c68260f68cf51db6357b2b4e8c3c5ab96fe224797f",
+      "format": "PNG",
+      "mode": "RGB",
+      "width": 1024,
+      "height": 1024,
+      "has_alpha": false,
+      "alpha_unique_values": 1,
+      "visible_bbox": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "visible_occupancy": 1.0,
+      "nonempty": true,
+      "rgb_coarse_entropy_bits": 1.806,
+      "interpretation": "Technical diagnostics only. These signals do not establish visual quality or art-direction approval."
+    },
+    "refined_path": "assets/refined/umbral-weaver.png",
+    "refined_sha256": "117349829d48bb25f2247b0f0c28fdf841e127b9fe940e50cf0952973203cfbc",
+    "refined_inspection": {
+      "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\refined\\umbral-weaver.png",
+      "sha256": "117349829d48bb25f2247b0f0c28fdf841e127b9fe940e50cf0952973203cfbc",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 512,
+      "height": 512,
+      "has_alpha": true,
+      "alpha_unique_values": 256,
+      "visible_bbox": [
+        4,
+        4,
+        508,
+        508
+      ],
+      "visible_occupancy": 0.260536,
+      "nonempty": true,
+      "rgb_coarse_entropy_bits": 1.8806,
+      "interpretation": "Technical diagnostics only. These signals do not establish visual quality or art-direction approval."
+    }
+  },
+  {
+    "slug": "sanctuary-arena",
+    "seed": 2199,
+    "prompt": "Wide angled 2.5D tabletop battle arena environment: The Prismatic Sanctuary, ancient obsidian stone platform inlaid with glowing gold and cyan hexagonal resonance circuits, surrounded by floating amethyst and quartz crystal monoliths against a deep celestial nebula void, dramatic rim lighting, painterly fantasy game environment art, no characters, no text, no watermark",
+    "duration_seconds": 11.55,
+    "raw_path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\generated\\sanctuary-arena\\01_klein-bench_00040_.png",
+    "sha256": "a9e50d0167edb8c54363e37747d41975d6dcb7d6dfaa39ed10d54b0d6e0f9615",
+    "inspection": {
+      "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\generated\\sanctuary-arena\\01_klein-bench_00040_.png",
+      "sha256": "a9e50d0167edb8c54363e37747d41975d6dcb7d6dfaa39ed10d54b0d6e0f9615",
+      "format": "PNG",
+      "mode": "RGB",
+      "width": 1024,
+      "height": 1024,
+      "has_alpha": false,
+      "alpha_unique_values": 1,
+      "visible_bbox": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "visible_occupancy": 1.0,
+      "nonempty": true,
+      "rgb_coarse_entropy_bits": 4.5684,
+      "interpretation": "Technical diagnostics only. These signals do not establish visual quality or art-direction approval."
+    },
+    "refined_path": "assets/refined/sanctuary-arena.png",
+    "refined_sha256": "db0d68d3b7548d3760af3cdf0d90acfb878ddd4634d0eb50a26f0a4280735434",
+    "refined_inspection": {
+      "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\refined\\sanctuary-arena.png",
+      "sha256": "db0d68d3b7548d3760af3cdf0d90acfb878ddd4634d0eb50a26f0a4280735434",
+      "format": "PNG",
+      "mode": "RGBA",
+      "width": 1024,
+      "height": 640,
+      "has_alpha": true,
+      "alpha_unique_values": 1,
+      "visible_bbox": [
+        0,
+        0,
+        1024,
+        640
+      ],
+      "visible_occupancy": 1.0,
+      "nonempty": true,
+      "rgb_coarse_entropy_bits": 4.5733,
+      "interpretation": "Technical diagnostics only. These signals do not establish visual quality or art-direction approval."
+    }
+  }
+]

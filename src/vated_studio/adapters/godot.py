@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from pathlib import Path
 from shutil import which
+import os
 from typing import Any
 import json
 import subprocess
@@ -20,7 +21,24 @@ class GodotAdapter:
         candidate = Path(self.executable).expanduser()
         if candidate.is_file():
             return str(candidate.resolve())
-        return which(self.executable)
+        resolved = which(self.executable)
+        if resolved:
+            return resolved
+        # Match preflight's PATH candidate order even when a configured alias
+        # (or configured path) is missing.
+        for name in ("godot", "godot4", "godot_console.exe"):
+            if name == self.executable:
+                continue
+            resolved = which(name)
+            if resolved:
+                return resolved
+        # The Studio's Windows developer layout bundles Godot outside PATH.
+        # Keep this fallback deterministic; explicit config and PATH take priority.
+        if os.name == "nt":
+            bundled = Path.home() / "tools" / "ai-game-studio" / "godot" / "godot_console.exe"
+            if bundled.is_file():
+                return str(bundled.resolve())
+        return None
 
     def doctor(self) -> dict[str, Any]:
         located = self.locate()

@@ -1,0 +1,251 @@
+{
+  "schema_version": "1.0",
+  "last_reviewed": "2026-10-20",
+  "policy": "free-local-first; opt-in installs; evidence-driven status",
+  "tools": [
+    {
+      "id": "mcp-for-blender",
+      "name": "MCP for Blender",
+      "repository": "https://github.com/ahujasid/mcp-for-blender",
+      "role": [
+        "3d-modeling",
+        "rigging",
+        "animation",
+        "render-review",
+        "scene-inspection"
+      ],
+      "license_snapshot": "MIT source; separate privacy/terms must be reviewed",
+      "priority": "P0",
+      "status": "researched-not-installed-by-this-overlay",
+      "free_local_path": true,
+      "health_check": "MCP host lists Blender tools; addon socket responds only on localhost",
+      "security": {
+        "localhost_only": true,
+        "safe_mode_required_initially": true,
+        "telemetry_disabled": true,
+        "backup_source_blend": true,
+        "risk": "Socket has no auth/encryption; code execution can modify scene. Run against a copied project and review scripts."
+      },
+      "smoke_test": [
+        "list scene objects/armatures/actions",
+        "key one bone on a disposable rig",
+        "render and inspect one action frame",
+        "verify source .blend hash unchanged"
+      ],
+      "source": "https://github.com/ahujasid/mcp-for-blender"
+    },
+    {
+      "id": "comfy-mcp",
+      "name": "Comfy MCP",
+      "repository": "https://github.com/Comfy-Org/comfy-mcp",
+      "role": [
+        "comfyui-introspection",
+        "workflow-validation",
+        "generation-jobs",
+        "cancel-resume"
+      ],
+      "license_snapshot": "AGPL family according to upstream snapshot; verify exact current terms and comfy-cli dependencies",
+      "priority": "P0",
+      "status": "research-only-local-host-smoke-test-required",
+      "free_local_path": true,
+      "health_check": "MCP tools list + live ComfyUI nodes/models/templates query",
+      "security": {
+        "local_endpoint_only": true,
+        "custom_nodes_reviewed": true,
+        "network_and_model_downloads_opt_in": true,
+        "note": "Use locally installed ComfyUI; do not select cloud route by default."
+      },
+      "smoke_test": [
+        "query live model/node inventory",
+        "run a tiny known workflow",
+        "collect output and hash",
+        "cancel a disposable async test job"
+      ],
+      "source": "https://github.com/Comfy-Org/comfy-mcp"
+    },
+    {
+      "id": "godot-mcp",
+      "name": "Godot MCP",
+      "repository": "https://github.com/Coding-Solo/godot-mcp",
+      "role": [
+        "engine-run",
+        "debug-output",
+        "project-inspection"
+      ],
+      "license_snapshot": "MIT per repository snapshot; verify current Node/runtime compatibility",
+      "priority": "P1",
+      "status": "research-only-host-smoke-test-required",
+      "free_local_path": true,
+      "health_check": "MCP tool list and disposable Godot run succeeds",
+      "security": {
+        "workspace_scoped_projects": true,
+        "generated_scripts_reviewed": true
+      },
+      "smoke_test": [
+        "run disposable project",
+        "capture debug output",
+        "exercise one input path",
+        "close cleanly"
+      ],
+      "source": "https://github.com/Coding-Solo/godot-mcp"
+    },
+    {
+      "id": "krita-mcp",
+      "name": "Krita MCP",
+      "repository": "https://github.com/SanSaSane/krita-mcp",
+      "role": [
+        "layered-raster-edit",
+        "masks",
+        "paintover",
+        "export"
+      ],
+      "license_snapshot": "Upstream snapshot identifies CC0 server; verify current project/plugin terms; Krita/model terms are separate",
+      "priority": "P1",
+      "status": "research-only-version-compatibility-required",
+      "free_local_path": true,
+      "health_check": "MCP lists canvas/layer operations; disposable layer edit round-trip succeeds",
+      "security": {
+        "work_on_project_copy": true,
+        "preserve_original_layer_source": true
+      },
+      "smoke_test": [
+        "open copied document",
+        "create/edit test layer",
+        "export review image",
+        "verify original is preserved"
+      ],
+      "source": "https://github.com/SanSaSane/krita-mcp"
+    },
+    {
+      "id": "playwright-mcp",
+      "name": "Playwright MCP",
+      "repository": "https://github.com/microsoft/playwright-mcp",
+      "role": [
+        "browser-runtime-test",
+        "screenshot",
+        "input-simulation",
+        "console-review"
+      ],
+      "license_snapshot": "Apache-2.0 repository snapshot; browser distribution terms may differ",
+      "priority": "P1",
+      "status": "research-only-browser-smoke-test-required",
+      "free_local_path": true,
+      "health_check": "MCP tool list; local test page launches and can be captured",
+      "security": {
+        "local_projects_only_by_default": true,
+        "no_secrets_in_browser_context": true
+      },
+      "smoke_test": [
+        "launch local build",
+        "send mouse and keyboard input",
+        "capture screenshot",
+        "record console errors and restart path"
+      ],
+      "source": "https://github.com/microsoft/playwright-mcp"
+    },
+    {
+      "id": "freemocap",
+      "name": "FreeMoCap",
+      "repository": "https://github.com/freemocap/freemocap",
+      "role": [
+        "motion-capture",
+        "skeleton-source",
+        "retarget-input"
+      ],
+      "license_snapshot": "AGPL-3.0; project snapshot reports alpha release; verify current version and obligations",
+      "priority": "P2",
+      "status": "optional-research",
+      "free_local_path": true,
+      "health_check": "Installed GUI/server records a short test capture and exports skeleton data",
+      "security": {
+        "source_video_permission_recorded": true,
+        "capture_data_local_by_default": true
+      },
+      "smoke_test": [
+        "record short self-performed action",
+        "inspect skeleton continuity",
+        "retarget to target rig",
+        "check foot/hand/prop contact"
+      ],
+      "source": "https://github.com/freemocap/freemocap"
+    },
+    {
+      "id": "audacity-mcp",
+      "name": "Audacity MCP",
+      "repository": "https://github.com/xDarkzx/Audacity-MCP",
+      "role": [
+        "audio-edit",
+        "trim",
+        "mix",
+        "export"
+      ],
+      "license_snapshot": "Apache-2.0 reported in upstream snapshot; version/API compatibility must be tested",
+      "priority": "P2",
+      "status": "experimental-research",
+      "free_local_path": true,
+      "health_check": "MCP lists audio operations against local test project",
+      "security": {
+        "original_stems_preserved": true,
+        "outputs_versioned": true
+      },
+      "smoke_test": [
+        "import short test clip",
+        "apply a non-destructive edit",
+        "export WAV",
+        "verify sample rate/bit depth/duration"
+      ],
+      "source": "https://github.com/xDarkzx/Audacity-MCP"
+    },
+    {
+      "id": "ffmpeg-cli",
+      "name": "FFmpeg CLI",
+      "repository": "https://ffmpeg.org/",
+      "role": [
+        "media-probe",
+        "audio-conversion",
+        "frame-extraction",
+        "contact-sheet-prep"
+      ],
+      "license_snapshot": "Build/configuration and codecs vary; inspect local build configuration and applicable FFmpeg license",
+      "priority": "P1",
+      "status": "optional-local-binary",
+      "free_local_path": true,
+      "health_check": "ffmpeg -version and ffprobe on local sample file",
+      "security": {
+        "no_shell_interpolation": true,
+        "input_output_paths_validated": true
+      },
+      "smoke_test": [
+        "probe sample",
+        "extract two frames",
+        "convert small audio clip",
+        "compare duration and hash manifest"
+      ],
+      "source": "https://ffmpeg.org/"
+    },
+    {
+      "id": "tripo-sr",
+      "name": "TripoSR",
+      "repository": "https://github.com/VAST-AI-Research/TripoSR",
+      "role": [
+        "single-image-static-mesh-reconstruction"
+      ],
+      "license_snapshot": "MIT per official repo README snapshot; verify weights/dependencies in installed revision",
+      "priority": "P3",
+      "status": "optional-specialist-workflow",
+      "free_local_path": true,
+      "health_check": "exact Python/PyTorch/CUDA environment runs one provided example",
+      "security": {
+        "weights_stay_local": true,
+        "resource_preflight_required": true
+      },
+      "smoke_test": [
+        "reconstruct one non-hero prop",
+        "inspect topology/scale/material",
+        "export glTF/OBJ",
+        "test in target engine"
+      ],
+      "source": "https://github.com/VAST-AI-Research/TripoSR"
+    }
+  ]
+}

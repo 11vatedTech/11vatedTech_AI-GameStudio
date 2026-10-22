@@ -1,0 +1,82 @@
+{
+  "proof_id": "torch-dominions-haze-styleproof-02",
+  "status": "runtime_verified_candidate_requires_followup_iteration_human_review_and_rights_review",
+  "created_at": "2026-10-20",
+  "purpose": "Controlled prompt-only second candidate: preserve the first proof's elevated Cinderwild and painterly palette direction while correcting the firearm-like enemy weapon and undersized detached Haze puff.",
+  "scope": "One local-generated 1024x1024 opaque concept illustration, displayed in a revision-specific disposable Godot 4.7.2 GL Compatibility review scene. Not a playable game, final art or camera approval.",
+  "inputs": {
+    "brief": "projects/Torch_Dominions-Game-jam-5/Game-concept/11vatedTech_Torch_RPG_GDD_v0.1.md",
+    "art_bible": "projects/Torch_Dominions-Game-jam-5/Game-concept/ART_BIBLE.md",
+    "previous_candidate": {
+      "path": "projects/Torch_Dominions-Game-jam-5/visual-proof/comfyui-output/01_klein-bench_00001_.png",
+      "sha256": "ad28c20ab979013b8889d1ba9b36f7afa75c8657d98f0dc8c5eeb0aa204af2ce",
+      "used_as_reference": false
+    },
+    "immutable_original_camera_studies": [
+      {"path": "assets/generated/torch-haze-proof/01_klein-bench_00041_.png", "sha256": "7d633800cc10e7ee326c364231cb50ff8473a2f83afc2a309f10926ec449cc80", "used_as_reference": false},
+      {"path": "assets/generated/torch-haze-proof/01_klein-bench_00042_.png", "sha256": "60d8ffd5193eb99dd485a7d05fd4a434b74b421818d445b8133dc2215645b91f", "used_as_reference": false}
+    ],
+    "protagonist_identity_reference": {
+      "path": "assets/reference/torch/torch-protagonist-identity-reference.png",
+      "sha256": "9c20150532fb09a45d0bebf1acf450853277c503802461e70b4c489e763ffd15",
+      "used_as_reference": false
+    }
+  },
+  "generation": {
+    "service": "Local ComfyUI 0.40.0 at 127.0.0.1:8188; launched for this run only with loopback binding, --offline, --disable-all-custom-nodes, --disable-assets, --disable-metadata, no browser auto-launch, isolated temporary user/input/output/temp paths; shut down after run.",
+    "workflow_recipe": "FLUX.2 Klein 4B Distilled FP8 via src/vated_studio/adapters/klein_workflows.py:make_klein_txt2img",
+    "workflow_path": "projects/Torch_Dominions-Game-jam-5/visual-proof/comfy-workflow-revision-02.json",
+    "request_path": "projects/Torch_Dominions-Game-jam-5/visual-proof/generation-request-revision-02.json",
+    "prompt_id": "e40095f1-9ca7-404f-a97f-ca8cb0a6e8a9",
+    "controlled_variables": {"width": 1024, "height": 1024, "seed": 7183417, "steps": 4, "cfg": 1.0, "distilled": true, "weight_dtype": "fp8_e4m3fn", "sampler": "euler"},
+    "controlled_changes": ["Only the prompt changed: explicitly require the rogue's burning cage/lantern melee torch and prohibit all firearms/ranged weapons.", "Only the prompt changed: specify a broad, low ground-hugging Haze field with translucent layered coverage bands, not a small detached puff.", "The exact 13 generation node classes and 3 component filenames were checked against live /object_info before execution; queue was empty.", "Pre-submit measured free host RAM 13.58 GiB and free Comfy CUDA VRAM 10.78 GiB."],
+    "elapsed_ms": 24628,
+    "components": [
+      {"role": "diffusion model", "path": "C:/Users/11vat/AppData/Local/Comfy-Desktop/ComfyUI-Shared/models/diffusion_models/flux-2-klein-4b-fp8.safetensors", "sha256": "97ed34fe0567e436200f2faee3939b88f2b5d99f8af2a4dc16532c4245c0ccb6"},
+      {"role": "text encoder", "path": "C:/Users/11vat/AppData/Local/Comfy-Desktop/ComfyUI-Shared/models/text_encoders/qwen_3_4b.safetensors", "sha256": "6c671498573ac2f7a5501502ccce8d2b08ea6ca2f661c458e708f36b36edfc5a"},
+      {"role": "VAE", "path": "C:/Users/11vat/AppData/Local/Comfy-Desktop/ComfyUI-Shared/models/vae/flux2-vae.safetensors", "sha256": "868fe7b343cc8f3a19dbcfcafbc3d5f888802be3f89bd81b65b3621a066ce8f3"}
+    ],
+    "output": {"path": "projects/Torch_Dominions-Game-jam-5/visual-proof/comfyui-output/revision-02/01_candidate_00001_.png", "sha256": "4cd6a9dccd462043dc2692838d3b57c6f3537305fa6ff70902c35dff0ac35f21", "bytes": 1618763, "dimensions": [1024, 1024], "mode": "RGB", "alpha": false}
+  },
+  "godot": {
+    "version": "4.7.2.stable.official.ed1daf0bf",
+    "renderer": "GL Compatibility / OpenGL 3.3 NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+    "fixture_project": "projects/Torch_Dominions-Game-jam-5/visual-proof/project.godot",
+    "versioned_scene": "projects/Torch_Dominions-Game-jam-5/visual-proof/proof-revision-02.tscn",
+    "versioned_script": "projects/Torch_Dominions-Game-jam-5/visual-proof/proof-revision-02.gd",
+    "editor_import_log": "projects/Torch_Dominions-Game-jam-5/visual-proof/godot-editor-import-revision-02.log",
+    "runtime_log": "projects/Torch_Dominions-Game-jam-5/visual-proof/godot-runtime-revision-02.log",
+    "run_command": "godot_console.exe --path <visual-proof> --scene res://proof-revision-02.tscn --audio-driver Dummy --rendering-method gl_compatibility --resolution 1024x1024 --fixed-fps 30 --write-movie godot-runtime-revision-02.png --quit-after 2",
+    "editor_import_exit_code": 0,
+    "runtime_exit_code": 0,
+    "runtime_output": "TORCH_VISUAL_PROOF_REVISION_LOADED path=res://comfyui-output/revision-02/01_candidate_00001_.png size=(1024, 1024)",
+    "capture_frames": [
+      {"path": "projects/Torch_Dominions-Game-jam-5/visual-proof/godot-runtime-revision-0200000000.png", "sha256": "47a97e23e98d61123d22d86605b7d2e07749716ff814225635587e31b1ed9892", "dimensions": [1024, 1024]},
+      {"path": "projects/Torch_Dominions-Game-jam-5/visual-proof/godot-runtime-revision-0200000001.png", "sha256": "47a97e23e98d61123d22d86605b7d2e07749716ff814225635587e31b1ed9892", "dimensions": [1024, 1024]}
+    ],
+    "pixel_comparison": "The static source illustration is displayed under revision-identification labels; runtime capture intentionally differs from the source because the label overlay is rendered by Godot.",
+    "review_capture_preview": "projects/Torch_Dominions-Game-jam-5/visual-proof/godot-runtime-revision-02-small.jpg"
+  },
+  "agent_review": {
+    "path": "projects/Torch_Dominions-Game-jam-5/visual-proof/candidate-review-revision-02.json",
+    "decision": "The two targeted prompt compliance defects are visually corrected. Haze blankets parts of the path and rogue lower legs, and the rogue's stance still lacks a strong unmistakable wind-up. Retain only as a reference/style candidate and continue revision before approval."
+  },
+  "quality_boundaries": {
+    "generation": "demonstrated",
+    "candidate_artifact_valid": "verified; 1024x1024 RGB PNG, correct SHA-256 from downloaded generation result",
+    "godot_import": "verified in actual Godot 4.7.2 editor-import mode",
+    "runtime_render": "verified; two 1024x1024 GL Compatibility output frames; load marker and renderer present; no ERROR or SCRIPT ERROR in reviewed runtime log",
+    "gameplay": "not implemented or tested",
+    "animation": "not implemented or tested; source illustration and capture are static",
+    "camera_gate": "open; no new side-on engine comparison",
+    "human_art_approval": "pending",
+    "rights_review": "pending"
+  },
+  "preservation": {
+    "previous_candidate_hash_before_and_after_revision": "ad28c20ab979013b8889d1ba9b36f7afa75c8657d98f0dc8c5eeb0aa204af2ce",
+    "camera_study_side_on_hash_before_and_after": "7d633800cc10e7ee326c364231cb50ff8473a2f83afc2a309f10926ec449cc80",
+    "camera_study_elevated_hash_before_and_after": "60d8ffd5193eb99dd485a7d05fd4a434b74b421818d445b8133dc2215645b91f",
+    "protagonist_reference_hash_before_and_after": "9c20150532fb09a45d0bebf1acf450853277c503802461e70b4c489e763ffd15",
+    "server_cleanup": "Both PIDs for the process tree launched by this task were matched against its unique isolated-state path and expected parent relationship, stopped after generation, and verified exited; TCP 8188 has no listener."
+  }
+}

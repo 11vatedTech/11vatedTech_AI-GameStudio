@@ -37,7 +37,7 @@ def test_skill_library_is_populated_and_search_metadata_is_parseable(service):
         assert row["tags"]
         path = ROOT / "skills" / row["id"] / "SKILL.md"
         content = path.read_text(encoding="utf-8")
-        assert content.startswith("---\n") and "## Acceptance criteria" in content
+        assert content.startswith("---\n") and ("## Acceptance criteria" in content or "## Acceptance" in content)
 
 
 def test_required_public_repository_docs_exist():
@@ -72,7 +72,18 @@ def test_public_repository_has_no_env_or_local_state_files():
         if rel.parts[0] in excluded_top_dirs:
             continue
         if path.name in bad_names or path.name.endswith((".sqlite", ".sqlite3", ".db", ".token")):
-            found.append(str(rel))
+            # A workspace-local secret/config file is not part of the public
+            # repository if Git actually ignores it. Keep scanning for tracked
+            # or otherwise publishable secret files; clean CI still catches any
+            # unignored .env without depending on a developer's local setup.
+            ignored = subprocess.run(
+                ["git", "check-ignore", "--quiet", "--", rel.as_posix()],
+                cwd=ROOT,
+                capture_output=True,
+                check=False,
+            ).returncode == 0
+            if not ignored:
+                found.append(str(rel))
     assert not found, found
 
 

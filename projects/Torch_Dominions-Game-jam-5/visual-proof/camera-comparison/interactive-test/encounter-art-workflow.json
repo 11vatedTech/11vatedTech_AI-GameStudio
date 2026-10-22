@@ -1,0 +1,145 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "flux-2-klein-4b-fp8.safetensors",
+      "weight_dtype": "fp8_e4m3fn"
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "clip_name": "qwen_3_4b.safetensors",
+      "type": "flux2"
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "flux2-vae.safetensors"
+    }
+  },
+  "4": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "text": "An original stylized fantasy action-game encounter concept for Torch: Dominions in the Cinderwild at dusk. Hold the previous elevated three-quarter 2.5D camera, looking down approximately 35 degrees, and the same compact ruined-stone combat clearing, ash-slate path leading toward a broken sanctuary arch, foreground charred branches, slate blue-grey stone, muted moss, weathered bronze, cool dusk atmosphere, warm ember pinpoints, painterly gouache-like materials, anime-scale silhouette clarity, controlled warm/cool edge light and restrained environmental detail. At left-midground, one practical wayfarer in layered worn travel cloth, a single pale ash mantle and copper fasteners visibly grips one bespoke dark-ceramic perforated Haze lantern with violet glass vents. At right-midground, one disciplined ash rogue in contrasting muted ivory and weathered bronze armor is in a readable melee wind-up and visibly grips exactly one handheld rogue torch: a compact forged haft, hand-stop, and distinct burning metal cage/lantern head with ember light; it is unmistakably a ritual torch, not a firearm, bow, crossbow, rifle, pistol, wand, spear, or projectile weapon. No stock, trigger, sight, barrel, muzzle, gun-like silhouette, or ranged weapon. From the open vents of the wayfarer's violet lantern, Purple Haze has already spread outward into a broad, low, ground-hugging area-control cloud, flowing horizontally across a substantial half of the clearing and around the rogue's footing. Show an extended coverage footprint in top-visible ground-plane perspective, with rolling scalloped edges and several translucent layered density bands, including a contained amethyst hot core; it is a field-sized cloud, not a floating ball, small puff, detached projectile, vertical plume, or opaque screen fog. The route, both foot contacts, the hero's hand-to-lantern grip, the rogue's torch hand and its melee attack tell remain clearly legible through the smoke. Original authored fantasy-game composition, coherent value groups, tactile stone/cloth/ceramic/metal, no text, no UI, no letters, no logos, no watermark, no collage, no panels, no photorealism, no neon cyberpunk, no extra characters, no duplicate props, no other enemy weapons, no franchise references."
+    }
+  },
+  "5": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "text": ""
+    }
+  },
+  "6": {
+    "class_type": "ConditioningZeroOut",
+    "inputs": {
+      "conditioning": [
+        "5",
+        0
+      ]
+    }
+  },
+  "7": {
+    "class_type": "CFGGuider",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "positive": [
+        "4",
+        0
+      ],
+      "negative": [
+        "6",
+        0
+      ],
+      "cfg": 1.0
+    }
+  },
+  "8": {
+    "class_type": "KSamplerSelect",
+    "inputs": {
+      "sampler_name": "euler"
+    }
+  },
+  "9": {
+    "class_type": "Flux2Scheduler",
+    "inputs": {
+      "steps": 4,
+      "width": 1024,
+      "height": 1024
+    }
+  },
+  "10": {
+    "class_type": "RandomNoise",
+    "inputs": {
+      "noise_seed": 7183417
+    }
+  },
+  "11": {
+    "class_type": "EmptyFlux2LatentImage",
+    "inputs": {
+      "width": 1024,
+      "height": 1024,
+      "batch_size": 1
+    }
+  },
+  "12": {
+    "class_type": "SamplerCustomAdvanced",
+    "inputs": {
+      "noise": [
+        "10",
+        0
+      ],
+      "guider": [
+        "7",
+        0
+      ],
+      "sampler": [
+        "8",
+        0
+      ],
+      "sigmas": [
+        "9",
+        0
+      ],
+      "latent_image": [
+        "11",
+        0
+      ]
+    }
+  },
+  "13": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "12",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    }
+  },
+  "14": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "filename_prefix": "torch-dominions/paired-character-proof",
+      "images": [
+        "13",
+        0
+      ]
+    }
+  }
+}

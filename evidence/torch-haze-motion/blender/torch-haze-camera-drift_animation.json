@@ -1,0 +1,932 @@
+{
+  "anchor": "center",
+  "animation_id": "torch-haze-camera-drift",
+  "fps": 8.0,
+  "frame_count": 24,
+  "frame_size": [
+    648,
+    648
+  ],
+  "layout": [
+    {
+      "content_height": 640,
+      "content_width": 640,
+      "x": 4,
+      "y": 4
+    },
+    {
+      "content_height": 640,
+      "content_width": 640,
+      "x": 4,
+      "y": 4
+    },
+    {
+      "content_height": 640,
+      "content_width": 640,
+      "x": 4,
+      "y": 4
+    },
+    {
+      "content_height": 640,
+      "content_width": 640,
+      "x": 4,
+      "y": 4
+    },
+    {
+      "content_height": 640,
+      "content_width": 640,
+      "x": 4,
+      "y": 4
+    },
+    {
+      "content_height": 640,
+      "content_width": 640,
+      "x": 4,
+      "y": 4
+    },
+    {
+      "content_height": 640,
+      "content_width": 640,
+      "x": 4,
+      "y": 4
+    },
+    {
+      "content_height": 640,
+      "content_width": 640,
+      "x": 4,
+      "y": 4
+    },
+    {
+      "content_height": 640,
+      "content_width": 640,
+      "x": 4,
+      "y": 4
+    },
+    {
+      "content_height": 640,
+      "content_width": 640,
+      "x": 4,
+      "y": 4
+    },
+    {
+      "content_height": 640,
+      "content_width": 640,
+      "x": 4,
+      "y": 4
+    },
+    {
+      "content_height": 640,
+      "content_width": 640,
+      "x": 4,
+      "y": 4
+    },
+    {
+      "content_height": 640,
+      "content_width": 640,
+      "x": 4,
+      "y": 4
+    },
+    {
+      "content_height": 640,
+      "content_width": 640,
+      "x": 4,
+      "y": 4
+    },
+    {
+      "content_height": 640,
+      "content_width": 640,
+      "x": 4,
+      "y": 4
+    },
+    {
+      "content_height": 640,
+      "content_width": 640,
+      "x": 4,
+      "y": 4
+    },
+    {
+      "content_height": 640,
+      "content_width": 640,
+      "x": 4,
+      "y": 4
+    },
+    {
+      "content_height": 640,
+      "content_width": 640,
+      "x": 4,
+      "y": 4
+    },
+    {
+      "content_height": 640,
+      "content_width": 640,
+      "x": 4,
+      "y": 4
+    },
+    {
+      "content_height": 640,
+      "content_width": 640,
+      "x": 4,
+      "y": 4
+    },
+    {
+      "content_height": 640,
+      "content_width": 640,
+      "x": 4,
+      "y": 4
+    },
+    {
+      "content_height": 640,
+      "content_width": 640,
+      "x": 4,
+      "y": 4
+    },
+    {
+      "content_height": 640,
+      "content_width": 640,
+      "x": 4,
+      "y": 4
+    },
+    {
+      "content_height": 640,
+      "content_width": 640,
+      "x": 4,
+      "y": 4
+    }
+  ],
+  "loop": true,
+  "outputs": {
+    "gif": "torch-haze-camera-drift.gif",
+    "spritesheet": "torch-haze-camera-drift_spritesheet.png"
+  },
+  "schema_version": "1.0",
+  "source_audit": {
+    "anchor": "center",
+    "anchor_drift_px": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "anchor_positions": [
+      [
+        320.0,
+        320.0
+      ],
+      [
+        320.0,
+        320.0
+      ],
+      [
+        320.0,
+        320.0
+      ],
+      [
+        320.0,
+        320.0
+      ],
+      [
+        320.0,
+        320.0
+      ],
+      [
+        320.0,
+        320.0
+      ],
+      [
+        320.0,
+        320.0
+      ],
+      [
+        320.0,
+        320.0
+      ],
+      [
+        320.0,
+        320.0
+      ],
+      [
+        320.0,
+        320.0
+      ],
+      [
+        320.0,
+        320.0
+      ],
+      [
+        320.0,
+        320.0
+      ],
+      [
+        320.0,
+        320.0
+      ],
+      [
+        320.0,
+        320.0
+      ],
+      [
+        320.0,
+        320.0
+      ],
+      [
+        320.0,
+        320.0
+      ],
+      [
+        320.0,
+        320.0
+      ],
+      [
+        320.0,
+        320.0
+      ],
+      [
+        320.0,
+        320.0
+      ],
+      [
+        320.0,
+        320.0
+      ],
+      [
+        320.0,
+        320.0
+      ],
+      [
+        320.0,
+        320.0
+      ],
+      [
+        320.0,
+        320.0
+      ],
+      [
+        320.0,
+        320.0
+      ]
+    ],
+    "dimensions": [
+      [
+        640,
+        640
+      ],
+      [
+        640,
+        640
+      ],
+      [
+        640,
+        640
+      ],
+      [
+        640,
+        640
+      ],
+      [
+        640,
+        640
+      ],
+      [
+        640,
+        640
+      ],
+      [
+        640,
+        640
+      ],
+      [
+        640,
+        640
+      ],
+      [
+        640,
+        640
+      ],
+      [
+        640,
+        640
+      ],
+      [
+        640,
+        640
+      ],
+      [
+        640,
+        640
+      ],
+      [
+        640,
+        640
+      ],
+      [
+        640,
+        640
+      ],
+      [
+        640,
+        640
+      ],
+      [
+        640,
+        640
+      ],
+      [
+        640,
+        640
+      ],
+      [
+        640,
+        640
+      ],
+      [
+        640,
+        640
+      ],
+      [
+        640,
+        640
+      ],
+      [
+        640,
+        640
+      ],
+      [
+        640,
+        640
+      ],
+      [
+        640,
+        640
+      ],
+      [
+        640,
+        640
+      ]
+    ],
+    "dimensions_consistent": true,
+    "exact_duplicate_frame_hashes": [
+      "e2330a903452848065751d8bfefb7477b50f8466ec7497d3a42ba8451024705a"
+    ],
+    "frame_count": 24,
+    "frames": [
+      {
+        "alpha_unique": 1,
+        "bbox": [
+          0,
+          0,
+          640,
+          640
+        ],
+        "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\evidence\\torch-haze-motion\\blender\\frame_001.png",
+        "sha256": "3576d7e59b3a556f36c0df2f037e40dd668c2b8c2d7a9c834d1f8412bab71758",
+        "size": [
+          640,
+          640
+        ],
+        "visible_pixels": 409600
+      },
+      {
+        "alpha_unique": 1,
+        "bbox": [
+          0,
+          0,
+          640,
+          640
+        ],
+        "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\evidence\\torch-haze-motion\\blender\\frame_002.png",
+        "sha256": "8e8434b5ead4ab1fc9490f84324a8ddfb48ef1d344d08445ab9a339a2b109110",
+        "size": [
+          640,
+          640
+        ],
+        "visible_pixels": 409600
+      },
+      {
+        "alpha_unique": 1,
+        "bbox": [
+          0,
+          0,
+          640,
+          640
+        ],
+        "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\evidence\\torch-haze-motion\\blender\\frame_003.png",
+        "sha256": "115e17d1fe58ba1f2859afc9d6fc3976007cdd35b8388d54cb5665cc4f301abb",
+        "size": [
+          640,
+          640
+        ],
+        "visible_pixels": 409600
+      },
+      {
+        "alpha_unique": 1,
+        "bbox": [
+          0,
+          0,
+          640,
+          640
+        ],
+        "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\evidence\\torch-haze-motion\\blender\\frame_004.png",
+        "sha256": "5f6aea1d57981d692d2f67a7a9f2daaba484ae538478d400c1df3a1378b1de82",
+        "size": [
+          640,
+          640
+        ],
+        "visible_pixels": 409600
+      },
+      {
+        "alpha_unique": 1,
+        "bbox": [
+          0,
+          0,
+          640,
+          640
+        ],
+        "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\evidence\\torch-haze-motion\\blender\\frame_005.png",
+        "sha256": "fbf016f0428e6010ab7f846e9ef5d93890c55b80e6d44b4b402665ac67e5da87",
+        "size": [
+          640,
+          640
+        ],
+        "visible_pixels": 409600
+      },
+      {
+        "alpha_unique": 1,
+        "bbox": [
+          0,
+          0,
+          640,
+          640
+        ],
+        "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\evidence\\torch-haze-motion\\blender\\frame_006.png",
+        "sha256": "1215ad9f965cc73eedc23017106506c754614798fe843d3c617d8b128b006841",
+        "size": [
+          640,
+          640
+        ],
+        "visible_pixels": 409600
+      },
+      {
+        "alpha_unique": 1,
+        "bbox": [
+          0,
+          0,
+          640,
+          640
+        ],
+        "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\evidence\\torch-haze-motion\\blender\\frame_007.png",
+        "sha256": "26b46486baa25ac0c3a5d4b7e7b8c7a11b8b0a53968a9195ef7d4318b1f25440",
+        "size": [
+          640,
+          640
+        ],
+        "visible_pixels": 409600
+      },
+      {
+        "alpha_unique": 1,
+        "bbox": [
+          0,
+          0,
+          640,
+          640
+        ],
+        "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\evidence\\torch-haze-motion\\blender\\frame_008.png",
+        "sha256": "f2428fcb6d7386ffdda311731392ffe699e1d3bc62c765b3880f8abd5ac14cd2",
+        "size": [
+          640,
+          640
+        ],
+        "visible_pixels": 409600
+      },
+      {
+        "alpha_unique": 1,
+        "bbox": [
+          0,
+          0,
+          640,
+          640
+        ],
+        "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\evidence\\torch-haze-motion\\blender\\frame_009.png",
+        "sha256": "bc135a162c7933ebe1d9654430553f1dbdab35291a9bff4b199de6e8c7c25773",
+        "size": [
+          640,
+          640
+        ],
+        "visible_pixels": 409600
+      },
+      {
+        "alpha_unique": 1,
+        "bbox": [
+          0,
+          0,
+          640,
+          640
+        ],
+        "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\evidence\\torch-haze-motion\\blender\\frame_010.png",
+        "sha256": "19d975bba4a57e161a5b95aafa37bae6995bdc2796f7840130a33e4202ee592b",
+        "size": [
+          640,
+          640
+        ],
+        "visible_pixels": 409600
+      },
+      {
+        "alpha_unique": 1,
+        "bbox": [
+          0,
+          0,
+          640,
+          640
+        ],
+        "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\evidence\\torch-haze-motion\\blender\\frame_011.png",
+        "sha256": "e30f8aecf003a84770c43c155ed8e664e0f8fe0415bdf719cb927daf45b74941",
+        "size": [
+          640,
+          640
+        ],
+        "visible_pixels": 409600
+      },
+      {
+        "alpha_unique": 1,
+        "bbox": [
+          0,
+          0,
+          640,
+          640
+        ],
+        "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\evidence\\torch-haze-motion\\blender\\frame_012.png",
+        "sha256": "c342c0b25e89ea3168a1ad732ec3efba25c8eb911024f90a68d2bb0784074477",
+        "size": [
+          640,
+          640
+        ],
+        "visible_pixels": 409600
+      },
+      {
+        "alpha_unique": 1,
+        "bbox": [
+          0,
+          0,
+          640,
+          640
+        ],
+        "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\evidence\\torch-haze-motion\\blender\\frame_013.png",
+        "sha256": "09c701c653b5fa4fa25fb677773fde20b8438dd18892f099a06eeafddf877737",
+        "size": [
+          640,
+          640
+        ],
+        "visible_pixels": 409600
+      },
+      {
+        "alpha_unique": 1,
+        "bbox": [
+          0,
+          0,
+          640,
+          640
+        ],
+        "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\evidence\\torch-haze-motion\\blender\\frame_014.png",
+        "sha256": "1846492eb30fc841527f9f713b5f20bfc788837b35e16ca24d34de33c88d1212",
+        "size": [
+          640,
+          640
+        ],
+        "visible_pixels": 409600
+      },
+      {
+        "alpha_unique": 1,
+        "bbox": [
+          0,
+          0,
+          640,
+          640
+        ],
+        "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\evidence\\torch-haze-motion\\blender\\frame_015.png",
+        "sha256": "b1d6fcad3c83df8b101d5ec4735641408cc1f9fc545f0e8c83af9ba1cf131684",
+        "size": [
+          640,
+          640
+        ],
+        "visible_pixels": 409600
+      },
+      {
+        "alpha_unique": 1,
+        "bbox": [
+          0,
+          0,
+          640,
+          640
+        ],
+        "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\evidence\\torch-haze-motion\\blender\\frame_016.png",
+        "sha256": "23b168ec43a6fd9c60badcfd5dd050df665ed5cc0b9a3296d5758bcd0f1d72b4",
+        "size": [
+          640,
+          640
+        ],
+        "visible_pixels": 409600
+      },
+      {
+        "alpha_unique": 1,
+        "bbox": [
+          0,
+          0,
+          640,
+          640
+        ],
+        "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\evidence\\torch-haze-motion\\blender\\frame_017.png",
+        "sha256": "beb285467a609e7dccd87671575a04658ddae886f511f402706ab505bc9f4d84",
+        "size": [
+          640,
+          640
+        ],
+        "visible_pixels": 409600
+      },
+      {
+        "alpha_unique": 1,
+        "bbox": [
+          0,
+          0,
+          640,
+          640
+        ],
+        "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\evidence\\torch-haze-motion\\blender\\frame_018.png",
+        "sha256": "1da06da16ecb4db36cdceb482a05bde9a5099d9cf3a4b5ed08893d19ef54ab0f",
+        "size": [
+          640,
+          640
+        ],
+        "visible_pixels": 409600
+      },
+      {
+        "alpha_unique": 1,
+        "bbox": [
+          0,
+          0,
+          640,
+          640
+        ],
+        "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\evidence\\torch-haze-motion\\blender\\frame_019.png",
+        "sha256": "ce25a2f18a3a77f666914fdb5ea86db24a669429f30ad880e9640ec0ea827c17",
+        "size": [
+          640,
+          640
+        ],
+        "visible_pixels": 409600
+      },
+      {
+        "alpha_unique": 1,
+        "bbox": [
+          0,
+          0,
+          640,
+          640
+        ],
+        "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\evidence\\torch-haze-motion\\blender\\frame_020.png",
+        "sha256": "6e40343d47b01815ff9d88edd913578ad7bc0c0df7a59879d321afee9cae163c",
+        "size": [
+          640,
+          640
+        ],
+        "visible_pixels": 409600
+      },
+      {
+        "alpha_unique": 1,
+        "bbox": [
+          0,
+          0,
+          640,
+          640
+        ],
+        "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\evidence\\torch-haze-motion\\blender\\frame_021.png",
+        "sha256": "ef0bf297d212b8474f4365c8cc3e9714336cfe600ca17756ecf72cc9b3e7559e",
+        "size": [
+          640,
+          640
+        ],
+        "visible_pixels": 409600
+      },
+      {
+        "alpha_unique": 1,
+        "bbox": [
+          0,
+          0,
+          640,
+          640
+        ],
+        "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\evidence\\torch-haze-motion\\blender\\frame_022.png",
+        "sha256": "67c2228faab7857a7b50bf0c6e620e9d1e7913ce834418ca7347bfce0603a9f6",
+        "size": [
+          640,
+          640
+        ],
+        "visible_pixels": 409600
+      },
+      {
+        "alpha_unique": 1,
+        "bbox": [
+          0,
+          0,
+          640,
+          640
+        ],
+        "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\evidence\\torch-haze-motion\\blender\\frame_023.png",
+        "sha256": "49e197a8a880810b65284aa202173c63874983580c8e9f6d73274414ccffb723",
+        "size": [
+          640,
+          640
+        ],
+        "visible_pixels": 409600
+      },
+      {
+        "alpha_unique": 1,
+        "bbox": [
+          0,
+          0,
+          640,
+          640
+        ],
+        "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\evidence\\torch-haze-motion\\blender\\frame_024.png",
+        "sha256": "81749844db24965c58ee1c7fb91e80cb53d68e5c9dc061a0e6ca8f5eac8afb4d",
+        "size": [
+          640,
+          640
+        ],
+        "visible_pixels": 409600
+      }
+    ],
+    "interpretation": "This report detects technical signals, not semantic identity or artistic motion quality. Inspect the animation at target playback speed and in-engine scale.",
+    "max_anchor_drift_px": 0.0,
+    "mean_adjacent_alpha_delta": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "mean_adjacent_rgb_delta": [
+      2.0044,
+      4.7724,
+      6.4975,
+      7.6967,
+      8.5573,
+      9.1167,
+      9.3291,
+      8.9665,
+      7.9886,
+      6.1956,
+      2.7811,
+      2.3872,
+      5.5241,
+      7.2788,
+      8.297,
+      8.7895,
+      8.7956,
+      8.4464,
+      7.8434,
+      6.9924,
+      5.8372,
+      4.2046,
+      1.7124
+    ],
+    "warnings": [
+      "exact_duplicate_frames"
+    ]
+  },
+  "source_frames": [
+    {
+      "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\evidence\\torch-haze-motion\\blender\\frame_001.png",
+      "sha256": "3576d7e59b3a556f36c0df2f037e40dd668c2b8c2d7a9c834d1f8412bab71758"
+    },
+    {
+      "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\evidence\\torch-haze-motion\\blender\\frame_002.png",
+      "sha256": "8e8434b5ead4ab1fc9490f84324a8ddfb48ef1d344d08445ab9a339a2b109110"
+    },
+    {
+      "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\evidence\\torch-haze-motion\\blender\\frame_003.png",
+      "sha256": "115e17d1fe58ba1f2859afc9d6fc3976007cdd35b8388d54cb5665cc4f301abb"
+    },
+    {
+      "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\evidence\\torch-haze-motion\\blender\\frame_004.png",
+      "sha256": "5f6aea1d57981d692d2f67a7a9f2daaba484ae538478d400c1df3a1378b1de82"
+    },
+    {
+      "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\evidence\\torch-haze-motion\\blender\\frame_005.png",
+      "sha256": "fbf016f0428e6010ab7f846e9ef5d93890c55b80e6d44b4b402665ac67e5da87"
+    },
+    {
+      "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\evidence\\torch-haze-motion\\blender\\frame_006.png",
+      "sha256": "1215ad9f965cc73eedc23017106506c754614798fe843d3c617d8b128b006841"
+    },
+    {
+      "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\evidence\\torch-haze-motion\\blender\\frame_007.png",
+      "sha256": "26b46486baa25ac0c3a5d4b7e7b8c7a11b8b0a53968a9195ef7d4318b1f25440"
+    },
+    {
+      "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\evidence\\torch-haze-motion\\blender\\frame_008.png",
+      "sha256": "f2428fcb6d7386ffdda311731392ffe699e1d3bc62c765b3880f8abd5ac14cd2"
+    },
+    {
+      "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\evidence\\torch-haze-motion\\blender\\frame_009.png",
+      "sha256": "bc135a162c7933ebe1d9654430553f1dbdab35291a9bff4b199de6e8c7c25773"
+    },
+    {
+      "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\evidence\\torch-haze-motion\\blender\\frame_010.png",
+      "sha256": "19d975bba4a57e161a5b95aafa37bae6995bdc2796f7840130a33e4202ee592b"
+    },
+    {
+      "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\evidence\\torch-haze-motion\\blender\\frame_011.png",
+      "sha256": "e30f8aecf003a84770c43c155ed8e664e0f8fe0415bdf719cb927daf45b74941"
+    },
+    {
+      "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\evidence\\torch-haze-motion\\blender\\frame_012.png",
+      "sha256": "c342c0b25e89ea3168a1ad732ec3efba25c8eb911024f90a68d2bb0784074477"
+    },
+    {
+      "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\evidence\\torch-haze-motion\\blender\\frame_013.png",
+      "sha256": "09c701c653b5fa4fa25fb677773fde20b8438dd18892f099a06eeafddf877737"
+    },
+    {
+      "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\evidence\\torch-haze-motion\\blender\\frame_014.png",
+      "sha256": "1846492eb30fc841527f9f713b5f20bfc788837b35e16ca24d34de33c88d1212"
+    },
+    {
+      "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\evidence\\torch-haze-motion\\blender\\frame_015.png",
+      "sha256": "b1d6fcad3c83df8b101d5ec4735641408cc1f9fc545f0e8c83af9ba1cf131684"
+    },
+    {
+      "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\evidence\\torch-haze-motion\\blender\\frame_016.png",
+      "sha256": "23b168ec43a6fd9c60badcfd5dd050df665ed5cc0b9a3296d5758bcd0f1d72b4"
+    },
+    {
+      "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\evidence\\torch-haze-motion\\blender\\frame_017.png",
+      "sha256": "beb285467a609e7dccd87671575a04658ddae886f511f402706ab505bc9f4d84"
+    },
+    {
+      "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\evidence\\torch-haze-motion\\blender\\frame_018.png",
+      "sha256": "1da06da16ecb4db36cdceb482a05bde9a5099d9cf3a4b5ed08893d19ef54ab0f"
+    },
+    {
+      "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\evidence\\torch-haze-motion\\blender\\frame_019.png",
+      "sha256": "ce25a2f18a3a77f666914fdb5ea86db24a669429f30ad880e9640ec0ea827c17"
+    },
+    {
+      "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\evidence\\torch-haze-motion\\blender\\frame_020.png",
+      "sha256": "6e40343d47b01815ff9d88edd913578ad7bc0c0df7a59879d321afee9cae163c"
+    },
+    {
+      "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\evidence\\torch-haze-motion\\blender\\frame_021.png",
+      "sha256": "ef0bf297d212b8474f4365c8cc3e9714336cfe600ca17756ecf72cc9b3e7559e"
+    },
+    {
+      "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\evidence\\torch-haze-motion\\blender\\frame_022.png",
+      "sha256": "67c2228faab7857a7b50bf0c6e620e9d1e7913ce834418ca7347bfce0603a9f6"
+    },
+    {
+      "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\evidence\\torch-haze-motion\\blender\\frame_023.png",
+      "sha256": "49e197a8a880810b65284aa202173c63874983580c8e9f6d73274414ccffb723"
+    },
+    {
+      "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\evidence\\torch-haze-motion\\blender\\frame_024.png",
+      "sha256": "81749844db24965c58ee1c7fb91e80cb53d68e5c9dc061a0e6ca8f5eac8afb4d"
+    }
+  ],
+  "status": "assembled_requires_visual_review"
+}

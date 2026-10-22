@@ -10,11 +10,47 @@ import pytest
 
 from vated_studio.errors import StudioError
 from vated_studio.adapters.comfyui import ComfyUIClient, validate_api_workflow
+from vated_studio.adapters.godot import GodotAdapter
 from vated_studio.adapters.klein_workflows import make_klein_txt2img
 from vated_studio.adapters.sd_webui import SDWebUIClient
 from vated_studio.adapters.zimage_workflows import (
     QWEN_ENCODER, ZIMAGE_UNET, ZIMAGE_VAE, make_zimage_txt2img,
 )
+
+
+def test_godot_locate_prefers_explicit_path_and_uses_bundled_windows_fallback(monkeypatch, tmp_path):
+    explicit = tmp_path / "godot-custom.exe"
+    explicit.write_bytes(b"test executable placeholder")
+    adapter = GodotAdapter(str(explicit))
+    assert adapter.locate() == str(explicit.resolve())
+
+    adapter = GodotAdapter("godot")
+    monkeypatch.setattr("vated_studio.adapters.godot.os.name", "nt")
+    monkeypatch.setattr("vated_studio.adapters.godot.Path.home", lambda: tmp_path)
+    bundled = tmp_path / "tools" / "ai-game-studio" / "godot" / "godot_console.exe"
+    bundled.parent.mkdir(parents=True)
+    bundled.write_bytes(b"test executable placeholder")
+    monkeypatch.setattr("vated_studio.adapters.godot.which", lambda _name: None)
+    assert adapter.locate() == str(bundled.resolve())
+
+
+def test_godot_path_console_candidate_precedes_bundled_fallback(monkeypatch, tmp_path):
+    adapter = GodotAdapter("missing-godot-alias")
+    bundled = tmp_path / "tools" / "ai-game-studio" / "godot" / "godot_console.exe"
+    bundled.parent.mkdir(parents=True)
+    bundled.write_bytes(b"bundled placeholder")
+    monkeypatch.setattr("vated_studio.adapters.godot.os.name", "nt")
+    monkeypatch.setattr("vated_studio.adapters.godot.Path.home", lambda: tmp_path)
+    monkeypatch.setattr("vated_studio.adapters.godot.which", lambda name: "C:/path/godot_console.exe" if name == "godot_console.exe" else None)
+    assert adapter.locate() == "C:/path/godot_console.exe"
+
+
+def test_godot_missing_executable_stays_unavailable(monkeypatch, tmp_path):
+    adapter = GodotAdapter("godot")
+    monkeypatch.setattr("vated_studio.adapters.godot.os.name", "nt")
+    monkeypatch.setattr("vated_studio.adapters.godot.Path.home", lambda: tmp_path)
+    monkeypatch.setattr("vated_studio.adapters.godot.which", lambda _name: None)
+    assert adapter.locate() is None
 
 
 def test_comfy_workflow_validation_and_klein_builder():

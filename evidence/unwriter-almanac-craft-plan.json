@@ -1,0 +1,18 @@
+{
+  "mediums": [
+    {
+      "name": "Inline authored SVG with CSS/JavaScript pose choreography",
+      "mechanisms": ["hand-authored vector silhouettes", "clip-path ink wash and hatch groups", "stroke dash-offset interaction", "transform-based idle/anticipation/follow-through poses", "responsive editorial layout"],
+      "stages": ["MOODBOARD", "BLOCKOUT", "FIRST_VISIBLE_ARTIFACT", "PROTOTYPE", "PLAY_SCALE_REVIEW"],
+      "maturity_claim": "PROTOTYPE",
+      "constraints": ["No raster/model-generated sprite asset is required for the moodboard", "Any game-animation claim still requires playback-speed review in running gameplay"]
+    },
+    {
+      "name": "Optional single-queue local image-generation concept tests",
+      "mechanisms": ["ComfyUI API workflow", "FLUX.2 Klein 4B distilled at explicitly configured fp8", "512-square low-memory exploratory candidate", "raw-source preservation and SHA-256 lineage"],
+      "stages": ["LICENSE_PREFLIGHT", "VRAM_PREFLIGHT", "SEQUENTIAL_CANDIDATE", "OUTPUT_INSPECTION", "HUMAN_SELECTION"],
+      "maturity_claim": "REFERENCE_ONLY",
+      "constraints": ["Only after exact model/component license files and hashes are reviewed", "Do not initiate if GPU headroom is inadequate", "Generated images remain non-runtime concepts pending review"]
+    }
+  ]
+}

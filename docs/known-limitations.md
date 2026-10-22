@@ -1,6 +1,6 @@
 # Known Limitations and Capability Boundaries
 
-- **Artistic quality:** current metrics do not certify commercial quality; human art direction and in-game review are mandatory for important assets.
+- **Artistic quality:** current metrics do not certify commercial quality. The agent owns producing and iterating candidate art; inspect important assets in-game and label agent assessment, any explicitly required human review, and rights review as distinct evidence states. Routine art creation is not an operator task.
 - **Identity consistency:** same seed is not identity lock. Historical Klein img2img was promising but had a hand/prop ownership fault; review each action frame.
 - **Animation:** frame assembly/anchor metrics do not judge semantic motion, weight, arcs, timing, foot sliding or expressive readability. Cutout and Blender routes need project-specific verification.
 - **RIFE:** interpolation is not semantic action generation. A historical sprite test produced opaque frames and was rejected.
