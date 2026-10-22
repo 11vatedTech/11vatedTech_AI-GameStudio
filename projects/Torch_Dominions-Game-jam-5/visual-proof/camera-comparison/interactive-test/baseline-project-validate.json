@@ -4,26 +4,26 @@
   "duration_ms": 5172.0,
   "status": "succeeded",
   "result": {
-    "project": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\projects\\Torch_Dominions-Game-jam-5\\visual-proof\\camera-comparison\\interactive-test",
+    "project": "projects/Torch_Dominions-Game-jam-5/visual-proof/camera-comparison/interactive-test",
     "static_valid": true,
     "errors": [],
     "runtime_validation": "passed",
     "engine_run": {
       "command": [
-        "C:\\Users\\11vat\\tools\\ai-game-studio\\godot\\godot_console.exe",
+        "<USER_HOME>\\tools\\ai-game-studio\\godot\\godot_console.exe",
         "--headless",
         "--path",
-        "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\projects\\Torch_Dominions-Game-jam-5\\visual-proof\\camera-comparison\\interactive-test",
+        "projects/Torch_Dominions-Game-jam-5/visual-proof/camera-comparison/interactive-test",
         "--editor",
         "--quit"
       ],
-      "cwd": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\projects\\Torch_Dominions-Game-jam-5\\visual-proof\\camera-comparison\\interactive-test",
+      "cwd": "projects/Torch_Dominions-Game-jam-5/visual-proof/camera-comparison/interactive-test",
       "returncode": 0,
       "stdout": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\n[   0% ] \u001b[90m\u001b[1mfirst_scan_filesystem\u001b[22m | Started Project initialization (5 steps)\u001b[39m\u001b[0m\n[   0% ] \u001b[90m\u001b[1mfirst_scan_filesystem\u001b[22m | Scanning file structure...\u001b[39m\u001b[0m\n[  16% ] \u001b[90m\u001b[1mfirst_scan_filesystem\u001b[22m | Loading global class names...\u001b[39m\u001b[0m\n[  33% ] \u001b[90m\u001b[1mfirst_scan_filesystem\u001b[22m | Verifying GDExtensions...\u001b[39m\u001b[0m\n[  50% ] \u001b[90m\u001b[1mfirst_scan_filesystem\u001b[22m | Creating autoload scripts...\u001b[39m\u001b[0m\n[  66% ] \u001b[90m\u001b[1mfirst_scan_filesystem\u001b[22m | Initializing plugins...\u001b[39m\u001b[0m\n[  83% ] \u001b[90m\u001b[1mfirst_scan_filesystem\u001b[22m | Starting file scan...\u001b[39m\u001b[0m\n\u001b[92m[ DONE ]\u001b[39m \u001b[1mfirst_scan_filesystem\u001b[22m\n\u001b[0m\n[   0% ] \u001b[90m\u001b[1mloading_editor_layout\u001b[22m | Started Loading editor (5 steps)\u001b[39m\u001b[0m\n[   0% ] \u001b[90m\u001b[1mloading_editor_layout\u001b[22m | Loading editor layout...\u001b[39m\u001b[0m\n[  16% ] \u001b[90m\u001b[1mloading_editor_layout\u001b[22m | Loading docks...\u001b[39m\u001b[0m\n\u001b[92m[ DONE ]\u001b[39m \u001b[1mloading_editor_layout\u001b[22m\n\u001b[0m\n",
       "stderr": "",
       "duration_seconds": 5.172,
       "timed_out": false
     },
-    "project_root": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\projects\\Torch_Dominions-Game-jam-5\\visual-proof\\camera-comparison\\interactive-test"
+    "project_root": "projects/Torch_Dominions-Game-jam-5/visual-proof/camera-comparison/interactive-test"
   }
 }

@@ -7,6 +7,33 @@ from pathlib import Path
 from typing import Any
 
 
+# Additive columns that turn the runs table into a durable job queue. Rows
+# written by the synchronous command path leave these at their defaults, so
+# existing behavior and StudioStore.runs() output are unchanged.
+QUEUE_COLUMNS: tuple[tuple[str, str], ...] = (
+    ("attempt", "INTEGER NOT NULL DEFAULT 0"),
+    ("max_attempts", "INTEGER NOT NULL DEFAULT 1"),
+    ("idempotency_key", "TEXT"),
+    ("resource", "TEXT NOT NULL DEFAULT 'cpu'"),
+    ("not_before", "REAL"),
+    ("lease_token", "TEXT"),
+    ("lease_expires_at", "REAL"),
+    ("cancel_requested", "INTEGER NOT NULL DEFAULT 0"),
+    ("queue_managed", "INTEGER NOT NULL DEFAULT 0"),
+    ("progress_json", "TEXT"),
+)
+
+
+def migrate_runs_table(db: sqlite3.Connection) -> None:
+    """Idempotently add queue columns to an existing runs table."""
+    existing = {row[1] for row in db.execute("PRAGMA table_info(runs)")}
+    for name, ddl in QUEUE_COLUMNS:
+        if name not in existing:
+            db.execute(f"ALTER TABLE runs ADD COLUMN {name} {ddl}")
+    db.execute("CREATE UNIQUE INDEX IF NOT EXISTS idx_runs_idempotency ON runs(idempotency_key) WHERE idempotency_key IS NOT NULL")
+    db.execute("CREATE INDEX IF NOT EXISTS idx_runs_queue ON runs(queue_managed, status, resource)")
+
+
 class StudioStore:
     """SQLite state with short-lived connections and explicit transactions."""
     def __init__(self, workspace: Path):
@@ -47,6 +74,7 @@ class StudioStore:
             CREATE INDEX IF NOT EXISTS idx_assets_project ON assets(project_id, created_at DESC);
             CREATE INDEX IF NOT EXISTS idx_events_created ON events(created_at DESC);
             """)
+            migrate_runs_table(db)
 
     def start_run(self, run_id: str, command: str, payload: dict[str, Any]) -> None:
         with self.connect() as db:

@@ -1,7 +1,7 @@
 {
   "status": "read-only-inventory",
   "blender_version": "5.2.0 LTS",
-  "blend_file": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\.state\\creative-mcp-smoke\\vertical-slice\\torch_sweep_candidate.blend",
+  "blend_file": ".state/creative-mcp-smoke/vertical-slice/torch_sweep_candidate.blend",
   "render_engine": "BLENDER_EEVEE",
   "fps": 24,
   "frame_range": [

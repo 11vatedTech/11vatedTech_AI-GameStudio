@@ -41,7 +41,7 @@
       "status": 404,
       "body": "Not found"
     },
-    "recording_artifact": "C:/Users/11vat/AppData/Roaming/Freebuff/browser-recordings/1792220833829-f0e561ad-2977-49c5-8c3f-1b4739224434.webm",
+    "recording_artifact": "<USER_HOME>/AppData/Roaming/Freebuff/browser-recordings/1792220833829-f0e561ad-2977-49c5-8c3f-1b4739224434.webm",
     "recording_note": "The browser recorder captured an idle interval only; interaction verification was observed live, not established by that recording.",
     "pointer_input": "Verified actual pointerdown/move/up path from the canvas using captured pointer id at desktop; a second guided route and commit completed the page.",
     "keyboard_input": "Verified focused canvas keyboard controls do not trigger from focused buttons; Escape toggles pause/resume. Guided line can be selected and committed by keyboard-accessible DOM buttons.",
