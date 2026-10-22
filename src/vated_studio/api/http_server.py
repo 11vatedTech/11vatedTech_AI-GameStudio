@@ -8,6 +8,7 @@ import json
 import secrets
 import sys
 
+from .. import __version__
 from ..config import StudioConfig
 from ..errors import StudioError
 from ..jsonio import atomic_write_bytes
@@ -52,7 +53,7 @@ class _Handler(BaseHTTPRequestHandler):
 
     def do_GET(self) -> None:
         if self.path == "/health":
-            self._respond(200, {"ok": True, "service": "11vatedTech AI Game Studio", "version": "0.4.0"})
+            self._respond(200, {"ok": True, "service": "11vatedTech AI Game Studio", "version": __version__})
             return
         if not self._authorized():
             self._respond(401, {"error": {"code": "unauthorized", "message": "Bearer token required"}})
