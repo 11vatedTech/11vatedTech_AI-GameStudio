@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import sys
 from pathlib import Path
 from typing import Any
@@ -11,6 +12,7 @@ from .api.http_server import serve
 from .config import StudioConfig
 from .errors import StudioError
 from .mcp_server import run as run_mcp
+from .readiness import build_readiness_report, format_readiness_summary
 from .service import StudioService
 
 
@@ -32,6 +34,8 @@ def _parser() -> argparse.ArgumentParser:
     sub.add_parser("init", help="Initialize the workspace directories and database")
     sub.add_parser("status", help="Show workspace state and command list")
     sub.add_parser("doctor", help="Probe configured local tools and providers")
+    readiness = sub.add_parser("readiness", help="Collect a read-only production readiness report")
+    readiness.add_argument("--json", action="store_true", help="Emit the complete machine-readable report")
     sub.add_parser("capabilities", help="List implemented capabilities and limitations")
     sub.add_parser("commands", help="List available command identifiers")
     serve_parser = sub.add_parser("serve", help="Start the authenticated local HTTP command API")
@@ -116,6 +120,10 @@ def _parser() -> argparse.ArgumentParser:
 
 
 def _run(args: argparse.Namespace) -> Any:
+    if args.action == "readiness":
+        workspace = args.workspace or Path(os.environ.get("AGS_WORKSPACE", Path.cwd()))
+        report = build_readiness_report(workspace)
+        return report if args.json else format_readiness_summary(report)
     config = StudioConfig.from_env(args.workspace)
     if args.action == "serve":
         from dataclasses import replace
@@ -190,7 +198,10 @@ def main() -> None:
     args = parser.parse_args()
     try:
         result = _run(args)
-        print(json.dumps(result, ensure_ascii=False, indent=2, default=str))
+        if isinstance(result, str):
+            print(result)
+        else:
+            print(json.dumps(result, ensure_ascii=False, indent=2, default=str))
     except StudioError as exc:
         print(json.dumps({"ok": False, "error": exc.as_dict()}, ensure_ascii=False, indent=2), file=sys.stderr)
         raise SystemExit(2)

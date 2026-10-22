@@ -1,0 +1,107 @@
+{
+  "project_id": "the-unwriters-almanac",
+  "recorded_at": "2026-10-17T08:00:00Z",
+  "claim_boundary": "Local browser vertical slice demonstrated; not a jam submission, published build, commercially cleared artifact, or human-approved release.",
+  "source_root": "projects/the-unwriters-almanac/",
+  "runtime": {
+    "command": "PORT=8794 node scripts/serve.mjs",
+    "origin": "http://127.0.0.1:8794/",
+    "browser_observed": true,
+    "flows_observed": [
+      "Canvas page rendered at desktop and narrow viewport",
+      "Pointer stroke with captured drag committed from live input and reached solved overlay",
+      "Select guided keyboard line, cycle to another curve, and commit; bead and ink-being traverse the same line",
+      "Restart restores the seeded title state",
+      "Pause/resume via button and Escape",
+      "Reduced motion setting toggles the simulation and renderer"
+    ],
+    "viewports_css_pixels": [
+      {
+        "width": 1440,
+        "height": 960,
+        "note": "desktop browser proof"
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "note": "narrow layout; document width 373px, no horizontal overflow"
+      }
+    ],
+    "accessibility_tree_observed": true,
+    "keyboard_focus_verified": true,
+    "console_errors": 0,
+    "external_network_requests": 0,
+    "local_content_types": {
+      "/": "text/html; charset=utf-8",
+      "/styles.css": "text/css; charset=utf-8",
+      "/app.js": "text/javascript; charset=utf-8"
+    },
+    "http_traversal_probe": {
+      "request": "/../../.env",
+      "status": 404,
+      "body": "Not found"
+    },
+    "recording_artifact": "C:/Users/11vat/AppData/Roaming/Freebuff/browser-recordings/1792220833829-f0e561ad-2977-49c5-8c3f-1b4739224434.webm",
+    "recording_note": "The browser recorder captured an idle interval only; interaction verification was observed live, not established by that recording.",
+    "pointer_input": "Verified actual pointerdown/move/up path from the canvas using captured pointer id at desktop; a second guided route and commit completed the page.",
+    "keyboard_input": "Verified focused canvas keyboard controls do not trigger from focused buttons; Escape toggles pause/resume. Guided line can be selected and committed by keyboard-accessible DOM buttons.",
+    "narrow_layout_document_width": 373
+  },
+  "automated_checks": {
+    "command": "npm test && node --check src/app.js && node --check src/renderer.js && node --check src/simulation.js && node --check src/input.js && node --check src/animation.js && node --check src/geometry.js && node --check scripts/serve.mjs",
+    "status": "passed",
+    "tests_passed": 16,
+    "tests_failed": 0,
+    "syntax_checks": 7,
+    "coverage": [
+      "Seeded simulation replay",
+      "Stroke clamping and point budget",
+      "Polyline queries",
+      "Valid solve",
+      "Invalid-bead route rejection",
+      "Pause clock",
+      "Erase/restart/jump",
+      "Pointer cancellation state",
+      "CSS/device scaling and letterboxing coordinates",
+      "Solved-state input lock",
+      "Five authored pose bounds",
+      "Reduced-motion pose temporal stability"
+    ]
+  },
+  "schemas": {
+    "validator": "ags schema validate (JSON Schema draft 2020-12)",
+    "validated": [
+      "game-brief.schema.json",
+      "art-bible.schema.json",
+      "production-project.schema.json",
+      "asset-manifest.schema.json",
+      "task-graph.schema.json"
+    ],
+    "status": "passed"
+  },
+  "performance": {
+    "evidence_file": "evidence/the-unwriters-almanac/performance.json",
+    "simulation_runs": 40,
+    "total_updates": 12800,
+    "simulation_whole_run_median_ms": 0.6181,
+    "simulation_whole_run_p95_ms": 2.4244,
+    "browser_renderer_cpu_median_ms": 0.7,
+    "browser_renderer_cpu_p95_ms": 1.0,
+    "fps_claim": false
+  },
+  "provenance": {
+    "runtime_art": "Original Canvas2D code authored in src/renderer.js; no image generation or external image/font assets.",
+    "principle_references_only": [
+      "https://www.vam.ac.uk/articles/what-is-print",
+      "https://www.getty.edu/art/exhibitions/bestiary/inner.html",
+      "https://harvardartmuseums.org/article/it-s-a-wash"
+    ],
+    "rights_review": "No human rights review performed; reference images are not bundled and no generated media is shipped.",
+    "source_hashes": "Computed with SHA-256 into the companion source-manifest.json."
+  },
+  "human_gates": [
+    "Actual player rule-comprehension / puzzle-satisfaction playtest not performed.",
+    "Art-direction and motion remain agent-inspected; no human approval recorded.",
+    "No jam rules, deadline, or submission requirements supplied."
+  ]
+}

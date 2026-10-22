@@ -1,0 +1,11 @@
+{
+  "prompt": "Create key pose 2 of a three-pose attack keyframe test for Torch: Dominions. Match the same original female traveling torchbearer identity specified here, not another character: adult woman with short dark auburn hair swept into a low ponytail, small loose side fringe, same distinctive weathered teal asymmetrical mantle over charcoal leather tunic, same bronze chest fasteners and belt, same dark trousers and knee boots, same compact perforated violet-glass lantern torch in her right hand, same proportions and face. Full body, feet and complete torch visible. Fixed side-on three-quarter camera facing right, neutral grey plain background, painterly anime fantasy action-game character art. KEY POSE 2 IMPACT: plant both feet and sweep the lantern horizontally from behind her body forward toward the right, hips and shoulders rotate into the strike, left arm counterbalances, mantle and ponytail follow the arc, torch remains firmly in right-hand grip, clear readable contact pose, no target or opponent so silhouette is unambiguous. Preserve design and camera; do not change outfit, hair length/color, torch shape/hand, lighting or body scale. One character, one torch, no additional props, no motion blur, no text, no panels, no watermark, no logos.",
+  "width": 1024,
+  "height": 1024,
+  "seed": 7183603,
+  "steps": 4,
+  "cfg": 1.0,
+  "distilled": true,
+  "weight_dtype": "fp8_e4m3fn",
+  "output_dir": "assets/generated/torch-animation-proof"
+}

@@ -1,0 +1,193 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://11vatedtech.dev/schemas/blender-pose-spec-v1.schema.json",
+  "title": "Blender action pose specification",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "spec_id",
+    "armature_object",
+    "action_name",
+    "action_kind",
+    "fps",
+    "frame_start",
+    "frame_end",
+    "poses",
+    "events"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "spec_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "armature_object": {
+      "type": "string",
+      "minLength": 1
+    },
+    "action_name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "action_kind": {
+      "enum": [
+        "idle",
+        "walk",
+        "run",
+        "turn",
+        "jump",
+        "dodge",
+        "hit_reaction",
+        "attack",
+        "heavy_attack",
+        "combo",
+        "spellcast",
+        "interaction",
+        "death",
+        "other"
+      ]
+    },
+    "fps": {
+      "type": "number",
+      "exclusiveMinimum": 0,
+      "maximum": 120
+    },
+    "frame_start": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "frame_end": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "interpolation": {
+      "enum": [
+        "BEZIER",
+        "LINEAR",
+        "CONSTANT"
+      ]
+    },
+    "poses": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "frame",
+          "bones"
+        ],
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "frame": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "bones": {
+            "type": "object",
+            "minProperties": 1,
+            "additionalProperties": {
+              "type": "object",
+              "properties": {
+                "rotation_degrees": {
+                  "type": "array",
+                  "prefixItems": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ],
+                  "minItems": 3,
+                  "maxItems": 3
+                },
+                "location": {
+                  "type": "array",
+                  "prefixItems": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ],
+                  "minItems": 3,
+                  "maxItems": 3
+                }
+              },
+              "anyOf": [
+                {
+                  "required": [
+                    "rotation_degrees"
+                  ]
+                },
+                {
+                  "required": [
+                    "location"
+                  ]
+                }
+              ],
+              "additionalProperties": false
+            }
+          },
+          "purpose": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "events": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "frame",
+          "kind"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "frame": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "kind": {
+            "enum": [
+              "hitbox_on",
+              "hitbox_off",
+              "impact",
+              "sound",
+              "vfx",
+              "combo_open",
+              "combo_close",
+              "cancel_open",
+              "root_motion",
+              "marker",
+              "other"
+            ]
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

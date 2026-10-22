@@ -1,0 +1,5 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+BENCHMARK_TEST_START mode=side
+BENCHMARK_READY hero=res://hero-cutout-candidate.png sha256=32644a536e278461ad4dc13ec7e2a7cdd49d3389708671a13128e76fc8a344e5 paired_views=true
+BENCHMARK_TEST_RESULT {"attack_hits":1,"dodges":1,"enemy_health":1,"enemy_hits_received":0,"enemy_strikes":2,"haze_casts":1,"haze_zone_ticks":1,"hero_health":3,"locomotion_distance":324.25,"locomotion_reversal_count":1,"mode":"side","panel_size":"(684.0, 395.0)","passed":true,"scenario_events":["locomotion_capture","torch_attack_started","torch_attack_hit_enemy","locomotion_direction_reversed","haze_cast_ground_zone_started","dodge_started_invulnerable","haze_zone_enemy_damage_tick","hero_invulnerable_during_strike"],"shared_state":true,"source_hero_sha256":"32644a536e278461ad4dc13ec7e2a7cdd49d3389708671a13128e76fc8a344e5","world_rect":"[P: (0.0, 0.0), S: (900.0, 520.0)]"}

@@ -14,6 +14,14 @@ except ImportError:
     Image = None
 
 
+def _source_reference(path: Path) -> str:
+    """Record a portable provenance reference instead of a machine-specific path."""
+    try:
+        return path.resolve().relative_to(Path.cwd().resolve()).as_posix()
+    except ValueError:
+        return str(path)
+
+
 def pack_atlas(image_paths: list[str | Path], output_path: str | Path, *, max_width: int = 2048, padding: int = 2) -> dict[str, Any]:
     """Deterministic shelf-pack atlas. It refuses oversize inputs rather than silently rescaling them."""
     require_vision()
@@ -50,7 +58,7 @@ def pack_atlas(image_paths: list[str | Path], output_path: str | Path, *, max_wi
     for path, image, px, py in placements:
         atlas.alpha_composite(image, (px, py))
         manifest_items[path.name] = {"x": px, "y": py, "width": image.width, "height": image.height,
-                                     "sha256": sha256_file(path), "source": str(path)}
+                                     "sha256": sha256_file(path), "source": _source_reference(path)}
     atlas.save(target, optimize=True)
     manifest_path = target.with_suffix(".json")
     manifest = {"schema_version": "1.0", "atlas": target.name, "atlas_sha256": sha256_file(target),

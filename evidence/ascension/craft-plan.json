@@ -1,0 +1,34 @@
+{
+  "mediums": [
+    {
+      "name": "FLUX.2 Klein 4B Distilled FP8 + Studio Vision Pipeline",
+      "mechanisms": [
+        "Sequential 1024x1024 txt2img generation via ComfyUI API",
+        "Conservative edge-connected background extraction and 8px padded bounding-box trim",
+        "Deterministic sprite atlas packing and multi-frame breathing/combat animation assembly"
+      ],
+      "stages": [
+        "CONCEPT_GENERATION",
+        "ALPHA_REFINEMENT",
+        "ATLAS_AND_ANIMATION_ASSEMBLY",
+        "ENGINE_INTEGRATION"
+      ],
+      "maturity_claim": "INTEGRATED_VERTICAL_SLICE"
+    },
+    {
+      "name": "Hybrid Living Foil Card & Dimensional 2.5D Sanctuary Runtime (Godot 4 + Web Canvas/Shader)",
+      "mechanisms": [
+        "3D perspective tilt + multi-layer parallax (backdrop, aura, creature, veins/eyes, frame filigree, masked foil)",
+        "Three masked diffraction shaders: Prismatic Spectrum (rainbow hex), Phantom Foil (obsidian oil-slick chrome), Relic Foil (embossed gold runes)",
+        "Deterministic 6v6 Refractive Resonance simulation with causal chain arcs, Prism Gauge Convergence, and interactive combat log"
+      ],
+      "stages": [
+        "RULES_ENGINE",
+        "SHADER_AND_CARD_RENDERER",
+        "ARENA_MATERIALIZATION",
+        "PLAYTEST_VERIFICATION"
+      ],
+      "maturity_claim": "INTEGRATED_VERTICAL_SLICE"
+    }
+  ]
+}

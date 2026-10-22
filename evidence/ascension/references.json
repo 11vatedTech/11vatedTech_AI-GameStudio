@@ -1,0 +1,36 @@
+{
+  "references": [
+    {
+      "source": "assets/b5436f8e61644341916a6fd816188cc7.jpg",
+      "purpose": "Creature centerpiece and translucent crystal wing diffraction reference",
+      "why_good": "High-contrast warm ivory scales against cool cyan/violet crystal wings create immediate silhouette separation and focal depth.",
+      "transferable_principle": "Separate creature body values from luminous wing/horn focal zones so masked foil shaders catch the wings and scales.",
+      "must_not_copy": "Do not ship the reference image itself or clone its exact pose.",
+      "own_thing_plan": "Generate original Prismhart and Solarius portraits via FLUX.2 Klein 4B with distinct silhouettes and custom foil masks."
+    },
+    {
+      "source": "assets/daa274589bbc4679a649822757385d97.png",
+      "purpose": "Micro-hexagonal spectral scale diffraction texture reference",
+      "why_good": "Demonstrates physical micro-facet rainbow dispersion rather than flat linear gradients.",
+      "transferable_principle": "Use a procedural hexagonal micro-facet normal/diffraction pattern in the Prismatic Spectrum foil shader.",
+      "must_not_copy": "Do not paste raw photographic insect/scale crops onto cards.",
+      "own_thing_plan": "Synthesize real-time angle-reactive hex-grid diffraction in Canvas/WebGL and Godot shaders."
+    },
+    {
+      "source": "assets/912d1bb1ce584af2bc76efa7b8bf7cea.png",
+      "purpose": "Living collector card frame hierarchy and luminous border filigree reference",
+      "why_good": "Dark obsidian text box preserves 100% legibility while cyan/emerald seigaiha border and dragon veins glow.",
+      "transferable_principle": "Isolate title and stat/ability plates on dark high-contrast obsidian; apply foil only to frame filigree and creature mask.",
+      "must_not_copy": "Do not copy third-party TCG icons, copyright footers, or external card layouts.",
+      "own_thing_plan": "Design a bespoke Prismatic Sanctuary card frame showing Origin, Instinct, Signature, Resonance Trigger, Serial Collector #, and Foil Tier."
+    },
+    {
+      "source": "assets/171ecd89a7e84aff91e208f53e737611.png",
+      "purpose": "Three-tier cosmetic foil taxonomy (Prismatic Spectrum, Phantom Foil, Relic Foil)",
+      "why_good": "Establishes three distinct material personalities tied to creature fantasy rather than one generic holographic effect.",
+      "transferable_principle": "Implement all three switchable foil shaders (Prismatic Spectrum, Phantom Foil, Relic Foil) with zero competitive stat impact.",
+      "must_not_copy": "Do not ship the reference board crops.",
+      "own_thing_plan": "Build real-time interactive shaders for all three foil classes in the card renderer."
+    }
+  ]
+}

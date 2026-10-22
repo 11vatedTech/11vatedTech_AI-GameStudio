@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Asset method registry",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "methods"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "selection_policy": {
+      "type": "string"
+    },
+    "methods": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "best_for",
+          "inputs",
+          "steps",
+          "failure_signals",
+          "fallbacks",
+          "gpu_heavy"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9-]+$"
+          },
+          "best_for": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "inputs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "steps": {
+            "type": "array",
+            "minItems": 3,
+            "items": {
+              "type": "string"
+            }
+          },
+          "failure_signals": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "fallbacks": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string"
+            }
+          },
+          "gpu_heavy": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": true
+}

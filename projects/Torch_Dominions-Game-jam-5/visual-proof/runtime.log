@@ -1,0 +1,42 @@
+WorkerThreadPool: 24 threads, 7 max low-priority.
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+TextServer: Added interface "Dummy"
+TextServer: Added interface "ICU / HarfBuzz / Graphite (Built-in)"
+Accessibility: AccessKit driver loaded.
+Native OpenGL API detected: 3.3: NVIDIA - NVIDIA GeForce RTX 5070 Ti Laptop GPU
+NVAPI: Init OK!
+NVAPI: Disabled OpenGL threaded optimization successfully
+NVAPI: Disabled G-SYNC for windowed mode successfully
+Accessibility: window 0 adapter created.
+SDL: Init OK!
+Using "winink" pen tablet driver...
+Shader 'CanvasSdfShaderGLES3' SHA256: 06bb3afc27e0785ce3a919fdde0e858300de5e2f197a662c4f96b0cecb40b09f
+Shader 'SkeletonShaderGLES3' SHA256: f9b4872c892c252659936f43a0a93e819c1b317c6aa67aec2575bd02024a390d
+Shader 'ParticlesShaderGLES3' SHA256: cd74b258c9c7397dfb2cb56c3931e8a251affe352ef83bc2c18e5008be222999
+Shader 'ParticlesCopyShaderGLES3' SHA256: 50a851cd799c9250221ac1cc43177af3641d0e1753753f23b408cd84800ef3d5
+Shader 'CopyShaderGLES3' SHA256: cd8160e57cef97858048c9711b1192a0a4d0e5841abe2e8651e418f4b9650f31
+Shader 'CubemapFilterShaderGLES3' SHA256: 0fe1128938b40cf8ce2d0224b5e2d543e6a29903a4c9a6257e82e88c7a6a6085
+Shader 'GlowShaderGLES3' SHA256: 42b6079da6d45c284c0a40fb6d14bd46c2042e880908545eb686b2a38618cb57
+Shader 'PostShaderGLES3' SHA256: 04fbc9d174235834e57ceb98aa9d75d81d47ad4a2a626eedbafd5c406f550d04
+Shader 'FeedShaderGLES3' SHA256: 39da79143b0a49c8ef95642af73bc1858d7ecf9ff7a65969cafd46bcdef707be
+Shader 'CanvasShaderGLES3' SHA256: 29108854f4159074dea9adce148eb8f77c8bc8630980e3ef3b9dbd92ce016c45
+Shader 'CanvasOcclusionShaderGLES3' SHA256: db059f6d09d70230eb0b4e1e439a41749154da9a1b55662ce33233369581b940
+Shader 'SceneShaderGLES3' SHA256: 8f8b4f5f1f4429d95d98b17804e0d6e3b3a2ef4a8bf50fa685661ed532979270
+Shader 'SkyShaderGLES3' SHA256: d345b533c889f0d0ee850cdfbbd288cffe35599d3d4e0bde1f2e54b3eb38391c
+Shader 'TexBlitShaderGLES3' SHA256: 46a5021cc1388d26a9ec1f14cc6189742bb73699fdf6c3b465e815d3ff11e72a
+OpenGL API 3.3.0 NVIDIA 610.78 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 5070 Ti Laptop GPU
+
+TextServer: Primary interface set to: "ICU / HarfBuzz / Graphite (Built-in)".
+CORE API HASH: 2004498165
+EDITOR API HASH: 1696660745
+SceneTreeFTI: traversal method DEFAULT
+Loaded system CA certificates
+Loading resource: res://proof.tscn remapped: res://proof.tscn
+Loading resource: res://proof.gd remapped: res://proof.gd
+Completed load for: 'res://proof.gd' remapped 'res://proof.gd' at thread -1
+Completed load for: 'res://proof.tscn' remapped 'res://proof.tscn' at thread -1
+TORCH_VISUAL_PROOF_LOADED path=res://comfyui-output/01_klein-bench_00001_.png size=(1024, 1024)
+XR: Clearing primary interface
+XR: Removed interface "Native mobile"
+XR: Removed interface "OpenXR"
+Accessibility: window 0 adapter destroyed.

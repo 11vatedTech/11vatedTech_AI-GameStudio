@@ -1,0 +1,290 @@
+{
+  "schema_version": "1.0",
+  "spec_id": "example-torch-sweep-v1",
+  "armature_object": "HeroRig",
+  "action_name": "Torch_Sweep_Candidate",
+  "action_kind": "attack",
+  "fps": 24,
+  "frame_start": 1,
+  "frame_end": 24,
+  "interpolation": "BEZIER",
+  "notes": "Illustrative skeleton contract only. Replace armature and bone names, calibrate rotations for the actual rig, and inspect every pose. Angles are local Euler degrees; location values are local pose-bone coordinates.",
+  "poses": [
+    {
+      "name": "anticipation",
+      "purpose": "anticipation",
+      "frame": 1,
+      "bones": {
+        "root": {
+          "rotation_degrees": [
+            0,
+            0,
+            0
+          ],
+          "location": [
+            0,
+            0,
+            0
+          ]
+        },
+        "spine": {
+          "rotation_degrees": [
+            -6,
+            0,
+            -8
+          ]
+        },
+        "upper_arm.R": {
+          "rotation_degrees": [
+            -35,
+            0,
+            28
+          ]
+        },
+        "forearm.R": {
+          "rotation_degrees": [
+            -45,
+            0,
+            0
+          ]
+        },
+        "hand.R": {
+          "rotation_degrees": [
+            0,
+            0,
+            12
+          ]
+        },
+        "thigh.L": {
+          "rotation_degrees": [
+            8,
+            0,
+            0
+          ]
+        },
+        "thigh.R": {
+          "rotation_degrees": [
+            -5,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "name": "contact",
+      "purpose": "contact",
+      "frame": 9,
+      "bones": {
+        "root": {
+          "rotation_degrees": [
+            0,
+            0,
+            -14
+          ],
+          "location": [
+            0,
+            0,
+            0.05
+          ]
+        },
+        "spine": {
+          "rotation_degrees": [
+            3,
+            0,
+            24
+          ]
+        },
+        "upper_arm.R": {
+          "rotation_degrees": [
+            40,
+            0,
+            -64
+          ]
+        },
+        "forearm.R": {
+          "rotation_degrees": [
+            -18,
+            0,
+            0
+          ]
+        },
+        "hand.R": {
+          "rotation_degrees": [
+            0,
+            0,
+            8
+          ]
+        },
+        "thigh.L": {
+          "rotation_degrees": [
+            -8,
+            0,
+            0
+          ]
+        },
+        "thigh.R": {
+          "rotation_degrees": [
+            12,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "name": "follow-through",
+      "purpose": "follow_through",
+      "frame": 15,
+      "bones": {
+        "root": {
+          "rotation_degrees": [
+            0,
+            0,
+            -8
+          ],
+          "location": [
+            0,
+            0,
+            0.02
+          ]
+        },
+        "spine": {
+          "rotation_degrees": [
+            0,
+            0,
+            18
+          ]
+        },
+        "upper_arm.R": {
+          "rotation_degrees": [
+            22,
+            0,
+            -45
+          ]
+        },
+        "forearm.R": {
+          "rotation_degrees": [
+            -10,
+            0,
+            0
+          ]
+        },
+        "hand.R": {
+          "rotation_degrees": [
+            0,
+            0,
+            5
+          ]
+        },
+        "thigh.L": {
+          "rotation_degrees": [
+            -5,
+            0,
+            0
+          ]
+        },
+        "thigh.R": {
+          "rotation_degrees": [
+            8,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "name": "recovery",
+      "purpose": "recovery",
+      "frame": 24,
+      "bones": {
+        "root": {
+          "rotation_degrees": [
+            0,
+            0,
+            0
+          ],
+          "location": [
+            0,
+            0,
+            0
+          ]
+        },
+        "spine": {
+          "rotation_degrees": [
+            0,
+            0,
+            0
+          ]
+        },
+        "upper_arm.R": {
+          "rotation_degrees": [
+            -12,
+            0,
+            4
+          ]
+        },
+        "forearm.R": {
+          "rotation_degrees": [
+            -20,
+            0,
+            0
+          ]
+        },
+        "hand.R": {
+          "rotation_degrees": [
+            0,
+            0,
+            0
+          ]
+        },
+        "thigh.L": {
+          "rotation_degrees": [
+            0,
+            0,
+            0
+          ]
+        },
+        "thigh.R": {
+          "rotation_degrees": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    }
+  ],
+  "events": [
+    {
+      "name": "hitbox-enable",
+      "frame": 7,
+      "kind": "hitbox_on"
+    },
+    {
+      "name": "torch-impact",
+      "frame": 9,
+      "kind": "impact"
+    },
+    {
+      "name": "impact-sfx",
+      "frame": 9,
+      "kind": "sound"
+    },
+    {
+      "name": "impact-flame-vfx",
+      "frame": 9,
+      "kind": "vfx"
+    },
+    {
+      "name": "hitbox-disable",
+      "frame": 11,
+      "kind": "hitbox_off"
+    },
+    {
+      "name": "combo-window-open",
+      "frame": 18,
+      "kind": "combo_open"
+    }
+  ]
+}

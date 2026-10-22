@@ -1,0 +1,248 @@
+{
+  "schema_version": "1.0",
+  "selection_policy": "select by required visual invariants, available tools/resources, license, target platform and measured output; a tool failure triggers another method rather than placeholder substitution",
+  "methods": [
+    {
+      "id": "conditioned-2d-keyframes",
+      "best_for": [
+        "hand-painted 2d characters",
+        "signature attacks",
+        "frame-by-frame stylized motion"
+      ],
+      "inputs": [
+        "locked character reference",
+        "action spec",
+        "camera and canvas",
+        "prompt/workflow config"
+      ],
+      "steps": [
+        "generate semantic key poses",
+        "compare identity and grip",
+        "repair key poses",
+        "generate in-betweens if needed",
+        "playback review",
+        "engine import"
+      ],
+      "failure_signals": [
+        "identity drift",
+        "hand/weapon swaps",
+        "camera shift",
+        "limb deformation",
+        "alpha damage"
+      ],
+      "fallbacks": [
+        "alternate reference-edit workflow",
+        "layer reconstruction",
+        "3d rigged route"
+      ],
+      "gpu_heavy": true
+    },
+    {
+      "id": "layered-2d-rig",
+      "best_for": [
+        "static painterly characters needing reusable motion",
+        "limited-camera action"
+      ],
+      "inputs": [
+        "layered character artwork",
+        "occluded-region reconstruction",
+        "pivot map",
+        "target pose range"
+      ],
+      "steps": [
+        "separate parts",
+        "reconstruct hidden surfaces",
+        "establish hierarchy/pivots",
+        "stress pose extremes",
+        "fix seams",
+        "export and test"
+      ],
+      "failure_signals": [
+        "rubber limbs",
+        "paper-doll hinge motion",
+        "seams/gaps",
+        "cape/weapon intersections"
+      ],
+      "fallbacks": [
+        "repaint/segmentation redo",
+        "hybrid authored key poses",
+        "3d rigged route"
+      ],
+      "gpu_heavy": false
+    },
+    {
+      "id": "blender-rigged-3d",
+      "best_for": [
+        "multi-angle characters",
+        "reusable attacks/combos",
+        "camera-driven 3d worlds",
+        "consistent lighting"
+      ],
+      "inputs": [
+        "mesh or reconstructable concept",
+        "armature/rig map",
+        "action pose spec",
+        "materials/camera"
+      ],
+      "steps": [
+        "inspect mesh/topology",
+        "rig and weight",
+        "define root/weapon socket",
+        "author key poses and action curves",
+        "render multi-view reviews",
+        "export engine format",
+        "test state transitions"
+      ],
+      "failure_signals": [
+        "bad skin weights",
+        "joint collapse",
+        "missing prop grip",
+        "root/foot drift",
+        "action export loss"
+      ],
+      "fallbacks": [
+        "retarget compatible motion",
+        "simplify rig only if silhouette survives",
+        "redesign asset scope"
+      ],
+      "gpu_heavy": false
+    },
+    {
+      "id": "motion-capture-retarget",
+      "best_for": [
+        "natural body motion",
+        "weight shifts",
+        "complex full-body attacks"
+      ],
+      "inputs": [
+        "permitted capture/source clip",
+        "source skeleton",
+        "target rig mapping",
+        "prop/contact timing"
+      ],
+      "steps": [
+        "capture/acquire",
+        "clean tracking",
+        "retarget",
+        "fix root/feet",
+        "constrain hand/weapon",
+        "restage gameplay timing",
+        "export and runtime test"
+      ],
+      "failure_signals": [
+        "foot sliding",
+        "missing fingers/weapon grip",
+        "bad proportions",
+        "root drift",
+        "rights uncertainty"
+      ],
+      "fallbacks": [
+        "manual Blender action",
+        "conditioned key poses",
+        "hybrid capture plus keyframe cleanup"
+      ],
+      "gpu_heavy": false
+    },
+    {
+      "id": "image-to-3d-prop",
+      "best_for": [
+        "selected static props",
+        "reference-driven objects",
+        "background assets"
+      ],
+      "inputs": [
+        "clean multi-view or single image",
+        "physical size/material requirements",
+        "target export constraints"
+      ],
+      "steps": [
+        "reconstruct mesh",
+        "inspect silhouette/topology",
+        "remesh/retopo if needed",
+        "UV/material repair",
+        "LOD/collision setup",
+        "engine preview"
+      ],
+      "failure_signals": [
+        "melted silhouette",
+        "nonmanifold mesh",
+        "unusable UVs",
+        "excessive triangles",
+        "wrong scale"
+      ],
+      "fallbacks": [
+        "Blender modeling",
+        "multi-view reconstruction",
+        "licensed modular asset as temporary reference only"
+      ],
+      "gpu_heavy": true
+    },
+    {
+      "id": "ai-concept-plus-3d-environment",
+      "best_for": [
+        "walkable environment from high fidelity keyframe",
+        "cinematic vista plus explorable route"
+      ],
+      "inputs": [
+        "environment keyframe",
+        "camera blockout",
+        "landmark plan",
+        "traversal requirements"
+      ],
+      "steps": [
+        "preserve concept as north-star frame",
+        "layout traversable terrain and route",
+        "model/build architecture/landmarks",
+        "author materials and lighting",
+        "use depth layers and fog deliberately",
+        "capture camera-matched screenshots"
+      ],
+      "failure_signals": [
+        "flat poster world",
+        "non-traversable art",
+        "landmark mismatch",
+        "depth ambiguity"
+      ],
+      "fallbacks": [
+        "parallax scene if designed for it",
+        "smaller coherent explorable area",
+        "alternate camera/level route"
+      ],
+      "gpu_heavy": false
+    },
+    {
+      "id": "authored-runtime-vfx",
+      "best_for": [
+        "fire identity",
+        "attack impact",
+        "elemental combo feedback"
+      ],
+      "inputs": [
+        "gameplay event spec",
+        "signature effect reference",
+        "depth/shape/color rules",
+        "performance budget"
+      ],
+      "steps": [
+        "design silhouette over time",
+        "build texture/mesh/shader/particles as appropriate",
+        "synchronize event timing",
+        "test on target backgrounds",
+        "inspect performance and accessibility"
+      ],
+      "failure_signals": [
+        "generic glow pulse",
+        "color-only differentiation",
+        "overdraw haze",
+        "unclear hit/contact",
+        "effects obscure enemy"
+      ],
+      "fallbacks": [
+        "sprite sequence plus shader",
+        "mesh trail plus particles",
+        "split effect into readable stages"
+      ],
+      "gpu_heavy": false
+    }
+  ]
+}

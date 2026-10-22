@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0",
+  "project_id": "prismatic-creature-battler",
+  "title": "The Prismatic Creature Battler",
+  "engine": "Godot 4.7.2 validation/export fixture + custom HTML5 Canvas2D/WebGL playable runtime",
+  "jam_profile": "24h",
+  "brief_path": "projects/prismatic-creature-battler/docs/game-brief.json",
+  "art_bible_path": "projects/prismatic-creature-battler/docs/art-bible.json",
+  "task_graph_path": "projects/prismatic-creature-battler/docs/task-graph.json",
+  "current_stage": "benched",
+  "risk_register": [
+    {
+      "id": "vram-headroom",
+      "description": "FLUX.2 Klein 4B fp8 peaks near 11.1 GB on 12 GB RTX 5070 Ti Laptop GPU.",
+      "impact": "high",
+      "mitigation": "Run all ComfyUI generations strictly sequentially and record cold/warm timings.",
+      "status": "mitigated"
+    },
+    {
+      "id": "foil-readability",
+      "description": "Intense rainbow holographic foil can obscure card names, stats, or combat readability.",
+      "impact": "high",
+      "mitigation": "Mask foil diffraction strictly to creature highlights, scale patterns, and frame borders while keeping text plates dark high-contrast obsidian.",
+      "status": "mitigated"
+    },
+    {
+      "id": "synergy-comprehension",
+      "description": "Auto-battler trigger chains can feel random if not visually and textually telegraphed.",
+      "impact": "medium",
+      "mitigation": "Render explicit Resonance arcs (Voltbrand -> Refractive Ward -> Phase Rend) with step-by-step causal Combat Log entries and slow-mo/step inspection.",
+      "status": "mitigated"
+    }
+  ],
+  "non_goals": [
+    "Hundreds of filler cards or gacha pack monetization",
+    "Pay-to-win stat boosts on rare foils",
+    "Opaque black-box RNG combat without causal combat log telemetry"
+  ],
+  "release_target": "builds/prismatic-creature-battler/prismatic-creature-battler-web.zip"
+}

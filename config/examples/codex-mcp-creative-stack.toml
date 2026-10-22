@@ -1,0 +1,9 @@
+# Illustrative inventory only. Enable servers one-by-one after checking the exact upstream
+# package entrypoint, version, license, local service and installed host requirements.
+# Do not paste this file over a real user configuration.
+# Blender is the only complete sample; add the verified local Comfy/Godot/Krita/Playwright
+# blocks after their exact tool versions are installed and smoke-tested.
+[mcp_servers.blender]
+command = "uvx"
+args = ["mcp-for-blender", "--host", "localhost", "--port", "9876"]
+env = { BLENDER_HOST = "localhost", BLENDER_PORT = "9876", BLENDER_MCP_SAFE_MODE = "1", DISABLE_TELEMETRY = "true" }

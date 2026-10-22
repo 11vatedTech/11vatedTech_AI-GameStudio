@@ -1,0 +1,188 @@
+{
+  "anchor": "bottom-center",
+  "animation_id": "tempest-wyrm_idle",
+  "fps": 6.0,
+  "frame_count": 4,
+  "frame_size": [
+    516,
+    516
+  ],
+  "layout": [
+    {
+      "content_height": 504,
+      "content_width": 504,
+      "x": 6,
+      "y": 8
+    },
+    {
+      "content_height": 508,
+      "content_width": 508,
+      "x": 4,
+      "y": 4
+    },
+    {
+      "content_height": 508,
+      "content_width": 508,
+      "x": 4,
+      "y": 4
+    },
+    {
+      "content_height": 508,
+      "content_width": 508,
+      "x": 4,
+      "y": 4
+    }
+  ],
+  "loop": true,
+  "outputs": {
+    "gif": "tempest-wyrm_idle.gif",
+    "spritesheet": "tempest-wyrm_idle_spritesheet.png"
+  },
+  "schema_version": "1.0",
+  "source_audit": {
+    "anchor": "bottom-center",
+    "anchor_drift_px": [
+      3.354,
+      1.118,
+      1.118,
+      1.118
+    ],
+    "anchor_positions": [
+      [
+        256.0,
+        507.0
+      ],
+      [
+        258.0,
+        511.0
+      ],
+      [
+        258.0,
+        511.0
+      ],
+      [
+        258.0,
+        511.0
+      ]
+    ],
+    "dimensions": [
+      [
+        512,
+        512
+      ],
+      [
+        512,
+        512
+      ],
+      [
+        512,
+        512
+      ],
+      [
+        512,
+        512
+      ]
+    ],
+    "dimensions_consistent": true,
+    "exact_duplicate_frame_hashes": [],
+    "frame_count": 4,
+    "frames": [
+      {
+        "alpha_unique": 256,
+        "bbox": [
+          4,
+          4,
+          508,
+          508
+        ],
+        "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\anim\\tempest-wyrm\\f0.png",
+        "sha256": "7e8f0fe70f608f969bac993fee855665143bac6e478ae934758986b7038e419d",
+        "size": [
+          512,
+          512
+        ],
+        "visible_pixels": 90570
+      },
+      {
+        "alpha_unique": 256,
+        "bbox": [
+          4,
+          4,
+          512,
+          512
+        ],
+        "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\anim\\tempest-wyrm\\f1.png",
+        "sha256": "b6fc00e52519de8b85d6828e7117779841e2af000b20b22a4fb0af1ca1f6f2dd",
+        "size": [
+          512,
+          512
+        ],
+        "visible_pixels": 97683
+      },
+      {
+        "alpha_unique": 256,
+        "bbox": [
+          4,
+          4,
+          512,
+          512
+        ],
+        "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\anim\\tempest-wyrm\\f2.png",
+        "sha256": "e3a95e9043af3b35055760d865610613ae6914d098359131e7774119f24858e7",
+        "size": [
+          512,
+          512
+        ],
+        "visible_pixels": 100417
+      },
+      {
+        "alpha_unique": 256,
+        "bbox": [
+          4,
+          4,
+          512,
+          512
+        ],
+        "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\anim\\tempest-wyrm\\f3.png",
+        "sha256": "f9adcd634f970059a2a2e25d34b2c1af0827670e42fd5fc2182926a3eb023968",
+        "size": [
+          512,
+          512
+        ],
+        "visible_pixels": 96011
+      }
+    ],
+    "interpretation": "This report detects technical signals, not semantic identity or artistic motion quality. Inspect the animation at target playback speed and in-engine scale.",
+    "max_anchor_drift_px": 3.354,
+    "mean_adjacent_alpha_delta": [
+      28.8902,
+      26.9686,
+      34.158
+    ],
+    "mean_adjacent_rgb_delta": [
+      16.8476,
+      18.2308,
+      20.5956
+    ],
+    "warnings": []
+  },
+  "source_frames": [
+    {
+      "path": "assets/anim/tempest-wyrm/f0.png",
+      "sha256": "7e8f0fe70f608f969bac993fee855665143bac6e478ae934758986b7038e419d"
+    },
+    {
+      "path": "assets/anim/tempest-wyrm/f1.png",
+      "sha256": "b6fc00e52519de8b85d6828e7117779841e2af000b20b22a4fb0af1ca1f6f2dd"
+    },
+    {
+      "path": "assets/anim/tempest-wyrm/f2.png",
+      "sha256": "e3a95e9043af3b35055760d865610613ae6914d098359131e7774119f24858e7"
+    },
+    {
+      "path": "assets/anim/tempest-wyrm/f3.png",
+      "sha256": "f9adcd634f970059a2a2e25d34b2c1af0827670e42fd5fc2182926a3eb023968"
+    }
+  ],
+  "status": "assembled_requires_visual_review"
+}

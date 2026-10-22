@@ -1,0 +1,142 @@
+{
+  "schema_version": "1.0",
+  "project_id": "prismatic-creature-battler",
+  "time_budget_minutes": 1440,
+  "reserve_minutes": 360,
+  "tasks": [
+    {
+      "id": "discover-brief",
+      "title": "Define Creative Thesis, Game Brief, and Art Bible",
+      "estimate_minutes": 45,
+      "priority": 5,
+      "depends_on": [],
+      "status": "done",
+      "mandatory": true,
+      "owner_role": "Creative Director",
+      "evidence": [
+        "projects/prismatic-creature-battler/docs/game-brief.json",
+        "projects/prismatic-creature-battler/docs/art-bible.json"
+      ]
+    },
+    {
+      "id": "reference-import",
+      "title": "Import and inspect 8 Founder reference images with provenance",
+      "estimate_minutes": 30,
+      "priority": 5,
+      "depends_on": [
+        "discover-brief"
+      ],
+      "status": "done",
+      "mandatory": true,
+      "owner_role": "Asset Director",
+      "evidence": [
+        "evidence/founder-reference-board.png"
+      ]
+    },
+    {
+      "id": "klein-generation",
+      "title": "Generate 8 creature concepts + sanctuary arena via ComfyUI FLUX.2 Klein 4B fp8",
+      "estimate_minutes": 120,
+      "priority": 5,
+      "depends_on": [
+        "reference-import"
+      ],
+      "status": "done",
+      "mandatory": true,
+      "owner_role": "Technical Artist",
+      "evidence": [
+        "evidence/klein-generation-run.json",
+        "evidence/klein-refined-creatures-sheet.png"
+      ]
+    },
+    {
+      "id": "asset-refinement",
+      "title": "Process transparent creature sprites, build contact sheet, pack atlas, and assemble animations",
+      "estimate_minutes": 90,
+      "priority": 5,
+      "depends_on": [
+        "klein-generation"
+      ],
+      "status": "done",
+      "mandatory": true,
+      "owner_role": "Technical Artist",
+      "evidence": [
+        "projects/prismatic-creature-battler/assets/sprites/creatures-atlas.png",
+        "projects/prismatic-creature-battler/web/assets/tempest-wyrm_idle.gif",
+        "projects/prismatic-creature-battler/web/assets/prismhart_idle.gif",
+        "projects/prismatic-creature-battler/web/assets/riftstalker_idle.gif",
+        "projects/prismatic-creature-battler/web/assets/solarius_idle.gif"
+      ]
+    },
+    {
+      "id": "resonance-engine",
+      "title": "Implement deterministic 6v6 Refractive Resonance auto-battler engine, 8 creatures, 3 archetypes, and Prism Gauge Convergence",
+      "estimate_minutes": 180,
+      "priority": 5,
+      "depends_on": [
+        "discover-brief"
+      ],
+      "status": "done",
+      "mandatory": true,
+      "owner_role": "Gameplay Engineer",
+      "evidence": [
+        "projects/prismatic-creature-battler/web/engine.js",
+        "projects/prismatic-creature-battler/web/test_engine.cjs"
+      ]
+    },
+    {
+      "id": "living-foil-renderer",
+      "title": "Implement Hybrid Living Foil Card Renderer (Prismatic Spectrum, Phantom Foil, Relic Foil) + Dimensional Arena Materialization",
+      "estimate_minutes": 180,
+      "priority": 5,
+      "depends_on": [
+        "asset-refinement",
+        "resonance-engine"
+      ],
+      "status": "done",
+      "mandatory": true,
+      "owner_role": "Rendering Specialist",
+      "evidence": [
+        "projects/prismatic-creature-battler/web/index.html",
+        "projects/prismatic-creature-battler/web/app.js",
+        "evidence/prismatic-creature-battler/playtest-frame.png"
+      ]
+    },
+    {
+      "id": "godot-and-web-slice",
+      "title": "Integrate Godot 4 validation/export fixture and interactive custom Web runtime, validate & export",
+      "estimate_minutes": 120,
+      "priority": 5,
+      "depends_on": [
+        "living-foil-renderer"
+      ],
+      "status": "done",
+      "mandatory": true,
+      "owner_role": "Gameplay Engineer",
+      "evidence": [
+        "projects/prismatic-creature-battler/project.godot",
+        "builds/prismatic-creature-battler/web/index.html",
+        "builds/prismatic-creature-battler/prismatic-creature-battler-web.zip",
+        "evidence/prismatic-creature-battler/release-qa.json"
+      ]
+    },
+    {
+      "id": "playtest-and-release",
+      "title": "Execute automated & live browser playtests, visual QA, release audit, and package",
+      "estimate_minutes": 90,
+      "priority": 5,
+      "depends_on": [
+        "godot-and-web-slice"
+      ],
+      "status": "done",
+      "mandatory": true,
+      "owner_role": "Visual QA Director",
+      "evidence": [
+        "evidence/prismatic-creature-battler/release-qa.json",
+        "evidence/prismatic-creature-battler/browser-playtest.webm",
+        "evidence/prismatic-creature-battler/playtest-frame.png",
+        "evidence/prismatic-creature-battler/package-manifest.json"
+      ]
+    }
+  ]
+}

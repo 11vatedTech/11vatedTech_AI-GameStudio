@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "intent": "Build Neon Blasters, a desktop browser arcade survival shooter where cursor movement aims an immediate mouse-held laser, precise spectrum matches cause material disintegration and bounded chain reactions, and increasing target pressure overloads the arena. First release includes four target families, three spectra, Splitter, Chainlight, Overdrive, five temporary powerups, run upgrades, score/restart, WebGL2 effects with Canvas2D fallback, local-only operation, reduced-flash accessibility, deterministic simulation, performance and browser verification.",
+  "task_classes": [
+    "CREATIVE_PRODUCT",
+    "HYBRID_PRODUCTION"
+  ],
+  "substantial_creative": true,
+  "required_skills": [
+    "11vt-creative-production",
+    "11vt-design-director",
+    "11vt-testing-verification"
+  ],
+  "required_agents": [
+    "11vt-art-director",
+    "11vt-creative-director",
+    "11vt-technical-artist",
+    "11vt-visual-qa-director"
+  ],
+  "required_evidence": [
+    "concept_gate",
+    "craft_mechanism_plan",
+    "first_visible_artifact",
+    "independent_review",
+    "render_or_runtime_capture",
+    "rendered_evidence",
+    "routing_stamp"
+  ],
+  "routing_stamp_required": true,
+  "concept_gate_required": true,
+  "first_pixel_required": true,
+  "kind": "creative-routing-stamp",
+  "decision": "CREATIVE_STUDIO_REQUIRED",
+  "fail_closed_if_missing": [
+    "concept_gate",
+    "first_pixel_review",
+    "rendered_evidence"
+  ]
+}

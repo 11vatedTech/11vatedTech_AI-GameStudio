@@ -1,0 +1,11 @@
+{
+  "prompt": "A polished playable-game screenshot concept for Torch: Dominions, Purple Haze Fire proof, ORIGINAL fantasy action adventure, elevated three-quarter 2.5D camera looking diagonally down at a small oblique stone combat clearing in an ancient cinderwild ruin at dusk, game camera sees ground plane and route depth and small full-body characters from above at about 35 degrees, restrained slate and teal weathered stone with foreground ruin framing and distant sanctuary arch. A distinct small traveling torchbearer hero in left foreground with beautifully designed perforated dark ceramic and violet-glass lantern torch, facing one disciplined rogue enemy on right midground; character silhouette legible from this elevated angle. Torch releases a layered translucent amethyst burning-smoke cloud hugging and spreading across the ground in readable density bands, violet hot core, enemy wind-up still visible, route margins clear, subtle ember sparks, painterly cinematic lighting, harmonious premium authored fantasy game art, convincing game-scene composition designed for tactical movement and dodging, no text, no UI, no logo, no watermark, no multi-panel, no franchise references",
+  "width": 1024,
+  "height": 1024,
+  "seed": 7183402,
+  "steps": 4,
+  "cfg": 1.0,
+  "distilled": true,
+  "weight_dtype": "fp8_e4m3fn",
+  "output_dir": "assets/generated/torch-haze-proof"
+}

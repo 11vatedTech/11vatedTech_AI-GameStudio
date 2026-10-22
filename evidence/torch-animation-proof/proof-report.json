@@ -1,0 +1,81 @@
+{
+  "proof_id": "torch-purple-haze-attack-keyposes-v1",
+  "status": "rejected_as_animation_candidate",
+  "purpose": "Test whether independently generated Torch: Dominions protagonist attack poses can function as a coherent character animation.",
+  "frames": [
+    {
+      "role": "anticipation",
+      "source": "assets/generated/torch-animation-proof/01_klein-bench_00043_.png",
+      "sha256": "d9406f063e68b7dd3caf4451f7b0b7ae66a95f1dac429ac642e1ebb150a5a833",
+      "settings": {"seed": 7183601, "steps": 4, "cfg": 1.0, "model": "flux2-klein-4b-distilled-fp8"}
+    },
+    {
+      "role": "contact",
+      "source": "assets/generated/torch-animation-proof/01_klein-bench_00045_.png",
+      "sha256": "126c7150bb8b7f8337701bba95defeed2265b4126d1de49c42c7376e86b68b74",
+      "settings": {"seed": 7183603, "steps": 4, "cfg": 1.0, "model": "flux2-klein-4b-distilled-fp8"}
+    },
+    {
+      "role": "recovery",
+      "source": "assets/generated/torch-animation-proof/01_klein-bench_00046_.png",
+      "sha256": "59b319a8e570177d52d39eaabc60b144100e9137290f6f03f06f2c2e93449397",
+      "settings": {"seed": 7183604, "steps": 4, "cfg": 1.0, "model": "flux2-klein-4b-distilled-fp8"}
+    }
+  ],
+  "excluded_alternate": {
+    "source": "assets/generated/torch-animation-proof/01_klein-bench_00044_.png",
+    "sha256": "bc84aa7f34cca1284734e01a1ebec184d55c1deb7460e794142be161e57e1ec9",
+    "reason": "Alternate pose candidate; not used in the labeled three-beat sequence."
+  },
+  "visual_review": {
+    "identity": "fail: hair changes from long dark auburn flowing hair (anticipation) to a shorter tied-back shape (contact) and then reddish ponytail (recovery); face and apparent age/proportions also drift.",
+    "torch_ownership": "fail: anticipation/contact depict one held violet lantern; recovery visibly introduces a second flame/torch in the other hand while retaining the lantern in the extended hand.",
+    "torch_design": "fail: lantern shape and scale change between frames; in recovery it is a different, enlarged cage-like design.",
+    "silhouette": "fail: costume silhouette, mantle/cape outline, facing and body pose change substantially; not a controlled continuation of one attack.",
+    "action_continuity": "fail: the recovery image does not recover from the contact strike; it reads as a separately staged pose with different equipment and orientation.",
+    "gameplay_scale": "not assessed in engine; source frames are 1024x1024 RGB concept images on opaque backgrounds, not transparent game-ready sprites.",
+    "playback_timing": "not approved or assembled as gameplay motion because the source poses fail identity/equipment continuity."
+  },
+  "technical_audit": {
+    "command": "ags animation audit --frames <anticipation> <contact> <recovery> --anchor bottom-center",
+    "result": "succeeded",
+    "frame_count": 3,
+    "dimensions": [1024, 1024],
+    "mode": "RGB",
+    "alpha": "opaque; no transparency",
+    "anchor_drift_px": [0, 0, 0],
+    "mean_adjacent_rgb_delta": [63.3961, 40.8521],
+    "warnings": [],
+    "interpretation": "Technical alignment/difference metrics only. The tool explicitly does not evaluate semantic identity or artistic motion quality."
+  },
+  "cutout_feasibility_test": {
+    "status": "failed_as_rig_source",
+    "method": "OpenCV 5.0 GrabCut, initialized from the neutral grey border color and a hand-bounded probable-foreground rectangle; six graph-cut iterations; largest connected component retained; 3x3 Gaussian alpha edge softening.",
+    "source": "assets/generated/torch-animation-proof/01_klein-bench_00043_.png",
+    "source_sha256": "d9406f063e68b7dd3caf4451f7b0b7ae66a95f1dac429ac642e1ebb150a5a833",
+    "outputs": [
+      {"path": "evidence/torch-animation-proof/grabcut-whole-character-cutout.png", "sha256": "32644a536e278461ad4dc13ec7e2a7cdd49d3389708671a13128e76fc8a344e5", "size": [870, 938], "mode": "RGBA"},
+      {"path": "evidence/torch-animation-proof/grabcut-cutout-preview.png", "sha256": "fd28328c308deadc88046baf577ba286f407e5d66078f98907795e0fd96a16fd", "size": [870, 938], "mode": "RGB"},
+      {"path": "evidence/torch-animation-proof/grabcut-alpha-mask.png", "sha256": "8fb38dd3c5ad17ca167d12934dd3b3264ecedc4bdc7cff903f1210c929826091", "size": [870, 938], "mode": "L"}
+    ],
+    "inspection": {
+      "result": "Character silhouette largely retained, but the cutout is one fused whole-character layer: torso, limbs, hair, grip, and torch are not separated for rigging. A wide opaque shadow strip under the boots and a grey-tinted smoke remnant at the torch top remain included as foreground. The soft alpha edge halo is visible on checkerboard review.",
+      "alpha_unique_values": 31,
+      "main_component_pixels": 259499,
+      "rig_suitability": "fail: translating/rotating this one layer cannot create an articulated torch strike; segmenting limbs/torch from this source would require destructive reconstruction at joints and through the grip."
+    },
+    "decision": "Keep as a background-removal feasibility artifact only. Do not call it a clean game-ready sprite, separate rig, or animation.",
+    "tools": {"opencv": "5.0", "python": "system Python with OpenCV/NumPy/Pillow", "hosted_services": "not used", "weights_downloaded": false}
+  },
+  "decision": "Do not interpolate or integrate the independent pose set as animation. The one-source GrabCut result is also not a usable character rig. Preserve both experiments as evidence: prompting and whole-character segmentation cannot supply stable pose continuity or independently articulated parts from these sources.",
+  "next_gate": "Obtain or author a clean approved layered character source with distinct torso, arm/hand/torch, legs, head/hair, mantle, and shadow/VFX layers, or a stable rigged model; preserve the chosen face, hair, costume, torch silhouette and right-hand grip. Then animate anticipation/contact/recovery and review the actual motion and seams at gameplay scale.",
+  "human_review": "The user supplied the three-pose contact sheet; no formal art-direction or release approval is implied.",
+  "evidence": [
+    "evidence/torch-animation-proof/three-pose-contact-sheet.jpg",
+    "evidence/torch-animation-proof/pose-01.jpg",
+    "evidence/torch-animation-proof/pose-02.jpg",
+    "evidence/torch-animation-proof/pose-03.jpg",
+    "evidence/torch-animation-proof/grabcut-cutout-preview.png",
+    "evidence/torch-animation-proof/grabcut-alpha-mask.png"
+  ]
+}

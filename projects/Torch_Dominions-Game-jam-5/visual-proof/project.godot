@@ -1,0 +1,18 @@
+; Torch: Dominions — temporary visual proof fixture; candidate artwork only.
+config_version=5
+
+[application]
+config/name="Torch Dominions — Haze Visual Proof"
+run/main_scene="res://proof.tscn"
+
+[display]
+window/size/viewport_width=1024
+window/size/viewport_height=1024
+window/size/window_width_override=1024
+window/size/window_height_override=1024
+window/stretch/mode="canvas_items"
+
+[rendering]
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+environment/defaults/default_clear_color=Color(0.04, 0.06, 0.08, 1)

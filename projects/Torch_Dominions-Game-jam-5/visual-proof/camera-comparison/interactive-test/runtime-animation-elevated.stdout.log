@@ -1,0 +1,9 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 610.78 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 5070 Ti Laptop GPU
+
+BENCHMARK_TEST_START mode=elevated
+BENCHMARK_READY hero=res://hero-cutout-candidate.png sha256=32644a536e278461ad4dc13ec7e2a7cdd49d3389708671a13128e76fc8a344e5 paired_views=true
+BENCHMARK_CAPTURE path=res://captures/elevated-initial.png
+BENCHMARK_CAPTURE path=res://captures/elevated-haze-active.png
+BENCHMARK_TEST_RESULT {"attack_hits":1,"dodges":1,"enemy_health":1,"enemy_hits_received":0,"enemy_strikes":2,"haze_casts":1,"haze_zone_ticks":1,"hero_health":3,"mode":"elevated","panel_size":"(684.0, 395.0)","passed":true,"scenario_events":["torch_attack_started","torch_attack_hit_enemy","haze_cast_ground_zone_started","dodge_started_invulnerable","haze_zone_enemy_damage_tick","hero_invulnerable_during_strike"],"shared_state":true,"source_hero_sha256":"32644a536e278461ad4dc13ec7e2a7cdd49d3389708671a13128e76fc8a344e5","world_rect":"[P: (0.0, 0.0), S: (900.0, 520.0)]"}
+BENCHMARK_CAPTURE path=res://captures/elevated-final.png

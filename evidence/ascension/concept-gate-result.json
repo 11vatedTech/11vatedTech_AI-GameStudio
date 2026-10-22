@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "kind": "concept-gate-evaluation",
+  "decision": "PASS",
+  "blockers": [],
+  "required_before_broad_implementation": true,
+  "non_substitution_rule": "A concept that could fit 100 unrelated products cannot pass."
+}

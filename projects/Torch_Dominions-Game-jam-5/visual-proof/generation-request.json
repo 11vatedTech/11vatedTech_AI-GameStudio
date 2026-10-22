@@ -1,0 +1,15 @@
+{
+  "proof_id": "torch-dominions-haze-styleproof-01",
+  "purpose": "One art-directed scene candidate to test whether painterly mythic dark-fantasy imagery, a distinct Haze lantern, and combat readability can coexist before integration into Godot.",
+  "prompt": "An original stylized fantasy action-game scene concept for Torch: Dominions, the Cinderwild at dusk, elevated three-quarter 2.5D game camera looking down about 35 degrees, one compact readable ruined-stone combat clearing with a traversable ash-slate path leading toward a distant broken sanctuary arch, foreground charred branches framing the view, restrained charcoal blue-grey stone, desaturated moss, weathered bronze, volumetric cool dusk haze and warm ember pinpoints. At left-midground an original small wayfarer adventurer in layered worn travel cloth, one asymmetrical pale ash mantle and copper fasteners, clearly gripping exactly one bespoke dark-ceramic perforated lantern torch with violet glass vents; at right-midground one disciplined ash rogue in contrasting weathered bronze and muted ivory armor in a readable raised-weapon attack anticipation stance. A sculptural amethyst Haze-fire cloud rolls low from the lantern across one side of the clearing in translucent layered wisps with a bright contained hot core and clear density bands, preserving both characters' silhouettes, the enemy tell, the route and their grounded contact shadows. Painterly gouache-like environment surfaces, intentional anime-scale silhouette clarity, confident designed shapes, tactile materials, cinematic warm/cool edge light, restrained detail away from focal figures, sophisticated original game art direction, coherent value grouping, attractive but practical playable-scene composition, no text, no UI, no letters, no logo, no watermark, no collage, no multiple panels, no photorealism, no neon cyberpunk, no opaque full-screen smoke, no duplicate weapons, no extra limbs, no franchise references.",
+  "width": 1024,
+  "height": 1024,
+  "seed": 7183417,
+  "steps": 4,
+  "cfg": 1.0,
+  "distilled": true,
+  "weight_dtype": "fp8_e4m3fn",
+  "output_dir": "projects/Torch_Dominions-Game-jam-5/visual-proof/comfyui-output",
+  "service": "ComfyUI local API",
+  "workflow_recipe": "FLUX.2 Klein 4B Distilled FP8"
+}

@@ -6,6 +6,7 @@ from urllib.request import Request, urlopen
 from urllib.error import HTTPError
 
 from vated_studio.api.http_server import _Server, _Handler
+from vated_studio import mcp_server as mcp_module
 from vated_studio.mcp_server import MCPServer
 
 
@@ -19,6 +20,18 @@ def test_mcp_initialize_list_tools_and_dispatch(service):
     result = mcp.handle({"jsonrpc": "2.0", "id": 3, "method": "tools/call", "params": {"name": "ags_status", "arguments": {}}})
     assert result["result"]["isError"] is False
     assert "11vatedTech AI Game Studio" in result["result"]["structuredContent"]["result"]["name"]
+
+
+def test_mcp_negotiates_only_supported_protocol_versions(service):
+    mcp = MCPServer(service)
+    assert mcp_module.SUPPORTED_PROTOCOL_VERSIONS == ("2025-06-18", "2025-03-26", "2024-11-05")
+    for version in mcp_module.SUPPORTED_PROTOCOL_VERSIONS:
+        init = mcp.handle({"jsonrpc": "2.0", "id": 1, "method": "initialize", "params": {"protocolVersion": version}})
+        assert init["result"]["protocolVersion"] == version
+    # A missing, malformed or host-rejected version must never echo through.
+    for params in (None, {}, {"protocolVersion": "2025-11-25"}, {"protocolVersion": 7}):
+        init = mcp.handle({"jsonrpc": "2.0", "id": 2, "method": "initialize", "params": params})
+        assert init["result"]["protocolVersion"] == "2025-06-18"
 
 
 def test_mcp_rejects_unknown_tools_and_invalid_methods(service):

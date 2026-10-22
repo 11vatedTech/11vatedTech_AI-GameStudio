@@ -1,0 +1,28 @@
+{
+  "references": [
+    {
+      "source": "https://www.vam.ac.uk/articles/what-is-print",
+      "purpose": "Understand how relief-print positive and negative shapes make structural marks readable.",
+      "why_good": "The museum's explanation provides a clear material basis for turning drawn ridges and carved spaces into legible collision and page geometry.",
+      "transferable_principle": "Use a confident positive/negative contour hierarchy: solid platform edges are the ink-bearing ridge; cut-outs and hatching describe absence and texture.",
+      "must_not_copy": "Do not reproduce any specific print, historical plate, maker's signature, composition, or distinctive hatch pattern.",
+      "own_thing_plan": "Invent a palette, rail grammar, page composition, and living-ink character around the one-stroke gravity mechanic."
+    },
+    {
+      "source": "https://www.getty.edu/art/exhibitions/bestiary/inner.html",
+      "purpose": "Study how manuscript creatures communicate through icon-like silhouettes and staged color.",
+      "why_good": "The exhibition documents line drawing, layered color and outline, and figures that prioritize expressive meaning over naturalistic depiction.",
+      "transferable_principle": "Make the ink-being readable as a bold, memorable silhouette at play scale; reserve color for meaningful state changes.",
+      "must_not_copy": "Do not reuse bestiary figures, page layouts, ornamental borders, historic symbols, or costume details.",
+      "own_thing_plan": "Create a new asymmetric blot anatomy, negative-space eyes, capillary tail, and vermilion seed with poses designed for clinging and drawing."
+    },
+    {
+      "source": "https://harvardartmuseums.org/article/it-s-a-wash",
+      "purpose": "Ground visual material cues in documented interactions between inks and paper.",
+      "why_good": "The conservation account shows that marks and paper can respond differently to moisture and treatment, supporting distinct crisp-versus-diffuse material states.",
+      "transferable_principle": "Separate stable structural strokes from fragile spreading washes so material quality carries game state information.",
+      "must_not_copy": "Do not trace or imitate artworks in the conservation examples; do not imply scientific ink simulation from a simple visual effect.",
+      "own_thing_plan": "Use controlled vector stipple/wash masks and authored timing as original feedback for an edited rail, a redirected bead, and solved page."
+    }
+  ]
+}

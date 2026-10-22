@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#070a12">
+  <meta name="description" content="A precise neon arcade survival shooter. Aim. Fire. Disintegrate.">
+  <title>Neon Blasters — Precision Disintegration</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="masthead">
+      <a class="wordmark" href="#" aria-label="Neon Blasters home"><span class="visually-hidden">Neon Blasters</span><span class="wordmark-mark" aria-hidden="true">N<span>B</span></span><span>NEON<br>BLASTERS</span></a>
+      <p class="masthead-note">PRECISION // DISINTEGRATION</p>
+      <button id="settings-toggle" class="icon-button" type="button" aria-expanded="false" aria-controls="settings-panel">SETTINGS <span aria-hidden="true">⌄</span></button>
+    </header>
+    <section id="settings-panel" class="settings-panel" aria-label="Accessibility and audio settings" hidden>
+      <label><input id="reduced-flash" type="checkbox"> Reduced flash</label>
+      <label><input id="reduced-effects" type="checkbox"> Reduced effects</label>
+      <label><input id="high-contrast" type="checkbox"> High contrast</label>
+      <label><input id="mute-audio" type="checkbox"> Mute audio</label>
+    </section>
+
+    <section class="game-frame" aria-label="Neon Blasters game">
+      <canvas id="game-canvas" width="1280" height="720" aria-label="Neon Blasters playfield. Aim with the mouse and hold the left button to fire." tabindex="0"></canvas>
+      <div class="scanline" aria-hidden="true"></div>
+      <div class="game-topline" aria-live="polite">
+        <div class="readout"><span class="eyebrow">SCORE</span><strong id="score">000000</strong></div>
+        <div class="spectrum-readout"><span class="eyebrow">SPECTRUM</span><strong id="spectrum-label"><i class="spectrum-dot cyan"></i> CYAN <span class="keycap">Q</span></strong></div>
+        <div class="readout combo-readout"><span class="eyebrow">CHAIN</span><strong id="combo">×00</strong></div>
+        <div class="charge-readout"><span class="eyebrow">OVERDRIVE <span class="keycap">SPACE</span></span><div class="charge-track"><i id="overdrive-fill"></i></div></div>
+        <button id="pause-button" class="pause-button" type="button" aria-label="Pause game">Ⅱ</button>
+      </div>
+      <div class="bottomline" aria-live="polite"><span id="target-status">TARGETS <b>00</b></span><span id="power-status">SYSTEMS NOMINAL</span><span id="time-status">00:00</span></div>
+      <div id="status-banner" class="status-banner" aria-live="assertive" hidden></div>
+      <div id="overlay" class="overlay" role="dialog" aria-modal="true" aria-labelledby="overlay-title">
+        <div class="overlay-card">
+          <p id="overlay-kicker" class="eyebrow">ARCADE SURVIVAL // SECTOR 01</p>
+          <h1 id="overlay-title">AIM.<br><span>FIRE.</span><br>DISINTEGRATE.</h1>
+          <p id="overlay-copy" class="overlay-copy">Your cursor is the weapon. Match the spectrum, crack the core, and let every fragment count.</p>
+          <div class="control-guide"><span><kbd>MOUSE</kbd> AIM</span><span><kbd>HOLD</kbd> FIRE</span><span><kbd>Q</kbd> SPECTRUM</span><span><kbd>SPACE</kbd> OVERDRIVE</span></div>
+          <button id="primary-action" class="primary-action" type="button"><span>INITIALIZE RUN</span><b aria-hidden="true">↗</b></button>
+          <p class="overlay-foot">MOUSE + KEYBOARD · DESKTOP</p>
+        </div>
+      </div>
+    </section>
+    <footer class="footerline"><span>NB-01 // NEON DISINTEGRATION PROTOCOL</span><span>LOCAL BUILD <i aria-hidden="true"></i> NO SIGNAL REQUIRED</span></footer>
+  </main>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

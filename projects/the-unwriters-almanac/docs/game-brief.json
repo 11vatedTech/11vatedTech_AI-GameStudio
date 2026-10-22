@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0",
+  "project_id": "the-unwriters-almanac",
+  "title": "The Unwriter’s Almanac",
+  "genre": "Illustrated environmental puzzle",
+  "subgenres": ["one-stroke traversal", "physics-guided puzzle"],
+  "platforms": ["web"],
+  "jam_profile": "24h",
+  "jam_rules": {
+    "constraints": ["Local browser experiment only; no jam deadline or submission rules were provided.", "No paid API, external service, account, telemetry, or network runtime dependency."]
+  },
+  "audience": "Players who enjoy compact, readable environmental puzzles and visually authored worlds.",
+  "player_fantasy": "I am writing a rule into the page, and this little living mark trusts my line enough to follow it.",
+  "creative_thesis": "A puzzle page becomes editable physics: draw one continuous rail, watch the pigment bead follow it, and guide an expressive ink-being through the result.",
+  "design_pillars": ["One player-authored line has two simultaneous consequences: pigment flow and character traversal.", "The page is an authored material system, not a generic parchment backdrop.", "Failure is reversible; the player can erase, redraw, pause, and restart without punishment."],
+  "core_loop": ["Notice the ink-being, pigment bead, rail rule, and folio seal.", "Draw one continuous line from the living mark toward the seal.", "Commit the line; the bead follows its curve while the ink-being traverses it.", "Erase and redraw if the line does not reach the seal.", "Solve the page, then restart into the same deterministic puzzle."],
+  "core_verbs": ["draw", "commit", "erase", "move", "jump", "pause", "restart"],
+  "controls": {
+    "Pointer": "Hold and drag on the page to preview one line; release to commit.",
+    "Erase": "E or the Erase line button.",
+    "Pause": "Escape or P, then Resume.",
+    "Restart": "R or Restart page.",
+    "Move": "A/D or Left/Right.",
+    "Jump": "Space or W/Up.",
+    "Guided keyboard line": "Use the guided line control then choose one of three line shapes and commit."
+  },
+  "success_criteria": ["A committed, bounded line changes both bead travel and character traversal deterministically.", "Only a valid solution line reaches the seal and triggers the solved state.", "Pointer input survives CSS scaling and is cancelled safely on interruption; keyboard-only users can select and commit a guided line.", "Pause freezes gameplay and animation; erase, reset and restart are reliable.", "The character has readable authored idle, anticipation, traverse, recovery, and solve motion.", "The actual served game is operable in browser at desktop and narrow viewport with no uncaught console errors or remote requests."],
+  "non_goals": ["A campaign, level editor, procedural level generation, combat, online play, mobile release, 3D, remote AI/API calls, generated runtime sprites, deployment, or distribution clearance."]
+}

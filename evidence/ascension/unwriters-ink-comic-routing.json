@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "intent": "Redesign The Unwriter's Almanac into expressive ink-comic, image-led art with meaningful route-choice gameplay",
+  "task_classes": [
+    "GAME_CREATIVE"
+  ],
+  "substantial_creative": true,
+  "required_skills": [
+    "11vt-game-development"
+  ],
+  "required_agents": [],
+  "required_evidence": [
+    "feel_review",
+    "playable_evidence"
+  ],
+  "routing_stamp_required": true,
+  "concept_gate_required": true,
+  "first_pixel_required": true,
+  "kind": "creative-routing-stamp",
+  "decision": "CREATIVE_STUDIO_REQUIRED",
+  "fail_closed_if_missing": [
+    "concept_gate",
+    "first_pixel_review",
+    "rendered_evidence"
+  ]
+}

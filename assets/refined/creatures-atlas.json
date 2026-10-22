@@ -1,0 +1,77 @@
+{
+  "atlas": "creatures-atlas.png",
+  "atlas_sha256": "ec39843f4ac0f21dc2c7a7844aa91e7f294f5faeb30160502b5a20bdf1dbf587",
+  "items": {
+    "abyssal-ryu.png": {
+      "height": 512,
+      "sha256": "d6c06a4b71b96b54afb589d510ea7ff6ed01d74d5f8a0af57a13e20015cf21fd",
+      "source": "assets/refined/abyssal-ryu.png",
+      "width": 512,
+      "x": 8,
+      "y": 8
+    },
+    "prismhart.png": {
+      "height": 512,
+      "sha256": "a1051e303f82ad9d0a38166a780e9f0bdfdfbac58bfc88c419344a967e3a7a3e",
+      "source": "assets/refined/prismhart.png",
+      "width": 512,
+      "x": 528,
+      "y": 8
+    },
+    "pyrewarden.png": {
+      "height": 512,
+      "sha256": "cf8cb06f7272f72e2e1ef4a624397441f8f8c1a30976b7c50a471c86ca2613c3",
+      "source": "assets/refined/pyrewarden.png",
+      "width": 512,
+      "x": 1048,
+      "y": 8
+    },
+    "riftstalker.png": {
+      "height": 512,
+      "sha256": "f932c265702fe4f6ec269fc135b3b960c749d80733beb862661ed50cb261c80f",
+      "source": "assets/refined/riftstalker.png",
+      "width": 512,
+      "x": 8,
+      "y": 528
+    },
+    "solarius.png": {
+      "height": 512,
+      "sha256": "3b37145b0eef881355d6a892f908e6223c1b042a4fe238a2d2aeca82de2e35ef",
+      "source": "assets/refined/solarius.png",
+      "width": 512,
+      "x": 528,
+      "y": 528
+    },
+    "sylvan-aegis.png": {
+      "height": 512,
+      "sha256": "81dabb471cc5e699559eb27cce09e5afb96122a24e779c2c23c57d107f46d489",
+      "source": "assets/refined/sylvan-aegis.png",
+      "width": 512,
+      "x": 1048,
+      "y": 528
+    },
+    "tempest-wyrm.png": {
+      "height": 512,
+      "sha256": "e50722847cf8c2fc6dc18dcb880ff973d6e25ce9c50292cfd598ec512eb08c1d",
+      "source": "assets/refined/tempest-wyrm.png",
+      "width": 512,
+      "x": 8,
+      "y": 1048
+    },
+    "umbral-weaver.png": {
+      "height": 512,
+      "sha256": "117349829d48bb25f2247b0f0c28fdf841e127b9fe940e50cf0952973203cfbc",
+      "source": "assets/refined/umbral-weaver.png",
+      "width": 512,
+      "x": 528,
+      "y": 1048
+    }
+  },
+  "padding": 4,
+  "schema_version": "1.0",
+  "size": [
+    1564,
+    1568
+  ],
+  "status": "packed_requires_engine_import_check"
+}

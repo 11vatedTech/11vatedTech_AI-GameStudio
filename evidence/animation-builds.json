@@ -1,0 +1,1066 @@
+{
+  "tempest-wyrm": {
+    "audit": {
+      "frame_count": 4,
+      "frames": [
+        {
+          "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\anim\\tempest-wyrm\\f0.png",
+          "size": [
+            512,
+            512
+          ],
+          "bbox": [
+            4,
+            4,
+            508,
+            508
+          ],
+          "visible_pixels": 90570,
+          "alpha_unique": 256,
+          "sha256": "7e8f0fe70f608f969bac993fee855665143bac6e478ae934758986b7038e419d"
+        },
+        {
+          "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\anim\\tempest-wyrm\\f1.png",
+          "size": [
+            512,
+            512
+          ],
+          "bbox": [
+            4,
+            4,
+            512,
+            512
+          ],
+          "visible_pixels": 97683,
+          "alpha_unique": 256,
+          "sha256": "b6fc00e52519de8b85d6828e7117779841e2af000b20b22a4fb0af1ca1f6f2dd"
+        },
+        {
+          "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\anim\\tempest-wyrm\\f2.png",
+          "size": [
+            512,
+            512
+          ],
+          "bbox": [
+            4,
+            4,
+            512,
+            512
+          ],
+          "visible_pixels": 100417,
+          "alpha_unique": 256,
+          "sha256": "e3a95e9043af3b35055760d865610613ae6914d098359131e7774119f24858e7"
+        },
+        {
+          "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\anim\\tempest-wyrm\\f3.png",
+          "size": [
+            512,
+            512
+          ],
+          "bbox": [
+            4,
+            4,
+            512,
+            512
+          ],
+          "visible_pixels": 96011,
+          "alpha_unique": 256,
+          "sha256": "f9adcd634f970059a2a2e25d34b2c1af0827670e42fd5fc2182926a3eb023968"
+        }
+      ],
+      "dimensions_consistent": true,
+      "dimensions": [
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ]
+      ],
+      "anchor": "bottom-center",
+      "anchor_positions": [
+        [
+          256.0,
+          507.0
+        ],
+        [
+          258.0,
+          511.0
+        ],
+        [
+          258.0,
+          511.0
+        ],
+        [
+          258.0,
+          511.0
+        ]
+      ],
+      "anchor_drift_px": [
+        3.354,
+        1.118,
+        1.118,
+        1.118
+      ],
+      "max_anchor_drift_px": 3.354,
+      "mean_adjacent_rgb_delta": [
+        16.8476,
+        18.2308,
+        20.5956
+      ],
+      "mean_adjacent_alpha_delta": [
+        28.8902,
+        26.9686,
+        34.158
+      ],
+      "exact_duplicate_frame_hashes": [],
+      "warnings": [],
+      "interpretation": "This report detects technical signals, not semantic identity or artistic motion quality. Inspect the animation at target playback speed and in-engine scale."
+    },
+    "build": {
+      "gif": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\builds\\anim\\tempest-wyrm_idle.gif",
+      "spritesheet": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\builds\\anim\\tempest-wyrm_idle_spritesheet.png",
+      "manifest": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\builds\\anim\\tempest-wyrm_idle_animation.json",
+      "frame_count": 4,
+      "frame_size": [
+        516,
+        516
+      ],
+      "audit": {
+        "frame_count": 4,
+        "frames": [
+          {
+            "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\anim\\tempest-wyrm\\f0.png",
+            "size": [
+              512,
+              512
+            ],
+            "bbox": [
+              4,
+              4,
+              508,
+              508
+            ],
+            "visible_pixels": 90570,
+            "alpha_unique": 256,
+            "sha256": "7e8f0fe70f608f969bac993fee855665143bac6e478ae934758986b7038e419d"
+          },
+          {
+            "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\anim\\tempest-wyrm\\f1.png",
+            "size": [
+              512,
+              512
+            ],
+            "bbox": [
+              4,
+              4,
+              512,
+              512
+            ],
+            "visible_pixels": 97683,
+            "alpha_unique": 256,
+            "sha256": "b6fc00e52519de8b85d6828e7117779841e2af000b20b22a4fb0af1ca1f6f2dd"
+          },
+          {
+            "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\anim\\tempest-wyrm\\f2.png",
+            "size": [
+              512,
+              512
+            ],
+            "bbox": [
+              4,
+              4,
+              512,
+              512
+            ],
+            "visible_pixels": 100417,
+            "alpha_unique": 256,
+            "sha256": "e3a95e9043af3b35055760d865610613ae6914d098359131e7774119f24858e7"
+          },
+          {
+            "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\anim\\tempest-wyrm\\f3.png",
+            "size": [
+              512,
+              512
+            ],
+            "bbox": [
+              4,
+              4,
+              512,
+              512
+            ],
+            "visible_pixels": 96011,
+            "alpha_unique": 256,
+            "sha256": "f9adcd634f970059a2a2e25d34b2c1af0827670e42fd5fc2182926a3eb023968"
+          }
+        ],
+        "dimensions_consistent": true,
+        "dimensions": [
+          [
+            512,
+            512
+          ],
+          [
+            512,
+            512
+          ],
+          [
+            512,
+            512
+          ],
+          [
+            512,
+            512
+          ]
+        ],
+        "anchor": "bottom-center",
+        "anchor_positions": [
+          [
+            256.0,
+            507.0
+          ],
+          [
+            258.0,
+            511.0
+          ],
+          [
+            258.0,
+            511.0
+          ],
+          [
+            258.0,
+            511.0
+          ]
+        ],
+        "anchor_drift_px": [
+          3.354,
+          1.118,
+          1.118,
+          1.118
+        ],
+        "max_anchor_drift_px": 3.354,
+        "mean_adjacent_rgb_delta": [
+          16.8476,
+          18.2308,
+          20.5956
+        ],
+        "mean_adjacent_alpha_delta": [
+          28.8902,
+          26.9686,
+          34.158
+        ],
+        "exact_duplicate_frame_hashes": [],
+        "warnings": [],
+        "interpretation": "This report detects technical signals, not semantic identity or artistic motion quality. Inspect the animation at target playback speed and in-engine scale."
+      }
+    }
+  },
+  "prismhart": {
+    "audit": {
+      "frame_count": 4,
+      "frames": [
+        {
+          "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\anim\\prismhart\\f0.png",
+          "size": [
+            512,
+            512
+          ],
+          "bbox": [
+            11,
+            4,
+            501,
+            508
+          ],
+          "visible_pixels": 117819,
+          "alpha_unique": 256,
+          "sha256": "fc6efbd2b272d6ac8ec7ac445ae13c3dbff6f0e32c4a68633c5d90bed35f730d"
+        },
+        {
+          "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\anim\\prismhart\\f1.png",
+          "size": [
+            512,
+            512
+          ],
+          "bbox": [
+            11,
+            4,
+            511,
+            512
+          ],
+          "visible_pixels": 124901,
+          "alpha_unique": 256,
+          "sha256": "2998c065509132a5a9980027fe2e6d0ceace637ae401216b3268806c8f41bb89"
+        },
+        {
+          "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\anim\\prismhart\\f2.png",
+          "size": [
+            512,
+            512
+          ],
+          "bbox": [
+            11,
+            4,
+            512,
+            512
+          ],
+          "visible_pixels": 128127,
+          "alpha_unique": 256,
+          "sha256": "993a1ad6c67cb4026617a15540c1ba3f8e4bcf20b0c254ead6fdbc210ab9e489"
+        },
+        {
+          "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\anim\\prismhart\\f3.png",
+          "size": [
+            512,
+            512
+          ],
+          "bbox": [
+            11,
+            4,
+            506,
+            512
+          ],
+          "visible_pixels": 123210,
+          "alpha_unique": 256,
+          "sha256": "58774e626606416239131e712b4a9ab1c906cf62f37a6be362c93172dd55ece2"
+        }
+      ],
+      "dimensions_consistent": true,
+      "dimensions": [
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ]
+      ],
+      "anchor": "bottom-center",
+      "anchor_positions": [
+        [
+          256.0,
+          507.0
+        ],
+        [
+          261.0,
+          511.0
+        ],
+        [
+          261.5,
+          511.0
+        ],
+        [
+          258.5,
+          511.0
+        ]
+      ],
+      "anchor_drift_px": [
+        4.423,
+        2.016,
+        2.462,
+        1.25
+      ],
+      "max_anchor_drift_px": 4.423,
+      "mean_adjacent_rgb_delta": [
+        27.7212,
+        26.2739,
+        32.4247
+      ],
+      "mean_adjacent_alpha_delta": [
+        22.2351,
+        17.8355,
+        25.2407
+      ],
+      "exact_duplicate_frame_hashes": [],
+      "warnings": [],
+      "interpretation": "This report detects technical signals, not semantic identity or artistic motion quality. Inspect the animation at target playback speed and in-engine scale."
+    },
+    "build": {
+      "gif": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\builds\\anim\\prismhart_idle.gif",
+      "spritesheet": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\builds\\anim\\prismhart_idle_spritesheet.png",
+      "manifest": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\builds\\anim\\prismhart_idle_animation.json",
+      "frame_count": 4,
+      "frame_size": [
+        509,
+        516
+      ],
+      "audit": {
+        "frame_count": 4,
+        "frames": [
+          {
+            "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\anim\\prismhart\\f0.png",
+            "size": [
+              512,
+              512
+            ],
+            "bbox": [
+              11,
+              4,
+              501,
+              508
+            ],
+            "visible_pixels": 117819,
+            "alpha_unique": 256,
+            "sha256": "fc6efbd2b272d6ac8ec7ac445ae13c3dbff6f0e32c4a68633c5d90bed35f730d"
+          },
+          {
+            "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\anim\\prismhart\\f1.png",
+            "size": [
+              512,
+              512
+            ],
+            "bbox": [
+              11,
+              4,
+              511,
+              512
+            ],
+            "visible_pixels": 124901,
+            "alpha_unique": 256,
+            "sha256": "2998c065509132a5a9980027fe2e6d0ceace637ae401216b3268806c8f41bb89"
+          },
+          {
+            "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\anim\\prismhart\\f2.png",
+            "size": [
+              512,
+              512
+            ],
+            "bbox": [
+              11,
+              4,
+              512,
+              512
+            ],
+            "visible_pixels": 128127,
+            "alpha_unique": 256,
+            "sha256": "993a1ad6c67cb4026617a15540c1ba3f8e4bcf20b0c254ead6fdbc210ab9e489"
+          },
+          {
+            "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\anim\\prismhart\\f3.png",
+            "size": [
+              512,
+              512
+            ],
+            "bbox": [
+              11,
+              4,
+              506,
+              512
+            ],
+            "visible_pixels": 123210,
+            "alpha_unique": 256,
+            "sha256": "58774e626606416239131e712b4a9ab1c906cf62f37a6be362c93172dd55ece2"
+          }
+        ],
+        "dimensions_consistent": true,
+        "dimensions": [
+          [
+            512,
+            512
+          ],
+          [
+            512,
+            512
+          ],
+          [
+            512,
+            512
+          ],
+          [
+            512,
+            512
+          ]
+        ],
+        "anchor": "bottom-center",
+        "anchor_positions": [
+          [
+            256.0,
+            507.0
+          ],
+          [
+            261.0,
+            511.0
+          ],
+          [
+            261.5,
+            511.0
+          ],
+          [
+            258.5,
+            511.0
+          ]
+        ],
+        "anchor_drift_px": [
+          4.423,
+          2.016,
+          2.462,
+          1.25
+        ],
+        "max_anchor_drift_px": 4.423,
+        "mean_adjacent_rgb_delta": [
+          27.7212,
+          26.2739,
+          32.4247
+        ],
+        "mean_adjacent_alpha_delta": [
+          22.2351,
+          17.8355,
+          25.2407
+        ],
+        "exact_duplicate_frame_hashes": [],
+        "warnings": [],
+        "interpretation": "This report detects technical signals, not semantic identity or artistic motion quality. Inspect the animation at target playback speed and in-engine scale."
+      }
+    }
+  },
+  "riftstalker": {
+    "audit": {
+      "frame_count": 4,
+      "frames": [
+        {
+          "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\anim\\riftstalker\\f0.png",
+          "size": [
+            512,
+            512
+          ],
+          "bbox": [
+            5,
+            6,
+            507,
+            506
+          ],
+          "visible_pixels": 89687,
+          "alpha_unique": 256,
+          "sha256": "5348ffcbd35f28a4323b43752476269a26d6467e0d179b3fd2dbd920fc493ee7"
+        },
+        {
+          "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\anim\\riftstalker\\f1.png",
+          "size": [
+            512,
+            512
+          ],
+          "bbox": [
+            5,
+            6,
+            512,
+            512
+          ],
+          "visible_pixels": 98201,
+          "alpha_unique": 256,
+          "sha256": "94f30c7519090e2f75648e7e6f7d7fdf71ab415b63db5f4fcfe82995bd8720a7"
+        },
+        {
+          "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\anim\\riftstalker\\f2.png",
+          "size": [
+            512,
+            512
+          ],
+          "bbox": [
+            5,
+            6,
+            512,
+            512
+          ],
+          "visible_pixels": 100994,
+          "alpha_unique": 256,
+          "sha256": "7e1dae15742535438e38c5c8a903f55b753ccf2c75067acb0966ac2d1afb844f"
+        },
+        {
+          "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\anim\\riftstalker\\f3.png",
+          "size": [
+            512,
+            512
+          ],
+          "bbox": [
+            5,
+            6,
+            512,
+            512
+          ],
+          "visible_pixels": 96594,
+          "alpha_unique": 256,
+          "sha256": "823ce1c2950e70e872e0bfdcf808efb402ac7858a70195b5cd4a338596182350"
+        }
+      ],
+      "dimensions_consistent": true,
+      "dimensions": [
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ]
+      ],
+      "anchor": "bottom-center",
+      "anchor_positions": [
+        [
+          256.0,
+          505.0
+        ],
+        [
+          258.5,
+          511.0
+        ],
+        [
+          258.5,
+          511.0
+        ],
+        [
+          258.5,
+          511.0
+        ]
+      ],
+      "anchor_drift_px": [
+        4.875,
+        1.625,
+        1.625,
+        1.625
+      ],
+      "max_anchor_drift_px": 4.875,
+      "mean_adjacent_rgb_delta": [
+        25.1434,
+        26.1428,
+        29.9675
+      ],
+      "mean_adjacent_alpha_delta": [
+        42.997,
+        39.0548,
+        49.1579
+      ],
+      "exact_duplicate_frame_hashes": [],
+      "warnings": [],
+      "interpretation": "This report detects technical signals, not semantic identity or artistic motion quality. Inspect the animation at target playback speed and in-engine scale."
+    },
+    "build": {
+      "gif": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\builds\\anim\\riftstalker_idle.gif",
+      "spritesheet": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\builds\\anim\\riftstalker_idle_spritesheet.png",
+      "manifest": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\builds\\anim\\riftstalker_idle_animation.json",
+      "frame_count": 4,
+      "frame_size": [
+        515,
+        514
+      ],
+      "audit": {
+        "frame_count": 4,
+        "frames": [
+          {
+            "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\anim\\riftstalker\\f0.png",
+            "size": [
+              512,
+              512
+            ],
+            "bbox": [
+              5,
+              6,
+              507,
+              506
+            ],
+            "visible_pixels": 89687,
+            "alpha_unique": 256,
+            "sha256": "5348ffcbd35f28a4323b43752476269a26d6467e0d179b3fd2dbd920fc493ee7"
+          },
+          {
+            "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\anim\\riftstalker\\f1.png",
+            "size": [
+              512,
+              512
+            ],
+            "bbox": [
+              5,
+              6,
+              512,
+              512
+            ],
+            "visible_pixels": 98201,
+            "alpha_unique": 256,
+            "sha256": "94f30c7519090e2f75648e7e6f7d7fdf71ab415b63db5f4fcfe82995bd8720a7"
+          },
+          {
+            "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\anim\\riftstalker\\f2.png",
+            "size": [
+              512,
+              512
+            ],
+            "bbox": [
+              5,
+              6,
+              512,
+              512
+            ],
+            "visible_pixels": 100994,
+            "alpha_unique": 256,
+            "sha256": "7e1dae15742535438e38c5c8a903f55b753ccf2c75067acb0966ac2d1afb844f"
+          },
+          {
+            "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\anim\\riftstalker\\f3.png",
+            "size": [
+              512,
+              512
+            ],
+            "bbox": [
+              5,
+              6,
+              512,
+              512
+            ],
+            "visible_pixels": 96594,
+            "alpha_unique": 256,
+            "sha256": "823ce1c2950e70e872e0bfdcf808efb402ac7858a70195b5cd4a338596182350"
+          }
+        ],
+        "dimensions_consistent": true,
+        "dimensions": [
+          [
+            512,
+            512
+          ],
+          [
+            512,
+            512
+          ],
+          [
+            512,
+            512
+          ],
+          [
+            512,
+            512
+          ]
+        ],
+        "anchor": "bottom-center",
+        "anchor_positions": [
+          [
+            256.0,
+            505.0
+          ],
+          [
+            258.5,
+            511.0
+          ],
+          [
+            258.5,
+            511.0
+          ],
+          [
+            258.5,
+            511.0
+          ]
+        ],
+        "anchor_drift_px": [
+          4.875,
+          1.625,
+          1.625,
+          1.625
+        ],
+        "max_anchor_drift_px": 4.875,
+        "mean_adjacent_rgb_delta": [
+          25.1434,
+          26.1428,
+          29.9675
+        ],
+        "mean_adjacent_alpha_delta": [
+          42.997,
+          39.0548,
+          49.1579
+        ],
+        "exact_duplicate_frame_hashes": [],
+        "warnings": [],
+        "interpretation": "This report detects technical signals, not semantic identity or artistic motion quality. Inspect the animation at target playback speed and in-engine scale."
+      }
+    }
+  },
+  "solarius": {
+    "audit": {
+      "frame_count": 4,
+      "frames": [
+        {
+          "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\anim\\solarius\\f0.png",
+          "size": [
+            512,
+            512
+          ],
+          "bbox": [
+            4,
+            4,
+            508,
+            508
+          ],
+          "visible_pixels": 97024,
+          "alpha_unique": 256,
+          "sha256": "e55199584c71724ab48027463e3bc8efdc077f575839f569d5b6c016339a21f6"
+        },
+        {
+          "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\anim\\solarius\\f1.png",
+          "size": [
+            512,
+            512
+          ],
+          "bbox": [
+            4,
+            4,
+            512,
+            512
+          ],
+          "visible_pixels": 103554,
+          "alpha_unique": 256,
+          "sha256": "6e2815eac86ac1e3c534dfa861097d479c8af5a22d98f3e874574cf2e5cfa0f0"
+        },
+        {
+          "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\anim\\solarius\\f2.png",
+          "size": [
+            512,
+            512
+          ],
+          "bbox": [
+            4,
+            4,
+            512,
+            512
+          ],
+          "visible_pixels": 106896,
+          "alpha_unique": 256,
+          "sha256": "0d3d5617283eba742739b06ef8062709fb99998239a277f092f6d640900b4697"
+        },
+        {
+          "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\anim\\solarius\\f3.png",
+          "size": [
+            512,
+            512
+          ],
+          "bbox": [
+            4,
+            4,
+            512,
+            512
+          ],
+          "visible_pixels": 101709,
+          "alpha_unique": 256,
+          "sha256": "d5a8b967b8f6dab0c8e5631486ef0de69b16c20d0b38c69b68b7191e90a67124"
+        }
+      ],
+      "dimensions_consistent": true,
+      "dimensions": [
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          512,
+          512
+        ]
+      ],
+      "anchor": "bottom-center",
+      "anchor_positions": [
+        [
+          256.0,
+          507.0
+        ],
+        [
+          258.0,
+          511.0
+        ],
+        [
+          258.0,
+          511.0
+        ],
+        [
+          258.0,
+          511.0
+        ]
+      ],
+      "anchor_drift_px": [
+        3.354,
+        1.118,
+        1.118,
+        1.118
+      ],
+      "max_anchor_drift_px": 3.354,
+      "mean_adjacent_rgb_delta": [
+        24.4971,
+        24.3578,
+        29.2982
+      ],
+      "mean_adjacent_alpha_delta": [
+        18.0132,
+        16.1657,
+        21.8073
+      ],
+      "exact_duplicate_frame_hashes": [],
+      "warnings": [],
+      "interpretation": "This report detects technical signals, not semantic identity or artistic motion quality. Inspect the animation at target playback speed and in-engine scale."
+    },
+    "build": {
+      "gif": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\builds\\anim\\solarius_idle.gif",
+      "spritesheet": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\builds\\anim\\solarius_idle_spritesheet.png",
+      "manifest": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\builds\\anim\\solarius_idle_animation.json",
+      "frame_count": 4,
+      "frame_size": [
+        516,
+        516
+      ],
+      "audit": {
+        "frame_count": 4,
+        "frames": [
+          {
+            "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\anim\\solarius\\f0.png",
+            "size": [
+              512,
+              512
+            ],
+            "bbox": [
+              4,
+              4,
+              508,
+              508
+            ],
+            "visible_pixels": 97024,
+            "alpha_unique": 256,
+            "sha256": "e55199584c71724ab48027463e3bc8efdc077f575839f569d5b6c016339a21f6"
+          },
+          {
+            "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\anim\\solarius\\f1.png",
+            "size": [
+              512,
+              512
+            ],
+            "bbox": [
+              4,
+              4,
+              512,
+              512
+            ],
+            "visible_pixels": 103554,
+            "alpha_unique": 256,
+            "sha256": "6e2815eac86ac1e3c534dfa861097d479c8af5a22d98f3e874574cf2e5cfa0f0"
+          },
+          {
+            "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\anim\\solarius\\f2.png",
+            "size": [
+              512,
+              512
+            ],
+            "bbox": [
+              4,
+              4,
+              512,
+              512
+            ],
+            "visible_pixels": 106896,
+            "alpha_unique": 256,
+            "sha256": "0d3d5617283eba742739b06ef8062709fb99998239a277f092f6d640900b4697"
+          },
+          {
+            "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\assets\\anim\\solarius\\f3.png",
+            "size": [
+              512,
+              512
+            ],
+            "bbox": [
+              4,
+              4,
+              512,
+              512
+            ],
+            "visible_pixels": 101709,
+            "alpha_unique": 256,
+            "sha256": "d5a8b967b8f6dab0c8e5631486ef0de69b16c20d0b38c69b68b7191e90a67124"
+          }
+        ],
+        "dimensions_consistent": true,
+        "dimensions": [
+          [
+            512,
+            512
+          ],
+          [
+            512,
+            512
+          ],
+          [
+            512,
+            512
+          ],
+          [
+            512,
+            512
+          ]
+        ],
+        "anchor": "bottom-center",
+        "anchor_positions": [
+          [
+            256.0,
+            507.0
+          ],
+          [
+            258.0,
+            511.0
+          ],
+          [
+            258.0,
+            511.0
+          ],
+          [
+            258.0,
+            511.0
+          ]
+        ],
+        "anchor_drift_px": [
+          3.354,
+          1.118,
+          1.118,
+          1.118
+        ],
+        "max_anchor_drift_px": 3.354,
+        "mean_adjacent_rgb_delta": [
+          24.4971,
+          24.3578,
+          29.2982
+        ],
+        "mean_adjacent_alpha_delta": [
+          18.0132,
+          16.1657,
+          21.8073
+        ],
+        "exact_duplicate_frame_hashes": [],
+        "warnings": [],
+        "interpretation": "This report detects technical signals, not semantic identity or artistic motion quality. Inspect the animation at target playback speed and in-engine scale."
+      }
+    }
+  }
+}

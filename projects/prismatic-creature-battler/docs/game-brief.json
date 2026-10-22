@@ -1,0 +1,88 @@
+{
+  "schema_version": "1.0",
+  "project_id": "prismatic-creature-battler",
+  "title": "The Prismatic Creature Battler",
+  "genre": "Team-Building Prismatic Auto-Battler & Living Collectible Card Game",
+  "subgenres": [
+    "auto-battler",
+    "collectible-card-game",
+    "tactical-synergy-battler"
+  ],
+  "platforms": [
+    "web",
+    "windows"
+  ],
+  "jam_profile": "24h",
+  "jam_rules": {
+    "theme": "Refractive Resonance — Every creature is a living collectible, every team is a strategic composition, and every battle is a personalized spectacle.",
+    "must_use_ai": true,
+    "prohibited_tools": [
+      "paid_cloud_apis",
+      "pay_to_win_monetization"
+    ],
+    "constraints": [
+      "8 deliberately designed creatures across 8 Origins and 8 Instincts",
+      "3 distinct team archetypes (Storm-Crystal-Void Voltbrand Chain, Flame-Astral-Eclipse Solar Crucible, Tide-Verdant-Crystal Abyssal Bloom)",
+      "6v6 compact positional battlefield (3 Frontline + 3 Backline per side) with reserve bench and Captain slot",
+      "Refractive Resonance cross-creature reaction chains feeding the shared Prism Gauge for Convergence events",
+      "3 material-driven cosmetic foil treatments (Prismatic Spectrum, Phantom Foil, Relic Foil) separated strictly from competitive power"
+    ]
+  },
+  "audience": "Strategy and collectible card players who want tactical synergy engineering and living holographic creature spectacle without pay-to-win distortion.",
+  "player_fantasy": "Collect living prismatic creatures in museum-grade interactive foil cards, engineer 6-unit formations whose Origins and Instincts chain together through Refractive Resonance, and watch those cards materialize onto a dimensional Prismatic Sanctuary arena to unleash team-wide Convergence spectacles.",
+  "creative_thesis": "Every creature is a living collectible with multi-layer parallax and masked diffraction foil; every team is a causal Refractive Resonance circuit where marks, wards, and phase strikes chain across units; and every battle materializes cards onto a dimensional 3D-perspective sanctuary where player-engineered synergies ignite the Prism Gauge.",
+  "design_pillars": [
+    "Living Collectible Cards: Multi-layered creature portraits with masked Prismatic Spectrum, Phantom Foil, and Relic Foil shaders that never alter competitive stats.",
+    "Refractive Resonance Chains: Creatures do not fire isolated skills; Storm Voltbrand marks trigger Crystal Refractive Wards and open Void Phase Rend backline assassinations.",
+    "Hybrid Dimensional Materialization: Cards live as tactile holographic collectibles in Collection & Prep, then materialize onto a tilted dimensional arena in Battle.",
+    "Legible Causal Spectacle: Every mark, refraction beam, shield facet, phase rift, and Prism Gauge Convergence event is visually and log-traceably tied to player positioning."
+  ],
+  "core_loop": [
+    "PREPARE: Recruit from the 8-creature standardized pool, assign Captain + 3 Frontline / 3 Backline slots, select Tactical Directive, and customize cosmetic Foil Variant in the Collection Exhibition.",
+    "BATTLE: Cards materialize onto the dimensional arena; deterministic tick simulation resolves targeting, Origin/Instinct triggers, Refractive Resonance chains, and Prism Gauge Convergence events.",
+    "ADAPT: Inspect the causal Resonance Combat Log and synergy breakdown, earn Prismatic Shards & Collector Editions, counter the next opponent archetype, and advance through the 3-Round Gauntlet."
+  ],
+  "core_verbs": [
+    "collect",
+    "inspect-foil",
+    "arrange-formation",
+    "assign-captain",
+    "select-directive",
+    "trigger-resonance",
+    "unleash-convergence",
+    "adapt-counter"
+  ],
+  "controls": {
+    "mouse_move": "Tilt living holographic cards in 3D parallax and shift spectral diffraction angle",
+    "left_click": "Select creature card, assign Frontline/Backline hex slot, designate Captain, toggle Foil Edition, or trigger Battle",
+    "number_keys_1_8": "Quick-inspect roster creatures 1-8 in Collection Exhibition or recruit to formation",
+    "f_key": "Cycle cosmetic foil edition (Prismatic Spectrum / Phantom Foil / Relic Foil / Standard)",
+    "space_enter": "Launch Battle / Advance Round",
+    "r_key": "Reset match or load archetype preset (1: Storm-Crystal-Void Chain, 2: Flame-Astral Crucible, 3: Tide-Verdant Sanctuary)"
+  },
+  "success_criteria": [
+    "Players can deliberately construct and observe Refractive Resonance chains (e.g., Tempest Wyrm Voltbrand -> Prismhart Refractive Ward -> Riftstalker Phase Rend).",
+    "Positioning (Frontline vs Backline, adjacency to Prismhart, flank alignment for Riftstalker) and Tactical Directives demonstrably flip battle outcomes against higher raw-stat lineups.",
+    "Holographic cards render with interactive masked diffraction (Prismatic Spectrum, Phantom Foil, Relic Foil) and breathing parallax without obscuring names, stats, or combat telemetry.",
+    "Foil variants, serialized collector numbers, and alternate portraits are verified to have zero impact on deterministic combat resolution."
+  ],
+  "non_goals": [
+    "Hundreds of filler cards or gacha pack monetization",
+    "Pay-to-win stat boosts on rare foils",
+    "Opaque black-box RNG combat without causal combat log telemetry"
+  ],
+  "references": [
+    {
+      "title": "Teamfight Tactics / Auto-Battler Positional Conventions",
+      "url": "https://teamfighttactics.leagueoflegends.com/",
+      "why": "Recognizable prep/battle/adapt rhythm and frontline/backline spatial targeting.",
+      "license_notes": "Mechanics/genre reference only; all code and assets are original."
+    },
+    {
+      "title": "Super Auto Pets Fair Standard Pack Philosophy",
+      "url": "https://teamwoodgames.com/",
+      "why": "Standardized competitive creature pool where cosmetic editions never confer stat advantages.",
+      "license_notes": "Design principle reference only."
+    }
+  ]
+}

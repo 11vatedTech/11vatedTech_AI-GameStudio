@@ -7,13 +7,16 @@ The studio is a local-first production substrate an external reasoning agent ope
 - `cli.py`: operator-facing CLI; predictable JSON output.
 - `service.py`: application command registry, dependency composition and run tracking.
 - `api/http_server.py`: authenticated loopback HTTP wrapper.
-- `mcp_server.py`: JSON-RPC over stdio.
+- `mcp_server.py`: JSON-RPC over stdio for the studio command service.
+- `readiness.py`: read-only production readiness aggregation (tools, loopback services, RAM/GPU/disk, host MCP Blender override).
 - `adapters/`: explicit boundaries for ComfyUI, SD WebUI, Godot, Blender, RIFE and generation workflow builders.
 - `assets/`: image inspection/refinement, animation diagnostics/assembly and atlas packing.
 - `workflow.py` / `planner.py`: lifecycle state and timeboxed production planning.
 - `store.py`: local SQLite run/event/asset/feedback evidence.
 - `schemas/`, `skills/`, `docs/`: production contracts and specialist knowledge.
 - `templates/`: explicitly marked engine smoke fixture, not finished art.
+- `tools/creative_mcp_server.py`: bounded creative-tool MCP server; fixed bundled scripts, workspace-contained paths, `--disable-autoexec` Blender subprocesses.
+- `docs/registries/`: asset-method and MCP-tool registries validated against repository schemas.
 
 ## Invariants
 1. The agent chooses creative strategy; adapters perform narrow, explicit operations.

@@ -14,6 +14,8 @@ This is a clean-room consolidation based on the submitted 11vatedTech studio arc
 - **Creative-tool adapters:** ComfyUI API-format workflows, reference workflow builders for FLUX.2 Klein 4B and Z-Image Turbo, Stable Diffusion WebUI, Godot 4, Blender, and RIFE detection/invocation. External programs and models remain optional local installations.
 - **Asset pipeline:** image inspection, conservative edge-connected background removal, trim/color/resize operations, contact sheets, deterministic atlas packing, animation frame audit/assembly, hashes, and provenance records.
 - **Production state:** SQLite run/event/asset/feedback log, workflow state machine, validated JSON Schema contracts, capability registry, jam planning with release reserves, release inventory, ZIP integrity verification, and SHA-256 manifests.
+- **Agent-first creative production:** a production contract, animation execution runbook, resource-aware job orchestration guidance, and eight additional specialist skills that assign routine art, rigging, animation and integration to the executing agent instead of handing production back to the operator.
+- **Creative MCP server:** a bounded stdlib server (`tools/creative_mcp_server.py`) for local preflight, semantic animation validation, and Blender scene inventory, review rendering and pose-spec action authoring.
 - **Public-repository hygiene:** no bundled weights, `.env`, machine-specific database, virtual environment, or repeated WebAssembly releases.
 
 ## Requirements
@@ -58,6 +60,7 @@ No dependency installer downloads model weights. Configure local services via `.
 ```bash
 ags doctor
 ags capabilities
+ags readiness
 ags skills search "reference-conditioned character animation"
 ags jam profiles
 ags project create "My New Game" --slug my-new-game
@@ -111,12 +114,28 @@ Export requires a matching preset in `export_presets.cfg`, a compatible Godot ex
 - `FREEBUFF.md`, `CLAUDE.md`, `GEMINI.md` — thin host-specific entrypoints that defer to the shared canon.
 - `skills/*/SKILL.md` — specialist workflow modules with triggers, inputs, procedures, acceptance criteria, failure modes, evidence, and sources.
 - `docs/studio/11vatedtech-game-production-canon.md` — authoritative production lifecycle.
+- `docs/studio/AGENT_FIRST_CREATIVE_PRODUCTION_CONTRACT.md` — who owns routine creative production, and what may not be presented as finished art or animation.
+- `docs/studio/ANIMATION_PRODUCTION_EXECUTION_RUNBOOK.md` — action phases, rig/keyframe/cutout/retarget routes, event timing and playback review.
+- `docs/registries/` — machine-readable asset-method and MCP-tool registries, validated against repository schemas.
+- `docs/known-limitations.md` — capability boundaries, updated for the agent-first contract.
 - `docs/workflows/game-jam-24h.md`, `game-jam-72h.md`, `game-jam-14d.md` — time-budgeted operating systems.
 - `schemas/*.schema.json` — project, art, asset, animation, audio, task, license, review, QA, and release contracts.
 
 ## MCP server
 
 Configure a compatible MCP host to run `ags-mcp` from the repository's virtual environment. The server exposes `ags_status`, `ags_doctor`, `ags_capabilities`, `ags_skill_search`, and `ags_command`. It uses standard JSON-RPC over stdio and emits logs to stderr so stdout remains protocol-clean. Test it in the actual agent host after installation; a protocol smoke test alone does not prove host configuration.
+
+Both stdio servers negotiate only protocol revisions they implement (`2025-06-18`, `2025-03-26`, `2024-11-05`) and answer an unknown or unsupported request with the newest verified revision. `2025-11-25` is deliberately not advertised because the installed Freebuff host rejects it; add a revision only after a real connector test passes.
+
+### Creative tools MCP
+
+`tools/creative_mcp_server.py` is a separate stdlib server for creative execution:
+
+```bash
+AGS_WORKSPACE="$PWD" BLENDER_BIN=/path/to/blender python tools/creative_mcp_server.py
+```
+
+It exposes `ags_creative_preflight`, `ags_validate_animation_sequence`, `ags_validate_blender_pose_spec`, `ags_blender_scene_inventory`, `ags_blender_render_action_review` and `ags_blender_author_action`. Boundaries are deliberate: workspace-relative paths only, symlink components refused, bounded arguments and timeouts, fixed bundled scripts instead of arbitrary commands, Blender run with `--disable-autoexec`, authored output written to a new `.blend` with a source hash check, and no network listener. Rendered frames and authored Actions are review candidates; they are not approved animation until played back and integrated in the target engine. See [the MCP catalog](docs/studio/MCP_AND_LOCAL_TOOL_CATALOG.md) and [installation runbook](docs/studio/FREE_LOCAL_MCP_INSTALLATION_RUNBOOK.md).
 
 ## Local HTTP API
 
@@ -132,7 +151,7 @@ The API binds to loopback by default. On first run it creates `.state/api-token`
 python -m pytest -q
 ```
 
-Current-rebuild verification is recorded in `VERIFICATION.md`. Tests use simulated provider responses where appropriate; they cannot prove that the user's real GPU, ComfyUI node packs, checkpoints, Godot export templates, browser, or licenses are available. Run `ags doctor` and relevant external integration tests on the target machine.
+Current-rebuild verification is recorded in `VERIFICATION.md` and, for the creative upgrade, in `docs/studio/RELEASE_REPORT_2026-10-22.md`. Tests use simulated provider responses where appropriate; they cannot prove that the user's real GPU, ComfyUI node packs, checkpoints, Godot export templates, browser, or licenses are available. Run `ags doctor` and relevant external integration tests on the target machine.
 
 ## Public-release policy
 

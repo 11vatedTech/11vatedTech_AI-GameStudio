@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0",
+  "project_id": "prismatic-creature-battler",
+  "style_name": "Prismatic Sanctuary Painterly & Masked Diffraction Foil",
+  "style_description": "High-contrast painterly fantasy creatures with luminous anatomical focal points (crystalline wings, bioluminescent antlers, void-phase blades, magma runes, oceanic jade currents, celestial astrolabe rings) framed inside obsidian-and-celestial-gold collector cards with masked diffraction shaders, materializing onto a dark slate & crystal sanctuary arena.",
+  "reference_board": [
+    "assets/b5436f8e61644341916a6fd816188cc7.jpg",
+    "assets/daa274589bbc4679a649822757385d97.png",
+    "assets/912d1bb1ce584af2bc76efa7b8bf7cea.png",
+    "assets/ffcad3769d6e495eac84e4426832dec3.jpg",
+    "assets/3b57a90100b147529101872956940e8c.jpg",
+    "assets/b99ef5247aee478db7dc9fb6b81f6220.png",
+    "assets/472df9186e2948cba97ab8e4e69ddf9f.png",
+    "assets/171ecd89a7e84aff91e208f53e737611.png"
+  ],
+  "camera": {
+    "projection": "2.5d",
+    "view": "Interactive 3D-tilted collector card inspection in Collection/Prep; angled 2.5D dimensional tabletop sanctuary perspective in Battle",
+    "framing": "6v6 two-row hex formation (3 Frontline, 3 Backline per side) with top Prism Gauge bar, left Card Inspector & Foil Studio, and right Causal Resonance Log",
+    "perspective": "32-degree tilted obsidian sanctuary floor with floating holographic projection pedestals and volumetric creature sprites",
+    "target_resolution": [
+      1600,
+      960
+    ]
+  },
+  "palette": [
+    "#090B14",
+    "#121829",
+    "#38E5FF",
+    "#9D5CFF",
+    "#F5C451",
+    "#FF4D6D",
+    "#2CEAA3",
+    "#F2F6FF"
+  ],
+  "value_hierarchy": [
+    "1. Active Resonance chain beams, Voltbrand electrical marks, Refractive Ward facets, and Convergence waves (highest luminance 85-100%)",
+    "2. Creature silhouettes, glowing eyes/wings/core anchors, and card typography/stat badges (70-90%)",
+    "3. Masked card foil iridescence and hex pedestal rims (35-65%)",
+    "4. Deep obsidian sanctuary floor and dark celestial backdrop (5-18% value — prevents visual noise)"
+  ],
+  "shape_language": "Storm: jagged lightning fangs and swept wings; Crystal: faceted geometric antlers and prism shields; Void: asymmetrical scythe-blades and rift tears; Flame: heavy molten plate and rising embers; Verdant: spiraling botanical horns; Tide: sinuous abyssal ribbons; Astral: celestial rings; Eclipse: crescent shadow-halos.",
+  "lighting_language": "Cool celestial rim lighting on dark obsidian slate punctuated by Origin-coded bioluminescence and angle-dependent spectral foil diffraction.",
+  "material_language": "Three explicit foil shaders masked away from text plates: (1) Prismatic Spectrum — rainbow micro-hex diffraction on wings/scales; (2) Phantom Foil — dark obsidian chrome with oil-slick violet/cyan sheen; (3) Relic Foil — embossed antique gold/platinum filigree with illuminated runes.",
+  "identity_invariants": [
+    "Creature silhouette must read clearly at both full card scale (320x440) and arena projection scale (120x120).",
+    "Foil diffraction is masked to creature highlights and frame filigree — never washed uniformly over text or stat badges.",
+    "Every Resonance state has a geometric + color dual indicator: Voltbrand (lightning diamond + cyan arc), Refractive Ward (hexagonal crystal prism + teal barrier), Phase Rend (void crescent + magenta rift), Solar Brand (ember crown + gold flare)."
+  ],
+  "forbidden_traits": [
+    "Full-card unmasked rainbow gradient washing out typography",
+    "Pay-to-win stat changes tied to foil rarity",
+    "Unreadable black-crushed creature silhouettes against dark arena floors",
+    "Shipped raw third-party reference images in the game build"
+  ],
+  "asset_rules": {
+    "transparent_sprites": "Generated at 1024x1024 on solid dark backdrop via FLUX.2 Klein 4B fp8, edge-background removed, trimmed with 8px padding, and packed into spritesheet + atlas.",
+    "environment": "1024x1024 painterly Prismatic Sanctuary arena backdrop generated via FLUX.2 Klein 4B fp8.",
+    "ui": "Obsidian & brushed gold collector frames with high-contrast tabular numbers and WCAG-compliant stat plates.",
+    "vfx": "Causal procedural + shader-driven Voltbrand arcs, Refractive Ward facets, Void Phase rifts, and Prism Gauge Convergence waves.",
+    "animation": "Breathing/idle/attack/resonance frame sequences audited via ags animation audit & assembled via ags animation build."
+  },
+  "review_criteria": [
+    "Each of the 8 creatures is distinguishable by silhouette and Origin color before reading its name.",
+    "All 3 foil tiers (Prismatic Spectrum, Phantom Foil, Relic Foil) visibly respond to cursor tilt and light angle.",
+    "Resonance chains (Voltbrand -> Refractive Ward -> Phase Rend) are visually unmistakable in live battle and recorded in the causal log."
+  ],
+  "style_mix_policy": "All shipped creature and arena raster assets are generated with FLUX.2 Klein 4B Distilled FP8 under uniform painterly dark-celestial prompts and processed through the deterministic studio alpha/trim pipeline.",
+  "version": "1.0"
+}

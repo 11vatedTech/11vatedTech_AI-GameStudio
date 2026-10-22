@@ -1,0 +1,56 @@
+{
+  "project_id": "the-unwriters-almanac",
+  "measurement_date": "2026-10-17",
+  "environment": {
+    "os": "Windows 11",
+    "node": "v24.18.0",
+    "browser": "Freebuff Chromium preview",
+    "screen_css_pixels": [
+      1440,
+      960
+    ],
+    "canvas_logical_pixels": [
+      1280,
+      720
+    ],
+    "canvas_backing_pixels": [
+      1910,
+      1074
+    ],
+    "device_pixel_ratio_capped_at": 2
+  },
+  "simulation": {
+    "method": "Warm-independent deterministic route timings using Node performance.now; 40 independent seeds/runs, 320 fixed updates/run, 12800 updates total.",
+    "route": "Five-point authored rail traversing from start through bead to folio seal; each run asserted SOLVED.",
+    "whole_run_cpu_ms": {
+      "median": 0.6181,
+      "p95": 2.4244
+    },
+    "per_update_cpu_ms": {
+      "median": 0.0011,
+      "p95": 0.003
+    },
+    "functional_runs_solved": 40
+  },
+  "renderer": {
+    "method": "Instrumented browser Canvas2D render CPU samples via performance.now; queried live after desktop interaction. 240 most recent frames, one measured sample window.",
+    "render_cpu_ms": {
+      "median": 0.7,
+      "p95": 1.0
+    },
+    "backing_dimensions": [
+      1910,
+      1074
+    ],
+    "ambient_particle_cap": 24,
+    "observed_particle_peak": 20,
+    "stroke_point_cap": 72,
+    "observed_authored_route_points": 5,
+    "reduced_motion_particle_rendering": false
+  },
+  "limitations": [
+    "CPU callback timing does not measure GPU/compositor time or guarantee whole-frame latency.",
+    "Renderer sample window is the live browser experience, not a broad multi-device benchmark.",
+    "No FPS or target frame-rate claim is made."
+  ]
+}

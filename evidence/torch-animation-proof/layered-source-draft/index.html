@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Torch layered-source review · draft</title>
+<style>
+:root{color-scheme:dark}body{margin:0;background:#101318;color:#eee;font:16px/1.5 system-ui,sans-serif}main{max-width:1320px;margin:auto;padding:28px}h1,h2{line-height:1.15}p,li{color:#c7cbd4}.status{padding:14px 18px;border:1px solid #b77d39;background:#332719;border-radius:8px;color:#ffe0ae}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:18px}.card{background:#1a1e25;border:1px solid #343b47;border-radius:10px;padding:12px}.card img{display:block;width:100%;height:auto;background:repeating-conic-gradient(#555 0 25%,#383838 0 50%) 50%/24px 24px}.wide{grid-column:1/-1}.mono{font:13px/1.45 ui-monospace,monospace;overflow-wrap:anywhere;color:#aeb7c6}a{color:#a7ccff}footer{margin-top:28px;border-top:1px solid #343b47;padding-top:16px;color:#9ca4b1}
+</style><main>
+<h1>Torch pose · layered-source extraction review</h1>
+<p class="status"><strong>Draft only — not a usable rig.</strong> The broad torso/cape mask contamination was removed. Current extraction retains the staff, torch, painted grip, and a partial sleeve; its blunt sleeve termination has no valid shoulder pivot or repaired body plate.</p>
+<p>Source image is kept unchanged. Layer candidate is hidden by default in the OpenRaster file; the visible layer and merged preview remain the original full pose. Review images expose defects rather than implying approval.</p>
+<section class="grid">
+<article class="card wide"><h2>Source / extraction / alpha mask</h2><img src="layered-source-contact-sheet.png" alt="Original source beside partial arm and torch extraction and alpha mask"></article>
+<article class="card"><h2>Mask coverage on source</h2><img src="mask-coordinate-review.png" alt="Cyan overlay shows extracted pixels and partial sleeve end"></article>
+<article class="card"><h2>Transparent-edge review</h2><img src="arm-torch-transparent-detail.png" alt="Torch and partial sleeve on checkerboard transparency"></article>
+<article class="card"><h2>Full-source mask overlay</h2><img src="mask-review-overlay.jpg" alt="Full character with extraction boundary"></article>
+<article class="card"><h2>Layered interchange file</h2><p><a href="torch-protagonist-layer-source-draft.ora">OpenRaster draft (.ora)</a></p><p><a href="layer-manifest.json">Layer manifest / provenance</a> · <a href="build-result.json">Build hashes</a></p><p class="mono">Candidate layer: hidden by default. Original pose: visible, locked reference.</p></article>
+<article class="card"><h2>Human art gate</h2><ul><li>Author a hand-clean shoulder/sleeve separation and separate body plate.</li><li>Separate lantern plume/smoke; review staff and hand ownership.</li><li>Approve the pivot, then test overlap and motion at game scale.</li></ul></article>
+</section><footer>Local extraction prototype. No remote service/model was used. No animation, engine integration, art-direction approval, or human approval is claimed.</footer></main></html>

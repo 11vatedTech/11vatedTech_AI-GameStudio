@@ -1,0 +1,141 @@
+{
+  "package": "builds\\prismatic-creature-battler\\prismatic-creature-battler-web.zip",
+  "zip_bytes": 6896326,
+  "files": [
+    {
+      "path": "app.js",
+      "bytes": 20816,
+      "sha256": "8cff13b5837392d4695ce559ce91702e731ca0d31aa50411f19e2d4c61ee656d"
+    },
+    {
+      "path": "assets/abyssal-ryu.png",
+      "bytes": 352267,
+      "sha256": "d6c06a4b71b96b54afb589d510ea7ff6ed01d74d5f8a0af57a13e20015cf21fd"
+    },
+    {
+      "path": "assets/abyssal-ryu.png.import",
+      "bytes": 947,
+      "sha256": "20245b4a35c0b2e238e4531fd948827ec100df1268656950510c2391c24cfe46"
+    },
+    {
+      "path": "assets/creatures-atlas.png",
+      "bytes": 2441095,
+      "sha256": "ec39843f4ac0f21dc2c7a7844aa91e7f294f5faeb30160502b5a20bdf1dbf587"
+    },
+    {
+      "path": "assets/creatures-atlas.png.import",
+      "bytes": 960,
+      "sha256": "6f68d8df73a9bc6dd84a8eee36996c5d99efb83847f20b6761a34860a78b5b57"
+    },
+    {
+      "path": "assets/prismhart.png",
+      "bytes": 295944,
+      "sha256": "a1051e303f82ad9d0a38166a780e9f0bdfdfbac58bfc88c419344a967e3a7a3e"
+    },
+    {
+      "path": "assets/prismhart.png.import",
+      "bytes": 942,
+      "sha256": "1742d9f736d13001c9aee60a7ededc738dff0fd45b4cd7cbdb495d30aab0584f"
+    },
+    {
+      "path": "assets/prismhart_idle.gif",
+      "bytes": 294195,
+      "sha256": "7387919dbadd32cd7096cda85c3e3fb22114d8143619f1b67c4171703bcdc97c"
+    },
+    {
+      "path": "assets/pyrewarden.png",
+      "bytes": 375069,
+      "sha256": "cf8cb06f7272f72e2e1ef4a624397441f8f8c1a30976b7c50a471c86ca2613c3"
+    },
+    {
+      "path": "assets/pyrewarden.png.import",
+      "bytes": 945,
+      "sha256": "5ef3cf7049f3b3edd307a479d3ad3808e65418ebdb8d32166cbfceb48c2644c0"
+    },
+    {
+      "path": "assets/riftstalker.png",
+      "bytes": 272284,
+      "sha256": "f932c265702fe4f6ec269fc135b3b960c749d80733beb862661ed50cb261c80f"
+    },
+    {
+      "path": "assets/riftstalker.png.import",
+      "bytes": 948,
+      "sha256": "815a95cc79a35c16fc8694b702465fa796cb929f1d2d3abbdcecb0cb318a15b7"
+    },
+    {
+      "path": "assets/riftstalker_idle.gif",
+      "bytes": 310655,
+      "sha256": "3427ccbf70b710895c11e4a6cbe412b76703201d1d12bd51565ba58d017610be"
+    },
+    {
+      "path": "assets/sanctuary-arena.png",
+      "bytes": 885752,
+      "sha256": "db0d68d3b7548d3760af3cdf0d90acfb878ddd4634d0eb50a26f0a4280735434"
+    },
+    {
+      "path": "assets/sanctuary-arena.png.import",
+      "bytes": 960,
+      "sha256": "ae2cb48558d5a367fa9914417d401490c4d1f90828f55f5926d8d2c27dbc2a2e"
+    },
+    {
+      "path": "assets/solarius.png",
+      "bytes": 270104,
+      "sha256": "3b37145b0eef881355d6a892f908e6223c1b042a4fe238a2d2aeca82de2e35ef"
+    },
+    {
+      "path": "assets/solarius.png.import",
+      "bytes": 938,
+      "sha256": "dac324861143cb0185351367df6885b99b320f59ccf8436eea97fa3e3b599c59"
+    },
+    {
+      "path": "assets/solarius_idle.gif",
+      "bytes": 272432,
+      "sha256": "e9071a8e2e1ac35a50141ff9a8c0e49ac111b3802e972329eb0b202ea4e07fba"
+    },
+    {
+      "path": "assets/sylvan-aegis.png",
+      "bytes": 341663,
+      "sha256": "81dabb471cc5e699559eb27cce09e5afb96122a24e779c2c23c57d107f46d489"
+    },
+    {
+      "path": "assets/sylvan-aegis.png.import",
+      "bytes": 951,
+      "sha256": "0a7f93e962ca1d93147cc8d9305374be976963c17047f21709092170aa09fb5e"
+    },
+    {
+      "path": "assets/tempest-wyrm.png",
+      "bytes": 259608,
+      "sha256": "e50722847cf8c2fc6dc18dcb880ff973d6e25ce9c50292cfd598ec512eb08c1d"
+    },
+    {
+      "path": "assets/tempest-wyrm.png.import",
+      "bytes": 951,
+      "sha256": "13daa7631b991f663e25bf57dedc00b0f69f7136a14e7416be385b80e33ad038"
+    },
+    {
+      "path": "assets/tempest-wyrm_idle.gif",
+      "bytes": 286379,
+      "sha256": "6f18c7f22774a1fb13a1095b26e4c9b4c8d811b94acafb30b84643a9c61e922c"
+    },
+    {
+      "path": "assets/umbral-weaver.png",
+      "bytes": 221048,
+      "sha256": "117349829d48bb25f2247b0f0c28fdf841e127b9fe940e50cf0952973203cfbc"
+    },
+    {
+      "path": "assets/umbral-weaver.png.import",
+      "bytes": 953,
+      "sha256": "37544fe223ebefbbe2ccf52deb2b6923d15bec0b919e14f9a0a5598ae972c4cc"
+    },
+    {
+      "path": "engine.js",
+      "bytes": 32635,
+      "sha256": "339421416294201a217eb515f8e92909620921c0e76acb7cd5c6541ee3fcec0b"
+    },
+    {
+      "path": "index.html",
+      "bytes": 22654,
+      "sha256": "2da198905659686f915edc679504eb6277cfc933a47f7030bcfa65b9550d3ae5"
+    }
+  ]
+}

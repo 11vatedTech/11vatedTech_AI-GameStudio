@@ -51,6 +51,34 @@ jobs:
           ags skills search "character identity animation"
           ags jam profiles
           printf '%s\n' '{"jsonrpc":"2.0","id":1,"method":"initialize","params":{}}' '{"jsonrpc":"2.0","id":2,"method":"tools/list","params":{}}' | ags-mcp
+          ags readiness
+
+      - name: Smoke test creative MCP server over stdio
+        env:
+          AGS_WORKSPACE: ${{ github.workspace }}
+        run: |
+          python - <<'PY' > creative-mcp.in
+          import json
+          requests = [
+              {"jsonrpc": "2.0", "id": 1, "method": "initialize", "params": {"protocolVersion": "2025-06-18", "capabilities": {}, "clientInfo": {"name": "ci", "version": "0"}}},
+              {"jsonrpc": "2.0", "id": 2, "method": "tools/list", "params": {}},
+              {"jsonrpc": "2.0", "id": 3, "method": "tools/call", "params": {"name": "ags_validate_animation_sequence", "arguments": {"manifest_path": "examples/animation/torch_sweep.sequence.example.json"}}},
+              {"jsonrpc": "2.0", "id": 4, "method": "tools/call", "params": {"name": "ags_validate_animation_sequence", "arguments": {"manifest_path": "../outside.json"}}},
+          ]
+          print(chr(10).join(json.dumps(request) for request in requests))
+          PY
+          python tools/creative_mcp_server.py < creative-mcp.in > creative-mcp.out
+          python - <<'PY'
+          import json
+          rows = [json.loads(line) for line in open("creative-mcp.out", encoding="utf-8")]
+          assert rows[0]["result"]["protocolVersion"] == "2025-06-18", rows[0]
+          assert len(rows[1]["result"]["tools"]) == 6, rows[1]
+          assert rows[2]["result"]["isError"] is False, rows[2]
+          assert rows[2]["result"]["structuredContent"]["valid"] is True, rows[2]
+          assert rows[3]["result"]["isError"] is True, rows[3]
+          assert rows[3]["result"]["structuredContent"]["code"] == "path_outside_workspace", rows[3]
+          print("creative MCP stdio smoke passed")
+          PY
 
       - name: Build distributable wheel
         run: python -m pip wheel --no-deps . --wheel-dir dist

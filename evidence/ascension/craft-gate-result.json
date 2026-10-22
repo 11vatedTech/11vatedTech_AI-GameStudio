@@ -1,0 +1,7 @@
+{
+  "schema_version": 1,
+  "kind": "craft-mechanism-gate-evaluation",
+  "decision": "PASS",
+  "blockers": [],
+  "rule": "Selected mechanisms must serve thesis; mechanism inventory is active but not over-triggered."
+}

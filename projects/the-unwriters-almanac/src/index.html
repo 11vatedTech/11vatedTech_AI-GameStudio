@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f1e7cf">
+  <meta name="description" content="Draw one living line through a watercolor puzzle page in The Unwriter’s Almanac.">
+  <title>The Unwriter’s Almanac — Folio 01</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+  <main class="folio-shell">
+    <header class="masthead">
+      <p class="eyebrow">A living book · field note 01</p>
+      <h1>The Unwriter’s <em>Almanac</em></h1>
+      <p class="deck">One line becomes a law. Guide the little mark home.</p>
+    </header>
+
+    <section class="play-page" aria-label="The illustrated puzzle page">
+      <div class="page-meta" aria-hidden="true"><span>THE DRAWN RIDGE</span><span>FOLIO 01 / 03</span></div>
+      <div class="stage-wrap" id="stageWrap">
+        <canvas id="game" width="1280" height="720" tabindex="0" role="img" aria-label="Puzzle page. Draw a continuous line from the ink-being toward the gold seal; the bead follows your line and the ink-being rides it.">
+          This game needs a browser with Canvas 2D. Use the controls below to play with the guided line.
+        </canvas>
+        <div class="overlay" id="overlay" hidden>
+          <p class="eyebrow" id="overlayKicker">PAGE PAUSED</p>
+          <h2 id="overlayTitle">The ink is resting</h2>
+          <p id="overlayBody">The page and its little inhabitant are waiting.</p>
+          <button class="button button-primary" id="overlayAction" type="button">Resume page</button>
+        </div>
+      </div>
+      <div class="page-meta page-meta-bottom"><span id="stateLabel">A line is waiting to be written</span><span>INK · PIGMENT · PAPER</span></div>
+    </section>
+
+    <section class="instructions" aria-labelledby="ruleHeading">
+      <div class="rule-copy">
+        <p class="eyebrow">The page’s rule</p>
+        <h2 id="ruleHeading">One stroke. Two paths.</h2>
+        <p>Begin near the little ink-being and draw toward the seal. Release to set the rail: the gold bead follows it, and the being walks its curve. If the line misses, erase and try again.</p>
+      </div>
+      <div class="controls" aria-label="Puzzle controls">
+        <button class="button button-primary" id="guidedButton" type="button" aria-pressed="false">Use guided line</button>
+        <button class="button" id="commitButton" type="button" disabled>Commit line</button>
+        <button class="button" id="eraseButton" type="button" disabled>Erase line</button>
+        <button class="button" id="pauseButton" type="button">Pause <kbd>Esc</kbd></button>
+        <button class="button" id="restartButton" type="button">Restart <kbd>R</kbd></button>
+        <label class="motion-toggle"><input id="reducedMotion" type="checkbox"> Reduce motion</label>
+      </div>
+    </section>
+
+    <section class="keyboard-guide" aria-label="Keyboard controls">
+      <span><kbd>A</kbd> <kbd>D</kbd> / arrows · move</span>
+      <span><kbd>Space</kbd> / <kbd>W</kbd> · jump</span>
+      <span><kbd>E</kbd> · erase</span>
+      <span>Guided line → select a curve and commit</span>
+    </section>
+    <p class="sr-only" id="liveStatus" role="status" aria-live="polite" aria-atomic="true">Page ready. Draw a line from the ink-being toward the seal.</p>
+    <footer class="colophon"><span>Original vector and Canvas illustration · no generated runtime art</span><span>THE BREATHING PAGE · 01</span></footer>
+  </main>
+</body>
+</html>

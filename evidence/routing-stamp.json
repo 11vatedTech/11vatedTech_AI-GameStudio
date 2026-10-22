@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "intent": "The Prismatic Creature Battler: living collectible holographic cards + Refractive Resonance auto-battler vertical slice",
+  "task_classes": [
+    "CHARACTER",
+    "CREATIVE_PRODUCT"
+  ],
+  "substantial_creative": true,
+  "required_skills": [
+    "11vt-creative-production",
+    "11vt-design-director",
+    "11vt-testing-verification"
+  ],
+  "required_agents": [
+    "11vt-art-director",
+    "11vt-creative-director",
+    "11vt-visual-qa-director"
+  ],
+  "required_evidence": [
+    "concept_gate",
+    "first_visible_artifact",
+    "identity_protection",
+    "independent_review",
+    "proportion",
+    "rendered_evidence",
+    "routing_stamp",
+    "silhouette"
+  ],
+  "routing_stamp_required": true,
+  "concept_gate_required": true,
+  "first_pixel_required": true,
+  "kind": "creative-routing-stamp",
+  "decision": "CREATIVE_STUDIO_REQUIRED",
+  "fail_closed_if_missing": [
+    "concept_gate",
+    "first_pixel_review",
+    "rendered_evidence"
+  ]
+}

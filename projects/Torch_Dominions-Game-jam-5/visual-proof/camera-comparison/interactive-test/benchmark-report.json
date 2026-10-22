@@ -1,0 +1,283 @@
+{
+  "proof_id": "torch-dominions-matched-interactive-camera-benchmark-03",
+  "status": "runtime_verified_blockout_camera_comparison_not_a_camera_approval",
+  "date": "2026-10-21",
+  "scope": "Isolated Godot 4.7.2 GL Compatibility benchmark. One deterministic 900x520 encounter is shown simultaneously in two 684x395 viewports, each at 684x395 output size. Side-on compresses world depth; elevated three-quarter exposes more world Y. Both panels receive the same simulation coordinates, source hero, combat state and controls. This is a diagnostic blockout, not the game build.",
+  "purpose": "Compare readability of player/torch silhouette, enemy attack telegraph, battlefield route and Purple Haze footprint with camera perspective as the intended variable.",
+  "design_contract": {
+    "player_fantasy": "Wayfarer torchbearer reads a rival rogue's wind-up, sweeps the Haze lantern through the close threat, places a persistent ground-area field and dodges the strike.",
+    "core_loop": [
+      "Move into range",
+      "read the orange wind-up marker and attack lane",
+      "sweep torch for a range-checked hit",
+      "cast a persistent Haze field that damages an enemy inside its radius",
+      "dodge during the strike's invulnerability window",
+      "reset and repeat"
+    ],
+    "controls": {
+      "move": "WASD or arrow keys",
+      "dodge": "Shift",
+      "torch_sweep": "Space",
+      "purple_haze": "H",
+      "reset": "R",
+      "focus_camera_view": "Tab"
+    },
+    "enemy_states": {
+      "windup_seconds": 0.82,
+      "strike_seconds": 0.16,
+      "recovery_seconds": 0.55
+    },
+    "dodge": {
+      "invulnerability_seconds": 0.38,
+      "cooldown_seconds": 0.72
+    },
+    "haze": {
+      "duration_seconds": 4.0,
+      "radius_world_units": 210,
+      "damage_tick_seconds": 0.7
+    },
+    "camera_modes": {
+      "side_on": "world Y compressed 0.18 around shared combat floor",
+      "elevated": "world Y compressed 0.70 around arena center",
+      "common_world_rect": [
+        0,
+        0,
+        900,
+        520
+      ],
+      "common_panel_size": [
+        684,
+        395
+      ]
+    },
+    "acceptance": [
+      "Both cameras receive identical scenario inputs and preserve health/combat results",
+      "torch strike lands once on a foe in its range",
+      "Haze persists and applies at least one area tick",
+      "enemy wind-up/strike occurs during dodge invulnerability without damage",
+      "both captures show the same hero source and route landmark",
+      "Godot Compatibility runtime has no script/engine errors"
+    ]
+  },
+  "assets_and_provenance": {
+    "hero_identity_reference": {
+      "path": "assets/reference/torch/torch-protagonist-identity-reference.png",
+      "sha256": "9c20150532fb09a45d0bebf1acf450853277c503802461e70b4c489e763ffd15",
+      "use": "identity anchor; not sliced/rigged"
+    },
+    "hero_source_concept": {
+      "path": "assets/generated/torch-animation-proof/01_klein-bench_00043_.png",
+      "sha256": "d9406f063e68b7dd3caf4451f7b0b7ae66a95f1dac429ac642e1ebb150a5a833",
+      "use": "source for one fused cutout presentation image; not runtime sprite animation"
+    },
+    "hero_runtime_cutout": {
+      "path": "projects/Torch_Dominions-Game-jam-5/visual-proof/camera-comparison/interactive-test/hero-cutout-candidate.png",
+      "sha256": "32644a536e278461ad4dc13ec7e2a7cdd49d3389708671a13128e76fc8a344e5",
+      "size": [
+        870,
+        938
+      ],
+      "mode": "RGBA",
+      "source_report": "evidence/torch-animation-proof/proof-report.json",
+      "approval": "feasibility cutout only; alpha halo/shadow/smoke remain; explicitly rejected as rig source"
+    },
+    "enemy": "Original runtime blockout drawing used only for scale, lane and telegraph testing; not production character art.",
+    "environment": "Original in-engine Cinderwild geometric blockout; not final background art."
+  },
+  "runtime": {
+    "engine": "Godot 4.7.2.stable.official.ed1daf0bf",
+    "renderer": "GL Compatibility / OpenGL 3.3 NVIDIA 610.78 NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+    "project": "projects/Torch_Dominions-Game-jam-5/visual-proof/camera-comparison/interactive-test/project.godot",
+    "scene": "projects/Torch_Dominions-Game-jam-5/visual-proof/camera-comparison/interactive-test/benchmark.tscn",
+    "controller": "projects/Torch_Dominions-Game-jam-5/visual-proof/camera-comparison/interactive-test/benchmark.gd",
+    "viewport_renderer": "projects/Torch_Dominions-Game-jam-5/visual-proof/camera-comparison/interactive-test/benchmark_world.gd",
+    "command_template": "godot_console.exe --path . --rendering-method gl_compatibility --resolution 1440x900 --fixed-fps 30 --audio-driver Dummy --log-file runtime-final-presentation-<mode>.log -- --test-mode <side|elevated|paired>",
+    "results": {
+      "side": {
+        "exit_code": 0,
+        "passed": true,
+        "torch_hits": 1,
+        "haze_casts": 1,
+        "haze_ticks": 1,
+        "enemy_strikes": 2,
+        "dodge_count": 1,
+        "hits_taken": 0,
+        "hero_health": 3,
+        "enemy_health": 1,
+        "locomotion_distance_world_units": 324.25,
+        "locomotion_reversals": 1,
+        "log": "projects/Torch_Dominions-Game-jam-5/visual-proof/camera-comparison/interactive-test/runtime-final-presentation-side.log"
+      },
+      "elevated": {
+        "exit_code": 0,
+        "passed": true,
+        "torch_hits": 1,
+        "haze_casts": 1,
+        "haze_ticks": 1,
+        "enemy_strikes": 2,
+        "dodge_count": 1,
+        "hits_taken": 0,
+        "hero_health": 3,
+        "enemy_health": 1,
+        "locomotion_distance_world_units": 324.25,
+        "locomotion_reversals": 1,
+        "log": "projects/Torch_Dominions-Game-jam-5/visual-proof/camera-comparison/interactive-test/runtime-final-presentation-elevated.log"
+      },
+      "paired": {
+        "exit_code": 0,
+        "passed": true,
+        "torch_hits": 1,
+        "haze_casts": 1,
+        "haze_ticks": 1,
+        "enemy_strikes": 2,
+        "dodge_count": 1,
+        "hits_taken": 0,
+        "hero_health": 3,
+        "enemy_health": 1,
+        "locomotion_distance_world_units": 324.25,
+        "locomotion_reversals": 1,
+        "log": "projects/Torch_Dominions-Game-jam-5/visual-proof/camera-comparison/interactive-test/runtime-final-presentation-paired.log"
+      }
+    },
+    "assertion_note": "Deterministic automated smoke applies the same actions/state handlers as input; the locomotion phase includes 0.90 seconds at +250 units/s, a reversal, then movement at -190 units/s until the dodge. Separate manual keyboard playtesting was not performed.",
+    "errors_in_final_logs": 0,
+    "authored_animation_runtime_check": {
+      "engine": "Godot 4.7.2.stable.official.ed1daf0bf",
+      "renderer": "GL Compatibility / OpenGL 3.3 NVIDIA 610.78 NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+      "window_resolution": [
+        1440,
+        900
+      ],
+      "fixed_fps": 30,
+      "modes": [
+        "paired",
+        "side",
+        "elevated"
+      ],
+      "log_pattern": "projects/Torch_Dominions-Game-jam-5/visual-proof/camera-comparison/interactive-test/runtime-final-presentation-<mode>.log",
+      "observed_result": "Each mode passed: one torch hit, one Haze zone tick, one dodge, two enemy strikes, zero hits taken, hero health 3, rogue health 1; locomotion covered 324.25 world units with one direction reversal; no script or engine errors.",
+      "visual_features": [
+        "phase-keyed attack anticipation, contact, follow-through and planted-foot recovery",
+        "alternating two-step walk cycle with counter-swinging arms, body bob and cloak drag",
+        "camera-depth comparison preserves upright actor anatomy in both projections",
+        "lantern hand/staff sweep, fire and embers timed to the action",
+        "Ash Rogue wind-up, strike and recovery silhouette with telegraph",
+        "persistent Haze lobes, curling wisps, source ribbon and remaining-duration bar",
+        "dodge compression, directional burst, recovery pose and cyan invulnerability motes",
+        "screen-spaced nameplates, action-state labels and hit confirmation"
+      ],
+      "gameplay_state_modified_by_visuals": false
+    }
+  },
+  "captures": [
+    {
+      "state": "paired_locomotion_cycle",
+      "path": "projects/Torch_Dominions-Game-jam-5/visual-proof/camera-comparison/interactive-test/captures/paired-locomotion.png",
+      "sha256": "ab7ddd9efd4266239fcb4aa596449ca11374d62343058627a1ef1225cf89a435",
+      "dimensions": [
+        1440,
+        900
+      ]
+    },
+    {
+      "state": "paired_torch_sweep_action",
+      "path": "projects/Torch_Dominions-Game-jam-5/visual-proof/camera-comparison/interactive-test/captures/paired-attack-active.png",
+      "sha256": "c190fa0f7b67aff00b7e03c2d3a27b46d62613168ac39d2b26f2d0431a4cebce",
+      "dimensions": [
+        1440,
+        900
+      ]
+    },
+    {
+      "state": "paired_haze_zone_cast",
+      "path": "projects/Torch_Dominions-Game-jam-5/visual-proof/camera-comparison/interactive-test/captures/paired-haze-active.png",
+      "sha256": "aa92123c83a9fb70afaaef26f3c81cc30f93e8f9fc38bd279875a7f5332e07dd",
+      "dimensions": [
+        1440,
+        900
+      ]
+    },
+    {
+      "state": "paired_after_dodge",
+      "path": "projects/Torch_Dominions-Game-jam-5/visual-proof/camera-comparison/interactive-test/captures/paired-final.png",
+      "sha256": "5e1b03c2997abe7e163f6148a67599034225f18aafaf753b62d818456a80be46",
+      "dimensions": [
+        1440,
+        900
+      ]
+    },
+    {
+      "state": "side_on_after_dodge",
+      "path": "projects/Torch_Dominions-Game-jam-5/visual-proof/camera-comparison/interactive-test/captures/side-final.png",
+      "sha256": "24a2429984ea4aad6c7dcc0a3a8a73c78d62355f04c41ecb35a251a630a3a597",
+      "dimensions": [
+        1440,
+        900
+      ]
+    },
+    {
+      "state": "elevated_after_dodge",
+      "path": "projects/Torch_Dominions-Game-jam-5/visual-proof/camera-comparison/interactive-test/captures/elevated-final.png",
+      "sha256": "81d83daacc5b424550b55b5c631e97a971b9978392cf001293d16bda2d5bf552",
+      "dimensions": [
+        1440,
+        900
+      ]
+    }
+  ],
+  "agent_visual_read": {
+    "side_on": {
+      "strengths": [
+        "Upright character silhouettes retain head-to-foot proportions while their horizontal spacing remains easy to scan.",
+        "A low, lateral Haze footprint reads as a persistent screen-plane band and does not engulf the full vertical field."
+      ],
+      "tradeoffs": [
+        "Depth and route width collapse toward a narrow ground strip; terrain depth and area-field shape are suppressed.",
+        "Large environment landmarks contribute less tactical information."
+      ]
+    },
+    "elevated_three_quarter": {
+      "strengths": [
+        "Route, landmark and field footprint occupy more vertical information space; path and Haze coverage are easier to reason about spatially.",
+        "Actor head-to-foot proportions remain upright while their projected ground positions reveal separation in depth."
+      ],
+      "tradeoffs": [
+        "The elevated composition expands floor-plane information and can bring route/Haze marks closer to the characters; the blockout cannot establish production framing.",
+        "A small number of actors are insufficient to prove crowding, occlusion or target-selection behavior."
+      ]
+    },
+    "current_read": "Both camera panels share the exact same encounter and outcomes. Locomotion now presents an alternating step cycle with visible foot lifts, counter-swinging arms and cloak drag; attack anticipation/contact/follow-through, dodge phases and rogue strike are timed to gameplay state. Actor anatomy stays upright while only world placement depth is compressed by camera mode. Side-on prioritizes action; elevated reveals route/Haze geography. All geometry, characters except the static idle reference, and effects remain diagnostic blockout presentation."
+  },
+  "visual_review_limits": [
+    "Hero locomotion, attack and dodge are procedural, anchored diagnostic poses synchronized to gameplay timers; they are not sampled source frames or a production sprite rig. Idle uses the fused static identity reference.",
+    "Ash Rogue remains a diagnostic blockout, despite its phase-driven wind-up, strike, recoil and telegraph.",
+    "Environment projection and haze footprint are diagnostic camera compositions, not a calibrated production camera or volumetric effect.",
+    "No separate human playtest, production-game integration, performance measurement, full viewport/device/aspect-ratio matrix, or accessibility audit has been completed. Paired output captures were smoke-tested at 1440x900 (16:10) and 1600x900 (16:9); broader viewport coverage remains open.",
+    "Environment shapes and hand-drawn combat/Haze effects remain temporary diagnostics, not production art or final effects."
+  ],
+  "remaining_gate": "Integrate approved production layered/rigged hero and enemy art plus the production Haze effect; test real traversable collision/layout and complete manual/aspect-ratio/device review; obtain human review before final camera or art lock.",
+  "review_states": {
+    "design_contract": "defined_for_benchmark",
+    "engine_runtime": "verified",
+    "automated_gameplay_smoke": "passed_three_modes",
+    "visual_assessment": "agent_reviewed_final_locomotion_attack_haze_and_dodge_captures",
+    "manual_playtest": "not_performed",
+    "character_animation": "runtime_verified_authored_procedural_diagnostic_locomotion_and_actions; production_rig_and_final_art_not_implemented",
+    "production_art": "not_implemented_for_rogue_or_environment; diagnostic_hero_action_drawing_only",
+    "camera_decision": "open",
+    "human_art_approval": "pending",
+    "rights_review": "pending"
+  },
+  "aspect_ratio_review": {
+    "comparison_window": [
+      1440,
+      900
+    ],
+    "panel_size": [
+      684,
+      395
+    ],
+    "window_ratio": "16:10",
+    "status": "Paired runtime smoke and output captures verified at 1440x900 (16:10) and 1600x900 (16:9); fixed panels fit at both tested sizes. Evidence: aspect-captures/aspect-ratio-review.json. 4:3, OS-scale, alternate-device, manual-playtest and production-camera gates remain open."
+  }
+}

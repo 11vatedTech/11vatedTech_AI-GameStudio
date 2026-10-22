@@ -1,0 +1,52 @@
+{
+  "status": "agent_review_candidate_requires_iteration_or_human_review",
+  "reviewed_at": "2026-10-20",
+  "reviewer_type": "agent_visual_review",
+  "method": "Native 1024x1024 candidate and 600x600 game-scale review; in-engine 1024x1024 GL Compatibility capture separately inspected.",
+  "acceptance_checks": [
+    {
+      "criterion": "Enemy visibly carries a torch, not a modern firearm or ranged weapon.",
+      "result": "pass_observed",
+      "notes": "The right-hand rogue holds a short haft with a metal cage and flame; no firearm silhouette, barrel, stock, trigger or sight is visible."
+    },
+    {
+      "criterion": "Purple Haze is a low extended area cloud covering substantial ground and has layered readable edges.",
+      "result": "pass_observed",
+      "notes": "Broad, scalloped violet smoke occupies the lower foreground and wraps around/under the rogue; density reads as a persistent zone rather than the old small detached puff."
+    },
+    {
+      "criterion": "Both figures, held props, contact/attack pose and route remain readable.",
+      "result": "partial_pass",
+      "notes": "Hero lantern, rogue torch and both body silhouettes remain legible through translucent cloud. The cloud overlaps the rogue lower legs and parts of route; exact wind-up/action tell and foot contact are not fully clear."
+    },
+    {
+      "criterion": "Keep palette, painterly treatment, environment motif and camera consistent in intent.",
+      "result": "pass_observed",
+      "notes": "Blue-slate ruined arch, ember pinpoints, painted surfaces, left/right staging and elevated three-quarter view are retained. Generation is not reference-conditioned; specific architecture/poses/details vary."
+    }
+  ],
+  "strengths": [
+    "Torch compliance is corrected: the opposing rogue has an unmistakable burning lantern/cage torch.",
+    "Haze reads as broad ground-occupying area control with softly layered edges rather than a small airborne puff.",
+    "Slate-blue archway environment, warm fire and violet focal contrast remain coherent; both characters remain visible at the review scale."
+  ],
+  "remaining_defects": [
+    "Haze blankets portions of the path and the rogue lower legs; tactical-foot placement/route clarity is only partial.",
+    "Rogue pose reads more like a planted guard/torch display than an unmistakable committed wind-up despite the torch being correct.",
+    "Hero lantern and rogue torch designs/identity are independently generated; they are not locked to the existing protagonist reference or each other.",
+    "This remains one opaque scenic illustration and a label overlay, not separated/modular sprites, live smoke, animation, control, collision, combat, or gameplay.",
+    "Only an elevated composition was revised. No new matched side-on runtime composition exists; camera decision remains open."
+  ],
+  "decision": "Promote revision 02 over candidate 01 only as a reference/style candidate for torch-bearing enemy and Haze field scale; do not promote as approved game art. It resolves the two targeted prompt defects but leaves legibility and semantic-action issues to iterate in an actual playable proof.",
+  "gate_state": {
+    "generated": "demonstrated",
+    "artifact_valid": "1024x1024 RGB PNG; SHA-256 verified against generation receipt",
+    "godot_import": "verified",
+    "runtime_render": "verified in GL Compatibility",
+    "agent_visual_review": "candidate review recorded",
+    "human_approval": "pending",
+    "rights_review": "pending",
+    "camera_gate": "open",
+    "gameplay_animation": "not implemented or tested"
+  }
+}

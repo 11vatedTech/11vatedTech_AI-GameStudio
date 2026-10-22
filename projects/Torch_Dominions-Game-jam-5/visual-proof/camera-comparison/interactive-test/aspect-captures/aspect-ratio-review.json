@@ -1,0 +1,203 @@
+{
+  "schema_version": "1.0",
+  "purpose": "Targeted viewport-size readiness evidence for the matched side-on/elevated camera diagnostic; not a camera lock or production art approval.",
+  "status": "passed_targeted_16_10_and_16_9_runtime_captures",
+  "runs": [
+    {
+      "ratio": "16:10",
+      "resolution": [
+        1440,
+        900
+      ],
+      "engine": "Godot 4.7.2.stable.official.ed1daf0bf",
+      "renderer": "GL Compatibility / OpenGL 3.3 NVIDIA RTX 5070 Ti Laptop GPU",
+      "fixed_fps": 30,
+      "mode": "paired",
+      "command": "godot_console.exe --path . --windowed --rendering-method gl_compatibility --resolution 1440x900 --fixed-fps 30 --audio-driver Dummy --log-file aspect-captures/runtime-16-10.log -- --test-mode paired",
+      "log": "aspect-captures/runtime-16-10.log",
+      "result": {
+        "attack_hits": 1,
+        "dodges": 1,
+        "enemy_health": 1,
+        "enemy_hits_received": 0,
+        "enemy_strikes": 2,
+        "haze_casts": 1,
+        "haze_zone_ticks": 1,
+        "hero_health": 3,
+        "locomotion_distance": 324.25,
+        "locomotion_reversal_count": 1,
+        "mode": "paired",
+        "panel_size": "(684.0, 395.0)",
+        "passed": true,
+        "scenario_events": [
+          "locomotion_capture",
+          "torch_attack_started",
+          "torch_attack_hit_enemy",
+          "locomotion_direction_reversed",
+          "haze_cast_ground_zone_started",
+          "dodge_started_invulnerable",
+          "haze_zone_enemy_damage_tick",
+          "hero_invulnerable_during_strike"
+        ],
+        "shared_state": true,
+        "source_hero_sha256": "32644a536e278461ad4dc13ec7e2a7cdd49d3389708671a13128e76fc8a344e5",
+        "world_rect": "[P: (0.0, 0.0), S: (900.0, 520.0)]"
+      },
+      "captures": [
+        {
+          "state": "paired_initial",
+          "path": "aspect-captures/paired-initial-16-10.png",
+          "dimensions": [
+            1440,
+            900
+          ],
+          "bytes": 94954,
+          "sha256": "c2ae35fe2d5e71e635a59bc64e8faeb1398d675b9634c4958fd325ac15bc4de3"
+        },
+        {
+          "state": "paired_locomotion",
+          "path": "aspect-captures/paired-locomotion-16-10.png",
+          "dimensions": [
+            1440,
+            900
+          ],
+          "bytes": 95654,
+          "sha256": "ab7ddd9efd4266239fcb4aa596449ca11374d62343058627a1ef1225cf89a435"
+        },
+        {
+          "state": "paired_attack_active",
+          "path": "aspect-captures/paired-attack-active-16-10.png",
+          "dimensions": [
+            1440,
+            900
+          ],
+          "bytes": 99395,
+          "sha256": "c190fa0f7b67aff00b7e03c2d3a27b46d62613168ac39d2b26f2d0431a4cebce"
+        },
+        {
+          "state": "paired_haze_active",
+          "path": "aspect-captures/paired-haze-active-16-10.png",
+          "dimensions": [
+            1440,
+            900
+          ],
+          "bytes": 98849,
+          "sha256": "aa92123c83a9fb70afaaef26f3c81cc30f93e8f9fc38bd279875a7f5332e07dd"
+        },
+        {
+          "state": "paired_final",
+          "path": "aspect-captures/paired-final-16-10.png",
+          "dimensions": [
+            1440,
+            900
+          ],
+          "bytes": 116625,
+          "sha256": "5e1b03c2997abe7e163f6148a67599034225f18aafaf753b62d818456a80be46"
+        }
+      ],
+      "capture_resolution_observed": true
+    },
+    {
+      "ratio": "16:9",
+      "resolution": [
+        1600,
+        900
+      ],
+      "engine": "Godot 4.7.2.stable.official.ed1daf0bf",
+      "renderer": "GL Compatibility / OpenGL 3.3 NVIDIA RTX 5070 Ti Laptop GPU",
+      "fixed_fps": 30,
+      "mode": "paired",
+      "command": "godot_console.exe --path . --windowed --rendering-method gl_compatibility --resolution 1600x900 --fixed-fps 30 --audio-driver Dummy --log-file aspect-captures/runtime-16-9.log -- --test-mode paired",
+      "log": "aspect-captures/runtime-16-9.log",
+      "result": {
+        "attack_hits": 1,
+        "dodges": 1,
+        "enemy_health": 1,
+        "enemy_hits_received": 0,
+        "enemy_strikes": 2,
+        "haze_casts": 1,
+        "haze_zone_ticks": 1,
+        "hero_health": 3,
+        "locomotion_distance": 324.25,
+        "locomotion_reversal_count": 1,
+        "mode": "paired",
+        "panel_size": "(684.0, 395.0)",
+        "passed": true,
+        "scenario_events": [
+          "locomotion_capture",
+          "torch_attack_started",
+          "torch_attack_hit_enemy",
+          "locomotion_direction_reversed",
+          "haze_cast_ground_zone_started",
+          "dodge_started_invulnerable",
+          "haze_zone_enemy_damage_tick",
+          "hero_invulnerable_during_strike"
+        ],
+        "shared_state": true,
+        "source_hero_sha256": "32644a536e278461ad4dc13ec7e2a7cdd49d3389708671a13128e76fc8a344e5",
+        "world_rect": "[P: (0.0, 0.0), S: (900.0, 520.0)]"
+      },
+      "captures": [
+        {
+          "state": "paired_initial",
+          "path": "aspect-captures/paired-initial-16-9.png",
+          "dimensions": [
+            1600,
+            900
+          ],
+          "bytes": 96162,
+          "sha256": "22f1fb428bcf934f85356c022b893fe509d57ddc86b6a8f1fcfdef7ac4777a6d"
+        },
+        {
+          "state": "paired_locomotion",
+          "path": "aspect-captures/paired-locomotion-16-9.png",
+          "dimensions": [
+            1600,
+            900
+          ],
+          "bytes": 96739,
+          "sha256": "c3932fb29403d07b8554d515bc0f511b6e01fb21145b46b8592d31b24176a9e7"
+        },
+        {
+          "state": "paired_attack_active",
+          "path": "aspect-captures/paired-attack-active-16-9.png",
+          "dimensions": [
+            1600,
+            900
+          ],
+          "bytes": 100328,
+          "sha256": "abd1cc8d78410ecf6c01e78891a4ad1b0514cb74d4e056c9a7078987e7068ba4"
+        },
+        {
+          "state": "paired_haze_active",
+          "path": "aspect-captures/paired-haze-active-16-9.png",
+          "dimensions": [
+            1600,
+            900
+          ],
+          "bytes": 99717,
+          "sha256": "3083980f65c11005c896349ef422625710b7c02e07681245041a2bb2d4bad26d"
+        },
+        {
+          "state": "paired_final",
+          "path": "aspect-captures/paired-final-16-9.png",
+          "dimensions": [
+            1600,
+            900
+          ],
+          "bytes": 117901,
+          "sha256": "90e3e88fbbc5b329eb3d2db02d19def6fb03519886f2e38510ba6fcc9217cccd"
+        }
+      ],
+      "capture_resolution_observed": true
+    }
+  ],
+  "not_tested": [
+    "4:3 runtime window",
+    "OS display scaling and alternate monitors",
+    "other device resolutions/aspect ratios",
+    "manual keyboard playtest",
+    "production camera framing / final art"
+  ],
+  "decision_gate": "Use paired captures to compare information hierarchy only. Keep camera_decision open until human review and representative production assets/traversable layout are tested."
+}

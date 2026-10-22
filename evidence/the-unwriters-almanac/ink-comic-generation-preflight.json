@@ -1,0 +1,127 @@
+{
+  "schema_version": "1.0",
+  "project_id": "the-unwriters-almanac",
+  "work_item": "IC-003",
+  "checked_at_utc": "2026-10-17T08:31:13.153973+00:00",
+  "status": "preflight_verified_generation_paused_for_host_memory_headroom",
+  "workflow": {
+    "runtime": "ComfyUI 0.40.0 at http://127.0.0.1:8188 (loopback)",
+    "project_builder": "src/vated_studio/adapters/klein_workflows.py:make_klein_txt2img",
+    "workflow_nodes_checked_against_live_object_info": [
+      "UNETLoader",
+      "CLIPLoader",
+      "VAELoader",
+      "CLIPTextEncode",
+      "ConditioningZeroOut",
+      "CFGGuider",
+      "KSamplerSelect",
+      "Flux2Scheduler",
+      "RandomNoise",
+      "EmptyFlux2LatentImage",
+      "SamplerCustomAdvanced",
+      "VAEDecode",
+      "SaveImage"
+    ],
+    "node_component_options_observed": {
+      "unet": "flux-2-klein-4b-fp8.safetensors",
+      "weight_dtype": "fp8_e4m3fn",
+      "text_encoder": "qwen_3_4b.safetensors",
+      "clip_type": "flux2",
+      "vae": "flux2-vae.safetensors"
+    },
+    "queue_at_last_check": {
+      "running": 0,
+      "pending": 0
+    },
+    "workflow_execution": "not_submitted; node metadata was verified, but the complete graph was not executed"
+  },
+  "components": [
+    {
+      "role": "FLUX.2 Klein 4B distilled FP8 diffusion model",
+      "local_path": "C:/Users/11vat/AppData/Local/Comfy-Desktop/ComfyUI-Shared/models/diffusion_models/flux-2-klein-4b-fp8.safetensors",
+      "bytes": 4070624520,
+      "sha256": "97ed34fe0567e436200f2faee3939b88f2b5d99f8af2a4dc16532c4245c0ccb6",
+      "publisher_repository": "https://huggingface.co/black-forest-labs/FLUX.2-klein-4b-fp8",
+      "publisher_revision": "5b4408e59397a4a37ccb46afe426d8ed86379441",
+      "upstream_file_sha256": "97ed34fe0567e436200f2faee3939b88f2b5d99f8af2a4dc16532c4245c0ccb6",
+      "identity_match": "exact SHA-256 match to publisher-hosted artifact",
+      "license_metadata": "Apache-2.0",
+      "license_sources": [
+        "https://huggingface.co/black-forest-labs/FLUX.2-klein-4b-fp8",
+        "https://huggingface.co/black-forest-labs/FLUX.2-klein-4B"
+      ],
+      "usage_policy_source": "https://bfl.ai/legal/usage-policy",
+      "legal_review": "not performed; model/output rights and applicable terms still require human review before release"
+    },
+    {
+      "role": "Qwen3-4B text encoder",
+      "local_path": "C:/Users/11vat/AppData/Local/Comfy-Desktop/ComfyUI-Shared/models/text_encoders/qwen_3_4b.safetensors",
+      "bytes": 8044982048,
+      "sha256": "6c671498573ac2f7a5501502ccce8d2b08ea6ca2f661c458e708f36b36edfc5a",
+      "publisher_repository": "https://huggingface.co/Qwen/Qwen3-4B",
+      "comfy_component_repository": "https://huggingface.co/Comfy-Org/flux2-klein-4b",
+      "comfy_revision": "5f526678002e43af5551dadb73ce2e8c91b43afe",
+      "upstream_file_sha256": "6c671498573ac2f7a5501502ccce8d2b08ea6ca2f661c458e708f36b36edfc5a",
+      "identity_match": "exact SHA-256 match to Comfy-Org-hosted component",
+      "license_metadata": "Apache-2.0",
+      "license_source": "https://huggingface.co/Qwen/Qwen3-4B/blob/main/LICENSE"
+    },
+    {
+      "role": "FLUX.2 VAE",
+      "local_path": "C:/Users/11vat/AppData/Local/Comfy-Desktop/ComfyUI-Shared/models/vae/flux2-vae.safetensors",
+      "bytes": 336211292,
+      "sha256": "868fe7b343cc8f3a19dbcfcafbc3d5f888802be3f89bd81b65b3621a066ce8f3",
+      "publisher_component_repository": "https://huggingface.co/Comfy-Org/flux2-klein-4b",
+      "comfy_revision": "5f526678002e43af5551dadb73ce2e8c91b43afe",
+      "upstream_file_sha256": "868fe7b343cc8f3a19dbcfcafbc3d5f888802be3f89bd81b65b3621a066ce8f3",
+      "identity_match": "exact SHA-256 match to Comfy-Org-hosted component",
+      "license_metadata": "Apache-2.0; BFL's FLUX.2 release materials also identify the VAE as Apache-2.0",
+      "license_sources": [
+        "https://huggingface.co/Comfy-Org/flux2-klein-4b",
+        "https://bfl.ai/blog/flux-2"
+      ]
+    }
+  ],
+  "hardware_snapshot": {
+    "gpu": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+    "gpu_total_bytes_nvidia_smi": 12820938752,
+    "gpu_used_bytes_nvidia_smi": 70254592,
+    "gpu_free_bytes_nvidia_smi": 12454985728,
+    "gpu_free_bytes_comfy_system_stats": 2711895528,
+    "comfy_torch_vram_free_bytes": 23346664,
+    "host_ram_total_bytes": 33736089600,
+    "host_ram_available_bytes_at_08_30_25_utc": 2270801920,
+    "host_ram_available_bytes_at_08_30_53_utc": 2281390080,
+    "host_ram_available_bytes_at_08_31_13_utc": 2064769024,
+    "host_swap_total_bytes": 46182301696,
+    "host_swap_used_bytes_at_08_30_25_utc": 16960135168,
+    "comfyui_process_rss_bytes": 27832320,
+    "comfyui_process_vms_bytes": 3184152576,
+    "comfyui_version": "0.40.0",
+    "queue_rechecked_twice_at_08_29_33_utc": "empty"
+  },
+  "generation_decision": {
+    "generated": false,
+    "reason": "Host had only about 2.0-2.1 GB available RAM (about 93% committed), with 16.96 GB swap already used; available RAM declined by about 216 MB during a 20-second idle observation. The 4.07 GB diffusion model plus 8.04 GB text encoder and runtime working memory could cause severe paging or destabilize the shared workstation. This does not satisfy the plan's safe-headroom gate.",
+    "threshold_for_retry": "Recheck while ComfyUI queue is empty; require at least 8 GiB host RAM available and confirm stable memory during a short idle sample. Recheck VRAM, process activity, and ComfyUI health immediately before each sequential job.",
+    "no_fallback_used": true,
+    "no_model_files_changed_or_copied": true,
+    "no_game_code_changed": true
+  },
+  "rights_boundary": {
+    "model_and_component_identity": "verified by exact SHA-256 against publisher/component repository records",
+    "model_license_metadata": "Apache-2.0 for BFL model, Qwen encoder, and Comfy-Org component repository",
+    "bfl_usage_policy_reviewed_as_reference": "https://bfl.ai/legal/usage-policy",
+    "generated_output_rights": "not yet applicable; no images generated",
+    "commercial_or_release_clearance": "not claimed; human legal review remains open"
+  },
+  "evidence_routes": [
+    "LOCAL_EVIDENCE: installed files hashed; ComfyUI node metadata, queue, system stats, and NVIDIA telemetry inspected",
+    "OFFICIAL_DOCS: https://docs.comfy.org/tutorials/flux/flux-2-klein",
+    "LIVE_WEB: https://huggingface.co/black-forest-labs/FLUX.2-klein-4b-fp8",
+    "LIVE_WEB: https://huggingface.co/black-forest-labs/FLUX.2-klein-4B",
+    "LIVE_WEB: https://huggingface.co/Qwen/Qwen3-4B",
+    "LIVE_WEB: https://huggingface.co/Comfy-Org/flux2-klein-4b",
+    "LIVE_WEB: https://bfl.ai/legal/usage-policy"
+  ]
+}

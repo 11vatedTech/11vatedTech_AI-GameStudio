@@ -1,0 +1,92 @@
+{
+  "proof_id": "torch-dominions-haze-styleproof-01",
+  "status": "runtime_verified_visual_candidate_requires_iteration_and_human_review",
+  "created_at": "2026-10-20",
+  "purpose": "Determine whether the current painterly mythic dark-fantasy direction and Purple Haze signature can read as an in-game style at 1024x1024 before committing to full production.",
+  "scope": "One generated 1024x1024 Haze-combat concept integrated into a temporary Godot 4.7.2 GL Compatibility scene. This is visual proof, not a playable game, final art, or approval of the camera.",
+  "inputs": {
+    "brief": "projects/Torch_Dominions-Game-jam-5/Game-concept/11vatedTech_Torch_RPG_GDD_v0.1.md",
+    "art_bible": "projects/Torch_Dominions-Game-jam-5/Game-concept/ART_BIBLE.md",
+    "original_camera_A_source": {
+      "path": "assets/generated/torch-haze-proof/01_klein-bench_00042_.png",
+      "sha256": "60d8ffd5193eb99dd485a7d05fd4a434b74b421818d445b8133dc2215645b91f",
+      "used_as_generation_reference": false
+    },
+    "original_camera_B_source": {
+      "path": "assets/generated/torch-haze-proof/01_klein-bench_00041_.png",
+      "sha256": "7d633800cc10e7ee326c364231cb50ff8473a2f83afc2a309f10926ec449cc80",
+      "used_as_generation_reference": false
+    }
+  },
+  "generation": {
+    "service": "local ComfyUI 0.40.0, loopback only",
+    "workflow": "Studio image.generate.klein; FLUX.2 Klein 4B Distilled FP8",
+    "comfy_prompt_id": "5aa0ab8c-a5c6-4bce-80e4-e899ef27a421",
+    "seed": 7183417,
+    "steps": 4,
+    "cfg": 1.0,
+    "dimensions": [1024, 1024],
+    "model_component_hashes": {
+      "flux-2-klein-4b-fp8.safetensors": "97ed34fe0567e436200f2faee3939b88f2b5d99f8af2a4dc16532c4245c0ccb6",
+      "qwen_3_4b.safetensors": "6c671498573ac2f7a5501502ccce8d2b08ea6ca2f661c458e708f36b36edfc5a",
+      "flux2-vae.safetensors": "868fe7b343cc8f3a19dbcfcafbc3d5f888802be3f89bd81b65b3621a066ce8f3"
+    },
+    "elapsed_ms": 23422,
+    "output": {
+      "path": "projects/Torch_Dominions-Game-jam-5/visual-proof/comfyui-output/01_klein-bench_00001_.png",
+      "sha256": "ad28c20ab979013b8889d1ba9b36f7afa75c8657d98f0dc8c5eeb0aa204af2ce",
+      "bytes": 1757061,
+      "mode": "RGB",
+      "alpha": false
+    },
+    "license_status": "model source register describes 4B weights as Apache-2.0; separate weight/component terms and output rights not human-reviewed for release"
+  },
+  "godot": {
+    "version": "4.7.2.stable.official.ed1daf0bf",
+    "renderer": "GL Compatibility / OpenGL 3.3 NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+    "fixture_project": "projects/Torch_Dominions-Game-jam-5/visual-proof/project.godot",
+    "scene": "projects/Torch_Dominions-Game-jam-5/visual-proof/proof.tscn",
+    "runtime_log": "projects/Torch_Dominions-Game-jam-5/visual-proof/runtime.log",
+    "runtime_output": "TORCH_VISUAL_PROOF_LOADED path=res://comfyui-output/01_klein-bench_00001_.png size=(1024, 1024)",
+    "run_command": "godot.exe --path projects/Torch_Dominions-Game-jam-5/visual-proof --audio-driver Dummy --resolution 1024x1024 --fixed-fps 30 --quit-after 3 --verbose",
+    "runtime_exit_code": 0,
+    "capture_sequence": [
+      "projects/Torch_Dominions-Game-jam-5/visual-proof/godot-runtime00000000.png",
+      "projects/Torch_Dominions-Game-jam-5/visual-proof/godot-runtime00000001.png"
+    ],
+    "capture_sha256": "2ec5f999f0f7b2b9fe565c735fac81ad7347b41b4f63ff319ecd83e87413c45b",
+    "capture_dimensions": [1024, 1024]
+  },
+  "agent_visual_critique": {
+    "strengths": [
+      "A coherent slate-blue dusk palette, ruined arch landmark, foreground framing and warm ember points make a readable mythic-fantasy place.",
+      "The violet lantern, plume and low cloud create a strong purple focal accent against the environment; the cloud is not opaque and the major silhouettes remain visible.",
+      "At the 1024-square proof scale, foreground character silhouettes, weapon direction and central action are immediately legible; the overall composition feels authored rather than a generic neon HUD scene."
+    ],
+    "defects": [
+      "The enemy has a modern firearm-like ranged weapon, not the torch-bearing melee rogue described by the brief; this is a major subject compliance error.",
+      "The Haze ability appears as a small isolated magical puff/bolus between characters rather than a low, extended area-control cloud that communicates persistent battlefield coverage.",
+      "The elevated camera and character size/route read were not compared in a running playable scene against side-on; only one camera direction received this fresh generation.",
+      "Generated composition does not establish reusable identity, authored animation, responsive VFX, combat timing, navigation/collision, or feasible asset modularization.",
+      "Candidate remains an opaque background scene illustration and cannot directly serve as a transparent character, prop, tile, or animated effect asset."
+    ],
+    "decision": "Keep as an art-direction candidate, not approved. Strong enough to show the painterly dark-fantasy scene treatment and focal color contrast can work at gameplay-like framing, but it is not yet a valid Haze-combat design proof because the enemy weapon and cloud behavior violate the intended scene contract. Next visual iteration should fix these two defects while holding palette/camera/lighting constant; a fair camera decision still requires corresponding engine compositions."
+  },
+  "quality_boundaries": {
+    "generation": "demonstrated",
+    "artifact_valid": "1024x1024 PNG, non-empty, SHA-256 recorded",
+    "godot_import": "verified",
+    "runtime_render": "verified",
+    "gameplay": "not_implemented_or_tested",
+    "animation": "not_implemented_or_tested",
+    "camera_gate": "open",
+    "agent_review": "initial critique recorded; candidate needs prompt/subject iteration",
+    "human_approval": "pending",
+    "rights_review": "pending"
+  },
+  "preservation": {
+    "existing_camera_study_A_hash_before_and_after": "7d633800cc10e7ee326c364231cb50ff8473a2f83afc2a309f10926ec449cc80",
+    "existing_camera_study_B_hash_before_and_after": "60d8ffd5193eb99dd485a7d05fd4a434b74b421818d445b8133dc2215645b91f",
+    "protagonist_reference_hash_before_and_after": "9c20150532fb09a45d0bebf1acf450853277c503802461e70b4c489e763ffd15"
+  }
+}

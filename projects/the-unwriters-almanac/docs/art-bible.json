@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "project_id": "the-unwriters-almanac",
+  "style_name": "The breathing page",
+  "style_description": "An original browser-first illustration system combining crisp relief-like ink geometry with controlled watercolor blooms and a tiny expressive ink creature. Material contrast communicates gameplay: stable structure is sharp, wet washes are soft, and the player-authored change is vermilion.",
+  "reference_board": ["evidence/unwriter-almanac-moodboard.html", "evidence/unwriter-almanac-references.json"],
+  "camera": {"projection": "2d", "view": "Fixed orthographic page tableau", "framing": "One complete page in frame at 16:9 logical coordinates; responsive contain-fit with quiet page margin", "perspective": "Flat layers with subtle authored paper depth, no perspective distortion", "target_resolution": [1280, 720]},
+  "palette": ["#F1E7CF", "#182A35", "#688A87", "#D96C4D", "#E7B957", "#FAF6E9"],
+  "value_hierarchy": ["Ink-being, structural contours, live/committed rail, bead and folio seal have crisp readable contrast.", "Diffuse wash, fibers and marginalia remain low-contrast and never obscure collision or interaction cues.", "Vermilion is reserved for the active authored line and its consequences; the bead has a distinct warm gold fill."],
+  "shape_language": "Asymmetric droplet/blot body; two negative-space eyes; tapering capillary tail; one small vermilion seed. Rails are gently curved and have clear endpoints. Ledges are broad original printed forms, never generic grid platforms.",
+  "lighting_language": "Soft daylight across cool ivory paper; no simulated 3D lighting or bloom over active geometry.",
+  "material_language": "Blue-black crisp structural ink, controlled feathered sage/warm watercolor washes, fine paper fibers, sparse graphite marginal notes, and player-authored vermilion marks.",
+  "identity_invariants": ["One dark asymmetric droplet silhouette", "Exactly two pale negative-space eyes", "A capillary tail rooted on the same lower-left body point", "One small vermilion seed that remains visible in all poses"],
+  "forbidden_traits": ["Generic distressed sepia parchment", "Copied manuscript borders, artwork, layout, symbols, or artist imitation", "Neon cyberpunk glow", "Uncontrolled wash under the collision rail or goal", "Illegible decorative text", "Primitive placeholders presented as final animation", "Generated sprite sequences without playback review"],
+  "asset_rules": {"transparent_sprites": "Not used; original vector forms are authored directly in the renderer.", "environment": "Original Canvas2D geometry and bounded procedural paper texture, all below gameplay contours.", "ui": "Semantic DOM controls in an editorial folio grammar; explicit readable instructions, high-contrast focus, no color-only cues.", "vfx": "Small bounded, non-flashing watercolor specks; motion respects reduced-motion preference.", "animation": "Authored identity-anchored pose/state curves; inspect at actual game scale and playback rate."},
+  "review_criteria": ["Player and gameplay geometry read over the wash at desktop and narrow sizes.", "Character silhouette, eyes, tail root, and seed remain stable across states.", "The committed line is visibly the same path that was previewed and is consistent with movement.", "No decorative shape implies unsupported collision.", "Reduced motion retains all objective and state feedback."],
+  "style_mix_policy": "Relief-print structure establishes gameplay hierarchy; watercolor is restrained atmosphere; neither may imitate a named work or compromise the authored original design.",
+  "version": "1.0"
+}

@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Prismatic Creature Battler — Refractive Resonance Vertical Slice</title>
+  <style>
+    :root {
+      --bg-obsidian: #070912;
+      --bg-panel: #0e1424;
+      --bg-elevated: #151e34;
+      --border-subtle: rgba(122, 240, 255, 0.22);
+      --border-gold: rgba(245, 196, 81, 0.45);
+      --cyan: #38e5ff;
+      --crystal: #7af0ff;
+      --void: #c25cff;
+      --gold: #f5c451;
+      --emerald: #2ceaa3;
+      --crimson: #ff4d6d;
+      --text-main: #f2f6ff;
+      --text-muted: #9fb0cc;
+      --foil-angle: 132deg;
+      --foil-x: 50%;
+      --foil-y: 50%;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background: radial-gradient(circle at 50% 12%, #16213d 0%, #070912 68%);
+      color: var(--text-main);
+      font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+      min-height: 100vh;
+      overflow-x: hidden;
+      user-select: none;
+    }
+    /* Top Sanctuary Header */
+    .top-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 24px;
+      background: rgba(10, 14, 26, 0.92);
+      border-bottom: 1px solid var(--border-gold);
+      backdrop-filter: blur(10px);
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .brand-block {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .prism-crest {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: conic-gradient(from 45deg, #38e5ff, #c25cff, #f5c451, #2ceaa3, #38e5ff);
+      display: grid;
+      place-items: center;
+      box-shadow: 0 0 18px rgba(56, 229, 255, 0.4);
+      font-weight: 800;
+      color: #070912;
+      font-size: 18px;
+    }
+    .brand-title {
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      background: linear-gradient(90deg, #f2f6ff, #7af0ff, #f5c451);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .brand-sub {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+    /* Prism Gauge Bar */
+    .gauge-cluster {
+      flex: 1;
+      max-width: 500px;
+      min-width: 280px;
+    }
+    .gauge-header {
+      display: flex;
+      justify-content: space-between;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+      color: var(--gold);
+    }
+    .gauge-track {
+      height: 16px;
+      background: #060810;
+      border: 1px solid var(--border-gold);
+      border-radius: 999px;
+      overflow: hidden;
+      position: relative;
+      box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.8);
+    }
+    .gauge-fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #38e5ff 0%, #c25cff 52%, #f5c451 100%);
+      box-shadow: 0 0 16px rgba(245, 196, 81, 0.75);
+      transition: width 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .top-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .pill-badge {
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      background: rgba(21, 30, 52, 0.9);
+      border: 1px solid var(--border-subtle);
+      color: var(--crystal);
+    }
+    /* Main 3-Column Studio Workspace */
+    .workspace {
+      display: grid;
+      grid-template-columns: 370px 1fr 370px;
+      gap: 16px;
+      padding: 16px 20px 24px;
+      max-width: 1760px;
+      margin: 0 auto;
+    }
+    @media (max-width: 1360px) {
+      .workspace {
+        grid-template-columns: 340px 1fr;
+      }
+      .right-column {
+        grid-column: 1 / -1;
+      }
+    }
+    @media (max-width: 960px) {
+      .workspace {
+        grid-template-columns: 1fr;
+      }
+    }
+    .panel {
+      background: linear-gradient(180deg, rgba(18, 25, 45, 0.95) 0%, rgba(10, 14, 26, 0.97) 100%);
+      border: 1px solid var(--border-subtle);
+      border-radius: 16px;
+      padding: 16px;
+      box-shadow: 0 18px 42px rgba(0, 0, 0, 0.55);
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .panel-title {
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+      color: var(--gold);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding-bottom: 8px;
+    }
+
+    /* LIVING PRISMATIC CARD COMPONENT */
+    .card-stage {
+      perspective: 1100px;
+      display: flex;
+      justify-content: center;
+      padding: 6px 0;
+    }
+    .living-card {
+      width: 320px;
+      height: 456px;
+      border-radius: 18px;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 0.12s ease-out, box-shadow 0.2s ease;
+      background: #0b1020;
+      border: 2px solid rgba(122, 240, 255, 0.55);
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.75), 0 0 26px rgba(56, 229, 255, 0.22);
+      overflow: hidden;
+      cursor: grab;
+    }
+    /* Masked Foil Border & Portrait Layers — Never washes out text! */
+    .card-art-window {
+      position: absolute;
+      top: 46px;
+      left: 14px;
+      right: 14px;
+      height: 238px;
+      border-radius: 12px;
+      overflow: hidden;
+      background: radial-gradient(circle at 50% 42%, #1d2c54 0%, #060913 85%);
+      border: 1px solid rgba(245, 196, 81, 0.45);
+    }
+    .card-bg-nebula {
+      position: absolute;
+      inset: -16px;
+      background:
+        radial-gradient(circle at 30% 30%, rgba(56, 229, 255, 0.25), transparent 55%),
+        radial-gradient(circle at 75% 65%, rgba(194, 92, 255, 0.25), transparent 55%);
+      transition: transform 0.12s ease-out;
+    }
+    .card-creature-img {
+      position: absolute;
+      inset: 6px;
+      width: calc(100% - 12px);
+      height: calc(100% - 12px);
+      object-fit: contain;
+      filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.85)) drop-shadow(0 0 14px var(--unit-color, #38e5ff));
+      animation: creatureBreathe 3.4s ease-in-out infinite;
+      transition: transform 0.12s ease-out;
+      z-index: 2;
+    }
+    @keyframes creatureBreathe {
+      0%, 100% { transform: translateY(0px) scale(1); }
+      50% { transform: translateY(-5px) scale(1.035); }
+    }
+    /* Masked Foil Overlay inside Art Window & Frame Border Only */
+    .card-foil-layer {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 3;
+      mix-blend-mode: color-dodge;
+      opacity: 0.72;
+      transition: opacity 0.2s ease;
+    }
+    /* 1. Prismatic Spectrum: Iridescent rainbow micro-hex diffraction */
+    .living-card[data-foil="prismatic-spectrum"] .card-foil-layer {
+      background:
+        repeating-linear-gradient(60deg, rgba(255,255,255,0.06) 0px, rgba(255,255,255,0.06) 2px, transparent 2px, transparent 9px),
+        repeating-linear-gradient(-60deg, rgba(56,229,255,0.08) 0px, rgba(56,229,255,0.08) 2px, transparent 2px, transparent 9px),
+        linear-gradient(var(--foil-angle),
+          rgba(255, 60, 140, 0.42) 0%,
+          rgba(255, 210, 60, 0.40) 22%,
+          rgba(44, 234, 163, 0.45) 45%,
+          rgba(56, 229, 255, 0.50) 68%,
+          rgba(194, 92, 255, 0.45) 90%);
+    }
+    /* 2. Phantom Foil: Dark obsidian chrome + oil-slick violet/cyan sheen */
+    .living-card[data-foil="phantom-foil"] {
+      border-color: rgba(194, 92, 255, 0.75);
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.85), 0 0 28px rgba(194, 92, 255, 0.32);
+    }
+    .living-card[data-foil="phantom-foil"] .card-foil-layer {
+      mix-blend-mode: screen;
+      background:
+        radial-gradient(circle at var(--foil-x) var(--foil-y),
+          rgba(194, 92, 255, 0.55) 0%,
+          rgba(56, 229, 255, 0.36) 28%,
+          rgba(12, 14, 26, 0.85) 64%),
+        repeating-radial-gradient(circle at 50% 50%, rgba(208, 107, 255, 0.12) 0px, transparent 6px, rgba(0, 229, 184, 0.1) 12px);
+    }
+    /* 3. Relic Foil: Embossed antique gold/platinum filigree + illuminated runes */
+    .living-card[data-foil="relic-foil"] {
+      border-color: rgba(245, 196, 81, 0.88);
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.82), 0 0 28px rgba(245, 196, 81, 0.35);
+    }
+    .living-card[data-foil="relic-foil"] .card-foil-layer {
+      background:
+        repeating-linear-gradient(45deg, rgba(245, 196, 81, 0.16) 0px, rgba(245, 196, 81, 0.16) 3px, transparent 3px, transparent 12px),
+        radial-gradient(circle at var(--foil-x) var(--foil-y),
+          rgba(255, 232, 145, 0.62) 0%,
+          rgba(214, 142, 42, 0.32) 40%,
+          transparent 72%);
+    }
+    /* 4. Standard Edition */
+    .living-card[data-foil="standard-edition"] .card-foil-layer {
+      opacity: 0.18;
+      background: radial-gradient(circle at var(--foil-x) var(--foil-y), rgba(255, 255, 255, 0.25), transparent 60%);
+    }
+
+    /* Crisp Unobscured Card Header & Text Box */
+    .card-top-plate {
+      position: absolute;
+      top: 8px;
+      left: 14px;
+      right: 14px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 5;
+    }
+    .card-name {
+      font-size: 15px;
+      font-weight: 800;
+      letter-spacing: 0.03em;
+      color: #ffffff;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.95);
+    }
+    .card-origin-pill {
+      font-size: 11px;
+      font-weight: 800;
+      padding: 3px 9px;
+      border-radius: 999px;
+      background: rgba(8, 12, 24, 0.92);
+      border: 1px solid var(--unit-color, #38e5ff);
+      color: var(--unit-color, #38e5ff);
+    }
+    /* High-contrast Obsidian Text Plate — Foil Never Bleeds Here */
+    .card-info-plate {
+      position: absolute;
+      top: 292px;
+      left: 14px;
+      right: 14px;
+      bottom: 12px;
+      background: rgba(7, 10, 20, 0.95);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 12px;
+      padding: 10px 12px;
+      z-index: 5;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .card-sig-line {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--gold);
+    }
+    .card-desc {
+      font-size: 11.5px;
+      line-height: 1.38;
+      color: #dce6f7;
+    }
+    .card-stats-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 4px;
+      padding-top: 6px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      font-variant-numeric: tabular-nums;
+    }
+    .stat-cell {
+      text-align: center;
+      background: rgba(20, 29, 52, 0.75);
+      border-radius: 6px;
+      padding: 3px 2px;
+      font-size: 11px;
+      font-weight: 700;
+    }
+    .stat-cell span {
+      display: block;
+      font-size: 9px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+    }
+    .card-serial-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 10px;
+      color: var(--text-muted);
+      letter-spacing: 0.05em;
+    }
+
+    /* Foil Switcher & Roster Grid */
+    .foil-selector {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 6px;
+    }
+    .btn {
+      background: var(--bg-elevated);
+      color: var(--text-main);
+      border: 1px solid var(--border-subtle);
+      border-radius: 9px;
+      padding: 8px 11px;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      text-align: center;
+    }
+    .btn:hover {
+      border-color: var(--cyan);
+      background: rgba(56, 229, 255, 0.14);
+    }
+    .btn.active {
+      border-color: var(--gold);
+      background: rgba(245, 196, 81, 0.18);
+      color: var(--gold);
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, #1b9aaa 0%, #38e5ff 50%, #7af0ff 100%);
+      color: #060913;
+      border: none;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      box-shadow: 0 0 20px rgba(56, 229, 255, 0.35);
+    }
+    .btn-primary:hover {
+      filter: brightness(1.1);
+      background: linear-gradient(135deg, #2ceaa3 0%, #38e5ff 100%);
+    }
+    .roster-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 6px;
+    }
+    .roster-mini {
+      background: rgba(14, 20, 36, 0.9);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 9px;
+      padding: 6px;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 3px;
+      transition: all 0.15s ease;
+    }
+    .roster-mini img {
+      width: 44px;
+      height: 44px;
+      object-fit: contain;
+    }
+    .roster-mini.active {
+      border-color: var(--cyan);
+      background: rgba(56, 229, 255, 0.16);
+      box-shadow: 0 0 12px rgba(56, 229, 255, 0.28);
+    }
+    .roster-mini-name {
+      font-size: 10px;
+      font-weight: 700;
+      text-align: center;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      width: 100%;
+    }
+
+    /* Center Arena Canvas & Formation Controls */
+    .arena-wrapper {
+      position: relative;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid rgba(122, 240, 255, 0.32);
+      background: #060912;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #sanctuaryCanvas {
+      width: 100%;
+      height: auto;
+      max-height: 560px;
+      display: block;
+      cursor: pointer;
+    }
+    .archetype-bar {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+    }
+    .directive-bar {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+    }
+    .battle-controls {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    /* Right Panel: Causal Resonance Log & Fairness Matrix */
+    .causal-log {
+      background: rgba(6, 9, 18, 0.92);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      padding: 10px;
+      height: 290px;
+      overflow-y: auto;
+      font-size: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      font-family: "Cascadia Code", "Consolas", monospace;
+    }
+    .log-entry {
+      padding: 6px 8px;
+      border-radius: 6px;
+      background: rgba(18, 26, 48, 0.72);
+      border-left: 3px solid var(--cyan);
+      line-height: 1.35;
+    }
+    .log-entry.resonance {
+      border-left-color: var(--void);
+      background: rgba(74, 30, 120, 0.28);
+      color: #f3e6ff;
+    }
+    .log-entry.convergence {
+      border-left-color: var(--gold);
+      background: rgba(120, 88, 18, 0.35);
+      color: #fff3c4;
+      font-weight: 700;
+    }
+    .fairness-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 11.5px;
+    }
+    .fairness-table th, .fairness-table td {
+      padding: 6px 8px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      text-align: left;
+    }
+    .fairness-table th {
+      color: var(--gold);
+      font-size: 10.5px;
+      text-transform: uppercase;
+    }
+    .tag-yes { color: var(--emerald); font-weight: 700; }
+    .tag-no { color: var(--crystal); font-weight: 700; }
+  </style>
+</head>
+<body>
+  <header class="top-bar">
+    <div class="brand-block">
+      <div class="prism-crest">❖</div>
+      <div>
+        <div class="brand-title">The Prismatic Creature Battler</div>
+        <div class="brand-sub">Living Collectible Foil Studio &amp; 6v6 Refractive Resonance Auto-Battler</div>
+      </div>
+    </div>
+
+    <div class="gauge-cluster">
+      <div class="gauge-header">
+        <span>Shared Team Resource · Prism Gauge</span>
+        <span id="gaugeLabel">0% · Convergence at 100%</span>
+      </div>
+      <div class="gauge-track">
+        <div class="gauge-fill" id="gaugeFill"></div>
+      </div>
+    </div>
+
+    <div class="top-actions">
+      <span class="pill-badge" id="roundBadge">Gauntlet Round 1 / 3</span>
+      <span class="pill-badge" id="phaseBadge">Phase: PREPARE</span>
+      <span class="pill-badge" id="chainCounterBadge">Resonance Chains: 0</span>
+    </div>
+  </header>
+
+  <main class="workspace">
+    <!-- LEFT COLUMN: Living Prismatic Card Studio -->
+    <section class="panel" aria-label="Living Prismatic Card Studio">
+      <div class="panel-title">
+        <span>1. Living Prismatic Card Studio</span>
+        <span id="cardFoilTag" style="color: var(--crystal);">Prismatic Spectrum</span>
+      </div>
+
+      <div class="card-stage">
+        <div class="living-card" id="livingCard" data-foil="prismatic-spectrum">
+          <div class="card-top-plate">
+            <span class="card-name" id="cardName">Tempest Wyrm</span>
+            <span class="card-origin-pill" id="cardOriginInstinct">Storm · Hunter</span>
+          </div>
+          <div class="card-art-window">
+            <div class="card-bg-nebula" id="cardNebula"></div>
+            <img class="card-creature-img" id="cardCreatureImg" src="assets/tempest-wyrm.png" alt="Tempest Wyrm" />
+            <div class="card-foil-layer"></div>
+          </div>
+          <div class="card-info-plate">
+            <div>
+              <div class="card-sig-line">
+                <span id="cardSignature">Signature: Voltbrand</span>
+                <span id="cardCost" style="color: var(--crystal);">Tier III</span>
+              </div>
+              <p class="card-desc" id="cardDesc"></p>
+            </div>
+            <div>
+              <div class="card-stats-row">
+                <div class="stat-cell"><span id="statHpVal">1220</span><span>HP</span></div>
+                <div class="stat-cell"><span id="statAtkVal">192</span><span>ATK</span></div>
+                <div class="stat-cell"><span id="statDefVal">36</span><span>DEF</span></div>
+                <div class="stat-cell"><span id="statSpdVal">1.38</span><span>SPD</span></div>
+              </div>
+              <div class="card-serial-row" style="margin-top: 6px;">
+                <span id="cardSerial">PCB-001 // UR</span>
+                <span>COMPETITIVE STANDARD POOL</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel-title" style="padding-top: 4px;">
+        <span>Material-Driven Foil Shader (Cosmetic Only)</span>
+      </div>
+      <div class="foil-selector" id="foilButtons"></div>
+
+      <div class="panel-title" style="padding-top: 4px;">
+        <span>Initial 8-Creature Test Roster (Click to Inspect / Assign)</span>
+      </div>
+      <div class="roster-strip" id="rosterStrip"></div>
+    </section>
+
+    <!-- CENTER COLUMN: Hybrid Dimensional Sanctuary Battlefield -->
+    <section class="panel" aria-label="Dimensional Sanctuary Arena">
+      <div class="panel-title">
+        <span id="opponentTitle">Round 1 — Ironclad Vanguard (Raw Stat Brute Lineup)</span>
+        <span style="color: var(--crystal);">Click Player Slot to Assign Selected Creature · Double-Click for Captain</span>
+      </div>
+
+      <div class="arena-wrapper">
+        <canvas id="sanctuaryCanvas" width="940" height="540"></canvas>
+      </div>
+
+      <div class="panel-title">
+        <span>2. Team Archetype Presets &amp; Tactical Directives</span>
+      </div>
+      <div class="archetype-bar" id="archetypeBar"></div>
+      <div class="directive-bar" id="directiveBar"></div>
+
+      <div class="battle-controls">
+        <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+          <button class="btn btn-primary" id="btnLaunchBattle">⚡ Materialize &amp; Launch Battle</button>
+          <button class="btn" id="btnStepTick">Step 1 Tick</button>
+          <button class="btn" id="btnInstantResolve">Instant Resolve</button>
+          <button class="btn" id="btnResetPrep">Reset to Prep</button>
+        </div>
+        <div style="display: flex; gap: 6px;">
+          <button class="btn" id="btnRound1">Round 1</button>
+          <button class="btn" id="btnRound2">Round 2</button>
+          <button class="btn" id="btnRound3">Round 3 (Apex)</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- RIGHT COLUMN: Refractive Resonance Telemetry & Fair Collectible Contract -->
+    <section class="panel right-column" aria-label="Causal Resonance Telemetry">
+      <div class="panel-title">
+        <span>3. Causal Refractive Resonance Log</span>
+        <span id="winnerStatus" style="color: var(--emerald);">Ready</span>
+      </div>
+      <div class="causal-log" id="causalLog"></div>
+
+      <div class="panel-title">
+        <span>4. Active Trio Synergy Circuit</span>
+      </div>
+      <div style="font-size: 12px; line-height: 1.45; color: #d6e3f8; background: rgba(12,18,34,0.85); padding: 10px; border-radius: 10px; border: 1px solid rgba(56,229,255,0.2);">
+        <div><strong style="color: #38e5ff;">1. Tempest Wyrm (Storm · Hunter):</strong> Marks target with <em>⚡Voltbrand</em> (+30% Resonance vulnerability).</div>
+        <div style="margin-top: 4px;"><strong style="color: #7af0ff;">2. Prismhart (Crystal · Guardian):</strong> Adjacent to Wyrm -> converts <em>⚡Voltbrand</em> into <em>❖Refractive Ward</em> shield &amp; secondary lightning arc.</div>
+        <div style="margin-top: 4px;"><strong style="color: #c25cff;">3. Riftstalker (Void · Assassin):</strong> Phases past frontline tanks to execute <em>⚡Voltbrand</em> or <em>☾Eclipse</em> marked targets for 175% DMG.</div>
+      </div>
+
+      <div class="panel-title">
+        <span>5. Collectible Fairness Contract (Verified)</span>
+        <button class="btn" id="btnVerifyFairness" style="padding: 3px 8px; font-size: 10.5px;">Run Proof</button>
+      </div>
+      <table class="fairness-table">
+        <thead>
+          <tr>
+            <th>Card Property</th>
+            <th>Affects Gameplay?</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Base creature abilities</td><td class="tag-yes">Yes (Standardized)</td></tr>
+          <tr><td>Team synergies &amp; positioning</td><td class="tag-yes">Yes (Causal Chains)</td></tr>
+          <tr><td>Tactical Directive &amp; Captain</td><td class="tag-yes">Yes (Player Strategy)</td></tr>
+          <tr><td>Prismatic, Phantom or Relic foil</td><td class="tag-no">No (0% Stat Delta)</td></tr>
+          <tr><td>Animated portrait &amp; Serial #</td><td class="tag-no">No (Cosmetic Only)</td></tr>
+        </tbody>
+      </table>
+      <div id="fairnessProofBanner" style="font-size: 11px; color: var(--emerald); font-weight: 700;"></div>
+    </section>
+  </main>
+
+  <script src="engine.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

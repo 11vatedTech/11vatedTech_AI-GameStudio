@@ -1,0 +1,50 @@
+{
+  "status": "generated_requires_review",
+  "elapsed_ms": 24628,
+  "workflow": "projects/Torch_Dominions-Game-jam-5/visual-proof/comfy-workflow-revision-02.json",
+  "prompt_id": "e40095f1-9ca7-404f-a97f-ca8cb0a6e8a9",
+  "images": [
+    {
+      "path": "C:\\Users\\11vat\\OneDrive\\Desktop\\AI-GameStudio_by_11vatedTech\\11vatedtech-ai-game-studio-v0.4.0\\projects\\Torch_Dominions-Game-jam-5\\visual-proof\\comfyui-output\\revision-02\\01_candidate_00001_.png",
+      "bytes": 1618763,
+      "sha256": "4cd6a9dccd462043dc2692838d3b57c6f3537305fa6ff70902c35dff0ac35f21",
+      "source": {
+        "filename": "candidate_00001_.png",
+        "subfolder": "torch-haze-revision-02",
+        "type": "output",
+        "metadata": {
+          "kind": "image",
+          "width": 1024,
+          "height": 1024
+        }
+      }
+    }
+  ],
+  "preflight": {
+    "available_ram_bytes": 14576214016,
+    "free_cuda_vram_bytes": 11578376192,
+    "queue_running": 0,
+    "queue_pending": 0,
+    "installed_nodes_verified": [
+      "UNETLoader",
+      "CLIPLoader",
+      "VAELoader",
+      "CLIPTextEncode",
+      "ConditioningZeroOut",
+      "CFGGuider",
+      "KSamplerSelect",
+      "Flux2Scheduler",
+      "RandomNoise",
+      "EmptyFlux2LatentImage",
+      "SamplerCustomAdvanced",
+      "VAEDecode",
+      "SaveImage"
+    ],
+    "components_verified": [
+      "flux-2-klein-4b-fp8.safetensors",
+      "qwen_3_4b.safetensors",
+      "flux2-vae.safetensors"
+    ]
+  },
+  "raw_output_dir": ".state/torch-haze-revision02-comfy/output"
+}

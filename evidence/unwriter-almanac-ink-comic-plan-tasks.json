@@ -1,0 +1,17 @@
+[
+  {"id":"IC-001","title":"Record approved scope and baseline existing game tests","estimate_minutes":15,"priority":5,"depends_on":[],"mandatory":true},
+  {"id":"IC-002","title":"Prove wide and narrow route geometry feasibility before implementation","estimate_minutes":60,"priority":5,"depends_on":["IC-001"],"mandatory":true},
+  {"id":"IC-003","title":"Verify local model identity provenance rights and VRAM","estimate_minutes":35,"priority":5,"depends_on":["IC-001"],"mandatory":true},
+  {"id":"IC-004","title":"Generate bounded local ink-comic scene and character proof set","estimate_minutes":90,"priority":4,"depends_on":["IC-002","IC-003"],"mandatory":true},
+  {"id":"IC-005","title":"Review image proofs at game scale and obtain Founder selection","estimate_minutes":30,"priority":5,"depends_on":["IC-004"],"mandatory":true},
+  {"id":"IC-006","title":"Update art bible asset manifest and provenance","estimate_minutes":35,"priority":5,"depends_on":["IC-005"],"mandatory":true},
+  {"id":"IC-007","title":"Integrate selected local comic art behind crisp gameplay overlays","estimate_minutes":65,"priority":5,"depends_on":["IC-006"],"mandatory":true},
+  {"id":"IC-008","title":"Implement responsive route HUD and accessible drawing feedback","estimate_minutes":40,"priority":5,"depends_on":["IC-007"],"mandatory":true},
+  {"id":"IC-009","title":"Implement deterministic hazard budget and anchor validation","estimate_minutes":60,"priority":5,"depends_on":["IC-002","IC-008"],"mandatory":true},
+  {"id":"IC-010","title":"Add validated wide and narrow route examples and keyboard presets","estimate_minutes":35,"priority":5,"depends_on":["IC-009"],"mandatory":true},
+  {"id":"IC-011","title":"Add useful invalid-route recovery and ink-budget presentation","estimate_minutes":35,"priority":5,"depends_on":["IC-009","IC-010"],"mandatory":true},
+  {"id":"IC-012","title":"Test route tradeoffs hazard rejection budget and retry deterministically","estimate_minutes":45,"priority":5,"depends_on":["IC-009","IC-010","IC-011"],"mandatory":true},
+  {"id":"IC-013","title":"Verify both routes interactions and recovery in actual browser","estimate_minutes":60,"priority":5,"depends_on":["IC-007","IC-008","IC-012"],"mandatory":true},
+  {"id":"IC-014","title":"Critique desktop narrow visual accessibility and performance evidence","estimate_minutes":50,"priority":5,"depends_on":["IC-013"],"mandatory":true},
+  {"id":"IC-015","title":"Run final regression update hashes and handoff records","estimate_minutes":55,"priority":5,"depends_on":["IC-014"],"mandatory":true}
+]

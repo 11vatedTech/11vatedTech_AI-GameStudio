@@ -1,0 +1,96 @@
+{
+  "project_id": "the-unwriters-almanac",
+  "algorithm": "SHA-256",
+  "files": [
+    {
+      "path": "projects/the-unwriters-almanac/docs/art-bible.json",
+      "sha256": "84ab3e35c63e45dbb8ddc0f366e0142be83bbf4458190bfafc67cc9e99826d17",
+      "bytes": 3625
+    },
+    {
+      "path": "projects/the-unwriters-almanac/docs/asset-manifest.json",
+      "sha256": "67af212a174ec43779a792b30c8db0e722436465294f49eda5a265f909b12000",
+      "bytes": 376
+    },
+    {
+      "path": "projects/the-unwriters-almanac/docs/game-brief.json",
+      "sha256": "53cb367f035ebf3fe93a008f75fd4e0044d323301a8a9da45ed8183d7094903b",
+      "bytes": 2866
+    },
+    {
+      "path": "projects/the-unwriters-almanac/docs/production-project.json",
+      "sha256": "35edd057d84597fc9e4856b65eb3baf0f9e4d2b2508e17af4873e33335e69421",
+      "bytes": 1661
+    },
+    {
+      "path": "projects/the-unwriters-almanac/docs/task-graph.json",
+      "sha256": "9f1539f4c2ee916c56d05c84438d0074dad5c20eae6100a4c5ab13306d6eab43",
+      "bytes": 8080
+    },
+    {
+      "path": "projects/the-unwriters-almanac/package.json",
+      "sha256": "123ff771fe7871aec079e8e1aefa65877cd39b3e93e512ef8be3b4cf048958cd",
+      "bytes": 201
+    },
+    {
+      "path": "projects/the-unwriters-almanac/scripts/serve.mjs",
+      "sha256": "e4b259ed3917bde8268a64038e901880828176b3da31ef87d1c48f1e18cb90d4",
+      "bytes": 1859
+    },
+    {
+      "path": "projects/the-unwriters-almanac/src/animation.js",
+      "sha256": "40911c46b6151410698ae9ad8abd3068e8795cb63d5ffde07f2d0795c92b5167",
+      "bytes": 1917
+    },
+    {
+      "path": "projects/the-unwriters-almanac/src/app.js",
+      "sha256": "2aa18336c684f593fb57ca49c6c1a88f58f95c22dd095e8dbe8869042d6a69e1",
+      "bytes": 9106
+    },
+    {
+      "path": "projects/the-unwriters-almanac/src/geometry.js",
+      "sha256": "332e3ce8f5c633cf575e35e73024fc5f9a620842aeada41f50d9ea02eef053a1",
+      "bytes": 3594
+    },
+    {
+      "path": "projects/the-unwriters-almanac/src/index.html",
+      "sha256": "bdcab8710cf3dbbc206681264e18d2364848d391c032bf0f6a35ebf9f6266f64",
+      "bytes": 3585
+    },
+    {
+      "path": "projects/the-unwriters-almanac/src/input.js",
+      "sha256": "71029e8d10d4bb4a66d08d43a65e98e98d66ce5e2c10bf9f4305d6dc093a0e1f",
+      "bytes": 5320
+    },
+    {
+      "path": "projects/the-unwriters-almanac/src/renderer.js",
+      "sha256": "c63e6a47746dcc4804208692a98056eeef8033bee0cf1b609a047055716e9c76",
+      "bytes": 12860
+    },
+    {
+      "path": "projects/the-unwriters-almanac/src/simulation.js",
+      "sha256": "60d0cded8b7b93bc88b778a9acce00cf6f5e9ce9577882aa4b81759f19a8edb0",
+      "bytes": 10631
+    },
+    {
+      "path": "projects/the-unwriters-almanac/src/styles.css",
+      "sha256": "133848102e3b7e897ecfd4a0f98399ae330d817f347cf1c3bea9e7176e384d57",
+      "bytes": 4713
+    },
+    {
+      "path": "projects/the-unwriters-almanac/tests/animation.test.mjs",
+      "sha256": "8014bd7a9df06d3cc2787e69d95f84e50ca516b09f33a75ed46bddb782da72de",
+      "bytes": 764
+    },
+    {
+      "path": "projects/the-unwriters-almanac/tests/input.test.mjs",
+      "sha256": "34dd507877d7f30dea0f45cfde7a1154daa8da8fff816e2f796651a6e5efcdf9",
+      "bytes": 1003
+    },
+    {
+      "path": "projects/the-unwriters-almanac/tests/simulation.test.mjs",
+      "sha256": "7d94f72a03b48e5dadf131e04fc1c86e6111cc580aa2b47d7f3475cac1156248",
+      "bytes": 4823
+    }
+  ]
+}
