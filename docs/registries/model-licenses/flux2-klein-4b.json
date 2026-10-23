@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0",
+  "record_id": "flux2-klein-4b",
+  "name": "FLUX.2 [klein] 4B",
+  "upstream_url": "https://github.com/black-forest-labs/flux2",
+  "code_license_status": "verified",
+  "weights_license_status": "conditional",
+  "commercial_use": "allowed_with_conditions",
+  "redistribution": "allowed_with_conditions",
+  "attribution_requirements": [],
+  "source_provenance": ["BFL FLUX.2 overview lists the 4B variant as Apache 2.0; the 9B variant is under the FLUX Non-Commercial License"],
+  "review_status": "human_review_required",
+  "verified_at": "2026-10-23",
+  "notes": "Verify the exact checkpoint file and its model card before shipping. Do not extend this to the 9B variant. VRAM use on 12 GB depends on quantization and workflow."
+}

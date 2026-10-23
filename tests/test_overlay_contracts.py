@@ -26,6 +26,18 @@ class TestOverlayContracts(unittest.TestCase):
   pose=json.loads((ROOT/'examples/blender/torch_sweep_pose_spec.example.json').read_text())
   pose_schema=json.loads((ROOT/'schemas/blender-pose-spec-v1.schema.json').read_text())
   jsonschema.validate(pose,pose_schema)
+ def test_model_license_records_conform_to_schema(self):
+  import jsonschema
+  schema=json.loads((ROOT/'schemas/model-license.schema.json').read_text())
+  records=sorted((ROOT/'docs/registries/model-licenses').glob('*.json'))
+  self.assertGreaterEqual(len(records),4)
+  ids=[]
+  for p in records:
+   rec=json.loads(p.read_text());jsonschema.validate(rec,schema);ids.append(rec['record_id'])
+  self.assertEqual(len(set(ids)),len(ids))
+  for p in records:
+   rec=json.loads(p.read_text())
+   if rec['commercial_use']=='allowed_with_conditions':self.assertNotEqual(rec['review_status'],'prohibited')
  def test_hard_no_placeholder_policy_exists(self):
   c=(ROOT/"docs/studio/AGENT_FIRST_CREATIVE_PRODUCTION_CONTRACT.md").read_text()
   self.assertIn("Pulsing, scaling, rotating",c);self.assertIn("operator responsible for generating images",c)

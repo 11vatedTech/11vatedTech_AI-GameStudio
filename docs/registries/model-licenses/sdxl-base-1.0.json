@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0",
+  "record_id": "sdxl-base-1.0",
+  "name": "Stable Diffusion XL 1.0 base",
+  "upstream_url": "https://stability.ai/news-updates/stable-diffusion-sdxl-1-announcement",
+  "code_license_status": "conditional",
+  "weights_license_status": "conditional",
+  "commercial_use": "allowed_with_conditions",
+  "redistribution": "allowed_with_conditions",
+  "attribution_requirements": [],
+  "source_provenance": ["SDXL 1.0 base is under CreativeML OpenRAIL++-M, which carries use restrictions"],
+  "review_status": "human_review_required",
+  "verified_at": "2026-10-23",
+  "notes": "Community checkpoints, LoRAs and ControlNets do not inherit this license. Record each one separately and read its use restrictions."
+}
