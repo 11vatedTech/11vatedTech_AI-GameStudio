@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0",
+  "record_id": "flux2-dev",
+  "name": "FLUX.2 [dev]",
+  "upstream_url": "https://bfl.ai/legal/non-commercial-license-terms",
+  "code_license_status": "conditional",
+  "weights_license_status": "conditional",
+  "commercial_use": "noncommercial_only",
+  "redistribution": "unclear",
+  "attribution_requirements": [],
+  "source_provenance": ["Black Forest Labs FLUX.2 [dev] open weights; BFL Non-Commercial License"],
+  "review_status": "prohibited",
+  "verified_at": "2026-10-23",
+  "notes": "Do not use the model itself for commercial or production purposes without a separate BFL license. Output ownership terms are not a license to the model. Also too large for a 12 GB local GPU."
+}
