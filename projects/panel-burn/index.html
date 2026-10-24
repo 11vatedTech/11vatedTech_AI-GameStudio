@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PANEL BURN</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="wrap">
+    <header class="top">
+      <h1>PANEL BURN</h1>
+      <p class="tagline">Build the page. Burn the story. <span class="small">Local two-player prototype</span></p>
+    </header>
+
+    <p id="status" class="status" role="status"></p>
+
+    <section id="book" class="book">
+      <div id="page-1" class="page" data-player="1">
+        <div class="label">PLAYER 1 · TOP PAGE</div>
+        <div class="sheet">
+          <div class="cells"></div>
+          <div class="panels"></div>
+        </div>
+      </div>
+      <div class="gutter"><span>THE GUTTER</span></div>
+      <div id="page-2" class="page" data-player="2">
+        <div class="label">PLAYER 2 · BOTTOM PAGE</div>
+        <div class="sheet">
+          <div class="cells"></div>
+          <div class="panels"></div>
+        </div>
+      </div>
+    </section>
+
+    <p id="msg" class="msg" aria-live="polite"></p>
+
+    <section id="build-controls" class="controls">
+      <div id="palette" class="palette">
+        <button data-type="core">Story Core</button>
+        <button data-type="small" class="on">Small</button>
+        <button data-type="wide">Wide</button>
+        <button data-type="tall">Tall</button>
+        <button data-type="large">Large</button>
+      </div>
+      <p class="hint">Click an empty space to place the selected panel. Click a panel to remove it. Each page holds one Story Core and up to five panels.</p>
+      <button id="ready" class="primary">Ready</button>
+    </section>
+
+    <section id="battle-controls" class="controls" hidden>
+      <div id="modes" class="modes">
+        <button data-mode="torch" class="on">Throw torch</button>
+        <button data-mode="reinforce">Reinforce (one action)</button>
+      </div>
+    </section>
+
+    <footer class="foot">
+      <button id="restart">New match</button>
+      <ol id="log" class="log"></ol>
+    </footer>
+  </main>
+
+  <script src="src/logic.js"></script>
+  <script src="src/app.js"></script>
+</body>
+</html>
